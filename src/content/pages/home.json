@@ -18,7 +18,7 @@
   },
   "imagen": {
     "video": "https://vyclk3sx0z.ufs.sh/f/hv6ttNERWpXuOGj0KhIPk5MLw0bimBlYnq6Vd2NfSJW9gCQU",
-    "ImagenArchivo": "/CMS-WEB/uploads/pixel.png",
+    "ImagenArchivo": "/CMS-WEB/uploads/chartb3sdqtc1zbqrnb.webp",
     "Imagen": "https://data-nova.vercel.app/_astro/chart.B3SdqTC1_ZbQRnB.webp"
   },
   "features": {
@@ -26,7 +26,7 @@
     "subtitulo": "Discover how DataNova transforms your Excel workspace into a comprehensive analytics powerhouse, making data analysis accessible and actionable.",
     "lista": [
       {
-        "titulo": "Native Excel integration",
+        "titulo": "test",
         "descripcion": "Work directly in Excel with our native toolbar and custom functions",
         "imagen": "src/assets/images/toolbar.webp",
         "class": "content-center border-b border-dashed border-slate-400 py-5 sm:col-span-2 sm:p-5",
