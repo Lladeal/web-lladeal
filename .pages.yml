@@ -1,6 +1,6 @@
 media:
   - name: uploads
-    label: Uploads
+    label: Imagenes subidas
     input: public/uploads
     output: /CMS-WEB/uploads
     categories: [image]
@@ -8,85 +8,85 @@ media:
 
 content:
   - name: site_pages
-    label: Paginas web
+    label: Paginas del sitio
     type: group
     items:
       - name: home_page
-        label: Pagina inicio
+        label: Pagina de inicio
         type: file
         path: src/content/pages/home.json
         format: json
         fields:
           - name: anuncio
-            label: Barrra de anuncios
+            label: Barra de anuncio superior
             type: object
             fields:
               - name: titulo
-                label: Title
+                label: Texto principal
                 type: string
               - name: titulo_link
-                label: Link Text
+                label: Texto del enlace
                 type: string
               - name: link
-                label: Link URL
+                label: Enlace
                 type: string
           - name: hero
-            label: Hero Content
+            label: Seccion principal
             type: object
             fields:
               - name: titulo
-                label: Title
+                label: Titulo principal
                 type: string
               - name: subtitulo
-                label: Subtitle
+                label: Texto descriptivo
                 type: text
               - name: Boton_1
-                label: Primary Button
+                label: Boton principal
                 type: object
                 fields:
                   - name: titulo
-                    label: Title
+                    label: Texto del boton
                     type: string
                   - name: link
-                    label: Link URL
+                    label: Enlace del boton
                     type: string
               - name: boton_2
-                label: Secondary Button
+                label: Boton secundario
                 type: object
                 fields:
                   - name: titulo
-                    label: Title
+                    label: Texto del boton
                     type: string
                   - name: link
-                    label: Link URL
+                    label: Enlace del boton
                     type: string
           - name: imagen
-            label: Hero Media
+            label: Imagen y video principal
             type: object
             fields:
               - name: video
-                label: Video URL
+                label: Enlace del video
                 type: string
               - name: ImagenArchivo
-                label: Uploaded Image
+                label: Imagen subida
                 type: image
                 options:
                   media: uploads
               - name: Imagen
-                label: External Image URL
+                label: Enlace de imagen externa
                 type: string
           - name: features
-            label: Feature Showcase
+            label: Bloque de funcionalidades destacadas
             type: object
             fields:
               - name: titulo
-                label: Title
+                label: Titulo
                 type: text
               - name: subtitulo
-                label: Subtitle
+                label: Descripcion
                 type: text
               - name: lista
-                label: Feature List
+                label: Lista de bloques
                 type: object
                 list:
                   collapsible:
@@ -94,95 +94,100 @@ content:
                     summary: "{titulo} ({index})"
                 fields:
                   - name: titulo
-                    label: Title
+                    label: Titulo
                     type: string
                   - name: descripcion
-                    label: Description
+                    label: Descripcion
                     type: text
                   - name: imagen
-                    label: Image Path or URL
+                    label: Enlace de imagen externa
                     type: string
+                  - name: imagenArchivo
+                    label: Imagen subida
+                    type: image
+                    options:
+                      media: uploads
                   - name: class
-                    label: Wrapper Classes
+                    label: Estilos del bloque
                     type: text
                   - name: posicion
-                    label: Image Classes
+                    label: Estilos de la imagen
                     type: text
                   - name: mas_caracteristicas
-                    label: More Features
+                    label: Lista adicional de caracteristicas
                     type: string
                     list: true
           - name: caracteristicas
-            label: Feature Cards Section
+            label: Seccion de tarjetas informativas
             type: object
             fields:
               - name: titulo
-                label: Title
+                label: Titulo
                 type: string
               - name: subtitulo
-                label: Subtitle
+                label: Descripcion
                 type: text
               - name: boton
-                label: Button
+                label: Boton
                 type: object
                 fields:
                   - name: titulo
-                    label: Title
+                    label: Texto del boton
                     type: string
                   - name: link
-                    label: Link URL
+                    label: Enlace del boton
                     type: string
               - name: carta1
-                label: Card 1
+                label: Tarjeta 1
                 type: object
                 fields:
                   - name: icono
-                    label: Icon
+                    label: Icono
                     type: string
                   - name: descripcion
-                    label: Description
+                    label: Descripcion
                     type: text
                   - name: estilo
-                    label: Style Classes
+                    label: Estilos de la tarjeta
                     type: string
               - name: carta2
-                label: Card 2
+                label: Tarjeta 2
                 type: object
                 fields:
                   - name: icono
-                    label: Icon
+                    label: Icono
                     type: string
                   - name: descripcion
-                    label: Description
+                    label: Descripcion
                     type: text
                   - name: estilo
-                    label: Style Classes
+                    label: Estilos de la tarjeta
                     type: string
               - name: carta3
-                label: Card 3
+                label: Tarjeta 3
                 type: object
                 fields:
                   - name: icono
-                    label: Icon
+                    label: Icono
                     type: string
                   - name: descripcion
-                    label: Description
+                    label: Descripcion
                     type: text
                   - name: estilo
-                    label: Style Classes
+                    label: Estilos de la tarjeta
                     type: string
           - name: Caracteristicas_red
-            label: Why Choose Section
+            label: Seccion de ventajas o razones
             type: object
             fields:
               - name: titulo
-                label: Title
+                label: Titulo
                 type: text
               - name: subtitulo
-                label: Subtitle
+                label: Descripcion
                 type: text
               - name: lista
-                label: Cards
+                label: Tarjetas
                 type: object
                 list:
                   collapsible:
@@ -190,30 +195,30 @@ content:
                     summary: "{titulo_tarjeta}"
                 fields:
                   - name: estilo_borde
-                    label: Border Classes
+                    label: Estilos de bordes
                     type: string
                   - name: gridClasses
-                    label: Grid Classes
+                    label: Estilos de posicion
                     type: string
                   - name: estilo_color
-                    label: Color Classes
+                    label: Estilos de color
                     type: string
                   - name: icono
-                    label: Icon
+                    label: Icono
                     type: string
                   - name: titulo_tarjeta
-                    label: Card Title
+                    label: Titulo de la tarjeta
                     type: string
                   - name: descripcion
-                    label: Description
+                    label: Descripcion
                     type: text
 
   - name: editorial_content
-    label: Editorial Content
+    label: Contenido editorial
     type: group
     items:
       - name: articles
-        label: Articles
+        label: Articulos
         type: collection
         path: src/content/articles
         filename:
@@ -230,23 +235,23 @@ content:
             order: desc
         fields:
           - name: title
-            label: Title
+            label: Titulo
             type: string
           - name: description
-            label: Description
+            label: Descripcion corta
             type: text
           - name: date
-            label: Publish Date
+            label: Fecha de publicacion
             type: date
           - name: body
-            label: Body
+            label: Contenido
             type: rich-text
             options:
               format: markdown
               media: uploads
 
       - name: reference_docs
-        label: Reference Docs
+        label: Documentacion de referencia
         type: collection
         path: src/content/reference
         filename:
@@ -263,23 +268,23 @@ content:
             order: desc
         fields:
           - name: title
-            label: Title
+            label: Titulo
             type: string
           - name: description
-            label: Description
+            label: Descripcion corta
             type: text
           - name: date
-            label: Publish Date
+            label: Fecha de publicacion
             type: date
           - name: body
-            label: Body
+            label: Contenido
             type: rich-text
             options:
               format: markdown
               media: uploads
 
   - name: data_library
-    label: Data Library
+    label: Biblioteca de recursos
     type: group
     items:
       - name: whitepapers
@@ -300,17 +305,17 @@ content:
             order: asc
         fields:
           - name: title
-            label: Title
+            label: Titulo
             type: string
           - name: description
-            label: Description
+            label: Descripcion
             type: text
           - name: readLink
-            label: Read Link
+            label: Enlace para leer
             type: string
 
       - name: spreadsheets
-        label: Spreadsheets
+        label: Hojas de calculo
         type: collection
         path: src/data/spreadsheets
         filename:
@@ -327,11 +332,11 @@ content:
             order: asc
         fields:
           - name: title
-            label: Title
+            label: Titulo
             type: string
           - name: description
-            label: Description
+            label: Descripcion
             type: text
           - name: url
-            label: Download URL
+            label: Enlace de descarga
             type: string
