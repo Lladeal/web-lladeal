@@ -5,28 +5,17 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build --remote",
+    "build": "astro check && astro build",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "preview": "astro preview",
     "astro": "astro"
   },
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "@keystatic/astro>astro": "6"
-      }
-    }
-  },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
-    "@astrojs/db": "^0.21.1",
     "@astrojs/markdoc": "^1.0.4",
     "@astrojs/react": "5.0.4",
     "@astrojs/svelte": "^8.1.0",
-    "@astrojs/vercel": "10.0.6",
-    "@keystatic/astro": "^5.0.6",
-    "@keystatic/core": "^0.5.50",
     "@tailwindcss/vite": "^4.2.4",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
