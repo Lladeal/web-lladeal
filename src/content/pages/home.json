@@ -27,21 +27,19 @@
       {
         "titulo": "test",
         "descripcion": "Work directly in Excel with our native toolbar and custom functions",
-        "ImagenArchivo": "/CMS-WEB/uploads/toolbar.webp",
+        "imagenArchivo": "/CMS-WEB/uploads/toolbar.webp",
         "class": "content-center border-b border-dashed border-slate-400 py-5 sm:col-span-2 sm:p-5",
         "posicion": "mx-auto mt-10 rounded-xl shadow-lg sm:w-[75%]"
       },
       {
         "titulo": "Comprehensive analytics suite",
         "descripcion": "Choose from <span class=\"font-bold\">30+</span> statistical models and <span class=\"font-bold\">25+</span> visualization templates to unlock insights from any dataset.",
-        "ImagenArchivo": "/CMS-WEB/uploads/toolbar.webp",
         "class": "content-center py-5 sm:row-start-2 sm:p-5 sm:py-10",
         "posicion": "ml-auto mr-auto mt-10 w-[65%] rounded-xl shadow-lg sm:ml-0 sm:w-[45%]"
       },
       {
         "titulo": "Smart analysis tools",
         "descripcion": "Let AI do the heavy lifting. Automatically detect patterns, spot anomalies, and get accurate forecasts from your historical data.",
-        "ImagenArchivo": "/CMS-WEB/uploads//dashboard.webp",
         "class": "content-center border-t border-dashed border-slate-400 py-5 sm:row-span-2 sm:row-start-2 sm:border-l sm:border-t-0 sm:p-5 sm:text-right",
         "posicion": "ml-auto mr-auto mt-10 w-[80%] rounded-xl shadow-lg sm:mr-0"
       },
