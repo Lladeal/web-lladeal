@@ -1,11 +1,11 @@
 {
   "anuncio": {
-    "titulo": "Test datanova cms",
+    "titulo": "Introducing DataNova",
     "titulo_link": "Now ready to try!",
     "link": "https://github.com/mearashadowfax/DataNova"
   },
   "hero": {
-    "titulo": "Joann Gay",
+    "titulo": "Turn Excel® into Your Data Intelligence Powerhouse",
     "subtitulo": "Get instant insights from your spreadsheets with advanced analytics and stunning visualizations. No coding required. Make confident decisions backed by data in minutes, not days.",
     "Boton_1": {
       "titulo": "View Pricing",
