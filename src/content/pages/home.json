@@ -18,14 +18,11 @@
   },
   "imagen": {
     "video": "https://vyclk3sx0z.ufs.sh/f/hv6ttNERWpXuOGj0KhIPk5MLw0bimBlYnq6Vd2NfSJW9gCQU",
-    "ImagenArchivo": "",
     "Imagen": "https://data-nova.vercel.app/_astro/chart.B3SdqTC1_ZbQRnB.webp"
   },
-
   "features": {
     "titulo": "<span class=\"text-teal-700\">Data</span><span class=\"font-normal text-slate-400\">Nova</span>'s powerful analytics suite",
     "subtitulo": "Discover how DataNova transforms your Excel workspace into a comprehensive analytics powerhouse, making data analysis accessible and actionable.",
-
     "lista": [
       {
         "titulo": "Native Excel integration",
@@ -60,7 +57,6 @@
       }
     ]
   },
-
   "caracteristicas": {
     "titulo": "Turn historical data into tomorrow's decisions",
     "subtitulo": "Leverage advanced statistics and ML to uncover hidden patterns in your data. Make confident decisions backed by proven forecasting models. Our predictive engine analyzes thousands of data points to help you anticipate market changes and stay ahead of the competition.",
@@ -84,7 +80,6 @@
       "estilo": "self-end"
     }
   },
-
   "Caracteristicas_red": {
     "titulo": "Why choose <span class=\"text-teal-700\">Data</span><span class=\"font-normal text-slate-400\">Nova</span>?",
     "subtitulo": "Experience the perfect balance of power and simplicity in data analytics. From startups to enterprises, DataNova empowers teams to extract meaningful insights from their data while maintaining seamless integration with existing workflows. Transform the way you analyze, visualize, and act on your data.",

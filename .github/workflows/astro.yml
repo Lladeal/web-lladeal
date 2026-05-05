@@ -57,7 +57,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22" # 👈 Versión actualizada (antes era 20)
+          node-version: "22"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
 
@@ -75,6 +75,10 @@ jobs:
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
+
+      # 👇 NUEVO PASO: Deshabilitar Jekyll en GitHub Pages
+      - name: Disable Jekyll
+        run: touch ${{ env.BUILD_PATH }}/dist/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
