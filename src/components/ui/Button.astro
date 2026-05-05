@@ -1,6 +1,8 @@
 ---
 import { twMerge } from 'tailwind-merge';
+import { withBase } from '@utils/links';
 const { type, href, rel, target, variant, className, id } = Astro.props;
+const resolvedHref = withBase(href);
 
 export interface Props {
   type?: 'button' | 'submit' | 'reset';
@@ -44,7 +46,7 @@ This component dynamically renders either a `<button>` element or an `<a>` (link
   href ? (
     <a
       id={id}
-      href={href}
+      href={resolvedHref}
       rel={rel ? rel : undefined}
       target={target ? target : undefined}
       class={twMerge(

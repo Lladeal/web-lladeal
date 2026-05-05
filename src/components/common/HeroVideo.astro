@@ -2,8 +2,10 @@
 import { Image } from 'astro:assets';
 import chartImage from '@images/chart.webp';
 import { imagen } from '@content/pages/home.json'
+import { withBase } from '@utils/links';
 
-const heroImage = imagen.ImagenArchivo?.trim() || imagen.Imagen?.trim();
+const heroData = imagen as typeof imagen & { ImagenArchivo?: string };
+const heroImage = heroData.ImagenArchivo?.trim() || heroData.Imagen?.trim();
 ---
 
 {/* Hero Visual */}
@@ -39,7 +41,7 @@ const heroImage = imagen.ImagenArchivo?.trim() || imagen.Imagen?.trim();
       muted
       playsinline
       preload="metadata"
-      poster="/poster.png"
+        poster={withBase('/poster.png')}
       class="aspect-auto rounded-xl"
     >
       <source src={imagen.video} type="video/mp4" />

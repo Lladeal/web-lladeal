@@ -351,12 +351,12 @@ const schema: WithContext<Thing> = {
     </div>
   </section>
 
-  <style>
+  <style define:vars={{ guillocheBg: `url(${import.meta.env.BASE_URL}guilloche.svg)` }}>
     .svgBlock::after {
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url(/guilloche.svg);
+      background-image: var(--guillocheBg);
       background-repeat: repeat;
       background-position: right top;
       background-size: 20px, 20px;

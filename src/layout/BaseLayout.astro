@@ -6,6 +6,7 @@ import { SEO, type Props as SEOProps } from 'astro-seo';
 import { Schema } from 'astro-seo-schema';
 import type { WithContext, Thing } from 'schema-dts';
 import { AstroFont } from 'astro-font';
+import { withBase } from '@utils/links';
 import '@styles/global.css';
 
 interface Props {
@@ -15,7 +16,7 @@ interface Props {
 
 // Extract `seo` and `schema` from properties or define defaults
 const { seo, schema } = Astro.props;
-const socialImage = `${Astro.site}social.png`; // Path to the default social sharing image
+const socialImage = new URL(withBase('/social.png') ?? '/social.png', Astro.site).toString();
 
 const ogTitle = seo?.title ?? 'DataNova - Unlock Insights from Your Excel Data';
 const ogDescription =
@@ -69,9 +70,9 @@ const defaultSchema: WithContext<Thing> = {
       }}
       extend={{
         link: [
-          { rel: 'icon', href: '/icon.svg', type: 'image/svg+xml' },
-          { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-          { rel: 'manifest', href: '/manifest.webmanifest' },
+          { rel: 'icon', href: withBase('/icon.svg'), type: 'image/svg+xml' },
+          { rel: 'apple-touch-icon', href: withBase('/apple-touch-icon.png') },
+          { rel: 'manifest', href: withBase('/manifest.webmanifest') },
         ],
         meta: [
           { name: 'viewport', content: 'width=device-width' },

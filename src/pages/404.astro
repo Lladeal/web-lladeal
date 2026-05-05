@@ -3,6 +3,7 @@ export const prerender = true;
 import BaseLayout from '@layout/BaseLayout.astro';
 import Icon from '@ui/icons/Icon.astro';
 import Button from '@ui/Button.astro';
+import { withBase } from '@utils/links';
 import type { WithContext, Thing } from 'schema-dts';
 
 export const pageContent = {
@@ -91,7 +92,7 @@ const schema: WithContext<Thing> = {
             resources.map(resource => (
               <li>
                 <a
-                  href={resource.link}
+                   href={withBase(resource.link)}
                   class="group flex gap-x-5 px-2 py-8 transition hover:bg-slate-100"
                 >
                   <Icon name={resource.icon} class="size-6 text-teal-600" />
