@@ -8,11 +8,11 @@ media:
 
 content:
   - name: site_pages
-    label: Site Pages
+    label: Paginas web
     type: group
     items:
       - name: home_page
-        label: Home Page
+        label: Pagina inicio
         type: file
         path: src/content/pages/home.json
         format: json
