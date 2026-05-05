@@ -18,7 +18,7 @@ content:
         format: json
         fields:
           - name: anuncio
-            label: Announcement Banner
+            label: Barrra de anuncios
             type: object
             fields:
               - name: titulo
