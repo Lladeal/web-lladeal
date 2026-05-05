@@ -13,7 +13,8 @@
       "@ui/*": ["src/components/ui/*"],
       "@sections/*": ["src/components/sections/*"],
       "@styles/*": ["src/assets/styles/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@content/*": ["src/content/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

@@ -2,14 +2,8 @@
 import Icon from '@ui/icons/Icon.astro';
 import FeatureCard from '@common/FeatureCard.astro';
 import Button from '@ui/Button.astro';
+import { caracteristicas } from '@content/pages/home.json'
 
-// Content for the section title and subtitle
-const title = "Turn historical data into tomorrow's decisions";
-const subTitle =
-  'Leverage advanced statistics and ML to uncover hidden patterns in your data. Make confident decisions backed by proven forecasting models. Our predictive engine analyzes thousands of data points to help you anticipate market changes and stay ahead of the competition.';
-
-// Call-to-action configuration for the tertiary button
-const tertiaryCTA = { text: 'Learn More', href: '#' };
 ---
 
 <section
@@ -45,19 +39,19 @@ const tertiaryCTA = { text: 'Learn More', href: '#' };
       <h2
         class="text-2xl font-semibold tracking-tight text-balance text-slate-800 md:text-3xl md:leading-tight"
       >
-        {title}
+        {caracteristicas.titulo}
       </h2>
       <p class="mt-6 text-lg/8 text-pretty text-slate-700">
-        {subTitle}
+        {caracteristicas.subtitulo}
       </p>
       <div
         class="mt-10 flex items-center justify-start gap-x-6 sm:justify-center lg:justify-start"
       >
         <Button
-          href={tertiaryCTA.href}
+          href={caracteristicas.boton.link}
           variant="tertiary"
           className="group inline-flex items-center justify-center gap-x-2 py-2.5! pr-4 pl-5 text-slate-700"
-          >{tertiaryCTA.text}<Icon name="chevronRight" /></Button
+          >{caracteristicas.boton.titulo}<Icon name="chevronRight" /></Button
         >
       </div>
     </div>
@@ -68,9 +62,9 @@ const tertiaryCTA = { text: 'Learn More', href: '#' };
       {/* First Feature Card */}
 
       <FeatureCard
-        icon="dataBase"
-        description="Clean, organize, and prepare raw data for analysis."
-        styleClass=""
+        icon={caracteristicas.carta1.icono}
+        description={caracteristicas.carta1.descripcion}
+        styleClass={caracteristicas.carta1.estilo}
       />
 
       {/* First beam line SVG connecting feature cards visually */}
@@ -96,9 +90,9 @@ const tertiaryCTA = { text: 'Learn More', href: '#' };
 
       {/* Second Feature Card */}
       <FeatureCard
-        icon="brain"
-        description="Use statistical models to identify key patterns and trends."
-        styleClass="self-center"
+        icon={caracteristicas.carta2.icono}
+        description={caracteristicas.carta2.descripcion}
+        styleClass={caracteristicas.carta2.estilo}
       />
 
       {/* Second beam line SVG connecting feature cards visually */}
@@ -124,9 +118,9 @@ const tertiaryCTA = { text: 'Learn More', href: '#' };
 
       {/* Third Feature Card */}
       <FeatureCard
-        icon="lightbulb"
-        description="Convert insights into visuals and actionable decisions."
-        styleClass="self-end"
+        icon={caracteristicas.carta3.icono}
+        description={caracteristicas.carta3.descripcion}
+        styleClass={caracteristicas.carta3.estilo}
       />
     </div>
   </div>

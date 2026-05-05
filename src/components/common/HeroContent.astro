@@ -1,14 +1,8 @@
 ---
 import Button from '@ui/Button.astro';
+import { hero } from '@content/pages/home.json'
 
-const title = 'Turn Excel® into Your Data Intelligence Powerhouse';
-const subTitle =
-  'Get instant insights from your spreadsheets with advanced analytics and stunning visualizations. No coding required. Make confident decisions backed by data in minutes, not days.';
-const secondaryCTA = {
-  text: 'Start Free Trial',
-  href: 'https://github.com/mearashadowfax/DataNova',
-};
-const primaryCTA = { text: 'View Pricing', href: '/downloads/license-options' };
+
 ---
 
 {/* Hero Content */}
@@ -16,20 +10,20 @@ const primaryCTA = { text: 'View Pricing', href: '/downloads/license-options' };
   <h1
     class="block text-4xl text-balance text-slate-800 sm:text-5xl md:text-6xl lg:text-7xl"
   >
-    {title}
+    {hero.titulo}
   </h1>
 </div>
 
 <div class="mx-auto max-w-3xl text-left sm:text-center">
   <p class="text-lg text-pretty text-slate-700">
-    {subTitle}
+    {hero.subtitulo}
   </p>
 </div>
 
 {/* CTA Buttons */}
 <div class="flex flex-col justify-center gap-5 sm:flex-row">
-  <Button href={secondaryCTA.href} variant="secondary" target="_blank"
-    >{secondaryCTA.text}</Button
+  <Button href={hero.boton_2.link} variant="secondary" target="_blank"
+    >{hero.boton_2.titulo}</Button
   >
-  <Button href={primaryCTA.href} variant="primary">{primaryCTA.text}</Button>
+  <Button href={hero.Boton_1.link} variant="primary">{hero.Boton_1.titulo}</Button>
 </div>

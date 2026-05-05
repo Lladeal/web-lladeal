@@ -1,0 +1,337 @@
+media:
+  - name: uploads
+    label: Uploads
+    input: public/uploads
+    output: /uploads
+    categories: [image]
+    rename: safe
+
+content:
+  - name: site_pages
+    label: Site Pages
+    type: group
+    items:
+      - name: home_page
+        label: Home Page
+        type: file
+        path: src/content/pages/home.json
+        format: json
+        fields:
+          - name: anuncio
+            label: Announcement Banner
+            type: object
+            fields:
+              - name: titulo
+                label: Title
+                type: string
+              - name: titulo_link
+                label: Link Text
+                type: string
+              - name: link
+                label: Link URL
+                type: string
+          - name: hero
+            label: Hero Content
+            type: object
+            fields:
+              - name: titulo
+                label: Title
+                type: string
+              - name: subtitulo
+                label: Subtitle
+                type: text
+              - name: Boton_1
+                label: Primary Button
+                type: object
+                fields:
+                  - name: titulo
+                    label: Title
+                    type: string
+                  - name: link
+                    label: Link URL
+                    type: string
+              - name: boton_2
+                label: Secondary Button
+                type: object
+                fields:
+                  - name: titulo
+                    label: Title
+                    type: string
+                  - name: link
+                    label: Link URL
+                    type: string
+          - name: imagen
+            label: Hero Media
+            type: object
+            fields:
+              - name: video
+                label: Video URL
+                type: string
+              - name: ImagenArchivo
+                label: Uploaded Image
+                type: image
+                options:
+                  media: uploads
+              - name: Imagen
+                label: External Image URL
+                type: string
+          - name: features
+            label: Feature Showcase
+            type: object
+            fields:
+              - name: titulo
+                label: Title
+                type: text
+              - name: subtitulo
+                label: Subtitle
+                type: text
+              - name: lista
+                label: Feature List
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{titulo} ({index})"
+                fields:
+                  - name: titulo
+                    label: Title
+                    type: string
+                  - name: descripcion
+                    label: Description
+                    type: text
+                  - name: imagen
+                    label: Image Path or URL
+                    type: string
+                  - name: class
+                    label: Wrapper Classes
+                    type: text
+                  - name: posicion
+                    label: Image Classes
+                    type: text
+                  - name: mas_caracteristicas
+                    label: More Features
+                    type: string
+                    list: true
+          - name: caracteristicas
+            label: Feature Cards Section
+            type: object
+            fields:
+              - name: titulo
+                label: Title
+                type: string
+              - name: subtitulo
+                label: Subtitle
+                type: text
+              - name: boton
+                label: Button
+                type: object
+                fields:
+                  - name: titulo
+                    label: Title
+                    type: string
+                  - name: link
+                    label: Link URL
+                    type: string
+              - name: carta1
+                label: Card 1
+                type: object
+                fields:
+                  - name: icono
+                    label: Icon
+                    type: string
+                  - name: descripcion
+                    label: Description
+                    type: text
+                  - name: estilo
+                    label: Style Classes
+                    type: string
+              - name: carta2
+                label: Card 2
+                type: object
+                fields:
+                  - name: icono
+                    label: Icon
+                    type: string
+                  - name: descripcion
+                    label: Description
+                    type: text
+                  - name: estilo
+                    label: Style Classes
+                    type: string
+              - name: carta3
+                label: Card 3
+                type: object
+                fields:
+                  - name: icono
+                    label: Icon
+                    type: string
+                  - name: descripcion
+                    label: Description
+                    type: text
+                  - name: estilo
+                    label: Style Classes
+                    type: string
+          - name: Caracteristicas_red
+            label: Why Choose Section
+            type: object
+            fields:
+              - name: titulo
+                label: Title
+                type: text
+              - name: subtitulo
+                label: Subtitle
+                type: text
+              - name: lista
+                label: Cards
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{titulo_tarjeta}"
+                fields:
+                  - name: estilo_borde
+                    label: Border Classes
+                    type: string
+                  - name: gridClasses
+                    label: Grid Classes
+                    type: string
+                  - name: estilo_color
+                    label: Color Classes
+                    type: string
+                  - name: icono
+                    label: Icon
+                    type: string
+                  - name: titulo_tarjeta
+                    label: Card Title
+                    type: string
+                  - name: descripcion
+                    label: Description
+                    type: text
+
+  - name: editorial_content
+    label: Editorial Content
+    type: group
+    items:
+      - name: articles
+        label: Articles
+        type: collection
+        path: src/content/articles
+        filename:
+          template: "{primary}.mdoc"
+          field: create
+        format: yaml-frontmatter
+        view:
+          fields: [title, date, description]
+          primary: title
+          sort: [date, title]
+          search: [title, description, body]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: date
+            label: Publish Date
+            type: date
+          - name: body
+            label: Body
+            type: rich-text
+            options:
+              format: markdown
+              media: uploads
+
+      - name: reference_docs
+        label: Reference Docs
+        type: collection
+        path: src/content/reference
+        filename:
+          template: "{primary}.mdoc"
+          field: create
+        format: yaml-frontmatter
+        view:
+          fields: [title, date, description]
+          primary: title
+          sort: [date, title]
+          search: [title, description, body]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: date
+            label: Publish Date
+            type: date
+          - name: body
+            label: Body
+            type: rich-text
+            options:
+              format: markdown
+              media: uploads
+
+  - name: data_library
+    label: Data Library
+    type: group
+    items:
+      - name: whitepapers
+        label: Whitepapers
+        type: collection
+        path: src/data/whitepapers
+        filename:
+          template: "{primary}.json"
+          field: create
+        format: json
+        view:
+          fields: [title, readLink]
+          primary: title
+          sort: [title]
+          search: [title, description, readLink]
+          default:
+            sort: title
+            order: asc
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: readLink
+            label: Read Link
+            type: string
+
+      - name: spreadsheets
+        label: Spreadsheets
+        type: collection
+        path: src/data/spreadsheets
+        filename:
+          template: "{primary}.json"
+          field: create
+        format: json
+        view:
+          fields: [title, url]
+          primary: title
+          sort: [title]
+          search: [title, description, url]
+          default:
+            sort: title
+            order: asc
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: url
+            label: Download URL
+            type: string

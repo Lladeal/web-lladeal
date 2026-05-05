@@ -1,0 +1,117 @@
+{
+  "anuncio": {
+    "titulo": "Introducing DataNova",
+    "titulo_link": "Now ready to try!",
+    "link": "https://github.com/mearashadowfax/DataNova"
+  },
+  "hero": {
+    "titulo": "Turn Excel® into Your Data Intelligence Powerhouse",
+    "subtitulo": "Get instant insights from your spreadsheets with advanced analytics and stunning visualizations. No coding required. Make confident decisions backed by data in minutes, not days.",
+    "Boton_1": {
+      "titulo": "View Pricing",
+      "link": "/downloads/license-options"
+    },
+    "boton_2": {
+      "titulo": "Start Free Trial",
+      "link": "https://github.com/mearashadowfax/DataNova"
+    }
+  },
+  "imagen": {
+    "video": "https://vyclk3sx0z.ufs.sh/f/hv6ttNERWpXuOGj0KhIPk5MLw0bimBlYnq6Vd2NfSJW9gCQU",
+    "ImagenArchivo": "",
+    "Imagen": "https://data-nova.vercel.app/_astro/chart.B3SdqTC1_ZbQRnB.webp"
+  },
+
+  "features": {
+    "titulo": "<span class=\"text-teal-700\">Data</span><span class=\"font-normal text-slate-400\">Nova</span>'s powerful analytics suite",
+    "subtitulo": "Discover how DataNova transforms your Excel workspace into a comprehensive analytics powerhouse, making data analysis accessible and actionable.",
+
+    "lista": [
+      {
+        "titulo": "Native Excel integration",
+        "descripcion": "Work directly in Excel with our native toolbar and custom functions",
+        "imagen": "src/assets/images/toolbar.webp",
+        "class": "content-center border-b border-dashed border-slate-400 py-5 sm:col-span-2 sm:p-5",
+        "posicion": "mx-auto mt-10 rounded-xl shadow-lg sm:w-[75%]"
+      },
+      {
+        "titulo": "Comprehensive analytics suite",
+        "descripcion": "Choose from <span class=\"font-bold\">30+</span> statistical models and <span class=\"font-bold\">25+</span> visualization templates to unlock insights from any dataset.",
+        "imagen": "src/assets/images/graph.webp",
+        "class": "content-center py-5 sm:row-start-2 sm:p-5 sm:py-10",
+        "posicion": "ml-auto mr-auto mt-10 w-[65%] rounded-xl shadow-lg sm:ml-0 sm:w-[45%]"
+      },
+      {
+        "titulo": "Smart analysis tools",
+        "descripcion": "Let AI do the heavy lifting. Automatically detect patterns, spot anomalies, and get accurate forecasts from your historical data.",
+        "imagen": "src/assets/images/dashboard.webp",
+        "class": "content-center border-t border-dashed border-slate-400 py-5 sm:row-span-2 sm:row-start-2 sm:border-l sm:border-t-0 sm:p-5 sm:text-right",
+        "posicion": "ml-auto mr-auto mt-10 w-[80%] rounded-xl shadow-lg sm:mr-0"
+      },
+      {
+        "titulo": "And more...",
+        "class": "content-center border-t border-dashed border-slate-400 py-5 sm:p-5",
+        "mas_caracteristicas": [
+          "Works seamlessly with all modern Excel versions (2013+) on both Windows and Mac",
+          "Build interactive dashboards that update in real-time as your data changes",
+          "Access your insights anywhere through cloud integration with Google Sheets and OneDrive",
+          "Create custom reports that tell your data's story exactly how you want"
+        ]
+      }
+    ]
+  },
+
+  "caracteristicas": {
+    "titulo": "Turn historical data into tomorrow's decisions",
+    "subtitulo": "Leverage advanced statistics and ML to uncover hidden patterns in your data. Make confident decisions backed by proven forecasting models. Our predictive engine analyzes thousands of data points to help you anticipate market changes and stay ahead of the competition.",
+    "boton": {
+      "titulo": "Learn More",
+      "link": "#"
+    },
+    "carta1": {
+      "icono": "dataBase",
+      "descripcion": "Clean, organize, and prepare raw data for analysis.",
+      "estilo": "self-start"
+    },
+    "carta2": {
+      "icono": "brain",
+      "descripcion": "Use statistical models to identify key patterns and trends.",
+      "estilo": "self-center"
+    },
+    "carta3": {
+      "icono": "lightbulb",
+      "descripcion": "Convert insights into visuals and actionable decisions.",
+      "estilo": "self-end"
+    }
+  },
+
+  "Caracteristicas_red": {
+    "titulo": "Why choose <span class=\"text-teal-700\">Data</span><span class=\"font-normal text-slate-400\">Nova</span>?",
+    "subtitulo": "Experience the perfect balance of power and simplicity in data analytics. From startups to enterprises, DataNova empowers teams to extract meaningful insights from their data while maintaining seamless integration with existing workflows. Transform the way you analyze, visualize, and act on your data.",
+    "lista": [
+      {
+        "estilo_borde": "md:border-l md:border-r",
+        "estilo_color": "bg-linear-to-l/oklch from-teal-200 to-transparent",
+        "icono": "cursorRays",
+        "titulo_tarjeta": "Built for everyone",
+        "descripcion": "Whether you're a business analyst or data scientist, DataNova's intuitive interface makes advanced analytics accessible. Start with simple visualizations and progress to complex predictive models at your own pace."
+      },
+      {
+        "estilo_borde": "border-b border-t md:border-b-0",
+        "gridClasses": "md:col-start-2 md:col-end-3",
+        "estilo_color": "bg-linear-to-t/oklch from-teal-200 to-transparent",
+        "icono": "cog",
+        "titulo_tarjeta": "Enterprise-grade analytics",
+        "descripcion": "Harness the full power of advanced analytics with our comprehensive toolset. From automated pattern recognition to custom modeling, DataNova scales with your analytical needs while maintaining exceptional performance."
+      },
+      {
+        "estilo_borde": "md:border-l md:border-r md:border-t",
+        "gridClasses": "md:col-end-4",
+        "estilo_color": "bg-linear-to-tl/oklch from-teal-200 to-transparent",
+        "icono": "puzzle",
+        "titulo_tarjeta": "Seamless integration",
+        "descripcion": "Keep your existing Excel workflow while adding powerful analytics capabilities. DataNova works where you do, transforming your familiar spreadsheets into a sophisticated business intelligence platform."
+      }
+    ]
+  }
+}
