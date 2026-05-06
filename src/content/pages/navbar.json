@@ -1,12 +1,12 @@
 {
   "barra_de_navegacion": {
     "logo": {
-      "imagen": "/CMS-WEB/uploads/SC-INTER-NG (1).avif",
+      "imagen": "/CMS-WEB/uploads/logo-test.png",
       "descripcion": "Logo SCI"
     },
-    "boton":{
-        "texto": "Try Free",
-        "link": "https://github.com/mearashadowfax/DataNova"
+    "boton": {
+      "texto": "Try Free",
+      "link": "https://github.com/mearashadowfax/DataNova"
     }
   }
 }
