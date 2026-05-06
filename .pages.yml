@@ -99,9 +99,6 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
-                  - name: imagen
-                    label: Enlace de imagen externa
-                    type: string
                   - name: imagenArchivo
                     label: Imagen subida
                     type: image
@@ -110,15 +107,15 @@ content:
                   - name: class
                     label: Estilos del bloque
                     type: text
-                  - name: posicion
+                  - name: posición
                     label: Estilos de la imagen
                     type: text
                   - name: mas_caracteristicas
-                    label: Lista adicional de caracteristicas
+                    label: Lista adicional de características
                     type: string
                     list: true
           - name: caracteristicas
-            label: Seccion de tarjetas informativas
+            label: Sección de tarjetas informativas
             type: object
             fields:
               - name: titulo
@@ -212,6 +209,240 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
+      - name: about_page
+        label: Pagina Nosotros
+        type: file
+        path: src/content/pages/about.json
+        format: json
+        fields:
+          - name: datos_sobre_nosotros
+            label: Informacion principal
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: descripcion
+                label: Descripcion
+                type: text
+              - name: estadisticas
+                label: Estadisticas
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{texto}"
+                fields:
+                  - name: texto
+                    label: Texto
+                    type: string
+                  - name: valor
+                    label: Valor
+                    type: string
+          - name: datos_de_experticie
+            label: Experiencia del equipo
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: experticie
+                label: Lista de experiencia
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{titulo}"
+                fields:
+                  - name: titulo
+                    label: Titulo
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+      - name: seo_pages
+        label: SEO y metadatos
+        type: file
+        path: src/content/pages/SEO.json
+        format: json
+        fields:
+          - name: sobre_nosotros
+            label: SEO pagina nosotros
+            type: object
+            fields:
+              - name: lenguaje
+                label: Idioma
+                type: string
+              - name: nombre
+                label: Nombre de la pagina
+                type: string
+              - name: descripcion
+                label: Descripcion general
+                type: text
+              - name: parte_de
+                label: Informacion del sitio
+                type: object
+                fields:
+                  - name: nombre
+                    label: Nombre del sitio
+                    type: string
+                  - name: descripcion
+                    label: Descripcion del sitio
+                    type: text
+          - name: seo_sobre_nosotros
+            label: Meta etiquetas de nosotros
+            type: object
+            fields:
+              - name: title
+                label: Titulo SEO
+                type: string
+              - name: description
+                label: Descripcion SEO
+                type: text
+          - name: seo_contactos
+            label: SEO pagina contacto
+            type: object
+            fields:
+              - name: lenguaje
+                label: Idioma
+                type: string
+              - name: nombre
+                label: Nombre de la pagina
+                type: string
+              - name: description
+                label: Descripcion general
+                type: text
+              - name: parte_de
+                label: Informacion del sitio
+                type: object
+                fields:
+                  - name: nombre
+                    label: Nombre del sitio
+                    type: string
+                  - name: descripcion
+                    label: Descripcion del sitio
+                    type: text
+          - name: seo_contact
+            label: Meta etiquetas de contacto
+            type: object
+            fields:
+              - name: title
+                label: Titulo SEO
+                type: string
+              - name: description
+                label: Descripcion SEO
+                type: text
+      - name: contact_page
+        label: Pagina Contacto
+        type: file
+        path: src/content/pages/contactos.json
+        format: json
+        fields:
+          - name: contactos
+            label: Contenido de contacto
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: string
+              - name: subtitulo
+                label: Texto introductorio
+                type: text
+              - name: direcciones
+                label: Direccion
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de direccion
+                    type: string
+                  - name: direccion_1
+                    label: Direccion linea 1
+                    type: string
+                  - name: direccion_2
+                    label: Direccion linea 2
+                    type: string
+              - name: correo
+                label: Correo y telefono
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de contacto
+                    type: string
+                  - name: telefono
+                    label: Telefono
+                    type: string
+                  - name: mail
+                    label: Correo electronico
+                    type: string
+              - name: blog
+                label: Bloque de ayuda
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo del bloque
+                    type: string
+                  - name: detalles
+                    label: Detalles del bloque
+                    type: object
+                    fields:
+                      - name: descripcion
+                        label: Descripcion
+                        type: text
+                      - name: texto
+                        label: Texto del enlace
+                        type: string
+                      - name: link
+                        label: Enlace
+                        type: string
+      - name: footer_page
+        label: Pie de pagina
+        type: file
+        path: src/content/pages/footer.json
+        format: json
+        fields:
+          - name: generales
+            label: Informacion general
+            type: object
+            fields:
+              - name: nombre_empresa
+                label: Nombre de la empresa
+                type: string
+              - name: Descripcion
+                label: Descripcion de la empresa
+                type: text
+          - name: contactos
+            label: Datos de contacto
+            type: object
+            fields:
+              - name: address
+                label: Direccion corta
+                type: string
+              - name: phone
+                label: Telefono
+                type: string
+              - name: email
+                label: Correo electronico
+                type: string
+              - name: website
+                label: Sitio web
+                type: string
+          - name: creacion
+            label: Creditos del creador
+            type: object
+            fields:
+              - name: nombre
+                label: Nombre
+                type: string
+              - name: Link
+                label: Enlace
+                type: string
+          - name: noticia
+            label: Aviso legal
+            type: object
+            fields:
+              - name: titulo
+                label: Texto del aviso
+                type: text
 
   - name: editorial_content
     label: Contenido editorial

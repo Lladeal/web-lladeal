@@ -28,10 +28,10 @@ import { features } from '@content/pages/home.json'
             <Fragment set:html={feature.descripcion || ''} />
           </p>
 
-          {feature.imagen && (
+          {feature.ImagenArchivo && (
             <img
               class={`${feature.posicion || ''}`}
-              src={feature.imagen}
+              src={feature.ImagenArchivo}
               alt=""
             />
           )}

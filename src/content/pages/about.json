@@ -1,0 +1,37 @@
+{
+    "datos_sobre_nosotros": {
+        "titulo": "DataNova,",
+        "descripcion": "founded in 2018, is a leading provider of powerful analytics tools that transform your Excel workspace into a comprehensive analytics powerhouse, making data analysis accessible and actionable for businesses worldwide.",
+        "estadisticas":[
+            {
+                "texto": "Industry sectors served",
+                "valor": "15+"
+            },
+            {
+                "texto": "Data points processed",
+                "valor": "Billions"
+            },
+            {
+                "texto": "Custom reports generated",
+                "valor": "500,000+"
+            }
+        ]
+    },
+    "datos_de_experticie":{
+        "titulo": "Our expertise:",
+        "experticie":[
+            {
+                "titulo": "AI-powered insights:",
+                "descripcion": "Uncover deep insights and predict trends with advanced AI algorithms for proactive decision-making."
+            },
+            {
+                "titulo": "Real-time data visualization:",
+                "descripcion": "Transform data into interactive visuals, tracking key metrics in real-time for actionable insights."
+            },
+            {
+                "titulo": "Predictive analytics engine:",
+                "descripcion": "Leverage machine learning to forecast trends and identify opportunities, staying ahead of the curve."
+            }
+        ]
+    }
+}

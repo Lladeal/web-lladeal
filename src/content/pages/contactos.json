@@ -1,0 +1,24 @@
+{
+    "contactos": {
+        "titulo": "Contact us",
+        "subtitulo": "Questions, Comments or Feedback.",
+        "direcciones": {
+            "titulo": "Our address:",
+            "direccion_1": "1234 1st Ave Ste 300",
+            "direccion_2": "Seattle, WA 98104, USA"
+        },
+        "correo": {
+            "titulo":"Contact us by email:",
+            "telefono": "1 (833) 328-2669",
+            "mail": "info@datanova.com"
+        },
+        "blog":{
+            "titulo": "Knowledge base",
+            "detalles": {
+                "descripcion": "Browse through all of our knowledge base articles.",
+                "texto": "Search the knowledge base",
+                "link": "/support/knowledge-base"
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "sobre_nosotros": {
+        "lenguaje": "en-US",
+        "nombre": "About DataNova",
+        "descripcion": "Get to know DataNova, the powerful analytics platform for Excel that enables businesses to make data-driven decisions quickly with no coding required.",
+        "parte_de":{
+            "nombre": "DataNova",
+            "descripcion": "DataNova Analytics Inc. provides advanced analytics for Excel to help businesses unlock actionable insights quickly with no coding required."
+        }
+    },
+    "seo_sobre_nosotros": {
+        "title": "About DataNova",
+        "description": "Learn more about DataNova, the analytics platform that transforms your Excel data with advanced insights and predictive models."
+    },
+
+    "seo_contactos": {
+        "lenguaje": "en-US",
+        "nombre": "Contact DataNova",
+        "description": "Reach out to DataNova for any questions, support, or business inquiries. Our team is ready to assist you.",
+        "parte_de": {
+            "nombre": "DataNova",
+            "descripcion": "DataNova Analytics Inc. provides advanced analytics for Excel to help businesses unlock actionable insights quickly with no coding required."
+        }
+    },
+    "seo_contact":{
+        "title": "Contact DataNova",
+        "description": "Get in touch with DataNova for inquiries, support, and feedback. Reach out via email, phone, or visit our office."
+    }
+}
