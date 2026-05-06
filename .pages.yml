@@ -99,15 +99,18 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
-                  - name: imagenArchivo
+                  - name: ImagenArchivo
                     label: Imagen subida
                     type: image
                     options:
                       media: uploads
+                  - name: imagen
+                    label: Enlace de imagen externa
+                    type: string
                   - name: class
                     label: Estilos del bloque
                     type: text
-                  - name: posición
+                  - name: posicion
                     label: Estilos de la imagen
                     type: text
                   - name: mas_caracteristicas
@@ -209,6 +212,26 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
+          - name: call_to_action
+            label: Llamado final a la accion
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: text
+              - name: subtitulo
+                label: Descripcion
+                type: text
+              - name: boton
+                label: Boton principal
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace del boton
+                    type: string
       - name: about_page
         label: Pagina Nosotros
         type: file
@@ -443,6 +466,38 @@ content:
               - name: titulo
                 label: Texto del aviso
                 type: text
+      - name: navbar_page
+        label: Barra de navegacion
+        type: file
+        path: src/content/pages/navbar.json
+        format: json
+        fields:
+          - name: barra_de_navegacion
+            label: Contenido de la barra superior
+            type: object
+            fields:
+              - name: logo
+                label: Logo
+                type: object
+                fields:
+                  - name: imagen
+                    label: Imagen del logo
+                    type: image
+                    options:
+                      media: uploads
+                  - name: descripcion
+                    label: Texto alternativo del logo
+                    type: string
+              - name: boton
+                label: Boton principal
+                type: object
+                fields:
+                  - name: texto
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace del boton
+                    type: string
 
   - name: editorial_content
     label: Contenido editorial

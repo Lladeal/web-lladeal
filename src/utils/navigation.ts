@@ -1,4 +1,6 @@
+import { withBase } from '@utils/links';
+
 export const navigationLinks = [
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { path: '/about', href: withBase('/about'), label: 'About' },
+  { path: '/contact', href: withBase('/contact'), label: 'Contact' },
 ];
