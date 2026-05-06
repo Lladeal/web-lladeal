@@ -15,5 +15,12 @@
   },
   "noticia": {
     "titulo": "Microsoft&reg; and Excel&reg; are registered trademarks or trademarks of Microsoft Corporation"
+  },
+
+  "footer_form": {
+    "leyenda": "Subscribe to our newsletter",
+    "placeholder": "Ingresa tu email",
+    "submit": "enviar",
+    "description": "Get all the information you need. Enter your email, and we'll be in touch."
   }
 }

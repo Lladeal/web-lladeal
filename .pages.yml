@@ -466,6 +466,22 @@ content:
               - name: titulo
                 label: Texto del aviso
                 type: text
+          - name: footer_form
+            label: Formulario del pie de pagina
+            type: object
+            fields:
+              - name: leyenda
+                label: Titulo del formulario
+                type: string
+              - name: placeholder
+                label: Texto de ayuda del campo
+                type: string
+              - name: submit
+                label: Texto del boton
+                type: string
+              - name: description
+                label: Descripcion del formulario
+                type: text
       - name: navbar_page
         label: Barra de navegacion
         type: file
