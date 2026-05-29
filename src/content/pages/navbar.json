@@ -1,8 +1,8 @@
 {
   "barra_de_navegacion": {
     "logo": {
-      "imagen": "/CMS-WEB/uploads/SC-INTER-NG (1).avif",
-      "descripcion": "Logo SCI"
+      "imagen": "/CMS-WEB/uploads/logotipo-lladela.png",
+      "descripcion": "Logo lladeal"
     },
     "boton": {
       "texto": "Try Free",
