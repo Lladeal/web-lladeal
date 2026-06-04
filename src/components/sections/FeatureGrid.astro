@@ -1,5 +1,5 @@
 ---
-import Icon from '@ui/icons/Icon.astro';
+import { Icon } from 'astro-icon/components'
 import { Caracteristicas_red } from '@content/pages/home.json'
 
 ---
@@ -37,7 +37,7 @@ import { Caracteristicas_red } from '@content/pages/home.json'
               class={`group pointer-events-none absolute inset-0 h-full w-full ${feature.estilo_color} opacity-0 transition duration-300 group-hover:opacity-100`}
             />
             <div class="relative z-10 mb-4 px-10">
-              <Icon name={feature.icono} />
+              <Icon name={feature.icono} class="text-2xl text-slate-800" />
             </div>
             <div class="relative z-10 mb-2 px-10 text-lg font-semibold">
               <span class="inline-block text-balance text-slate-800 transition duration-300 group-hover:translate-x-2">

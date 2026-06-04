@@ -5,8 +5,8 @@ import { ClientRouter } from 'astro:transitions';
 import { SEO, type Props as SEOProps } from 'astro-seo';
 import { Schema } from 'astro-seo-schema';
 import type { WithContext, Thing } from 'schema-dts';
-import { AstroFont } from 'astro-font';
 import { withBase } from '@utils/links';
+import { Seo_global } from '@content/pages/SEO.json';
 import '@styles/global.css';
 
 interface Props {
@@ -17,6 +17,7 @@ interface Props {
 // Extract `seo` and `schema` from properties or define defaults
 const { seo, schema } = Astro.props;
 const socialImage = new URL(withBase('/social.png') ?? '/social.png', Astro.site).toString();
+const somatypeBold = withBase('/fonts/Somatype-Bold.otf');
 
 const ogTitle = seo?.title ?? 'DataNova - Unlock Insights from Your Excel Data';
 const ogDescription =
@@ -43,30 +44,29 @@ const defaultSchema: WithContext<Thing> = {
 };
 ---
 
-<html lang="en" class="scroll-pt-32">
+<html lang="es" class="scroll-pt-32">
   <head>
     {/* SEO Meta Tags */}
     <SEO
       charset="utf-8"
-      title={seo?.title ?? 'DataNova'}
-      description={seo?.description ??
-        "Unlock powerful data insights with DataNova's advanced analytics suite for Excel. Visualize, analyze, and make data-driven decisions in minutes with seamless Excel integration, AI-powered analysis, and predictive forecasting models."}
+      title={Seo_global.titulo}
+      description={Seo_global.descripcion}
       openGraph={{
         basic: {
-          title: ogTitle,
+          title: Seo_global.og_titulo,
           type: 'website',
           image: socialImage,
         },
         optional: {
-          description: ogDescription,
+          description: Seo_global.og_descripcion,
         },
       }}
       twitter={{
         card: 'summary_large_image',
-        title: ogTitle,
-        description: ogDescription,
+        title: Seo_global.og_titulo,
+        description: Seo_global.og_descripcion,
         image: socialImage,
-        imageAlt: 'DataNova Logo.',
+        imageAlt: Seo_global.imagen_texto_alternativo,
       }}
       extend={{
         link: [
@@ -86,31 +86,62 @@ const defaultSchema: WithContext<Thing> = {
     {/* Client-Side Router for page transitions */}
     <ClientRouter />
 
-    {/* Font Definitions */}
-    <AstroFont
-      config={[
-        {
-          src: [],
-          name: 'DM Sans',
-          googleFontsURL:
-            'https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap',
-          preload: true,
-          display: 'swap',
-          selector: 'h1, h2, h3, h4',
-          fallback: 'sans-serif',
-        },
-        {
-          src: [],
-          name: 'Work Sans',
-          googleFontsURL:
-            'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap',
-          preload: true,
-          display: 'swap',
-          selector: 'body',
-          fallback: 'sans-serif',
-        },
-      ]}
-    />
+    {/* Local Font Definitions */}
+    <link rel="preload" href={somatypeBold} as="font" type="font/otf" crossorigin />
+    <style
+      is:global
+      define:vars={{
+        somatypeBold,
+      }}
+    >
+      @font-face {
+        font-family: 'DM Sans';
+        src: url(var(--somatypeBold)) format('opentype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'DM Sans';
+        src: url(var(--somatypeBold)) format('opentype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'DM Sans';
+        src: url(var(--somatypeBold)) format('opentype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Work Sans';
+        src: url(var(--somatypeBold)) format('opentype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Work Sans';
+        src: url(var(--somatypeBold)) format('opentype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Work Sans';
+        src: url(var(--somatypeBold)) format('opentype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
 
     {/* Remove duplicate font links during transitions */}
     <script>
@@ -124,7 +155,7 @@ const defaultSchema: WithContext<Thing> = {
       );
     </script>
   </head>
-  <body class="bg-off-white selection:bg-teal-400 selection:text-slate-700">
+  <body class="bg-off-white selection:bg-[#7e2c75] selection:text-white">
     <Navbar />
 
     <main>

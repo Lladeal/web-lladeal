@@ -1,26 +1,26 @@
 {
   "generales": {
-    "nombre_empresa": "DataNova Analytics Inc.",
-    "Descripcion": "DataNova Analytics Inc. is a leading business intelligence and analytics software company founded in 2018, with offices in Boston and Seattle."
+    "nombre_empresa": "Lladeal®",
+    "Descripcion": "Lladeal® es una florícola líder en la producción y exportación de rosas de calidad premium. Centros de cultivo en Cayambe - Ecuador para la distribución internacional."
   },
   "contactos": {
-    "address": "Seattle, WA, 98104",
-    "phone": "593 0939750012",
-    "email": "info@datanova.com",
-    "website": "www.datanova.com"
+    "address": "Cayambe, Pesillo. Olmedo",
+    "phone": "593 939730772",
+    "email": "ecuador@lladeal.com",
+    "website": "www.lladeal.com"
   },
   "creacion": {
-    "nombre": "gulamoff",
-    "Link": "https://www.gulamoff.dev/"
+    "nombre": "Sotomayor Consulting",
+    "Link": "https://sotomayorconsulting.com/inicio/"
   },
   "noticia": {
-    "titulo": "Microsoft&reg; and Excel&reg; are registered trademarks or trademarks of Microsoft Corporation"
+    "titulo": "2026 Lladeal®. Todos los derechos reservados."
   },
 
   "footer_form": {
     "leyenda": "Subscribe to our newsletter",
     "placeholder": "Ingresa tu email",
     "submit": "enviar",
-    "description": "Get all the information you need. Enter your email, and we'll be in touch."
+    "description": "Recibe toda la información que necesitas. Ingresa tu correo y nos pondremos en contacto contigo."
   }
 }

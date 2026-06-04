@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+interface Props {
+  id: string;
+  title: string;
+  src: string;
+  description: string;
+}
+
+const { id, title, src, description } = Astro.props as Props;
+---
+
+<div
+  id={id}
+  class="hs-overlay pointer-events-none fixed inset-s-0 top-0 z-80 hidden size-full overflow-x-hidden overflow-y-auto"
+  role="dialog"
+  tabindex="-1"
+  aria-labelledby={id}
+>
+  <div
+    class="hs-overlay-animation-target hs-overlay-open:scale-100 hs-overlay-open:opacity-100 m-3 flex min-h-[calc(100%-56px)] scale-95 items-center opacity-0 transition-all duration-200 ease-in-out sm:mx-auto sm:w-full sm:max-w-lg"
+  >
+    <div
+      class="bg-overlay border-overlay-line pointer-events-auto flex w-full flex-col rounded-xl border shadow-2xs"
+    >
+      <div
+        class="border-overlay-header flex items-center justify-between border-b px-4 py-3"
+      >
+        <h3 id={id} class="text-foreground font-semibold">
+          {title}
+        </h3>
+        <button
+          type="button"
+          class="bg-surface border-surface-line text-surface-foreground hover:bg-surface-hover focus:bg-surface-focus inline-flex size-8 items-center justify-center gap-x-2 rounded-full border focus:outline-hidden disabled:pointer-events-none disabled:opacity-50"
+          aria-label="Close"
+          data-hs-overlay={`#${id}`}
+        >
+          <span class="sr-only">Close</span>
+          <svg
+            class="size-4 shrink-0"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="overflow-y-auto p-4">
+        <Image
+          src={src}
+          alt={description}
+          class="rounded-lg"
+          height={400}
+          width={700}
+        />
+      </div>
+      <div
+        class="border-overlay-footer flex items-center justify-end gap-x-2 border-t px-4 py-3"
+      >
+        <button
+          type="button"
+          class="bg-primary border-primary-line text-primary-foreground hover:bg-primary-hover focus:bg-primary-focus inline-flex items-center gap-x-2 rounded-lg border px-3 py-2 text-sm font-medium focus:outline-hidden disabled:pointer-events-none disabled:opacity-50"
+        >
+          Guardar cambios
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

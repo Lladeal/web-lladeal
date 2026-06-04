@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import svelte from '@astrojs/svelte';
+import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +17,14 @@ export default defineConfig({
   experimental: {
     clientPrerender: true,
   },
-  integrations: [react(), markdoc(), svelte()],
+  integrations: [
+    react(),
+    markdoc(),
+    svelte(),
+    icon({
+      iconDir: 'public/uploads/icons',
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

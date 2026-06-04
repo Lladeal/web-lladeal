@@ -1,4 +1,15 @@
 {
+    "Seo_global": {
+        "titulo": "DataNova",
+        "descripcion": "Unlock powerful data insights with DataNova's advanced analytics suite for Excel. Visualize, analyze, and make data-driven decisions in minutes with seamless Excel integration, AI-powered analysis, and predictive forecasting models.",
+        "og_titulo": "DataNova - Unlock Insights from Your Excel Data",
+        "og_descripcion": "Transform your Excel workspace with DataNova's powerful analytics suite. Get insights, predictive models, and visualizations in minutes with no coding required.",
+        "imagen_texto_alternativo": "DataNova Logo.",
+        "imagen_og": "/CMS-WEB/social.png",
+        "icono": "/CMS-WEB/icon.svg",
+        "icono_apple": "/CMS-WEB/apple-touch-icon.png",
+        "manifiesto": "/CMS-WEB/manifest.webmanifest"
+    },
     "sobre_nosotros": {
         "lenguaje": "en-US",
         "nombre": "About DataNova",

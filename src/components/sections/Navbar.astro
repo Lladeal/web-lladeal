@@ -9,11 +9,10 @@ import { navigationLinks } from '@utils/navigation';
 import { barra_de_navegacion } from '@content/pages/navbar.json'
 
 const currentPath = stripBase(Astro.url.pathname);
-
 ---
 
 <header
-  class="fixed start-1/2 top-5 z-50 mx-auto flex w-full max-w-sm -translate-x-1/2 transform flex-wrap rounded-2xl border-b border-slate-100 bg-white bg-linear-to-t/oklch from-teal-100 via-transparent to-white p-4 shadow-xs sm:max-w-xl md:max-w-4xl md:flex-nowrap md:justify-start lg:max-w-5xl xl:max-w-6xl xl:shadow-none xl:ring-teal-950/5 2xl:max-w-[81rem] 2xl:via-0%"
+  class="fixed start-1/2 top-5 z-50 mx-auto flex w-full max-w-sm -translate-x-1/2 transform flex-wrap rounded-2xl border-b border-slate-100 bg-white bg-linear-to-t/oklch from-teal-100 via-transparent to-white p-1 shadow-xs sm:max-w-xl md:max-w-4xl md:flex-nowrap md:justify-start lg:max-w-5xl xl:max-w-6xl xl:shadow-none xl:ring-teal-950/5 2xl:max-w-[81rem] 2xl:via-0%"
 >
   <nav
     class="relative mx-auto w-full px-4 py-2 sm:px-6 lg:px-8 xl:flex xl:max-w-7xl xl:items-center xl:justify-between xl:gap-3 2xl:max-w-[85rem]"
@@ -97,11 +96,11 @@ const currentPath = stripBase(Astro.url.pathname);
                 Inicio
               </a>
 
-              <Features />
+              <!-- <Features />
 
               <Platform />
 
-              <Downloads />
+              <Downloads /> -->
 
               <Support />
 

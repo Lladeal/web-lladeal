@@ -4,7 +4,7 @@ import chartImage from '@images/chart.webp';
 import { imagen } from '@content/pages/home.json'
 import { withBase } from '@utils/links';
 
-const heroData = imagen as typeof imagen & { ImagenArchivo?: string };
+const heroData = imagen as typeof imagen & { ImagenArchivo?: string; Imagen?: string };
 const heroImage = heroData.ImagenArchivo?.trim() || heroData.Imagen?.trim();
 ---
 
