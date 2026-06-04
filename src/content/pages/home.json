@@ -240,7 +240,7 @@
     {
       "titulo": "Salma",
       "descripcion": "Rosa Salma",
-      "ImagenArchivo": "/CMS-WEB/uploads/08_Salma.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/08_Salma.png",
       "tipo": "Bicolores",
       "Data": {
         "Tamaño_del_boton": "5,5 - 6,0 cm",
@@ -255,7 +255,7 @@
     {
       "titulo": "Dee Purple",
       "descripcion": "Rosa Dee purple",
-      "ImagenArchivo": "/CMS-WEB/uploads/09_Dee_Purple.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/09_Dee_Purple.png",
       "tipo": "Bicolores",
       "Data": {
         "Tamaño_del_boton": "5 - 6 cm",
@@ -270,7 +270,7 @@
     {
       "titulo": "Explorer",
       "descripcion": "Rosa Explorer",
-      "ImagenArchivo": "/CMS-WEB/uploads/10_Explorer.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/10_Explorer.png",
       "tipo": "Rojos",
       "Data": {
         "Tamaño_del_boton": "6,5 - 7,0 cm",
@@ -285,7 +285,7 @@
     {
       "titulo": "Pink Floyd",
       "descripcion": "Rosa Pink Floyd",
-      "ImagenArchivo": "/CMS-WEB/uploads/11_Pink_Floyd.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/11_Pink_Floyd.png",
       "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6 - 6,5 cm",
@@ -300,7 +300,7 @@
     {
       "titulo": "Brighton",
       "descripcion": "Rosa Brighton",
-      "ImagenArchivo": "/CMS-WEB/uploads/12_Brighton.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/12_Brighton.png",
       "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "5,0 - 6,0 cm",
@@ -315,7 +315,7 @@
     {
       "titulo": "Gotcha",
       "descripcion": "Rosa Gotcha",
-      "ImagenArchivo": "/CMS-WEB/uploads/13_Gotcha.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/13_Gotcha.png",
       "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6,0 - 6,5 cm",
@@ -330,7 +330,7 @@
     {
       "titulo": "Lola",
       "descripcion": "Rosa Lola",
-      "ImagenArchivo": "/CMS-WEB/uploads/14_Lola.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/14_Lola.png",
       "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "7,0 - 8,0 cm",
@@ -345,7 +345,7 @@
     {
       "titulo": "Novia",
       "descripcion": "Rosa Novia",
-      "ImagenArchivo": "/CMS-WEB/uploads/15_Novia.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/15_Novia.png",
       "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "7,0 cm",
@@ -360,7 +360,7 @@
     {
       "titulo": "Proud",
       "descripcion": "Rosa Proud",
-      "ImagenArchivo": "/CMS-WEB/uploads/16_Proud.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/16_Proud.png",
       "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6,9 cm",
@@ -375,7 +375,7 @@
     {
       "titulo": "Nina",
       "descripcion": "Rosa Nina",
-      "ImagenArchivo": "/CMS-WEB/uploads/17_Nina.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/17_Nina.png",
       "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6,4 cm",
@@ -390,7 +390,7 @@
     {
       "titulo": "Shimmer",
       "descripcion": "Rosa Shimmer",
-      "ImagenArchivo": "/CMS-WEB/uploads/18_Shimmer.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/18_Shimmer.png",
       "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6.5 - 7.0 cm",
@@ -405,7 +405,7 @@
     {
       "titulo": "Mondial",
       "descripcion": "Rosa Mondial",
-      "ImagenArchivo": "/CMS-WEB/uploads/19_Mondial.webp",
+      "ImagenArchivo": "/CMS-WEB/uploads/19_Mondial.png",
       "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "5,9 cm",

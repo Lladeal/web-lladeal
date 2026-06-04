@@ -1,40 +1,39 @@
 {
-    "Seo_global": {
-        "titulo": "DataNova",
-        "descripcion": "Unlock powerful data insights with DataNova's advanced analytics suite for Excel. Visualize, analyze, and make data-driven decisions in minutes with seamless Excel integration, AI-powered analysis, and predictive forecasting models.",
-        "og_titulo": "DataNova - Unlock Insights from Your Excel Data",
-        "og_descripcion": "Transform your Excel workspace with DataNova's powerful analytics suite. Get insights, predictive models, and visualizations in minutes with no coding required.",
-        "imagen_texto_alternativo": "DataNova Logo.",
-        "imagen_og": "/CMS-WEB/social.png",
-        "icono": "/CMS-WEB/icon.svg",
-        "icono_apple": "/CMS-WEB/apple-touch-icon.png",
-        "manifiesto": "/CMS-WEB/manifest.webmanifest"
-    },
-    "sobre_nosotros": {
-        "lenguaje": "en-US",
-        "nombre": "About DataNova",
-        "descripcion": "Get to know DataNova, the powerful analytics platform for Excel that enables businesses to make data-driven decisions quickly with no coding required.",
-        "parte_de":{
-            "nombre": "DataNova",
-            "descripcion": "DataNova Analytics Inc. provides advanced analytics for Excel to help businesses unlock actionable insights quickly with no coding required."
-        }
-    },
-    "seo_sobre_nosotros": {
-        "title": "About DataNova",
-        "description": "Learn more about DataNova, the analytics platform that transforms your Excel data with advanced insights and predictive models."
-    },
-
-    "seo_contactos": {
-        "lenguaje": "en-US",
-        "nombre": "Contact DataNova",
-        "description": "Reach out to DataNova for any questions, support, or business inquiries. Our team is ready to assist you.",
-        "parte_de": {
-            "nombre": "DataNova",
-            "descripcion": "DataNova Analytics Inc. provides advanced analytics for Excel to help businesses unlock actionable insights quickly with no coding required."
-        }
-    },
-    "seo_contact":{
-        "title": "Contact DataNova",
-        "description": "Get in touch with DataNova for inquiries, support, and feedback. Reach out via email, phone, or visit our office."
+  "Seo_global": {
+    "titulo": "Lladeal® | Rosas de Exportación de Ecuador Premium",
+    "descripcion": "Descubre la excelencia de Lladeal en Cayambe, Ecuador. Proveedor líder de rosas de altura con tallos robustos y botones grandes. Calidad premium bajo el sol ecuatorial para el mercado internacional.",
+    "og_titulo": "Lladeal® | Las Flores más Hermosas del Mundo",
+    "og_descripcion": "Llevamos la majestuosidad de las rosas ecuatorianas a todo el mundo. Cultivo de altura a 3,000 msnm en Cayambe con máxima durabilidad y frescura garantizada.",
+    "imagen_texto_alternativo": "Logotipo oficial de Lladeal, rosas de exportación de Ecuador.",
+    "imagen_og": "/CMS-WEB/social.png",
+    "icono": "/CMS-WEB/icon.svg",
+    "icono_apple": "/CMS-WEB/apple-touch-icon.png",
+    "manifiesto": "/CMS-WEB/manifest.webmanifest"
+  },
+  "sobre_nosotros": {
+    "lenguaje": "es-EC",
+    "nombre": "Sobre Lladeal",
+    "descripcion": "Conoce Lladeal, florícola líder en Pesillo, Cayambe. Nos especializamos en el cultivo y exportación de rosas premium con los más altos estándares de calidad internacional.",
+    "parte_de": {
+      "nombre": "Lladeal®",
+      "descripcion": "Lladeal® es una empresa florícola ecuatoriana dedicada a la producción sostenible de rosas de altura, reconocidas globalmente por su tamaño, fuerza y colores vibrantes."
     }
+  },
+  "seo_sobre_nosotros": {
+    "title": "Quiénes Somos | Lladeal Florícola en Cayambe",
+    "description": "Explora nuestra historia y procesos agrícolas. En Lladeal combinamos el microclima único de la línea ecuatorial con tecnología agroindustrial para producir rosas perfectas."
+  },
+  "seo_contactos": {
+    "lenguaje": "es-EC",
+    "nombre": "Contacto | Lladeal",
+    "description": "Ponte en contacto con nuestro equipo comercial para importar rosas premium de Ecuador. Atendemos pedidos mayoristas, distribuidores y brokers internacionales.",
+    "parte_de": {
+      "nombre": "Lladeal®",
+      "descripcion": "Lladeal® es una empresa florícola ecuatoriana dedicada a la producción sostenible de rosas de altura, reconocidas globalmente por su tamaño, fuerza y colores vibrantes."
+    }
+  },
+  "seo_contact": {
+    "title": "Contacto y Ventas Mayoristas | Lladeal",
+    "description": "Solicita una cotización o catálogo de nuestras variedades de rosas. Contáctanos por correo, teléfono o visítanos en el Cantón Cayambe, Ecuador."
+  }
 }

@@ -18,30 +18,30 @@ content:
         format: json
         fields:
           - name: anuncio
-            label: Barra de anuncio superior
+            label: Franja superior
             type: object
             fields:
               - name: titulo
                 label: Texto principal
                 type: string
               - name: titulo_link
-                label: Texto del enlace
+                label: Texto del boton
                 type: string
               - name: link
-                label: Enlace
+                label: Enlace del boton
                 type: string
           - name: hero
-            label: Seccion principal
+            label: Portada principal
             type: object
             fields:
               - name: titulo
                 label: Titulo principal
                 type: string
               - name: subtitulo
-                label: Texto descriptivo
+                label: Texto de apoyo
                 type: text
               - name: Boton_1
-                label: Boton principal
+                label: Primer boton
                 type: object
                 fields:
                   - name: titulo
@@ -51,7 +51,7 @@ content:
                     label: Enlace del boton
                     type: string
               - name: boton_2
-                label: Boton secundario
+                label: Segundo boton
                 type: object
                 fields:
                   - name: titulo
@@ -61,74 +61,111 @@ content:
                     label: Enlace del boton
                     type: string
           - name: imagen
-            label: Imagen y video principal
+            label: Video e imagen principal
             type: object
             fields:
               - name: video
-                label: Enlace del video
+                label: Archivo o enlace del video
                 type: string
               - name: ImagenArchivo
-                label: Imagen subida
+                label: Imagen principal subida
                 type: image
                 options:
                   media: uploads
               - name: Imagen
-                label: Enlace de imagen externa
+                label: Imagen externa
                 type: string
           - name: features
-            label: Bloque de funcionalidades destacadas
+            label: Bloque destacado
             type: object
             fields:
               - name: titulo
-                label: Titulo
+                label: Titulo del bloque
                 type: text
               - name: subtitulo
-                label: Descripcion
+                label: Descripcion del bloque
                 type: text
               - name: lista
-                label: Lista de bloques
+                label: Tarjetas destacadas
                 type: object
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{titulo} ({index})"
+                    summary: "{title} ({index})"
                 fields:
-                  - name: titulo
-                    label: Titulo
+                  - name: title
+                    label: Titulo de la tarjeta
                     type: string
-                  - name: descripcion
+                  - name: description
                     label: Descripcion
                     type: text
-                  - name: ImagenArchivo
-                    label: Imagen subida
+                  - name: imagen
+                    label: Campo antiguo de imagen
+                    type: string
+                  - name: image
+                    label: Imagen o ruta principal
+                    type: string
+                  - name: listItems
+                    label: Lista de puntos
+                    type: string
+                    list: true
+                  - name: component
+                    label: Componente especial
+                    type: string
+                  - name: class
+                    label: Ajuste interno de diseno (no cambiar)
+                    type: text
+                  - name: wrapperClass
+                    label: Ajuste interno del contenedor (no cambiar)
+                    type: text
+                  - name: posicion
+                    label: Campo antiguo de posicion
+                    type: text
+                  - name: imageClass
+                    label: Ajuste interno de imagen (no cambiar)
+                    type: text
+                  - name: imageContainerClass
+                    label: Ajuste interno del bloque de imagen (no cambiar)
+                    type: text
+                  - name: imageSecondaryContainerClass
+                    label: Ajuste interno secundario (no cambiar)
+                    type: text
+                  - name: imageFadeClass
+                    label: Ajuste interno de degradado (no cambiar)
+                    type: text
+                  - name: headingClass
+                    label: Ajuste interno del titulo (no cambiar)
+                    type: text
+              - name: Orbita
+                label: Iconos de la orbita
+                type: object
+                fields:
+                  - name: Imagen_central
+                    label: Imagen central
                     type: image
                     options:
                       media: uploads
-                  - name: imagen
-                    label: Enlace de imagen externa
+                  - name: Icono_1
+                    label: Icono 1
                     type: string
-                  - name: class
-                    label: Estilos del bloque
-                    type: text
-                  - name: posicion
-                    label: Estilos de la imagen
-                    type: text
-                  - name: mas_caracteristicas
-                    label: Lista adicional de características
+                  - name: Icono_2
+                    label: Icono 2
                     type: string
-                    list: true
+                  - name: Icono_3
+                    label: Icono 3
+                    type: string
           - name: caracteristicas
-            label: Sección de tarjetas informativas
+            label: Bloque de ventajas
             type: object
             fields:
               - name: titulo
-                label: Titulo
+                label: Titulo del bloque
                 type: string
               - name: subtitulo
-                label: Descripcion
+                label: Descripcion del bloque
                 type: text
               - name: boton
-                label: Boton
+                label: Boton del bloque
                 type: object
                 fields:
                   - name: titulo
@@ -142,49 +179,49 @@ content:
                 type: object
                 fields:
                   - name: icono
-                    label: Icono
+                    label: Nombre del icono
                     type: string
                   - name: descripcion
-                    label: Descripcion
+                    label: Texto de la tarjeta
                     type: text
                   - name: estilo
-                    label: Estilos de la tarjeta
+                    label: Ajuste interno de diseno (no cambiar)
                     type: string
               - name: carta2
                 label: Tarjeta 2
                 type: object
                 fields:
                   - name: icono
-                    label: Icono
+                    label: Nombre del icono
                     type: string
                   - name: descripcion
-                    label: Descripcion
+                    label: Texto de la tarjeta
                     type: text
                   - name: estilo
-                    label: Estilos de la tarjeta
+                    label: Ajuste interno de diseno (no cambiar)
                     type: string
               - name: carta3
                 label: Tarjeta 3
                 type: object
                 fields:
                   - name: icono
-                    label: Icono
+                    label: Nombre del icono
                     type: string
                   - name: descripcion
-                    label: Descripcion
+                    label: Texto de la tarjeta
                     type: text
                   - name: estilo
-                    label: Estilos de la tarjeta
+                    label: Ajuste interno de diseno (no cambiar)
                     type: string
           - name: Caracteristicas_red
-            label: Seccion de ventajas o razones
+            label: Razones para elegirnos
             type: object
             fields:
               - name: titulo
-                label: Titulo
+                label: Titulo del bloque
                 type: text
               - name: subtitulo
-                label: Descripcion
+                label: Descripcion del bloque
                 type: text
               - name: lista
                 label: Tarjetas
@@ -195,32 +232,32 @@ content:
                     summary: "{titulo_tarjeta}"
                 fields:
                   - name: estilo_borde
-                    label: Estilos de bordes
+                    label: Ajuste interno de bordes (no cambiar)
                     type: string
                   - name: gridClasses
-                    label: Estilos de posicion
+                    label: Ajuste interno de posicion (no cambiar)
                     type: string
                   - name: estilo_color
-                    label: Estilos de color
+                    label: Ajuste interno de color (no cambiar)
                     type: string
                   - name: icono
-                    label: Icono
+                    label: Nombre del icono
                     type: string
                   - name: titulo_tarjeta
                     label: Titulo de la tarjeta
                     type: string
                   - name: descripcion
-                    label: Descripcion
+                    label: Texto de la tarjeta
                     type: text
           - name: call_to_action
             label: Llamado final a la accion
             type: object
             fields:
               - name: titulo
-                label: Titulo
+                label: Titulo principal
                 type: text
               - name: subtitulo
-                label: Descripcion
+                label: Texto de apoyo
                 type: text
               - name: boton
                 label: Boton principal
@@ -231,6 +268,53 @@ content:
                     type: string
                   - name: link
                     label: Enlace del boton
+                    type: string
+          - name: carrusel
+            label: Catalogo de rosas
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titulo}"
+            fields:
+              - name: titulo
+                label: Nombre de la rosa
+                type: string
+              - name: descripcion
+                label: Descripcion corta
+                type: text
+              - name: ImagenArchivo
+                label: Imagen de la rosa
+                type: image
+                options:
+                  media: uploads
+              - name: tipo
+                label: Categoria o tipo
+                type: string
+              - name: Data
+                label: Datos tecnicos
+                type: object
+                fields:
+                  - name: Tamaño_del_boton
+                    label: Tamano del boton
+                    type: string
+                  - name: Longitud_del_tallo
+                    label: Longitud del tallo
+                    type: string
+                  - name: Vida_en_florero
+                    label: Vida en florero
+                    type: string
+                  - name: Numero_de_petalos
+                    label: Numero de petalos
+                    type: string
+                  - name: Estado_fenologico
+                    label: Estado fenologico
+                    type: string
+                  - name: Ciclo
+                    label: Ciclo
+                    type: string
+                  - name: link
+                    label: Enlace del producto
                     type: string
       - name: about_page
         label: Pagina Nosotros
