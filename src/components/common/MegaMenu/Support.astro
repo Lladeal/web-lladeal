@@ -1,8 +1,9 @@
 ---
 import Icon from '@ui/icons/Icon.astro';
 import { stripBase, withBase } from '@utils/links';
-import supportMenu from '@utils/megaMenu/support.json';
+import supportData from '@utils/megaMenu/support.json';
 const currentPath = stripBase(Astro.url.pathname);
+const supportMenu = supportData.secciones;
 ---
 
 <div

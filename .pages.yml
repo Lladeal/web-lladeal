@@ -1,9 +1,9 @@
 media:
   - name: uploads
-    label: Imagenes subidas
+    label: Archivos subidos
     input: public/uploads
     output: /CMS-WEB/uploads
-    categories: [image]
+    categories: [image, video]
     rename: safe
 
 content:
@@ -28,7 +28,7 @@ content:
                 label: Texto del boton
                 type: string
               - name: link
-                label: Enlace del boton
+                label: Enlace al hacer clic
                 type: string
           - name: hero
             label: Portada principal
@@ -48,7 +48,7 @@ content:
                     label: Texto del boton
                     type: string
                   - name: link
-                    label: Enlace del boton
+                    label: Enlace al hacer clic
                     type: string
               - name: boton_2
                 label: Segundo boton
@@ -58,14 +58,14 @@ content:
                     label: Texto del boton
                     type: string
                   - name: link
-                    label: Enlace del boton
+                    label: Enlace al hacer clic
                     type: string
           - name: imagen
             label: Video e imagen principal
             type: object
             fields:
               - name: video
-                label: Archivo o enlace del video
+                label: Video principal
                 type: string
               - name: ImagenArchivo
                 label: Imagen principal subida
@@ -73,7 +73,7 @@ content:
                 options:
                   media: uploads
               - name: Imagen
-                label: Imagen externa
+                label: Imagen externa opcional
                 type: string
           - name: features
             label: Bloque destacado
@@ -97,20 +97,20 @@ content:
                     label: Titulo de la tarjeta
                     type: string
                   - name: description
-                    label: Descripcion
+                    label: Texto descriptivo
                     type: text
                   - name: imagen
-                    label: Campo antiguo de imagen
+                    label: Ruta antigua de imagen
                     type: string
                   - name: image
-                    label: Imagen o ruta principal
+                    label: Imagen principal
                     type: string
                   - name: listItems
-                    label: Lista de puntos
+                    label: Lista de puntos destacados
                     type: string
                     list: true
                   - name: component
-                    label: Componente especial
+                    label: Componente visual especial
                     type: string
                   - name: class
                     label: Ajuste interno de diseno (no cambiar)
@@ -119,7 +119,7 @@ content:
                     label: Ajuste interno del contenedor (no cambiar)
                     type: text
                   - name: posicion
-                    label: Campo antiguo de posicion
+                    label: Ajuste antiguo de posicion
                     type: text
                   - name: imageClass
                     label: Ajuste interno de imagen (no cambiar)
@@ -141,7 +141,7 @@ content:
                 type: object
                 fields:
                   - name: Imagen_central
-                    label: Imagen central
+                    label: Imagen del centro
                     type: image
                     options:
                       media: uploads
@@ -172,7 +172,7 @@ content:
                     label: Texto del boton
                     type: string
                   - name: link
-                    label: Enlace del boton
+                    label: Enlace al hacer clic
                     type: string
               - name: carta1
                 label: Tarjeta 1
@@ -182,7 +182,7 @@ content:
                     label: Nombre del icono
                     type: string
                   - name: descripcion
-                    label: Texto de la tarjeta
+                    label: Descripcion de la tarjeta
                     type: text
                   - name: estilo
                     label: Ajuste interno de diseno (no cambiar)
@@ -195,7 +195,7 @@ content:
                     label: Nombre del icono
                     type: string
                   - name: descripcion
-                    label: Texto de la tarjeta
+                    label: Descripcion de la tarjeta
                     type: text
                   - name: estilo
                     label: Ajuste interno de diseno (no cambiar)
@@ -208,7 +208,7 @@ content:
                     label: Nombre del icono
                     type: string
                   - name: descripcion
-                    label: Texto de la tarjeta
+                    label: Descripcion de la tarjeta
                     type: text
                   - name: estilo
                     label: Ajuste interno de diseno (no cambiar)
@@ -224,7 +224,7 @@ content:
                 label: Descripcion del bloque
                 type: text
               - name: lista
-                label: Tarjetas
+                label: Tarjetas de beneficios
                 type: object
                 list:
                   collapsible:
@@ -247,7 +247,7 @@ content:
                     label: Titulo de la tarjeta
                     type: string
                   - name: descripcion
-                    label: Texto de la tarjeta
+                    label: Descripcion de la tarjeta
                     type: text
           - name: call_to_action
             label: Llamado final a la accion
@@ -267,7 +267,7 @@ content:
                     label: Texto del boton
                     type: string
                   - name: link
-                    label: Enlace del boton
+                    label: Enlace al hacer clic
                     type: string
           - name: carrusel
             label: Catalogo de rosas
@@ -281,7 +281,7 @@ content:
                 label: Nombre de la rosa
                 type: string
               - name: descripcion
-                label: Descripcion corta
+                label: Nombre corto o descripcion
                 type: text
               - name: ImagenArchivo
                 label: Imagen de la rosa
@@ -289,10 +289,10 @@ content:
                 options:
                   media: uploads
               - name: tipo
-                label: Categoria o tipo
+                label: Tipo de rosa
                 type: string
               - name: Data
-                label: Datos tecnicos
+                label: Ficha tecnica
                 type: object
                 fields:
                   - name: Tamaño_del_boton
@@ -314,7 +314,7 @@ content:
                     label: Ciclo
                     type: string
                   - name: link
-                    label: Enlace del producto
+                    label: Enlace para consultar o comprar
                     type: string
       - name: about_page
         label: Pagina Nosotros
@@ -596,7 +596,44 @@ content:
                     label: Texto del boton
                     type: string
                   - name: link
-                    label: Enlace del boton
+                    label: Enlace al hacer clic
+                    type: string
+      - name: support_menu
+        label: Menu de blog y ayuda
+        type: file
+        path: src/utils/megaMenu/support.json
+        format: json
+        fields:
+          - name: secciones
+            label: Secciones del menu
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{sectionTitle}"
+            fields:
+              - name: sectionTitle
+                label: Nombre de la seccion
+                type: string
+              - name: items
+                label: Enlaces de esta seccion
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: icon
+                    label: Nombre del icono
+                    type: string
+                  - name: title
+                    label: Titulo del enlace
+                    type: string
+                  - name: description
+                    label: Descripcion corta
+                    type: text
+                  - name: href
+                    label: Enlace de destino
                     type: string
 
   - name: editorial_content
