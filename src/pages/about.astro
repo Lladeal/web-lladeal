@@ -2,9 +2,13 @@
 export const prerender = true;
 import BaseLayout from '@layout/BaseLayout.astro';
 import type { WithContext, Thing } from 'schema-dts';
-import { sobre_nosotros, seo_sobre_nosotros } from '@content/pages/SEO.json'
-import { datos_sobre_nosotros, datos_de_experticie } from '@content/pages/about.json'
-
+import { sobre_nosotros, seo_sobre_nosotros } from '@content/pages/SEO.json';
+import { Image } from 'astro:assets';
+import {
+  datos_sobre_nosotros,
+  datos_de_experticie,
+  Team,
+} from '@content/pages/about.json';
 
 // Schema.org metadata for SEO
 const schema: WithContext<Thing> = {
@@ -14,17 +18,14 @@ const schema: WithContext<Thing> = {
   '@id': Astro.url.href,
   url: Astro.url.href,
   name: `${sobre_nosotros.nombre}`,
-  description:
-    `${sobre_nosotros.descripcion}`,
+  description: `${sobre_nosotros.descripcion}`,
   isPartOf: {
     '@type': 'WebPage',
     url: `${Astro.site}`,
     name: `${sobre_nosotros.parte_de.nombre}`,
-    description:
-      `${sobre_nosotros.parte_de.descripcion}`,
+    description: `${sobre_nosotros.parte_de.descripcion}`,
   },
 };
-
 ---
 
 <BaseLayout seo={seo_sobre_nosotros} schema={schema}>
@@ -66,30 +67,30 @@ const schema: WithContext<Thing> = {
   {/* Expertise Section */}
   <section class="mx-auto max-w-340 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
     <div
-      class="group relative isolate overflow-hidden rounded-3xl bg-teal-200 p-5 sm:p-11"
+      class="group relative isolate overflow-hidden rounded-3xl bg-[#e3186d]/10 p-5 sm:p-11"
     >
       <div
-        class="group to-off-white pointer-events-none absolute inset-0 -top-[10%] h-[120%] w-full rounded-xl bg-linear-to-r/oklch from-teal-200 opacity-0 transition duration-1000 group-hover:opacity-100"
+        class="group pointer-events-none absolute inset-0 -top-[10%] h-[120%] w-full rounded-xl bg-linear-to-r/oklch from-[#e3186d]/20 to-[#181c37]/2 opacity-0 transition duration-1000 group-hover:opacity-100"
       >
       </div>
       <div class="svgBlock mx-auto max-w-7xl">
         <h2
-          class="relative pl-4 text-2xl font-semibold text-balance text-slate-800 md:text-3xl md:leading-tight"
+          class="relative pl-4 text-2xl font-semibold text-balance text-slate-900 md:text-3xl md:leading-tight"
         >
           {datos_de_experticie.titulo}
         </h2>
         <dl
-          class="relative mt-10 grid max-w-xl grid-cols-1 items-start text-base/7 text-slate-600 sm:max-w-none lg:grid-flow-row-dense lg:auto-rows-fr lg:grid-cols-3"
+          class="relative mt-10 grid max-w-xl grid-cols-1 items-start text-base/7 text-slate-800 sm:max-w-none lg:grid-flow-row-dense lg:auto-rows-fr lg:grid-cols-3"
         >
           {
             datos_de_experticie.experticie.map((item, index) => (
               <div
                 class={`px-5 py-5 sm:px-10 lg:py-0 ${index === 1 ? 'h-full border-y border-dashed border-slate-400 lg:border-x lg:border-y-0' : ''}`}
               >
-                <dt class="text-lg font-semibold text-balance text-slate-600">
+                <dt class="text-lg font-semibold text-balance text-slate-800">
                   {item.titulo}
                 </dt>
-                <dd class="mt-2 text-pretty text-slate-500">
+                <dd class="mt-2 text-pretty text-slate-700">
                   {item.descripcion}
                 </dd>
               </div>
@@ -100,7 +101,57 @@ const schema: WithContext<Thing> = {
     </div>
   </section>
 
-  <style define:vars={{ guillocheBg: `url(${import.meta.env.BASE_URL}guilloche.svg)` }}>
+  <section class="mx-auto max-w-340 px-4 pb-12 pb-24 sm:px-6 lg:px-8">
+    <!-- Team -->
+    <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <!-- Title -->
+      <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
+        <h2
+          class="text-foreground text-2xl font-bold text-slate-800 md:text-4xl md:leading-tight"
+        >
+          {Team.titulo}
+        </h2>
+        <p class="text-muted-foreground-2 mt-1 text-slate-700">
+          {Team.descripcion}
+        </p>
+      </div>
+      <!-- End Title -->
+
+      <!-- Grid -->
+      <div
+        class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4 md:gap-12 lg:grid-cols-5"
+      >
+        {
+          Team.team.map(miembro => (
+            <div class="text-center">
+              <Image
+                class="mx-auto size-24 rounded-full"
+                src={
+                  miembro.foto == ''
+                    ? '/CMS-WEB/uploads/fotos_personal/Avatar-default.png'
+                    : miembro.foto
+                }
+                alt={`${miembro.nombre}'s avatar`}
+                width={96}
+                height={96}
+              />
+              <div class="mt-2 sm:mt-4">
+                <h3 class="text-foreground font-medium">{miembro.nombre}</h3>
+                <p class="text-muted-foreground-2 text-sm">{miembro.cargo}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <!-- End Team -->
+  </section>
+
+  <style
+    define:vars={{
+      guillocheBg: `url(${import.meta.env.BASE_URL}guilloche.svg)`,
+    }}
+  >
     .svgBlock::after {
       content: '';
       position: absolute;

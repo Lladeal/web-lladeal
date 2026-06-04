@@ -1,6 +1,6 @@
 {
-  "short_name": "DataNova",
-  "name": "DataNova",
+  "short_name": "LLadeal",
+  "name": "Lladeal",
   "icons": [
     {
       "src": "./icon-192.png",
@@ -18,6 +18,6 @@
   "display": "minimal-ui",
   "id": "/",
   "start_url": "/",
-  "theme_color": "#fefefe",
-  "background_color": "#85c5c5"
+  "theme_color": "#9f006a",
+  "background_color": "#fefefe"
 }

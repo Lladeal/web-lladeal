@@ -5,7 +5,8 @@ import Icon from '@ui/icons/Icon.astro';
 import ContactForm from '@ui/forms/ContactForm.astro';
 import type { WithContext, Thing } from 'schema-dts';
 import { contactos } from '@content/pages/contactos.json';
-import { seo_contactos, seo_contact } from '@content/pages/SEO.json'
+import { seo_contactos, seo_contact } from '@content/pages/SEO.json';
+import { barra_de_navegacion } from '@content/pages/navbar.json';
 
 // Schema.org metadata for SEO
 const schema: WithContext<Thing> = {
@@ -20,8 +21,7 @@ const schema: WithContext<Thing> = {
     '@type': 'WebSite',
     url: `${Astro.site}`,
     name: `${seo_contactos.parte_de.nombre}`,
-    description:
-      `${seo_contactos.parte_de.descripcion}`,
+    description: `${seo_contactos.parte_de.descripcion}`,
   },
 };
 ---
@@ -38,17 +38,13 @@ const schema: WithContext<Thing> = {
     </div>
 
     <div class="grid grid-cols-1 gap-x-10 md:grid-cols-2 lg:gap-x-16">
-      <div
-        class="mb-10 h-fit rounded-xl bg-teal-400 pb-10 md:order-2 md:mb-0 md:pb-0"
-      >
-        <ContactForm />
-      </div>
-
-      <div class="space-y-14">
+      <div class="space-y-14 self-center">
         <div class="flex gap-x-5">
           <Icon name="mapPin" />
           <div class="grow">
-            <h4 class="font-semibold text-slate-600">{contactos.direcciones.titulo}</h4>
+            <h4 class="font-semibold text-slate-600">
+              {contactos.direcciones.titulo}
+            </h4>
 
             <address class="mt-1 text-sm text-slate-500 not-italic">
               {contactos.direcciones.direccion_1}
@@ -61,7 +57,9 @@ const schema: WithContext<Thing> = {
         <div class="flex gap-x-5">
           <Icon name="email" class="size-6 shrink-0 text-slate-600" />
           <div class="grow">
-            <h4 class="font-semibold text-slate-600">{contactos.correo.titulo}</h4>
+            <h4 class="font-semibold text-slate-600">
+              {contactos.correo.titulo}
+            </h4>
 
             <a
               class="mt-1 text-sm text-slate-500 transition-colors duration-300 hover:text-slate-400 focus:text-slate-400 focus:outline-hidden"
@@ -75,7 +73,9 @@ const schema: WithContext<Thing> = {
         <div class="flex gap-x-5">
           <Icon name="info" class="size-6 shrink-0 text-slate-600" />
           <div class="grow">
-            <h4 class="font-semibold text-slate-600">{contactos.blog.titulo}</h4>
+            <h4 class="font-semibold text-slate-600">
+              {contactos.blog.titulo}
+            </h4>
             <p class="mt-1 text-sm text-slate-500">
               {contactos.blog.detalles.descripcion}
             </p>
@@ -91,6 +91,22 @@ const schema: WithContext<Thing> = {
           </div>
         </div>
       </div>
+      <div>
+        <div class="flex justify-center">
+          <img
+            src={barra_de_navegacion.logo.imagen}
+            alt={barra_de_navegacion.logo.descripcion}
+            class="w-48 my-2"
+          />
+        </div>
+        <div
+          class="mb-10 h-fit rounded-xl bg-[#e3186d]/20 pb-10 md:order-2 md:mb-0 md:pb-0"
+        >
+          <ContactForm />
+        </div>
+      </div>
+
+      
     </div>
   </div>
 

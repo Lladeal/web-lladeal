@@ -1,37 +1,67 @@
 {
-    "datos_sobre_nosotros": {
-        "titulo": "DataNova,",
-        "descripcion": "founded in 2018, is a leading provider of powerful analytics tools that transform your Excel workspace into a comprehensive analytics powerhouse, making data analysis accessible and actionable for businesses worldwide.",
-        "estadisticas":[
-            {
-                "texto": "Industry sectors served",
-                "valor": "15+"
-            },
-            {
-                "texto": "Data points processed",
-                "valor": "Billions"
-            },
-            {
-                "texto": "Custom reports generated",
-                "valor": "500,000+"
-            }
-        ]
-    },
-    "datos_de_experticie":{
-        "titulo": "Our expertise:",
-        "experticie":[
-            {
-                "titulo": "AI-powered insights:",
-                "descripcion": "Uncover deep insights and predict trends with advanced AI algorithms for proactive decision-making."
-            },
-            {
-                "titulo": "Real-time data visualization:",
-                "descripcion": "Transform data into interactive visuals, tracking key metrics in real-time for actionable insights."
-            },
-            {
-                "titulo": "Predictive analytics engine:",
-                "descripcion": "Leverage machine learning to forecast trends and identify opportunities, staying ahead of the curve."
-            }
-        ]
-    }
+  "datos_sobre_nosotros": {
+    "titulo": "Lladeal®",
+    "descripcion": "Las rosas de Ecuador no se distinguen por su cantidad, sino por su calidad superior, que es lo que las hace competitivas en el mercado mundial. En Lladeal prometemos que nuestras flores superarán todos los estándares de excelencia previos.",
+    "estadisticas": [
+      {
+        "texto": "Variedades de rosas",
+        "valor": "19"
+      },
+      {
+        "texto": "Colaboradores expertos",
+        "valor": "34"
+      },
+      {
+        "texto": "Destinos de exportación",
+        "valor": "100+"
+      },
+      {
+        "texto": "Rosas comercializadas",
+        "valor": "1,000+"
+      }
+    ]
+  },
+  "datos_de_experticie": {
+    "titulo": "Nuestra excelencia:",
+    "experticie": [
+      {
+        "titulo": "Microclima privilegiado:",
+        "descripcion": "Cultivamos en Cayambe a una altura ideal, logrando que nuestras rosas desarrollen botones más grandes y colores notablemente más vivos."
+      },
+      {
+        "titulo": "Corte y selección manual:",
+        "descripcion": "Cosechamos cada tallo en el punto exacto de apertura, asegurando una simetría perfecta y la máxima calidad de exportación."
+      },
+      {
+        "titulo": "Logística y cadena de frío:",
+        "descripcion": "Garantizamos un proceso de poscosecha riguroso para mantener la frescura e hidratación intactas hasta su destino internacional."
+      }
+    ]
+  },
+  "Team": {
+    "titulo": "Nuestro Equipo",
+    "descripcion":"Lladeal® es una empresa florícola ecuatoriana dedicada a la producción sostenible de rosas de altura, reconocidas globalmente por su tamaño, fuerza y colores vibrantes.",
+    "team": [
+      {
+        "nombre": "Fernando Tituaña",
+        "cargo": "Agricultor Experto",
+        "foto": "/CMS-WEB/uploads/fotos_personal/Fernando.webp"
+      },
+      {
+        "nombre": "Alberto Tituaña",
+        "cargo": "Especialista en Ventas",
+        "foto": "/CMS-WEB/uploads/fotos_personal/Alberto.webp"
+      },
+      {
+        "nombre": "Javier Vallejo",
+        "cargo": "Supervisor",
+        "foto": ""
+      },
+      {
+        "nombre": "Ricardo Tituaña",
+        "cargo": "Manager Logístico",
+        "foto": "/CMS-WEB/uploads/fotos_personal/Ricardo.webp"
+      }
+    ]
+  }
 }

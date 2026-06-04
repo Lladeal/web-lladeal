@@ -1,23 +1,23 @@
 {
     "contactos": {
-        "titulo": "Contact us",
-        "subtitulo": "Questions, Comments or Feedback.",
+        "titulo": "Contáctanos",
+        "subtitulo": "Preguntas, comentarios o solicitudes de cotización.",
         "direcciones": {
-            "titulo": "Our address:",
-            "direccion_1": "1234 1st Ave Ste 300",
-            "direccion_2": "Seattle, WA 98104, USA"
+            "titulo": "Nuestra ubicación:",
+            "direccion_1": "Cayambe, Pesillo",
+            "direccion_2": "Olmedo, Ecuador"
         },
         "correo": {
-            "titulo":"Contact us by email:",
-            "telefono": "1 (833) 328-2669",
-            "mail": "info@datanova.com"
+            "titulo": "Escríbenos por correo o llámanos:",
+            "telefono": "+593 939730772",
+            "mail": "ecuador@lladeal.com"
         },
-        "blog":{
-            "titulo": "Knowledge base",
+        "blog": {
+            "titulo": "Catálogo de Variedades",
             "detalles": {
-                "descripcion": "Browse through all of our knowledge base articles.",
-                "texto": "Search the knowledge base",
-                "link": "/support/knowledge-base"
+                "descripcion": "Explora nuestra exclusiva colección de rosas premium de altura.",
+                "texto": "Ver catálogo de rosas",
+                "link": "/catalogo"
             }
         }
     }

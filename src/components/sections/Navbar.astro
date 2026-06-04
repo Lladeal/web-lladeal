@@ -1,8 +1,8 @@
 ---
-import Downloads from '@megaMenu/Downloads.astro';
-import Support from '@megaMenu/Support.astro';
-import Platform from '@megaMenu/Platform.astro';
-import Features from '@megaMenu/Features.astro';
+// import Downloads from '@megaMenu/Downloads.astro';
+// import Support from '@megaMenu/Support.astro';
+// import Platform from '@megaMenu/Platform.astro';
+// import Features from '@megaMenu/Features.astro';
 import Button from '@ui/Button.astro';
 import { stripBase, withBase } from '@utils/links';
 import { navigationLinks } from '@utils/navigation';
@@ -102,7 +102,7 @@ const currentPath = stripBase(Astro.url.pathname);
 
               <Downloads /> -->
 
-              <Support />
+              <!-- <Support /> -->
 
               {
                 navigationLinks.map(link => (
