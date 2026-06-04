@@ -3,6 +3,15 @@ import { carrusel } from '@content/pages/home.json';
 import { Image } from 'astro:assets';
 import Button from '@ui/Button.astro';
 import { Icon } from 'astro-icon/components'
+
+function slugify(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
 ---
 
 <div class="mx-auto max-w-340 px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20">
@@ -101,7 +110,7 @@ import { Icon } from 'astro-icon/components'
                       </div>
                     </div>
                     <div class="mt-10 flex gap-3">
-                      <Button variant="alternative" href="#"> Saber más </Button>
+                      <Button variant="alternative" href={`/catalogo/${slugify(items.titulo)}`}> Saber más </Button>
                     </div>
                   </div>
                 </article>
@@ -183,5 +192,5 @@ import { Icon } from 'astro-icon/components'
   <!-- End Carousel -->
 </div>
 <div class="mx-auto flex w-full justify-center">
-  <Button variant="primary"> Ver en Detalle </Button>
+  <Button variant="primary" href="/catalogo"> Ver en detalle </Button>
 </div>
