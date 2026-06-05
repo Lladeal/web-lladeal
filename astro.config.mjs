@@ -13,6 +13,13 @@ export default defineConfig({
   site: 'https://damocles99.github.io',
   base: '/CMS-WEB',
   prefetch: true,
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en', 'ru', 'zh'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   trailingSlash: 'never',
   experimental: {
     clientPrerender: true,

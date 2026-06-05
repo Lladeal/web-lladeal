@@ -1,0 +1,25 @@
+{
+  "generales": {
+    "nombre_empresa": "Lladeal®",
+    "Descripcion": "Lladeal® is a leading flower company focused on the production and export of premium roses. Our growing operations in Cayambe, Ecuador support international distribution."
+  },
+  "contactos": {
+    "address": "Cayambe, Pesillo. Olmedo",
+    "phone": "593 939730772",
+    "email": "ecuador@lladeal.com",
+    "website": "www.lladeal.com"
+  },
+  "creacion": {
+    "nombre": "Sotomayor Consulting",
+    "Link": "https://sotomayorconsulting.com/inicio/"
+  },
+  "noticia": {
+    "titulo": "2026 Lladeal®. All rights reserved."
+  },
+  "footer_form": {
+    "leyenda": "Subscribe to our newsletter",
+    "placeholder": "Enter your email",
+    "submit": "Send",
+    "description": "Receive the information you need. Enter your email and our team will contact you."
+  }
+}

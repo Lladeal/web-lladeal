@@ -1,0 +1,67 @@
+{
+  "datos_sobre_nosotros": {
+    "titulo": "Lladeal®",
+    "descripcion": "Ecuadorian roses stand out not because of volume, but because of superior quality. At Lladeal, we are committed to delivering flowers that exceed the highest standards of excellence.",
+    "estadisticas": [
+      {
+        "texto": "Rose varieties",
+        "valor": "19"
+      },
+      {
+        "texto": "Expert collaborators",
+        "valor": "34"
+      },
+      {
+        "texto": "Export destinations",
+        "valor": "100+"
+      },
+      {
+        "texto": "Roses marketed",
+        "valor": "1,000+"
+      }
+    ]
+  },
+  "datos_de_experticie": {
+    "titulo": "Our excellence:",
+    "experticie": [
+      {
+        "titulo": "Privileged microclimate:",
+        "descripcion": "We grow in Cayambe at an ideal altitude, allowing our roses to develop larger buds and remarkably vivid colors."
+      },
+      {
+        "titulo": "Manual cutting and selection:",
+        "descripcion": "Every stem is harvested at the exact opening point to ensure perfect symmetry and export-grade quality."
+      },
+      {
+        "titulo": "Logistics and cold chain:",
+        "descripcion": "We guarantee a rigorous post-harvest process to preserve freshness and hydration until each order reaches its international destination."
+      }
+    ]
+  },
+  "Team": {
+    "titulo": "Our Team",
+    "descripcion": "Lladeal® is an Ecuadorian flower company dedicated to the sustainable production of high-altitude roses, globally recognized for their size, strength, and vibrant colors.",
+    "team": [
+      {
+        "nombre": "Fernando Tituaña",
+        "cargo": "Expert Grower",
+        "foto": "/CMS-WEB/uploads/fotos_personal/Fernando.webp"
+      },
+      {
+        "nombre": "Alberto Tituaña",
+        "cargo": "Sales Specialist",
+        "foto": "/CMS-WEB/uploads/fotos_personal/Alberto.webp"
+      },
+      {
+        "nombre": "Javier Vallejo",
+        "cargo": "Supervisor",
+        "foto": ""
+      },
+      {
+        "nombre": "Ricardo Tituaña",
+        "cargo": "Logistics Manager",
+        "foto": "/CMS-WEB/uploads/fotos_personal/Ricardo.webp"
+      }
+    ]
+  }
+}

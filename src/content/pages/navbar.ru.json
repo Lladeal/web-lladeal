@@ -1,0 +1,12 @@
+{
+  "barra_de_navegacion": {
+    "logo": {
+      "imagen": "/CMS-WEB/uploads/logotipo-lladela.png",
+      "descripcion": "Логотип Lladeal"
+    },
+    "boton": {
+      "texto": "Связаться с нами",
+      "link": "https://github.com/mearashadowfax/DataNova"
+    }
+  }
+}

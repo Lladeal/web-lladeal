@@ -598,6 +598,92 @@ content:
                   - name: link
                     label: Enlace al hacer clic
                     type: string
+      - name: catalog_page
+        label: Pagina Catalogo
+        type: file
+        path: src/content/pages/catalogo.json
+        format: json
+        fields:
+          - name: hero
+            label: Encabezado del catalogo
+            type: object
+            fields:
+              - name: preTitle
+                label: Texto pequeno superior
+                type: string
+              - name: title
+                label: Titulo principal
+                type: string
+              - name: subTitle
+                label: Texto descriptivo
+                type: text
+              - name: linkTitle
+                label: Texto del enlace principal
+                type: string
+              - name: linkHref
+                label: Enlace principal
+                type: string
+              - name: linkAriaLabel
+                label: Texto accesible del enlace
+                type: string
+          - name: listing
+            label: Tarjetas del catalogo
+            type: object
+            fields:
+              - name: typeLabel
+                label: Etiqueta para el tipo
+                type: string
+              - name: button
+                label: Texto del boton de cada rosa
+                type: string
+          - name: detail
+            label: Pagina de detalle de cada rosa
+            type: object
+            fields:
+              - name: badge
+                label: Etiqueta superior
+                type: string
+              - name: consultButton
+                label: Texto del boton para consultar
+                type: string
+              - name: backButton
+                label: Texto del boton para volver
+                type: string
+              - name: specsTitle
+                label: Titulo de la ficha tecnica
+                type: string
+              - name: specs
+                label: Nombres de los datos tecnicos
+                type: object
+                fields:
+                  - name: budSize
+                    label: Tamano del boton
+                    type: string
+                  - name: stemLength
+                    label: Longitud del tallo
+                    type: string
+                  - name: vaseLife
+                    label: Vida en florero
+                    type: string
+                  - name: petals
+                    label: Numero de petalos
+                    type: string
+                  - name: phenologicalStage
+                    label: Estado fenologico
+                    type: string
+                  - name: cycle
+                    label: Ciclo
+                    type: string
+          - name: seo
+            label: SEO del catalogo
+            type: object
+            fields:
+              - name: title
+                label: Titulo SEO
+                type: string
+              - name: description
+                label: Descripcion SEO
+                type: text
       - name: support_menu
         label: Menu de blog y ayuda
         type: file
@@ -635,6 +721,996 @@ content:
                   - name: href
                     label: Enlace de destino
                     type: string
+
+  - name: site_pages_en
+    label: Paginas en ingles
+    type: group
+    items:
+      - name: home_page_en
+        label: Inicio en ingles
+        type: file
+        path: src/content/pages/home.en.json
+        format: json
+        fields:
+          - name: anuncio
+            label: Franja superior
+            type: object
+            fields:
+              - name: titulo
+                label: Texto principal
+                type: string
+              - name: titulo_link
+                label: Texto del boton
+                type: string
+              - name: link
+                label: Enlace al hacer clic
+                type: string
+          - name: hero
+            label: Portada principal
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: string
+              - name: subtitulo
+                label: Texto de apoyo
+                type: text
+              - name: Boton_1
+                label: Primer boton
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
+                    type: string
+              - name: boton_2
+                label: Segundo boton
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
+                    type: string
+          - name: carrusel
+            label: Catalogo de rosas
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titulo}"
+            fields:
+              - name: titulo
+                label: Nombre de la rosa
+                type: string
+              - name: descripcion
+                label: Descripcion en ingles
+                type: text
+              - name: tipo
+                label: Tipo en ingles
+                type: string
+      - name: about_page_en
+        label: Nosotros en ingles
+        type: file
+        path: src/content/pages/about.en.json
+        format: json
+        fields:
+          - name: datos_sobre_nosotros
+            label: Informacion principal
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: descripcion
+                label: Descripcion
+                type: text
+              - name: estadisticas
+                label: Estadisticas
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{texto}"
+                fields:
+                  - name: texto
+                    label: Texto
+                    type: string
+                  - name: valor
+                    label: Valor
+                    type: string
+          - name: datos_de_experticie
+            label: Experiencia del equipo
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: experticie
+                label: Lista de experiencia
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{titulo}"
+                fields:
+                  - name: titulo
+                    label: Titulo
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+      - name: contact_page_en
+        label: Contacto en ingles
+        type: file
+        path: src/content/pages/contactos.en.json
+        format: json
+        fields:
+          - name: contactos
+            label: Contenido de contacto
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: string
+              - name: subtitulo
+                label: Texto introductorio
+                type: text
+              - name: direcciones
+                label: Direccion
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de direccion
+                    type: string
+                  - name: direccion_1
+                    label: Direccion linea 1
+                    type: string
+                  - name: direccion_2
+                    label: Direccion linea 2
+                    type: string
+              - name: correo
+                label: Correo y telefono
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de contacto
+                    type: string
+                  - name: telefono
+                    label: Telefono
+                    type: string
+                  - name: mail
+                    label: Correo electronico
+                    type: string
+              - name: blog
+                label: Bloque de ayuda
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo del bloque
+                    type: string
+                  - name: detalles
+                    label: Detalles del bloque
+                    type: object
+                    fields:
+                      - name: descripcion
+                        label: Descripcion
+                        type: text
+                      - name: texto
+                        label: Texto del enlace
+                        type: string
+                      - name: link
+                        label: Enlace
+                        type: string
+      - name: catalog_page_en
+        label: Catalogo en ingles
+        type: file
+        path: src/content/pages/catalogo.en.json
+        format: json
+        fields:
+          - name: hero
+            label: Encabezado del catalogo
+            type: object
+            fields:
+              - name: preTitle
+                label: Texto pequeno superior
+                type: string
+              - name: title
+                label: Titulo principal
+                type: string
+              - name: subTitle
+                label: Texto descriptivo
+                type: text
+              - name: linkTitle
+                label: Texto del enlace principal
+                type: string
+              - name: linkHref
+                label: Enlace principal
+                type: string
+              - name: linkAriaLabel
+                label: Texto accesible del enlace
+                type: string
+          - name: listing
+            label: Tarjetas del catalogo
+            type: object
+            fields:
+              - name: typeLabel
+                label: Etiqueta para el tipo
+                type: string
+              - name: button
+                label: Texto del boton de cada rosa
+                type: string
+          - name: detail
+            label: Pagina de detalle de cada rosa
+            type: object
+            fields:
+              - name: badge
+                label: Etiqueta superior
+                type: string
+              - name: consultButton
+                label: Texto del boton para consultar
+                type: string
+              - name: backButton
+                label: Texto del boton para volver
+                type: string
+              - name: specsTitle
+                label: Titulo de la ficha tecnica
+                type: string
+              - name: specs
+                label: Nombres de los datos tecnicos
+                type: object
+                fields:
+                  - name: budSize
+                    label: Tamano del boton
+                    type: string
+                  - name: stemLength
+                    label: Longitud del tallo
+                    type: string
+                  - name: vaseLife
+                    label: Vida en florero
+                    type: string
+                  - name: petals
+                    label: Numero de petalos
+                    type: string
+                  - name: phenologicalStage
+                    label: Estado fenologico
+                    type: string
+                  - name: cycle
+                    label: Ciclo
+                    type: string
+          - name: seo
+            label: SEO del catalogo
+            type: object
+            fields:
+              - name: title
+                label: Titulo SEO
+                type: string
+              - name: description
+                label: Descripcion SEO
+                type: text
+      - name: footer_page_en
+        label: Pie de pagina en ingles
+        type: file
+        path: src/content/pages/footer.en.json
+        format: json
+        fields:
+          - name: generales
+            label: Informacion general
+            type: object
+            fields:
+              - name: nombre_empresa
+                label: Nombre de la empresa
+                type: string
+              - name: Descripcion
+                label: Descripcion de la empresa
+                type: text
+          - name: footer_form
+            label: Formulario del pie de pagina
+            type: object
+            fields:
+              - name: leyenda
+                label: Titulo del formulario
+                type: string
+              - name: placeholder
+                label: Texto de ayuda del campo
+                type: string
+              - name: submit
+                label: Texto del boton
+                type: string
+              - name: description
+                label: Descripcion del formulario
+                type: text
+      - name: navbar_page_en
+        label: Barra de navegacion en ingles
+        type: file
+        path: src/content/pages/navbar.en.json
+        format: json
+        fields:
+          - name: barra_de_navegacion
+            label: Contenido de la barra superior
+            type: object
+            fields:
+              - name: logo
+                label: Logo
+                type: object
+                fields:
+                  - name: imagen
+                    label: Imagen del logo
+                    type: image
+                    options:
+                      media: uploads
+                  - name: descripcion
+                    label: Texto alternativo del logo
+                    type: string
+              - name: boton
+                label: Boton principal
+                type: object
+                fields:
+                  - name: texto
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
+                    type: string
+      - name: seo_pages_en
+        label: SEO en ingles
+        type: file
+        path: src/content/pages/SEO.en.json
+        format: json
+        fields:
+          - name: Seo_global
+            label: SEO global
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo general
+                type: string
+              - name: descripcion
+                label: Descripcion general
+                type: text
+              - name: og_titulo
+                label: Titulo para redes
+                type: string
+              - name: og_descripcion
+                label: Descripcion para redes
+                type: text
+          - name: sobre_nosotros
+            label: SEO pagina nosotros
+            type: object
+            fields:
+              - name: lenguaje
+                label: Idioma
+                type: string
+              - name: nombre
+                label: Nombre de la pagina
+                type: string
+              - name: descripcion
+                label: Descripcion general
+                type: text
+          - name: seo_sobre_nosotros
+            label: Meta etiquetas de nosotros
+            type: object
+            fields:
+              - name: title
+                label: Titulo SEO
+                type: string
+              - name: description
+                label: Descripcion SEO
+                type: text
+          - name: seo_contactos
+            label: SEO pagina contacto
+            type: object
+            fields:
+              - name: lenguaje
+                label: Idioma
+                type: string
+              - name: nombre
+                label: Nombre de la pagina
+                type: string
+              - name: description
+                label: Descripcion general
+                type: text
+          - name: seo_contact
+            label: Meta etiquetas de contacto
+            type: object
+            fields:
+              - name: title
+                label: Titulo SEO
+                type: string
+              - name: description
+                label: Descripcion SEO
+                type: text
+
+  - name: site_pages_ru
+    label: Paginas en ruso
+    type: group
+    items:
+      - name: home_page_ru
+        label: Inicio en ruso
+        type: file
+        path: src/content/pages/home.ru.json
+        format: json
+        fields:
+          - name: anuncio
+            label: Franja superior
+            type: object
+            fields:
+              - name: titulo
+                label: Texto principal
+                type: string
+              - name: titulo_link
+                label: Texto del boton
+                type: string
+              - name: link
+                label: Enlace al hacer clic
+                type: string
+          - name: hero
+            label: Portada principal
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: string
+              - name: subtitulo
+                label: Texto de apoyo
+                type: text
+              - name: Boton_1
+                label: Primer boton
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
+                    type: string
+              - name: boton_2
+                label: Segundo boton
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
+                    type: string
+          - name: carrusel
+            label: Catalogo de rosas
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titulo}"
+            fields:
+              - name: titulo
+                label: Nombre de la rosa
+                type: string
+              - name: descripcion
+                label: Descripcion en ruso
+                type: text
+              - name: tipo
+                label: Tipo en ruso
+                type: string
+      - name: about_page_ru
+        label: Nosotros en ruso
+        type: file
+        path: src/content/pages/about.ru.json
+        format: json
+        fields:
+          - name: datos_sobre_nosotros
+            label: Informacion principal
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: descripcion
+                label: Descripcion
+                type: text
+          - name: datos_de_experticie
+            label: Experiencia del equipo
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: experticie
+                label: Lista de experiencia
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{titulo}"
+                fields:
+                  - name: titulo
+                    label: Titulo
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+      - name: contact_page_ru
+        label: Contacto en ruso
+        type: file
+        path: src/content/pages/contactos.ru.json
+        format: json
+        fields:
+          - name: contactos
+            label: Contenido de contacto
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: string
+              - name: subtitulo
+                label: Texto introductorio
+                type: text
+              - name: direcciones
+                label: Direccion
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de direccion
+                    type: string
+                  - name: direccion_1
+                    label: Direccion linea 1
+                    type: string
+                  - name: direccion_2
+                    label: Direccion linea 2
+                    type: string
+              - name: correo
+                label: Correo y telefono
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de contacto
+                    type: string
+                  - name: telefono
+                    label: Telefono
+                    type: string
+                  - name: mail
+                    label: Correo electronico
+                    type: string
+      - name: catalog_page_ru
+        label: Catalogo en ruso
+        type: file
+        path: src/content/pages/catalogo.ru.json
+        format: json
+        fields:
+          - name: hero
+            label: Encabezado del catalogo
+            type: object
+            fields:
+              - name: preTitle
+                label: Texto pequeno superior
+                type: string
+              - name: title
+                label: Titulo principal
+                type: string
+              - name: subTitle
+                label: Texto descriptivo
+                type: text
+              - name: linkTitle
+                label: Texto del enlace principal
+                type: string
+          - name: listing
+            label: Tarjetas del catalogo
+            type: object
+            fields:
+              - name: typeLabel
+                label: Etiqueta para el tipo
+                type: string
+              - name: button
+                label: Texto del boton de cada rosa
+                type: string
+          - name: detail
+            label: Pagina de detalle de cada rosa
+            type: object
+            fields:
+              - name: badge
+                label: Etiqueta superior
+                type: string
+              - name: consultButton
+                label: Texto del boton para consultar
+                type: string
+              - name: backButton
+                label: Texto del boton para volver
+                type: string
+              - name: specsTitle
+                label: Titulo de la ficha tecnica
+                type: string
+          - name: seo
+            label: SEO del catalogo
+            type: object
+            fields:
+              - name: title
+                label: Titulo SEO
+                type: string
+              - name: description
+                label: Descripcion SEO
+                type: text
+      - name: footer_page_ru
+        label: Pie de pagina en ruso
+        type: file
+        path: src/content/pages/footer.ru.json
+        format: json
+        fields:
+          - name: generales
+            label: Informacion general
+            type: object
+            fields:
+              - name: nombre_empresa
+                label: Nombre de la empresa
+                type: string
+              - name: Descripcion
+                label: Descripcion de la empresa
+                type: text
+          - name: footer_form
+            label: Formulario del pie de pagina
+            type: object
+            fields:
+              - name: leyenda
+                label: Titulo del formulario
+                type: string
+              - name: placeholder
+                label: Texto de ayuda del campo
+                type: string
+              - name: submit
+                label: Texto del boton
+                type: string
+              - name: description
+                label: Descripcion del formulario
+                type: text
+      - name: navbar_page_ru
+        label: Barra de navegacion en ruso
+        type: file
+        path: src/content/pages/navbar.ru.json
+        format: json
+        fields:
+          - name: barra_de_navegacion
+            label: Contenido de la barra superior
+            type: object
+            fields:
+              - name: logo
+                label: Logo
+                type: object
+                fields:
+                  - name: imagen
+                    label: Imagen del logo
+                    type: image
+                    options:
+                      media: uploads
+                  - name: descripcion
+                    label: Texto alternativo del logo
+                    type: string
+              - name: boton
+                label: Boton principal
+                type: object
+                fields:
+                  - name: texto
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
+                    type: string
+      - name: seo_pages_ru
+        label: SEO en ruso
+        type: file
+        path: src/content/pages/SEO.ru.json
+        format: json
+        fields:
+          - name: Seo_global
+            label: SEO global
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo general
+                type: string
+              - name: descripcion
+                label: Descripcion general
+                type: text
+              - name: og_titulo
+                label: Titulo para redes
+                type: string
+              - name: og_descripcion
+                label: Descripcion para redes
+                type: text
+
+  - name: site_pages_zh
+    label: Paginas en chino
+    type: group
+    items:
+      - name: home_page_zh
+        label: Inicio en chino
+        type: file
+        path: src/content/pages/home.zh.json
+        format: json
+        fields:
+          - name: anuncio
+            label: Franja superior
+            type: object
+            fields:
+              - name: titulo
+                label: Texto principal
+                type: string
+              - name: titulo_link
+                label: Texto del boton
+                type: string
+              - name: link
+                label: Enlace al hacer clic
+                type: string
+          - name: hero
+            label: Portada principal
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: string
+              - name: subtitulo
+                label: Texto de apoyo
+                type: text
+              - name: Boton_1
+                label: Primer boton
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
+                    type: string
+              - name: boton_2
+                label: Segundo boton
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
+                    type: string
+          - name: carrusel
+            label: Catalogo de rosas
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titulo}"
+            fields:
+              - name: titulo
+                label: Nombre de la rosa
+                type: string
+              - name: descripcion
+                label: Descripcion en chino
+                type: text
+              - name: tipo
+                label: Tipo en chino
+                type: string
+      - name: about_page_zh
+        label: Nosotros en chino
+        type: file
+        path: src/content/pages/about.zh.json
+        format: json
+        fields:
+          - name: datos_sobre_nosotros
+            label: Informacion principal
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: descripcion
+                label: Descripcion
+                type: text
+          - name: datos_de_experticie
+            label: Experiencia del equipo
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: experticie
+                label: Lista de experiencia
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{titulo}"
+                fields:
+                  - name: titulo
+                    label: Titulo
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+      - name: contact_page_zh
+        label: Contacto en chino
+        type: file
+        path: src/content/pages/contactos.zh.json
+        format: json
+        fields:
+          - name: contactos
+            label: Contenido de contacto
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: string
+              - name: subtitulo
+                label: Texto introductorio
+                type: text
+              - name: direcciones
+                label: Direccion
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de direccion
+                    type: string
+                  - name: direccion_1
+                    label: Direccion linea 1
+                    type: string
+                  - name: direccion_2
+                    label: Direccion linea 2
+                    type: string
+              - name: correo
+                label: Correo y telefono
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de contacto
+                    type: string
+                  - name: telefono
+                    label: Telefono
+                    type: string
+                  - name: mail
+                    label: Correo electronico
+                    type: string
+      - name: catalog_page_zh
+        label: Catalogo en chino
+        type: file
+        path: src/content/pages/catalogo.zh.json
+        format: json
+        fields:
+          - name: hero
+            label: Encabezado del catalogo
+            type: object
+            fields:
+              - name: preTitle
+                label: Texto pequeno superior
+                type: string
+              - name: title
+                label: Titulo principal
+                type: string
+              - name: subTitle
+                label: Texto descriptivo
+                type: text
+              - name: linkTitle
+                label: Texto del enlace principal
+                type: string
+          - name: listing
+            label: Tarjetas del catalogo
+            type: object
+            fields:
+              - name: typeLabel
+                label: Etiqueta para el tipo
+                type: string
+              - name: button
+                label: Texto del boton de cada rosa
+                type: string
+          - name: detail
+            label: Pagina de detalle de cada rosa
+            type: object
+            fields:
+              - name: badge
+                label: Etiqueta superior
+                type: string
+              - name: consultButton
+                label: Texto del boton para consultar
+                type: string
+              - name: backButton
+                label: Texto del boton para volver
+                type: string
+              - name: specsTitle
+                label: Titulo de la ficha tecnica
+                type: string
+          - name: seo
+            label: SEO del catalogo
+            type: object
+            fields:
+              - name: title
+                label: Titulo SEO
+                type: string
+              - name: description
+                label: Descripcion SEO
+                type: text
+      - name: footer_page_zh
+        label: Pie de pagina en chino
+        type: file
+        path: src/content/pages/footer.zh.json
+        format: json
+        fields:
+          - name: generales
+            label: Informacion general
+            type: object
+            fields:
+              - name: nombre_empresa
+                label: Nombre de la empresa
+                type: string
+              - name: Descripcion
+                label: Descripcion de la empresa
+                type: text
+          - name: footer_form
+            label: Formulario del pie de pagina
+            type: object
+            fields:
+              - name: leyenda
+                label: Titulo del formulario
+                type: string
+              - name: placeholder
+                label: Texto de ayuda del campo
+                type: string
+              - name: submit
+                label: Texto del boton
+                type: string
+              - name: description
+                label: Descripcion del formulario
+                type: text
+      - name: navbar_page_zh
+        label: Barra de navegacion en chino
+        type: file
+        path: src/content/pages/navbar.zh.json
+        format: json
+        fields:
+          - name: barra_de_navegacion
+            label: Contenido de la barra superior
+            type: object
+            fields:
+              - name: logo
+                label: Logo
+                type: object
+                fields:
+                  - name: imagen
+                    label: Imagen del logo
+                    type: image
+                    options:
+                      media: uploads
+                  - name: descripcion
+                    label: Texto alternativo del logo
+                    type: string
+              - name: boton
+                label: Boton principal
+                type: object
+                fields:
+                  - name: texto
+                    label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
+                    type: string
+      - name: seo_pages_zh
+        label: SEO en chino
+        type: file
+        path: src/content/pages/SEO.zh.json
+        format: json
+        fields:
+          - name: Seo_global
+            label: SEO global
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo general
+                type: string
+              - name: descripcion
+                label: Descripcion general
+                type: text
+              - name: og_titulo
+                label: Titulo para redes
+                type: string
+              - name: og_descripcion
+                label: Descripcion para redes
+                type: text
 
   - name: editorial_content
     label: Contenido editorial

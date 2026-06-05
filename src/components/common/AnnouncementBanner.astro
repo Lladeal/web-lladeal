@@ -1,6 +1,9 @@
 ---
 import Icon from '@ui/icons/Icon.astro';
-import { anuncio } from '@content/pages/home.json'
+import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
+
+const locale = getLocaleFromUrl(Astro.url);
+const { anuncio } = getHomeContent(locale);
 ---
 
 <div class="flex justify-center">

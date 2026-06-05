@@ -1,9 +1,13 @@
 ---
 import { Image } from 'astro:assets';
 import chartImage from '@images/chart.webp';
-import { imagen } from '@content/pages/home.json'
+import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
+import { getUiStrings } from '@/i18n/ui';
 import { withBase } from '@utils/links';
 
+const locale = getLocaleFromUrl(Astro.url);
+const { imagen } = getHomeContent(locale);
+const t = getUiStrings(locale).footer;
 const heroData = imagen as typeof imagen & { ImagenArchivo?: string; Imagen?: string };
 const heroImage = heroData.ImagenArchivo?.trim() || heroData.Imagen?.trim();
 ---
@@ -45,7 +49,7 @@ const heroImage = heroData.ImagenArchivo?.trim() || heroData.Imagen?.trim();
       class="aspect-auto rounded-xl"
     >
       <source src={imagen.video} type="video/mp4" />
-      Your browser does not support the video tag.
+      {t.videoFallback}
     </video>
   </div>
 </div>

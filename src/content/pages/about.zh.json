@@ -1,0 +1,67 @@
+{
+  "datos_sobre_nosotros": {
+    "titulo": "Lladeal®",
+    "descripcion": "厄瓜多尔玫瑰以卓越品质而闻名，而不仅仅是产量。Lladeal 致力于提供超越高标准要求的优质鲜花。",
+    "estadisticas": [
+      {
+        "texto": "玫瑰品种",
+        "valor": "19"
+      },
+      {
+        "texto": "专业团队成员",
+        "valor": "34"
+      },
+      {
+        "texto": "出口目的地",
+        "valor": "100+"
+      },
+      {
+        "texto": "玫瑰供应数量",
+        "valor": "1,000+"
+      }
+    ]
+  },
+  "datos_de_experticie": {
+    "titulo": "我们的优势：",
+    "experticie": [
+      {
+        "titulo": "优越微气候：",
+        "descripcion": "我们在卡扬贝的理想海拔种植玫瑰，使花头更大、色彩更鲜艳。"
+      },
+      {
+        "titulo": "人工采切与筛选：",
+        "descripcion": "每一枝玫瑰都在最佳开放阶段采收，以确保完美形态和出口级品质。"
+      },
+      {
+        "titulo": "物流与冷链：",
+        "descripcion": "我们通过严格的采后流程，确保鲜花在到达国际客户手中前始终保持新鲜和水分。"
+      }
+    ]
+  },
+  "Team": {
+    "titulo": "我们的团队",
+    "descripcion": "Lladeal® 是一家厄瓜多尔花卉企业，专注于高海拔玫瑰的可持续生产，以花头大、枝干强、色泽鲜艳而闻名。",
+    "team": [
+      {
+        "nombre": "Fernando Tituaña",
+        "cargo": "种植专家",
+        "foto": "/CMS-WEB/uploads/fotos_personal/Fernando.webp"
+      },
+      {
+        "nombre": "Alberto Tituaña",
+        "cargo": "销售专员",
+        "foto": "/CMS-WEB/uploads/fotos_personal/Alberto.webp"
+      },
+      {
+        "nombre": "Javier Vallejo",
+        "cargo": "主管",
+        "foto": ""
+      },
+      {
+        "nombre": "Ricardo Tituaña",
+        "cargo": "物流经理",
+        "foto": "/CMS-WEB/uploads/fotos_personal/Ricardo.webp"
+      }
+    ]
+  }
+}

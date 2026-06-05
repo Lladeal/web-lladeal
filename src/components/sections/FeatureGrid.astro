@@ -1,6 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components'
-import { Caracteristicas_red } from '@content/pages/home.json'
+import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
+
+const locale = getLocaleFromUrl(Astro.url);
+const { Caracteristicas_red } = getHomeContent(locale);
+type FeatureGridItem = (typeof Caracteristicas_red.lista)[number];
 
 ---
 
@@ -29,7 +33,7 @@ import { Caracteristicas_red } from '@content/pages/home.json'
     {/* Feature Cards */}
     {
       Caracteristicas_red.lista &&
-        Caracteristicas_red.lista.map(feature => (
+        Caracteristicas_red.lista.map((feature: FeatureGridItem) => (
           <div
             class={`group relative mx-auto flex flex-col border-dashed border-slate-400 py-10 ${feature.estilo_borde} ${feature.gridClasses}`}
           >

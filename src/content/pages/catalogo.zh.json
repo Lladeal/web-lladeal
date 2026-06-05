@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "preTitle": "产品目录",
+    "title": "查看我们的鲜花目录",
+    "subTitle": "浏览我们在卡扬贝种植的优质玫瑰品种。每一朵玫瑰都以色彩、鲜度和市场表现脱颖而出。",
+    "linkTitle": "联系销售团队",
+    "linkHref": "/contact",
+    "linkAriaLabel": "联系销售团队咨询玫瑰品种"
+  },
+  "listing": {
+    "typeLabel": "类型",
+    "button": "查看详情"
+  },
+  "detail": {
+    "badge": "产品目录",
+    "consultButton": "咨询此品种",
+    "backButton": "返回目录",
+    "specsTitle": "技术参数",
+    "specs": {
+      "budSize": "花头尺寸",
+      "stemLength": "枝长",
+      "vaseLife": "瓶插寿命",
+      "petals": "花瓣数量",
+      "phenologicalStage": "生育周期",
+      "cycle": "周期"
+    }
+  },
+  "seo": {
+    "title": "玫瑰目录 | Lladeal",
+    "description": "浏览 Lladeal 的优质出口玫瑰目录，所有品种均种植于厄瓜多尔卡扬贝。"
+  }
+}

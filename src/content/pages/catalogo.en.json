@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "preTitle": "Catalog",
+    "title": "Explore our flower catalog",
+    "subTitle": "Browse our premium varieties grown in Cayambe. Every rose stands out for its color, freshness, and performance in demanding markets.",
+    "linkTitle": "Talk to sales",
+    "linkHref": "/contact",
+    "linkAriaLabel": "Talk to the sales team about rose varieties"
+  },
+  "listing": {
+    "typeLabel": "Type",
+    "button": "View details"
+  },
+  "detail": {
+    "badge": "Catalog",
+    "consultButton": "Ask about this variety",
+    "backButton": "Back to catalog",
+    "specsTitle": "Technical sheet",
+    "specs": {
+      "budSize": "Bud size",
+      "stemLength": "Stem length",
+      "vaseLife": "Vase life",
+      "petals": "Petal count",
+      "phenologicalStage": "Phenological stage",
+      "cycle": "Cycle"
+    }
+  },
+  "seo": {
+    "title": "Rose catalog | Lladeal",
+    "description": "Explore Lladeal's premium rose catalog with export varieties cultivated in Cayambe, Ecuador."
+  }
+}

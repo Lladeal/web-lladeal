@@ -1,7 +1,11 @@
 ---
 import { Image } from 'astro:assets';
-import { features } from '@content/pages/home.json';
+import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
 import PlatformOrbit from '@common/PlatformOrbit.astro';
+
+const locale = getLocaleFromUrl(Astro.url);
+const { features } = getHomeContent(locale);
+type FeatureItem = (typeof features.lista)[number];
 ---
 
 <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20">
@@ -20,7 +24,7 @@ import PlatformOrbit from '@common/PlatformOrbit.astro';
   <div class="mx-auto max-w-2xl px-6 lg:max-w-[85rem] lg:px-0">
     <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
       {
-        features.lista.map(feature => (
+        features.lista.map((feature: FeatureItem) => (
           <div class={feature.class}>
             <div
               class={`absolute inset-px rounded-lg bg-white ${feature.wrapperClass}`}
@@ -44,7 +48,7 @@ import PlatformOrbit from '@common/PlatformOrbit.astro';
                 {/* Render list items if available */}
                 {feature.listItems && (
                   <ul class="mt-2 max-w-lg list-inside list-disc space-y-1 text-sm/6 text-slate-600 marker:text-teal-600 max-lg:text-center">
-                    {feature.listItems.map(item => (
+                    {feature.listItems.map((item: string) => (
                       <li set:html={item} />
                     ))}
                   </ul>

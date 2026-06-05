@@ -1,7 +1,9 @@
 ---
 import Button from '@ui/Button.astro';
-import { hero } from '@content/pages/home.json'
+import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
 
+const locale = getLocaleFromUrl(Astro.url);
+const { hero } = getHomeContent(locale);
 
 ---
 

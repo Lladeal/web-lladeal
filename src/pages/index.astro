@@ -7,9 +7,44 @@ import FeatureAnimated from '@sections/FeatureAnimated.astro';
 import FeatureBento from '@sections/FeatureBento.astro';
 import FeatureGrid from '@sections/FeatureGrid.astro';
 import CTA from '@sections/CTA.astro';
+import { withBase } from '@utils/links';
+
+const localeRedirectMap = {
+  en: withBase('/en'),
+  ru: withBase('/ru'),
+  zh: withBase('/zh'),
+};
 ---
 
 <BaseLayout>
+  <script is:inline define:vars={{ localeRedirectMap }}>
+    (() => {
+      const isBot = /bot|crawler|spider|crawling|google|bing|yandex|baidu/i.test(
+        navigator.userAgent,
+      );
+
+      if (isBot) return;
+
+      const storedLocale = localStorage.getItem('preferredLocale');
+      const browserLocale = (navigator.languages?.[0] || navigator.language || 'es').toLowerCase();
+      const preferredLocale = storedLocale || browserLocale;
+
+      const targetLocale = preferredLocale.startsWith('ru')
+        ? 'ru'
+        : preferredLocale.startsWith('zh')
+          ? 'zh'
+          : preferredLocale.startsWith('en')
+            ? 'en'
+            : 'es';
+
+      if (targetLocale === 'es') return;
+
+      const targetHref = localeRedirectMap[targetLocale];
+      if (!targetHref || window.location.pathname === targetHref) return;
+
+      window.location.replace(targetHref);
+    })();
+  </script>
   <Hero />
 
   <Carrusel />

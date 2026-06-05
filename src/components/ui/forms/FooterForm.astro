@@ -1,5 +1,10 @@
 ---
-import { footer_form } from '@content/pages/footer.json'
+import { getFooterContent, getLocaleFromUrl } from '@/i18n/content';
+import { getUiStrings } from '@/i18n/ui';
+
+const locale = getLocaleFromUrl(Astro.url);
+const { footer_form } = getFooterContent(locale);
+const t = getUiStrings(locale).footer;
 ---
 
 <form>
@@ -34,7 +39,7 @@ import { footer_form } from '@content/pages/footer.json'
     <button
       type="submit"
       class="inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent bg-teal-100 p-3 text-sm font-medium whitespace-nowrap text-slate-700 transition duration-300 hover:bg-[#e3186d]/80 hover:text-white focus:bg-[#e3186d]/80 focus:text-white focus:outline-hidden sm:w-auto"
-      aria-label="Submit email"
+      aria-label={t.emailSubmitAria}
     >
       {footer_form.submit}
     </button>

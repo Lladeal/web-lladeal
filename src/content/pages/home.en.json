@@ -1,0 +1,421 @@
+{
+  "anuncio": {
+    "titulo": "Discover Lladeal",
+    "titulo_link": "Book a meeting!",
+    "link": "https://github.com/mearashadowfax/DataNova"
+  },
+  "hero": {
+    "titulo": "Lladeal Farm: turning altitude and sunlight into unforgettable flowers.",
+    "subtitulo": "Strategically located in Pesillo, Cayambe, we take advantage of equatorial light and warm soils to create an exceptional growing environment.",
+    "Boton_1": {
+      "titulo": "View our catalog",
+      "link": "/catalogo"
+    },
+    "boton_2": {
+      "titulo": "Contact us",
+      "link": "/contact"
+    }
+  },
+  "imagen": {
+    "video": "/CMS-WEB/uploads/flores.mp4",
+    "ImagenArchivo": "/CMS-WEB/uploads/ISOTIPO_LLADEAL.png"
+  },
+  "features": {
+    "titulo": "Lladeal Farm: excellence in every petal",
+    "subtitulo": "Discover how we transform Cayambe's unique conditions into some of the world's most beautiful export roses, combining artisanal care with uncompromising quality standards.",
+    "lista": [
+      {
+        "wrapperClass": "lg:rounded-l-3xl",
+        "title": "Rigorous export selection",
+        "description": "Excellence criteria: every flower is carefully evaluated, and only those with the ideal bud size, opening point, and symmetry are selected.",
+        "image": "/CMS-WEB/uploads/Flor-vertical.png",
+        "imageClass": "mx-auto mt-5 self-end object-cover w-[90%]",
+        "imageContainerClass": "relative flex min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
+        "headingClass": "pb-3 sm:pb-0",
+        "class": "relative lg:row-span-2"
+      },
+      {
+        "title": "Artisanal high-altitude cultivation",
+        "description": "Hands-on care in the field: we work the land of Pesillo with expert hands, using direct equatorial sunlight to grow strong stems and vibrant colors.",
+        "imageClass": "w-full rounded-t-xl",
+        "imageContainerClass": "relative flex flex-1 items-center justify-center px-4 max-lg:pb-12 max-lg:pt-10 lg:pb-2",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-1 z-10 mx-auto h-28 w-[93%] bg-linear-to-b/oklch from-transparent via-white to-white",
+        "class": "relative max-lg:row-start-1",
+        "image": "/CMS-WEB/uploads/Pesillo01.webp"
+      },
+      {
+        "title": "Nutrition and freshness guaranteed",
+        "description": "Warm soils and pure nutrients: we feed our plants with the minerals of Cayambe's highlands so every rose enjoys a longer vase life.",
+        "imageClass": "h-full object-cover",
+        "imageContainerClass": "relative min-h-[30rem] w-full grow",
+        "imageSecondaryContainerClass": "absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl shadow-2xl",
+        "class": "relative lg:row-span-2",
+        "image": "/CMS-WEB/uploads/Rosas.png"
+      },
+      {
+        "title": "And more...",
+        "listItems": [
+          "Majestic varieties: a wide range of vibrant colors and large buds that stand out in the global market.",
+          "Commitment and origin: proudly grown in Cayambe while respecting our land and our community."
+        ],
+        "class": "relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2",
+        "wrapperClass": "rounded-lg",
+        "component": "PlatformOrbit"
+      }
+    ],
+    "Orbita": {
+      "Imagen_central": "/CMS-WEB/uploads/ISOTIPO_LLADEAL.png",
+      "Icono_1": "MaterialSymbolsLightPalette",
+      "Icono_2": "MdiFlowerTulip",
+      "Icono_3": "MdiWhiteBalanceSunny"
+    }
+  },
+  "caracteristicas": {
+    "titulo": "From Cayambe's soil to markets around the world",
+    "subtitulo": "We take full advantage of the demanding conditions of the equatorial line to cultivate superior roses. Our process combines traditional agricultural knowledge with precise logistics to anticipate your needs and guarantee outstanding freshness.",
+    "boton": {
+      "titulo": "Learn more",
+      "link": "/contact"
+    },
+    "carta1": {
+      "icono": "MdiImageFilterHdr",
+      "descripcion": "High-altitude cultivation: strong stems and large buds under equatorial sunlight.",
+      "estilo": "self-start"
+    },
+    "carta2": {
+      "icono": "MdiHandExtended",
+      "descripcion": "Manual harvesting: rigorous selection at the precise opening stage.",
+      "estilo": "self-center"
+    },
+    "carta3": {
+      "icono": "MdiPackageVariant",
+      "descripcion": "Global distribution: protective packaging for long-lasting freshness across borders.",
+      "estilo": "self-end"
+    }
+  },
+  "Caracteristicas_red": {
+    "titulo": "Why choose Lladeal?",
+    "subtitulo": "Experience the perfect balance between natural beauty and export precision. From local florists to global distributors, Lladeal supplies premium roses that elevate every catalog with longer vase life, vibrant colors, and reliable availability.",
+    "lista": [
+      {
+        "estilo_borde": "md:border-l md:border-r",
+        "estilo_color": "bg-linear-to-l/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "MdiEarth",
+        "titulo_tarjeta": "Designed for every market",
+        "descripcion": "Whether you run a boutique flower shop or a global wholesale operation, Lladeal adapts to your scale with exclusive varieties and export-ready volume."
+      },
+      {
+        "estilo_borde": "border-b border-t md:border-b-0",
+        "gridClasses": "md:col-start-2 md:col-end-3",
+        "estilo_color": "bg-linear-to-t/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "MdiCheckDecagram",
+        "titulo_tarjeta": "International-standard quality",
+        "descripcion": "We unlock the full potential of floriculture through strict quality control, large buds, and superior vase life for the world's most demanding markets."
+      },
+      {
+        "estilo_borde": "md:border-l md:border-r md:border-t",
+        "gridClasses": "md:col-end-4",
+        "estilo_color": "bg-linear-to-tl/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "RiBubbleChartFill",
+        "titulo_tarjeta": "Frictionless logistics",
+        "descripcion": "Keep your supply chain efficient and predictable. We integrate smoothly with traditional import channels so your roses arrive fresh, hydrated, and ready to impress."
+      }
+    ]
+  },
+  "call_to_action": {
+    "titulo": "Place your first order with Lladeal.",
+    "subtitulo": "Get in touch with our sales team and discover how our high-altitude roses can elevate your catalog and captivate your customers.",
+    "boton": {
+      "titulo": "Start with Lladeal",
+      "link": "/contact"
+    }
+  },
+  "carrusel": [
+    {
+      "titulo": "Magic time",
+      "descripcion": "Magic Time rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/01_Magic_Time.png",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "7.0 - 8.0 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "15 - 18 days",
+        "Numero_de_petalos": "42 - 43",
+        "Estado_fenologico": "92 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "High Magic",
+      "descripcion": "High Magic rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/02_High_Magic.png",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "5.6 cm",
+        "Longitud_del_tallo": "50 - 90 cm",
+        "Vida_en_florero": "12 - 15 days",
+        "Numero_de_petalos": "43",
+        "Estado_fenologico": "88 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Paloma",
+      "descripcion": "Paloma rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/03_Paloma.png",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "5 - 6 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "10 - 12 days",
+        "Numero_de_petalos": "32",
+        "Estado_fenologico": "92 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Atomic",
+      "descripcion": "Atomic rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/04_Atomic.png",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "6.0 - 6.5 cm",
+        "Longitud_del_tallo": "50 - 70 cm",
+        "Vida_en_florero": "14 days",
+        "Numero_de_petalos": "40 - 45",
+        "Estado_fenologico": "89 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Iguazu",
+      "descripcion": "Iguazu rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/05_Iguazu.png",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "6.5 - 7 cm",
+        "Longitud_del_tallo": "60 - 80 cm",
+        "Vida_en_florero": "12 - 14 days",
+        "Numero_de_petalos": "53",
+        "Estado_fenologico": "90 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Esperance",
+      "descripcion": "Esperance rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/06_Esperance.png",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "50 - 70 cm",
+        "Longitud_del_tallo": "50 - 70 cm",
+        "Vida_en_florero": "14 days",
+        "Numero_de_petalos": "53",
+        "Estado_fenologico": "90 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Kahala",
+      "descripcion": "Kahala rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/07_Kahala.png",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "5.5 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "14 days",
+        "Numero_de_petalos": "40",
+        "Estado_fenologico": "88 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Salma",
+      "descripcion": "Salma rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/08_Salma.png",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "5.5 - 6.0 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "15 days",
+        "Numero_de_petalos": "35 - 40",
+        "Estado_fenologico": "92 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Dee Purple",
+      "descripcion": "Dee Purple rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/09_Dee_Purple.png",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "5 - 6 cm",
+        "Longitud_del_tallo": "50 - 80 cm",
+        "Vida_en_florero": "10 - 12 days",
+        "Numero_de_petalos": "40",
+        "Estado_fenologico": "86 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Explorer",
+      "descripcion": "Explorer rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/10_Explorer.png",
+      "tipo": "Red",
+      "Data": {
+        "Tamaño_del_boton": "6.5 - 7.0 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "15 days",
+        "Numero_de_petalos": "40 - 45",
+        "Estado_fenologico": "109 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Pink Floyd",
+      "descripcion": "Pink Floyd rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/11_Pink_Floyd.png",
+      "tipo": "Solid Color",
+      "Data": {
+        "Tamaño_del_boton": "6 - 6.5 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "17 days",
+        "Numero_de_petalos": "38",
+        "Estado_fenologico": "92 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Brighton",
+      "descripcion": "Brighton rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/12_Brighton.png",
+      "tipo": "Solid Color",
+      "Data": {
+        "Tamaño_del_boton": "5.0 - 6.0 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "12 - 14 days",
+        "Numero_de_petalos": "30",
+        "Estado_fenologico": "90 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Gotcha",
+      "descripcion": "Gotcha rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/13_Gotcha.png",
+      "tipo": "Solid Color",
+      "Data": {
+        "Tamaño_del_boton": "6.0 - 6.5 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "14 days",
+        "Numero_de_petalos": "30 - 35",
+        "Estado_fenologico": "95 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Lola",
+      "descripcion": "Lola rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/14_Lola.png",
+      "tipo": "Solid Color",
+      "Data": {
+        "Tamaño_del_boton": "7.0 - 8.0 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "15 - 18 days",
+        "Numero_de_petalos": "32",
+        "Estado_fenologico": "92 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Novia",
+      "descripcion": "Novia rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/15_Novia.png",
+      "tipo": "Solid Color",
+      "Data": {
+        "Tamaño_del_boton": "7.0 cm",
+        "Longitud_del_tallo": "50 - 80 cm",
+        "Vida_en_florero": "12 - 15 days",
+        "Numero_de_petalos": "37",
+        "Estado_fenologico": "90 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Proud",
+      "descripcion": "Proud rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/16_Proud.png",
+      "tipo": "Solid Color",
+      "Data": {
+        "Tamaño_del_boton": "6.9 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "10 - 12 days",
+        "Numero_de_petalos": "57",
+        "Estado_fenologico": "95 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Nina",
+      "descripcion": "Nina rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/17_Nina.png",
+      "tipo": "Solid Color",
+      "Data": {
+        "Tamaño_del_boton": "6,4 cm",
+        "Longitud_del_tallo": "40 - 90 cm",
+        "Vida_en_florero": "14 - 15 days",
+        "Numero_de_petalos": "52",
+        "Estado_fenologico": "92 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Shimmer",
+      "descripcion": "Shimmer rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/18_Shimmer.png",
+      "tipo": "Solid Color",
+      "Data": {
+        "Tamaño_del_boton": "6.5 - 7.0 cm",
+        "Longitud_del_tallo": "60 - 80 cm",
+        "Vida_en_florero": "15 days",
+        "Numero_de_petalos": "60 - 65",
+        "Estado_fenologico": "95 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "Mondial",
+      "descripcion": "Mondial rose",
+      "ImagenArchivo": "/CMS-WEB/uploads/19_Mondial.png",
+      "tipo": "Solid Color",
+      "Data": {
+        "Tamaño_del_boton": "5.9 cm",
+        "Longitud_del_tallo": "50 - 80 cm",
+        "Vida_en_florero": "15 - 18 days",
+        "Numero_de_petalos": "37",
+        "Estado_fenologico": "94 days",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    }
+  ]
+}

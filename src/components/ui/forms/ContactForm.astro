@@ -1,10 +1,9 @@
 ---
-const formStrings = {
-  name: 'Nombre',
-  email: 'Correo Electrónico',
-  message: 'Mensaje',
-  submit: 'Enviar',
-};
+import { getLocaleFromUrl } from '@/i18n/content';
+import { getUiStrings } from '@/i18n/ui';
+
+const locale = getLocaleFromUrl(Astro.url);
+const formStrings = getUiStrings(locale).contactForm;
 ---
 
 <!-- TODO: Wire up form submission. Options:

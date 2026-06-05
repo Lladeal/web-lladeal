@@ -4,11 +4,30 @@
 // import Platform from '@megaMenu/Platform.astro';
 // import Features from '@megaMenu/Features.astro';
 import Button from '@ui/Button.astro';
-import { stripBase, withBase } from '@utils/links';
-import { navigationLinks } from '@utils/navigation';
-import { barra_de_navegacion } from '@content/pages/navbar.json'
+import { localizePath, stripBase, withBase } from '@utils/links';
+import { getNavigationLinks } from '@utils/navigation';
+import { localeMetadata, locales, type Locale } from '@/i18n/config';
+import { getLocaleFromUrl, getNavbarContent } from '@/i18n/content';
+import { getUiStrings } from '@/i18n/ui';
 
 const currentPath = stripBase(Astro.url.pathname);
+const locale = getLocaleFromUrl(Astro.url);
+const { barra_de_navegacion } = getNavbarContent(locale);
+const t = getUiStrings(locale).nav;
+const navigationLinks = getNavigationLinks(locale);
+const localizedCurrentPath = stripBase(Astro.url.pathname);
+const currentPathSegments = localizedCurrentPath.split('/').filter(Boolean);
+const currentPathWithoutLocale =
+  currentPathSegments[0] && locales.includes(currentPathSegments[0] as Locale)
+    ? `/${currentPathSegments.slice(1).join('/')}` || '/'
+    : localizedCurrentPath;
+const languageLinks = locales.map(targetLocale => ({
+  locale: targetLocale,
+  label: localeMetadata[targetLocale].label,
+  href: withBase(localizePath(currentPathWithoutLocale || '/', targetLocale)),
+  active: targetLocale === locale,
+}));
+type NavigationLink = (typeof navigationLinks)[number];
 ---
 
 <header
@@ -20,8 +39,8 @@ const currentPath = stripBase(Astro.url.pathname);
     <div class="flex items-center justify-between gap-x-1">
       <a
         class="dm-sans flex-none text-2xl font-light text-slate-400 focus:opacity-80 focus:outline-hidden"
-        href={withBase('/')}
-        aria-label="DataNova Logo"
+        href={withBase('/', locale)}
+        aria-label={`Lladeal ${t.logoAltSuffix}`}
         translate="no"
         >
          <img src={barra_de_navegacion.logo.imagen} alt={barra_de_navegacion.logo.descripcion} class="w-35">
@@ -87,13 +106,13 @@ const currentPath = stripBase(Astro.url.pathname);
               class="flex flex-col gap-0.5 xl:flex-row xl:items-center xl:justify-evenly xl:gap-1"
             >
               <a
-                href={withBase('/')}
+                 href={withBase('/', locale)}
                 class={`flex items-center rounded-lg p-2 font-medium text-slate-800 hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden ${
                   currentPath === '/' ? 'underline underline-offset-4' : ''
                 }`}
                 aria-current={currentPath === '/' ? 'page' : undefined}
               >
-                Inicio
+                 {t.home}
               </a>
 
               <!-- <Features />
@@ -105,7 +124,7 @@ const currentPath = stripBase(Astro.url.pathname);
               <!-- <Support /> -->
 
               {
-                navigationLinks.map(link => (
+                navigationLinks.map((link: NavigationLink) => (
                     <a
                       href={link.href}
                       class={`flex items-center rounded-lg p-2 font-medium text-slate-800 hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden ${
@@ -124,9 +143,43 @@ const currentPath = stripBase(Astro.url.pathname);
             </div>
           </div>
 
-          <div
-            class="mt-5 flex flex-wrap items-center gap-x-1.5 xl:mt-0 xl:ml-6"
-          >
+           <div
+             class="mt-5 flex flex-wrap items-center gap-x-2 gap-y-2 xl:mt-0 xl:ml-6"
+           >
+            <label class="sr-only" for="locale-switch">Cambiar idioma</label>
+            <div class="relative min-w-20">
+              <select
+                id="locale-switch"
+                data-locale-select
+                class="w-full appearance-none rounded-xl border border-slate-200/80 bg-white/95 py-2 pr-5 pl-3 text-sm font-semibold text-slate-700 shadow-xs ring-1 ring-white/70 transition outline-hidden hover:border-slate-300 hover:bg-slate-50 focus:border-slate-400 focus:bg-white"
+                aria-label="Cambiar idioma"
+              >
+                {
+                  languageLinks.map(link => (
+                    <option
+                      value={link.href}
+                      data-locale={link.locale}
+                      selected={link.active}
+                    >
+                      {link.label}
+                    </option>
+                  ))
+                }
+              </select>
+              <svg
+                class="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-slate-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
             <Button
               href={barra_de_navegacion.boton.link}
               variant="primary"
@@ -140,6 +193,34 @@ const currentPath = stripBase(Astro.url.pathname);
     </div>
   </nav>
 </header>
+
+<script is:inline>
+  (() => {
+    const bindLocaleSelect = () => {
+      const select = document.querySelector('[data-locale-select]');
+      if (!select || select.dataset.bound === 'true') return;
+
+      select.dataset.bound = 'true';
+      select.addEventListener('change', event => {
+        const currentSelect = event.currentTarget;
+        const selectedOption = currentSelect.options[currentSelect.selectedIndex];
+        const locale = selectedOption?.dataset.locale;
+        const href = currentSelect.value;
+
+        if (locale) {
+          localStorage.setItem('preferredLocale', locale);
+        }
+
+        if (href && href !== window.location.pathname) {
+          window.location.assign(href);
+        }
+      });
+    };
+
+    bindLocaleSelect();
+    document.addEventListener('astro:page-load', bindLocaleSelect);
+  })();
+</script>
 
 <script>
   document.addEventListener('astro:page-load', async () => {

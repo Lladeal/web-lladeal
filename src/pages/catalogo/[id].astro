@@ -1,12 +1,10 @@
 ---
 export const prerender = true;
 
-import BaseLayout from '@layout/BaseLayout.astro';
-import Button from '@ui/Button.astro';
-import { Image } from 'astro:assets';
-import { carrusel } from '@content/pages/home.json';
+import CatalogDetailPage from '../../components/pages/CatalogDetailPage.astro';
+import homeEs from '@content/pages/home.json';
 
-type CatalogItem = (typeof carrusel)[number];
+type CatalogItem = (typeof homeEs.carrusel)[number];
 
 export function getStaticPaths() {
   const slugify = (value: string) =>
@@ -17,83 +15,13 @@ export function getStaticPaths() {
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
 
-  return carrusel.map(item => ({
+  return homeEs.carrusel.map((item: CatalogItem) => ({
     params: { id: slugify(item.titulo) },
     props: { item },
   }));
 }
 
 const { item } = Astro.props as { item: CatalogItem };
-
-const seo = {
-  title: `${item.titulo} | Catalogo`,
-  description: item.descripcion,
-};
-
-const specs = [
-  { label: 'Tamano del boton', value: item.Data.Tamaño_del_boton },
-  { label: 'Longitud del tallo', value: item.Data.Longitud_del_tallo },
-  { label: 'Vida en florero', value: item.Data.Vida_en_florero },
-  { label: 'Numero de petalos', value: item.Data.Numero_de_petalos },
-  { label: 'Estado fenologico', value: item.Data.Estado_fenologico },
-  { label: 'Ciclo', value: item.Data.Ciclo },
-];
 ---
 
-<BaseLayout seo={seo}>
-  <section class="mx-auto max-w-[85rem] px-4 pt-36 pb-16 sm:px-6 lg:px-8">
-    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-      <div>
-        <p class="text-sm font-semibold tracking-[0.2em] text-pink-600 uppercase">
-          Catalogo
-        </p>
-        <h1 class="mt-4 text-4xl font-bold text-slate-800 sm:text-5xl lg:text-6xl">
-          {item.titulo}
-        </h1>
-        <p class="mt-4 text-sm font-semibold tracking-[0.18em] text-slate-500 uppercase">
-          {item.tipo}
-        </p>
-        <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-700">
-          {item.descripcion}
-        </p>
-
-        <div class="mt-10 flex flex-wrap gap-4">
-          {item.Data.link !== '#' && <Button href={item.Data.link}>Consultar esta variedad</Button>}
-          <Button href="/catalogo" variant="alternative">Volver al catalogo</Button>
-        </div>
-      </div>
-
-      <div class="overflow-hidden rounded-3xl bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] p-6 shadow-xl ring-1 ring-slate-200/70">
-        <Image
-          src={item.ImagenArchivo}
-          alt={item.descripcion}
-          inferSize={false}
-          width={900}
-          height={1100}
-          class="mx-auto h-auto w-full max-w-md"
-        />
-      </div>
-    </div>
-  </section>
-
-  <section class="mx-auto max-w-[85rem] px-4 pb-24 sm:px-6 lg:px-8">
-    <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-      <div class="border-b border-slate-200 px-6 py-5 sm:px-8">
-        <h2 class="text-2xl font-semibold text-slate-800">Ficha tecnica</h2>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3">
-        {
-          specs.map(spec => (
-            <div class="border-b border-slate-100 px-6 py-5 sm:px-8 lg:[&:nth-last-child(-n+3)]:border-b-0">
-              <p class="text-xs font-semibold tracking-[0.16em] text-slate-500 uppercase">
-                {spec.label}
-              </p>
-              <p class="mt-2 text-lg font-semibold text-slate-800">{spec.value}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+<CatalogDetailPage item={item} />

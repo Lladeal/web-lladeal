@@ -1,0 +1,25 @@
+{
+  "generales": {
+    "nombre_empresa": "Lladeal®",
+    "Descripcion": "Lladeal® - ведущая цветочная компания, специализирующаяся на выращивании и экспорте премиальных роз. Наше производство в Каямбе, Эквадор, ориентировано на международный рынок."
+  },
+  "contactos": {
+    "address": "Каямбе, Песильо. Ольмедо",
+    "phone": "593 939730772",
+    "email": "ecuador@lladeal.com",
+    "website": "www.lladeal.com"
+  },
+  "creacion": {
+    "nombre": "Sotomayor Consulting",
+    "Link": "https://sotomayorconsulting.com/inicio/"
+  },
+  "noticia": {
+    "titulo": "2026 Lladeal®. Все права защищены."
+  },
+  "footer_form": {
+    "leyenda": "Подпишитесь на нашу рассылку",
+    "placeholder": "Введите ваш email",
+    "submit": "Отправить",
+    "description": "Оставьте ваш email, и наша команда свяжется с вами с нужной информацией."
+  }
+}

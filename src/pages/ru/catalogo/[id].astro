@@ -1,0 +1,27 @@
+---
+export const prerender = true;
+
+import CatalogDetailPage from '../../../components/pages/CatalogDetailPage.astro';
+import homeRu from '@content/pages/home.ru.json';
+
+type CatalogItem = (typeof homeRu.carrusel)[number];
+
+export function getStaticPaths() {
+  const slugify = (value: string) =>
+    value
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+
+  return homeRu.carrusel.map((item: CatalogItem) => ({
+    params: { id: slugify(item.titulo) },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props as { item: CatalogItem };
+---
+
+<CatalogDetailPage item={item} />

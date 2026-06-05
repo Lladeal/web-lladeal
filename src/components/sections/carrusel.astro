@@ -1,8 +1,72 @@
 ---
-import { carrusel } from '@content/pages/home.json';
 import { Image } from 'astro:assets';
 import Button from '@ui/Button.astro';
 import { Icon } from 'astro-icon/components'
+import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
+
+const locale = getLocaleFromUrl(Astro.url);
+const { carrusel } = getHomeContent(locale);
+type CarouselItem = (typeof carrusel)[number];
+const specRowClass =
+  'grid grid-cols-[minmax(0,10rem)_minmax(0,1fr)] items-center gap-4 border-b border-slate-100 py-3';
+const specLabelClass =
+  'text-[10px] leading-tight font-bold tracking-wider text-slate-500 uppercase';
+const specValueClass = 'text-right text-base font-semibold text-slate-900';
+const labelsByLocale = {
+  es: {
+    badge: 'Seleccion premium',
+    budSize: 'Tamano del boton',
+    stemLength: 'Longitud de tallo',
+    vaseLife: 'Vida en florero',
+    petals: 'Numero de petalos',
+    phenologicalStage: 'Estado fenologico',
+    cycle: 'Ciclo',
+    learnMore: 'Saber mas',
+    viewDetail: 'Ver en detalle',
+    previous: 'Anterior',
+    next: 'Siguiente',
+  },
+  en: {
+    badge: 'Premium selection',
+    budSize: 'Bud size',
+    stemLength: 'Stem length',
+    vaseLife: 'Vase life',
+    petals: 'Petal count',
+    phenologicalStage: 'Phenological stage',
+    cycle: 'Cycle',
+    learnMore: 'Learn more',
+    viewDetail: 'View in detail',
+    previous: 'Previous',
+    next: 'Next',
+  },
+  ru: {
+    badge: 'Премиальная коллекция',
+    budSize: 'Размер бутона',
+    stemLength: 'Длина стебля',
+    vaseLife: 'Стойкость в вазе',
+    petals: 'Количество лепестков',
+    phenologicalStage: 'Фенологическая стадия',
+    cycle: 'Цикл',
+    learnMore: 'Подробнее',
+    viewDetail: 'Смотреть каталог',
+    previous: 'Назад',
+    next: 'Вперед',
+  },
+  zh: {
+    badge: '精选品种',
+    budSize: '花头尺寸',
+    stemLength: '枝长',
+    vaseLife: '瓶插寿命',
+    petals: '花瓣数量',
+    phenologicalStage: '生育周期',
+    cycle: '周期',
+    learnMore: '了解更多',
+    viewDetail: '查看目录',
+    previous: '上一张',
+    next: '下一张',
+  },
+} as const;
+const labels = labelsByLocale[locale];
 
 function slugify(value: string) {
   return value
@@ -17,20 +81,21 @@ function slugify(value: string) {
 <div class="mx-auto max-w-340 px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20">
   <!-- Carousel -->
   <div
+    data-carousel-root
     data-hs-carousel='{
-    "loadingClasses": "opacity-0", "isInfiniteLoop": true, "isAutoPlay": true, "isDraggable": true
+    "isInfiniteLoop": true, "isAutoPlay": true, "isDraggable": true
   }'
     class="relative"
   >
     <div class="hs-carousel flex h-fit flex-col gap-2 sm:flex-row">
-      <div class="relative grow overflow-hidden rounded-lg sm:order-2">
+      <div class="relative min-h-[58rem] grow overflow-hidden rounded-lg sm:order-2 sm:min-h-[54rem] md:min-h-[42rem] lg:min-h-[40rem]">
         <div
-          class="hs-carousel-body absolute inset-s-0 top-0 bottom-0 flex flex-nowrap opacity-0 transition-transform duration-700"
+          class="hs-carousel-body absolute inset-s-0 top-0 bottom-0 flex flex-nowrap transition-transform duration-700"
         >
           {
-            carrusel.map((items, index) => (
-              <div class="hs-carousel-slide">
-                <article class="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl md:flex-row">
+            carrusel.map((items: CarouselItem, index: number) => (
+              <div class="hs-carousel-slide h-full">
+                <article class="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl md:flex-row">
                   <div class="group relative w-full overflow-hidden bg-linear-to-bl from-[#7e2c75]/80 to-[#4f274d]/20 md:w-1/2">
                     <Image
                       src={items.ImagenArchivo}
@@ -42,11 +107,11 @@ function slugify(value: string) {
                     />
                     <div class="absolute top-6 left-6">
                       <span class="rounded-full border border-slate-200 bg-white/90 px-3 py-1 text-[10px] font-bold tracking-widest text-slate-600 uppercase backdrop-blur-sm">
-                        Selección premium
+                        {labels.badge}
                       </span>
                     </div>
                   </div>
-                  <div class="flex w-full flex-col justify-center bg-white p-8 md:w-1/2 md:p-12">
+                    <div class="flex w-full flex-1 flex-col justify-center bg-white p-8 md:w-1/2 md:p-12">
                     <header class="mb-8">
                       <h1 class="mb-2 text-4xl font-bold text-pink-600">
                         {items.titulo}
@@ -60,57 +125,33 @@ function slugify(value: string) {
                       </div>
                     </header>
                     <div class="flex flex-col">
-                      <div class="flex items-center justify-between border-b border-slate-100 py-4">
-                        <span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">
-                          Tamaño del botón
-                        </span>
-                        <span class="text-base font-semibold text-slate-900">
-                          {items.Data.Tamaño_del_boton}
-                        </span>
+                      <div class={specRowClass}>
+                        <span class={specLabelClass}>{labels.budSize}</span>
+                        <span class={specValueClass}>{items.Data.Tamaño_del_boton}</span>
                       </div>
-                      <div class="flex items-center justify-between border-b border-slate-100 py-4">
-                        <span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">
-                          Longitud de tallo
-                        </span>
-                        <span class="text-base font-semibold text-slate-900">
-                          {items.Data.Longitud_del_tallo}
-                        </span>
+                      <div class={specRowClass}>
+                        <span class={specLabelClass}>{labels.stemLength}</span>
+                        <span class={specValueClass}>{items.Data.Longitud_del_tallo}</span>
                       </div>
-                      <div class="flex items-center justify-between border-b border-slate-100 py-4">
-                        <span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">
-                          Vida en florero
-                        </span>
-                        <span class="text-base font-semibold text-slate-900">
-                          {items.Data.Vida_en_florero}
-                        </span>
+                      <div class={specRowClass}>
+                        <span class={specLabelClass}>{labels.vaseLife}</span>
+                        <span class={specValueClass}>{items.Data.Vida_en_florero}</span>
                       </div>
-                      <div class="flex items-center justify-between border-b border-slate-100 py-4">
-                        <span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">
-                          Número de pétalos
-                        </span>
-                        <span class="text-base font-semibold text-slate-900">
-                          {items.Data.Numero_de_petalos}
-                        </span>
+                      <div class={specRowClass}>
+                        <span class={specLabelClass}>{labels.petals}</span>
+                        <span class={specValueClass}>{items.Data.Numero_de_petalos}</span>
                       </div>
-                      <div class="flex items-center justify-between border-b border-slate-100 py-4">
-                        <span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">
-                          Estado fenológico
-                        </span>
-                        <span class="text-base font-semibold text-slate-900">
-                          {items.Data.Estado_fenologico}
-                        </span>
+                      <div class={specRowClass}>
+                        <span class={specLabelClass}>{labels.phenologicalStage}</span>
+                        <span class={specValueClass}>{items.Data.Estado_fenologico}</span>
                       </div>
-                      <div class="flex items-center justify-between py-4">
-                        <span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">
-                          Ciclo
-                        </span>
-                        <span class="text-base font-semibold text-slate-900">
-                          {items.Data.Ciclo}
-                        </span>
+                      <div class="grid grid-cols-[minmax(0,10rem)_minmax(0,1fr)] items-center gap-4 py-3">
+                        <span class={specLabelClass}>{labels.cycle}</span>
+                        <span class={specValueClass}>{items.Data.Ciclo}</span>
                       </div>
                     </div>
                     <div class="mt-10 flex gap-3">
-                      <Button variant="alternative" href={`/catalogo/${slugify(items.titulo)}`}> Saber más </Button>
+                      <Button variant="alternative" href={`/catalogo/${slugify(items.titulo)}`}> {labels.learnMore} </Button>
                     </div>
                   </div>
                 </article>
@@ -138,13 +179,13 @@ function slugify(value: string) {
               stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg
             >
           </span>
-          <span class="sr-only">Previous</span>
+          <span class="sr-only">{labels.previous}</span>
         </button>
         <button
           type="button"
           class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:cursor-default bg-layer text-layer-foreground hover:bg-layer-hover absolute inset-e-2 top-1/2 inline-flex size-10 -translate-y-1/2 items-center justify-center rounded-full shadow-2xs focus:outline-hidden"
         >
-          <span class="sr-only">Next</span>
+          <span class="sr-only">{labels.next}</span>
           <span class="text-2xl" aria-hidden="true">
             <svg
               class="size-5 shrink-0"
@@ -169,7 +210,7 @@ function slugify(value: string) {
           class="hs-carousel-pagination [&::-webkit-scrollbar-track]:bg-scrollbar-track [&::-webkit-scrollbar-thumb]:bg-scrollbar-thumb flex max-h-160 flex-row gap-2 overflow-x-auto sm:flex-col sm:overflow-x-hidden sm:overflow-y-auto [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-none"
         >
           {
-            carrusel.map(items => (
+            carrusel.map((items: CarouselItem) => (
               <div class="hs-carousel-pagination-item border-line-2 hs-carousel-active:border-primary width-full h-fit shrink-0 cursor-pointer overflow-hidden rounded-md border">
                 <div class="flex h-fit items-center justify-center p-1 text-center">
                   <Image
@@ -192,5 +233,23 @@ function slugify(value: string) {
   <!-- End Carousel -->
 </div>
 <div class="mx-auto flex w-full justify-center">
-  <Button variant="primary" href="/catalogo"> Ver en detalle </Button>
+  <Button variant="primary" href="/catalogo"> {labels.viewDetail} </Button>
 </div>
+
+<script>
+  const initCarousel = async () => {
+    const root = document.querySelector('[data-carousel-root]');
+    if (!root) return;
+
+    const { HSStaticMethods } = await import('preline');
+    HSStaticMethods.autoInit();
+
+    requestAnimationFrame(() => {
+      HSStaticMethods.autoInit();
+    });
+  };
+
+  document.addEventListener('astro:page-load', initCarousel);
+  document.addEventListener('DOMContentLoaded', initCarousel);
+  window.addEventListener('load', initCarousel);
+</script>

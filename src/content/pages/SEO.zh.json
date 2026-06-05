@@ -1,0 +1,39 @@
+{
+  "Seo_global": {
+    "titulo": "Lladeal® | 厄瓜多尔高端出口玫瑰",
+    "descripcion": "探索 Lladeal 在厄瓜多尔卡扬贝的卓越玫瑰品质。我们为国际市场提供枝干强壮、花头饱满的高海拔优质玫瑰。",
+    "og_titulo": "Lladeal® | 世界上最美的鲜花",
+    "og_descripcion": "我们将厄瓜多尔玫瑰的魅力带向全球市场。卡扬贝高海拔种植确保出色的新鲜度与持久度。",
+    "imagen_texto_alternativo": "Lladeal 官方标志，来自厄瓜多尔的出口玫瑰。",
+    "imagen_og": "/CMS-WEB/social.png",
+    "icono": "/CMS-WEB/icon.svg",
+    "icono_apple": "/CMS-WEB/apple-touch-icon.png",
+    "manifiesto": "/CMS-WEB/manifest.webmanifest"
+  },
+  "sobre_nosotros": {
+    "lenguaje": "zh-CN",
+    "nombre": "关于 Lladeal",
+    "descripcion": "了解 Lladeal，这是一家位于卡扬贝佩西约的领先花卉企业。我们专注于高品质玫瑰的种植与出口。",
+    "parte_de": {
+      "nombre": "Lladeal®",
+      "descripcion": "Lladeal® 是一家厄瓜多尔花卉企业，专注于高海拔玫瑰的可持续生产，以花头大、枝干强、色泽鲜艳而闻名。"
+    }
+  },
+  "seo_sobre_nosotros": {
+    "title": "关于我们 | Lladeal 卡扬贝玫瑰农场",
+    "description": "了解我们的故事和种植流程。Lladeal 将卡扬贝独特的赤道微气候与农业经验结合，培育出卓越的玫瑰。"
+  },
+  "seo_contactos": {
+    "lenguaje": "zh-CN",
+    "nombre": "联系 | Lladeal",
+    "description": "如需进口厄瓜多尔优质玫瑰，请联系我们的销售团队。我们服务批发商、分销商和国际采购商。",
+    "parte_de": {
+      "nombre": "Lladeal®",
+      "descripcion": "Lladeal® 是一家厄瓜多尔花卉企业，专注于高海拔玫瑰的可持续生产，以花头大、枝干强、色泽鲜艳而闻名。"
+    }
+  },
+  "seo_contact": {
+    "title": "联系与批发销售 | Lladeal",
+    "description": "欢迎索取报价或玫瑰目录。您可以通过电子邮件、电话与我们联系，或前往厄瓜多尔卡扬贝拜访。"
+  }
+}

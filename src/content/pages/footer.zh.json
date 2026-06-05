@@ -1,0 +1,25 @@
+{
+  "generales": {
+    "nombre_empresa": "Lladeal®",
+    "Descripcion": "Lladeal® 是一家专注于优质玫瑰种植与出口的花卉企业。我们的种植基地位于厄瓜多尔卡扬贝，服务全球市场。"
+  },
+  "contactos": {
+    "address": "Cayambe, Pesillo. Olmedo",
+    "phone": "593 939730772",
+    "email": "ecuador@lladeal.com",
+    "website": "www.lladeal.com"
+  },
+  "creacion": {
+    "nombre": "Sotomayor Consulting",
+    "Link": "https://sotomayorconsulting.com/inicio/"
+  },
+  "noticia": {
+    "titulo": "2026 Lladeal®。保留所有权利。"
+  },
+  "footer_form": {
+    "leyenda": "订阅我们的资讯",
+    "placeholder": "请输入您的邮箱",
+    "submit": "发送",
+    "description": "留下您的邮箱，我们的团队会尽快与您联系并提供所需信息。"
+  }
+}

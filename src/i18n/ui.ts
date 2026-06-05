@@ -1,0 +1,120 @@
+import type { Locale } from './config';
+
+const ui = {
+  es: {
+    nav: {
+      home: 'Inicio',
+      about: 'Nosotros',
+      contact: 'Contactos',
+      catalogo: 'Catalogo',
+      blog: 'Blog',
+      switchToEnglish: 'EN',
+      switchToSpanish: 'ES',
+      switchToRussian: 'RU',
+      switchToChinese: '中文',
+      logoAltSuffix: 'inicio',
+    },
+    footer: {
+      moreInfo: '¿Mas informacion?',
+      contactUs: 'Contáctanos',
+      craftedBy: 'Creado por',
+      emailSubmitAria: 'Enviar correo',
+      videoFallback: 'Tu navegador no soporta el video.',
+      avatarAlt: 'Foto de',
+    },
+    contactForm: {
+      name: 'Nombre',
+      email: 'Correo Electrónico',
+      message: 'Mensaje',
+      submit: 'Enviar',
+    },
+  },
+  en: {
+    nav: {
+      home: 'Home',
+      about: 'About',
+      contact: 'Contact',
+      catalogo: 'Catalog',
+      blog: 'Blog',
+      switchToEnglish: 'EN',
+      switchToSpanish: 'ES',
+      switchToRussian: 'RU',
+      switchToChinese: '中文',
+      logoAltSuffix: 'home',
+    },
+    footer: {
+      moreInfo: 'Need more information?',
+      contactUs: 'Contact us',
+      craftedBy: 'Crafted by',
+      emailSubmitAria: 'Submit email',
+      videoFallback: 'Your browser does not support the video tag.',
+      avatarAlt: 'Photo of',
+    },
+    contactForm: {
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      submit: 'Send',
+    },
+  },
+  ru: {
+    nav: {
+      home: 'Главная',
+      about: 'О нас',
+      contact: 'Контакты',
+      catalogo: 'Каталог',
+      blog: 'Блог',
+      switchToEnglish: 'EN',
+      switchToSpanish: 'ES',
+      switchToRussian: 'RU',
+      switchToChinese: '中文',
+      logoAltSuffix: 'главная',
+    },
+    footer: {
+      moreInfo: 'Нужна дополнительная информация?',
+      contactUs: 'Свяжитесь с нами',
+      craftedBy: 'Создано',
+      emailSubmitAria: 'Отправить email',
+      videoFallback: 'Ваш браузер не поддерживает видео.',
+      avatarAlt: 'Фото',
+    },
+    contactForm: {
+      name: 'Имя',
+      email: 'Электронная почта',
+      message: 'Сообщение',
+      submit: 'Отправить',
+    },
+  },
+  zh: {
+    nav: {
+      home: '首页',
+      about: '关于我们',
+      contact: '联系我们',
+      catalogo: '产品目录',
+      blog: '博客',
+      switchToEnglish: 'EN',
+      switchToSpanish: 'ES',
+      switchToRussian: 'RU',
+      switchToChinese: '中文',
+      logoAltSuffix: '首页',
+    },
+    footer: {
+      moreInfo: '需要更多信息吗？',
+      contactUs: '联系我们',
+      craftedBy: '网站制作',
+      emailSubmitAria: '提交邮箱',
+      videoFallback: '您的浏览器不支持视频播放。',
+      avatarAlt: '照片',
+    },
+    contactForm: {
+      name: '姓名',
+      email: '电子邮箱',
+      message: '留言',
+      submit: '发送',
+    },
+  },
+} as const;
+
+export function getUiStrings(locale: Locale) {
+  return ui[locale];
+}

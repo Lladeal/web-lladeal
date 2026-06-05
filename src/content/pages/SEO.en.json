@@ -1,0 +1,39 @@
+{
+  "Seo_global": {
+    "titulo": "Lladeal® | Premium Ecuadorian Export Roses",
+    "descripcion": "Discover Lladeal's excellence in Cayambe, Ecuador. A leading provider of high-altitude roses with strong stems, large buds, and premium quality for the international market.",
+    "og_titulo": "Lladeal® | The World's Most Beautiful Flowers",
+    "og_descripcion": "We bring the majesty of Ecuadorian roses to the world. High-altitude cultivation in Cayambe with outstanding durability and guaranteed freshness.",
+    "imagen_texto_alternativo": "Official Lladeal logo, premium export roses from Ecuador.",
+    "imagen_og": "/CMS-WEB/social.png",
+    "icono": "/CMS-WEB/icon.svg",
+    "icono_apple": "/CMS-WEB/apple-touch-icon.png",
+    "manifiesto": "/CMS-WEB/manifest.webmanifest"
+  },
+  "sobre_nosotros": {
+    "lenguaje": "en-US",
+    "nombre": "About Lladeal",
+    "descripcion": "Learn about Lladeal, a leading flower company in Pesillo, Cayambe. We specialize in the cultivation and export of premium roses with international quality standards.",
+    "parte_de": {
+      "nombre": "Lladeal®",
+      "descripcion": "Lladeal® is an Ecuadorian flower company dedicated to the sustainable production of high-altitude roses, globally recognized for their size, strength, and vibrant colors."
+    }
+  },
+  "seo_sobre_nosotros": {
+    "title": "About Us | Lladeal Flower Farm in Cayambe",
+    "description": "Explore our story and agricultural processes. At Lladeal, we combine Cayambe's unique equatorial microclimate with agricultural expertise to produce exceptional roses."
+  },
+  "seo_contactos": {
+    "lenguaje": "en-US",
+    "nombre": "Contact | Lladeal",
+    "description": "Contact our commercial team to import premium roses from Ecuador. We support wholesale orders, distributors, and international brokers.",
+    "parte_de": {
+      "nombre": "Lladeal®",
+      "descripcion": "Lladeal® is an Ecuadorian flower company dedicated to the sustainable production of high-altitude roses, globally recognized for their size, strength, and vibrant colors."
+    }
+  },
+  "seo_contact": {
+    "title": "Contact and Wholesale Sales | Lladeal",
+    "description": "Request a quote or our rose catalog. Contact us by email, phone, or visit us in Cayambe, Ecuador."
+  }
+}

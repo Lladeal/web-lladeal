@@ -2,7 +2,10 @@
 import Icon from '@ui/icons/Icon.astro';
 import FeatureCard from '@common/FeatureCard.astro';
 import Button from '@ui/Button.astro';
-import { caracteristicas } from '@content/pages/home.json'
+import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
+
+const locale = getLocaleFromUrl(Astro.url);
+const { caracteristicas } = getHomeContent(locale);
 
 ---
 

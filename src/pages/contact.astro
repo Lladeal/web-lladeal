@@ -4,9 +4,13 @@ import BaseLayout from '@layout/BaseLayout.astro';
 import Icon from '@ui/icons/Icon.astro';
 import ContactForm from '@ui/forms/ContactForm.astro';
 import type { WithContext, Thing } from 'schema-dts';
-import { contactos } from '@content/pages/contactos.json';
-import { seo_contactos, seo_contact } from '@content/pages/SEO.json';
-import { barra_de_navegacion } from '@content/pages/navbar.json';
+import { withBase } from '@utils/links';
+import { getContactContent, getLocaleFromUrl, getNavbarContent, getSeoContent } from '@/i18n/content';
+
+const locale = getLocaleFromUrl(Astro.url);
+const { contactos } = getContactContent(locale);
+const { seo_contactos, seo_contact } = getSeoContent(locale);
+const { barra_de_navegacion } = getNavbarContent(locale);
 
 // Schema.org metadata for SEO
 const schema: WithContext<Thing> = {
@@ -82,7 +86,7 @@ const schema: WithContext<Thing> = {
             <p class="mt-2">
               <a
                 class="group inline-flex items-center gap-x-2 text-sm font-medium text-slate-600 decoration-2 transition duration-300 hover:underline focus:underline focus:outline-hidden"
-                href={contactos.blog.detalles.link}
+                href={withBase(contactos.blog.detalles.link, locale)}
               >
                 {contactos.blog.detalles.texto}
                 <Icon name="chevronRight" />

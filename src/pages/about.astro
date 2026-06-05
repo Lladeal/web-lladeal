@@ -2,13 +2,14 @@
 export const prerender = true;
 import BaseLayout from '@layout/BaseLayout.astro';
 import type { WithContext, Thing } from 'schema-dts';
-import { sobre_nosotros, seo_sobre_nosotros } from '@content/pages/SEO.json';
 import { Image } from 'astro:assets';
-import {
-  datos_sobre_nosotros,
-  datos_de_experticie,
-  Team,
-} from '@content/pages/about.json';
+import { getAboutContent, getLocaleFromUrl, getSeoContent } from '@/i18n/content';
+import { getUiStrings } from '@/i18n/ui';
+
+const locale = getLocaleFromUrl(Astro.url);
+const { sobre_nosotros, seo_sobre_nosotros } = getSeoContent(locale);
+const { datos_sobre_nosotros, datos_de_experticie, Team } = getAboutContent(locale);
+const t = getUiStrings(locale).footer;
 
 // Schema.org metadata for SEO
 const schema: WithContext<Thing> = {
@@ -131,7 +132,7 @@ const schema: WithContext<Thing> = {
                     ? '/CMS-WEB/uploads/fotos_personal/Avatar-default.png'
                     : miembro.foto
                 }
-                alt={`${miembro.nombre}'s avatar`}
+                alt={`${t.avatarAlt} ${miembro.nombre}`}
                 width={96}
                 height={96}
               />

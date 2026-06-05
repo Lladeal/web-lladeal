@@ -1,0 +1,24 @@
+{
+  "contactos": {
+    "titulo": "Contact us",
+    "subtitulo": "Questions, comments, or quote requests.",
+    "direcciones": {
+      "titulo": "Our location:",
+      "direccion_1": "Cayambe, Pesillo",
+      "direccion_2": "Olmedo, Ecuador"
+    },
+    "correo": {
+      "titulo": "Email or call us:",
+      "telefono": "+593 939730772",
+      "mail": "ecuador@lladeal.com"
+    },
+    "blog": {
+      "titulo": "Variety Catalog",
+      "detalles": {
+        "descripcion": "Explore our exclusive collection of premium high-altitude roses.",
+        "texto": "View rose catalog",
+        "link": "/catalogo"
+      }
+    }
+  }
+}

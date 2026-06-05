@@ -6,7 +6,8 @@ import { SEO, type Props as SEOProps } from 'astro-seo';
 import { Schema } from 'astro-seo-schema';
 import type { WithContext, Thing } from 'schema-dts';
 import { withBase } from '@utils/links';
-import { Seo_global } from '@content/pages/SEO.json';
+import { localeMetadata } from '@/i18n/config';
+import { getLocaleFromUrl, getSeoContent } from '@/i18n/content';
 import '@styles/global.css';
 
 interface Props {
@@ -16,6 +17,10 @@ interface Props {
 
 // Extract `seo` and `schema` from properties or define defaults
 const { seo, schema } = Astro.props;
+const locale = getLocaleFromUrl(Astro.url);
+const localeMeta = localeMetadata[locale];
+const seoContent = getSeoContent(locale);
+const { Seo_global } = seoContent;
 const socialImage = new URL(withBase('/social.png') ?? '/social.png', Astro.site).toString();
 const somatypeBold = withBase('/fonts/Somatype-Bold.otf');
 
@@ -28,23 +33,21 @@ const ogDescription =
 const defaultSchema: WithContext<Thing> = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  inLanguage: 'en-US',
+  inLanguage: localeMeta.schemaLang,
   '@id': Astro.url.href,
   url: Astro.url.href,
-  name: 'DataNova',
-  description:
-    "Unlock powerful data insights with DataNova's advanced analytics suite for Excel. Visualize, analyze, and make data-driven decisions in minutes with seamless Excel integration, AI-powered analysis, and predictive forecasting models.",
+  name: Seo_global.titulo,
+  description: Seo_global.descripcion,
   isPartOf: {
     '@type': 'WebSite',
     url: `${Astro.site}`,
-    name: 'DataNova',
-    description:
-      'DataNova Analytics Inc. provides advanced analytics for Excel to help businesses unlock actionable insights quickly with no coding required.',
+    name: Seo_global.titulo,
+    description: Seo_global.descripcion,
   },
 };
 ---
 
-<html lang="es" class="scroll-pt-32">
+<html lang={localeMeta.htmlLang} class="scroll-pt-32">
   <head>
     {/* SEO Meta Tags */}
     <SEO

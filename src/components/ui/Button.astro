@@ -1,8 +1,9 @@
 ---
 import { twMerge } from 'tailwind-merge';
-import { withBase } from '@utils/links';
+import { getLocaleFromPathname, withBase } from '@utils/links';
 const { type, href, rel, target, variant, className, id } = Astro.props;
-const resolvedHref = withBase(href);
+const locale = getLocaleFromPathname(Astro.url.pathname);
+const resolvedHref = withBase(href, locale);
 
 export interface Props {
   type?: 'button' | 'submit' | 'reset';

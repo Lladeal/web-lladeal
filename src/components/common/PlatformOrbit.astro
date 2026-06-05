@@ -1,7 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components'
-import { features } from '@content/pages/home.json';
+import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
+
+const locale = getLocaleFromUrl(Astro.url);
+const { features } = getHomeContent(locale);
 ---
 
 <div
