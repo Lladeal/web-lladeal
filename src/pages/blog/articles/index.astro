@@ -1,18 +1,33 @@
 ---
 import BaseLayout from '@layout/BaseLayout.astro';
+import { getArticlesByLocale } from '@utils/articles';
+import { getLocaleFromUrl } from '@/i18n/content';
 
-import { getCollection } from 'astro:content';
-
-const articles = (await getCollection('articles')).toSorted(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
+const locale = getLocaleFromUrl(Astro.url);
+const articles = await getArticlesByLocale(locale);
 
 const urlPath = Astro.url.pathname;
 
-export const pageContent = {
-  pageTitle: 'Blogs',
-  actionLabel: 'Leer artículo',
-};
+const pageContentByLocale = {
+  es: {
+    pageTitle: 'Blog',
+    actionLabel: 'Leer articulo',
+  },
+  en: {
+    pageTitle: 'Blog',
+    actionLabel: 'Read article',
+  },
+  ru: {
+    pageTitle: 'Блог',
+    actionLabel: 'Читать статью',
+  },
+  zh: {
+    pageTitle: '博客',
+    actionLabel: '阅读文章',
+  },
+} as const;
+
+const pageContent = pageContentByLocale[locale];
 ---
 
 <BaseLayout>
@@ -57,7 +72,7 @@ export const pageContent = {
           return (
             <a
               class={`card group ${borderClasses}`}
-              href={`${urlPath}/${item.id}`}
+              href={`${urlPath}/${item.data.articleSlug}`}
             >
               <div class="mb-5">
                 <div class="mt-5">

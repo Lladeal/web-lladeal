@@ -1,6 +1,7 @@
 ---
 import Navbar from '@sections/Navbar.astro';
 import Footer from '@sections/Footer.astro';
+import WhatsappBtn from '@common/whatsBtn.astro';
 import { ClientRouter } from 'astro:transitions';
 import { SEO, type Props as SEOProps } from 'astro-seo';
 import { Schema } from 'astro-seo-schema';
@@ -21,13 +22,11 @@ const locale = getLocaleFromUrl(Astro.url);
 const localeMeta = localeMetadata[locale];
 const seoContent = getSeoContent(locale);
 const { Seo_global } = seoContent;
-const socialImage = new URL(withBase('/social.png') ?? '/social.png', Astro.site).toString();
+const socialImage = new URL(
+  withBase('/social.png') ?? '/social.png',
+  Astro.site
+).toString();
 const somatypeBold = withBase('/fonts/Somatype-Bold.otf');
-
-const ogTitle = seo?.title ?? 'DataNova - Unlock Insights from Your Excel Data';
-const ogDescription =
-  seo?.description ??
-  "Transform your Excel workspace with DataNova's powerful analytics suite. Get insights, predictive models, and visualizations in minutes with no coding required.";
 
 // Define default JSON-LD Schema.org data if no schema is passed
 const defaultSchema: WithContext<Thing> = {
@@ -90,7 +89,13 @@ const defaultSchema: WithContext<Thing> = {
     <ClientRouter />
 
     {/* Local Font Definitions */}
-    <link rel="preload" href={somatypeBold} as="font" type="font/otf" crossorigin />
+    <link
+      rel="preload"
+      href={somatypeBold}
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
     <style
       is:global
       define:vars={{
@@ -163,6 +168,7 @@ const defaultSchema: WithContext<Thing> = {
 
     <main>
       <slot />
+      <WhatsappBtn />
     </main>
 
     <Footer />

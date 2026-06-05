@@ -1716,8 +1716,8 @@ content:
     label: Contenido editorial
     type: group
     items:
-      - name: articles
-        label: Articulos
+      - name: articles_es
+        label: Articulos en espanol
         type: collection
         path: src/content/articles
         filename:
@@ -1725,14 +1725,137 @@ content:
           field: create
         format: yaml-frontmatter
         view:
-          fields: [title, date, description]
+          fields: [title, date, description, articleSlug]
           primary: title
           sort: [date, title]
-          search: [title, description, body]
+          search: [title, description, body, articleSlug]
           default:
             sort: date
             order: desc
         fields:
+          - name: locale
+            label: Idioma interno
+            type: string
+          - name: articleSlug
+            label: Slug del articulo
+            type: string
+          - name: title
+            label: Titulo
+            type: string
+          - name: description
+            label: Descripcion corta
+            type: text
+          - name: date
+            label: Fecha de publicacion
+            type: date
+          - name: body
+            label: Contenido
+            type: rich-text
+            options:
+              format: markdown
+              media: uploads
+
+      - name: articles_en
+        label: Articulos en ingles
+        type: collection
+        path: src/content/articles/en
+        filename:
+          template: "{primary}.mdoc"
+          field: create
+        format: yaml-frontmatter
+        view:
+          fields: [title, date, description, articleSlug]
+          primary: title
+          sort: [date, title]
+          search: [title, description, body, articleSlug]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: locale
+            label: Idioma interno
+            type: string
+          - name: articleSlug
+            label: Slug del articulo
+            type: string
+          - name: title
+            label: Titulo
+            type: string
+          - name: description
+            label: Descripcion corta
+            type: text
+          - name: date
+            label: Fecha de publicacion
+            type: date
+          - name: body
+            label: Contenido
+            type: rich-text
+            options:
+              format: markdown
+              media: uploads
+
+      - name: articles_ru
+        label: Articulos en ruso
+        type: collection
+        path: src/content/articles/ru
+        filename:
+          template: "{primary}.mdoc"
+          field: create
+        format: yaml-frontmatter
+        view:
+          fields: [title, date, description, articleSlug]
+          primary: title
+          sort: [date, title]
+          search: [title, description, body, articleSlug]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: locale
+            label: Idioma interno
+            type: string
+          - name: articleSlug
+            label: Slug del articulo
+            type: string
+          - name: title
+            label: Titulo
+            type: string
+          - name: description
+            label: Descripcion corta
+            type: text
+          - name: date
+            label: Fecha de publicacion
+            type: date
+          - name: body
+            label: Contenido
+            type: rich-text
+            options:
+              format: markdown
+              media: uploads
+
+      - name: articles_zh
+        label: Articulos en chino
+        type: collection
+        path: src/content/articles/zh
+        filename:
+          template: "{primary}.mdoc"
+          field: create
+        format: yaml-frontmatter
+        view:
+          fields: [title, date, description, articleSlug]
+          primary: title
+          sort: [date, title]
+          search: [title, description, body, articleSlug]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: locale
+            label: Idioma interno
+            type: string
+          - name: articleSlug
+            label: Slug del articulo
+            type: string
           - name: title
             label: Titulo
             type: string
