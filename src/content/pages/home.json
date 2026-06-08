@@ -25,33 +25,33 @@
     "subtitulo": "Descubre cómo transformamos las condiciones únicas de Cayambe en las rosas de exportación más hermosas del mundo, combinando el cuidado artesanal con estándares de calidad insuperables.",
     "lista": [
       {
-        "wrapperClass": "lg:rounded-l-3xl",
         "title": "Selección rigurosa de exportación",
         "description": "Criterios de excelencia: Evaluamos minuciosamente cada flor, eligiendo solo aquellas que cumplen con el tamaño de botón perfecto, la apertura ideal y una simetría impecable.",
         "image": "/CMS-WEB/uploads/Flor-vertical.png",
+        "class": "relative lg:row-span-2",
+        "wrapperClass": "lg:rounded-l-3xl",
         "imageClass": "mx-auto mt-5 self-end object-cover w-[90%]",
         "imageContainerClass": "relative flex min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
         "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
-        "headingClass": "pb-3 sm:pb-0",
-        "class": "relative lg:row-span-2"
+        "headingClass": "pb-3 sm:pb-0"
       },
       {
         "title": "Cultivo artesanal en la altura",
         "description": "Cuidado directo en el campo: Trabajamos la tierra de Pesillo con manos expertas, aprovechando la luz perpendicular de la línea ecuatorial para dar vida a tallos robustos y colores intensos.",
+        "image": "/CMS-WEB/uploads/Pesillo01.webp",
+        "class": "relative max-lg:row-start-1",
         "imageClass": "w-full rounded-t-xl",
         "imageContainerClass": "relative flex flex-1 items-center justify-center px-4 max-lg:pb-12 max-lg:pt-10 lg:pb-2",
-        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-1 z-10 mx-auto h-28 w-[93%] bg-linear-to-b/oklch from-transparent via-white to-white",
-        "class": "relative max-lg:row-start-1",
-        "image": "/CMS-WEB/uploads/Pesillo01.webp"
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-1 z-10 mx-auto h-28 w-[93%] bg-linear-to-b/oklch from-transparent via-white to-white"
       },
       {
         "title": "Nutrición y frescura garantizada",
         "description": "Suelos cálidos y nutrientes puros: Alimentamos nuestras plantas con los minerales de las tierras altas de Cayambe, asegurando que cada rosa tenga una vida en florero mucho más larga y duradera.",
+        "image": "/CMS-WEB/uploads/Rosas.png",
+        "class": "relative lg:row-span-2",
         "imageClass": "h-full object-cover",
         "imageContainerClass": "relative min-h-[30rem] w-full grow",
-        "imageSecondaryContainerClass": "absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl shadow-2xl",
-        "class": "relative lg:row-span-2",
-        "image": "/CMS-WEB/uploads/Rosas.png"
+        "imageSecondaryContainerClass": "absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl shadow-2xl"
       },
       {
         "title": "Y mas...",
@@ -59,9 +59,9 @@
           "Variedades majestuosas: Una amplia gama de colores vibrantes y botones grandes que destacan en el mercado mundial.",
           "Compromiso y origen. Orgullosamente cultivadas en Cayambe, respetando la tierra y a nuestra comunidad."
         ],
+        "component": "PlatformOrbit",
         "class": "relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2",
-        "wrapperClass": "rounded-lg",
-        "component": "PlatformOrbit"
+        "wrapperClass": "rounded-lg"
       }
     ],
     "Orbita": {
@@ -133,16 +133,16 @@
   },
   "carrusel": [
     {
-      "titulo": "Magic time",
-      "descripcion": "Rosa Magic Time",
-      "ImagenArchivo": "/CMS-WEB/uploads/01_Magic_Time.png",
+      "titulo": "ATOMIC",
+      "descripcion": "Rosa ATOMIC",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-5.png",
       "tipo": "Bicolores",
       "Data": {
-        "Tamaño_del_boton": "7,0 - 8,0 cm",
+        "Tamaño_del_boton": "6.0 - 6.5 cm",
         "Longitud_del_tallo": "40 - 70 cm",
-        "Vida_en_florero": "15 - 18 días",
-        "Numero_de_petalos": "42 - 43",
-        "Estado_fenologico": "92 días",
+        "Vida_en_florero": "15  días",
+        "Numero_de_petalos": "40 - 45",
+        "Estado_fenologico": "95 días",
         "Ciclo": "Normal",
         "link": "#"
       }
