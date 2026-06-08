@@ -3,6 +3,7 @@ import BaseLayout from '@layout/BaseLayout.astro';
 import Button from '@ui/Button.astro';
 import { Image } from 'astro:assets';
 import { getCatalogContent, getLocaleFromUrl } from '@/i18n/content';
+import { formatCatalogSpecValue } from '@utils/catalog-format';
 
 const { item } = Astro.props as {
   item: {
@@ -40,12 +41,12 @@ const seo = {
 };
 
 const specs = [
-  { label: detail.specs.budSize, value: technicalData.Tamaño_del_boton },
-  { label: detail.specs.stemLength, value: technicalData.Longitud_del_tallo },
-  { label: detail.specs.vaseLife, value: technicalData.Vida_en_florero },
-  { label: detail.specs.petals, value: technicalData.Numero_de_petalos },
-  { label: detail.specs.phenologicalStage, value: technicalData.Estado_fenologico },
-  { label: detail.specs.cycle, value: technicalData.Ciclo },
+  { label: detail.specs.budSize, value: formatCatalogSpecValue(locale, 'Tamaño_del_boton', technicalData.Tamaño_del_boton) },
+  { label: detail.specs.stemLength, value: formatCatalogSpecValue(locale, 'Longitud_del_tallo', technicalData.Longitud_del_tallo) },
+  { label: detail.specs.vaseLife, value: formatCatalogSpecValue(locale, 'Vida_en_florero', technicalData.Vida_en_florero) },
+  { label: detail.specs.petals, value: formatCatalogSpecValue(locale, 'Numero_de_petalos', technicalData.Numero_de_petalos) },
+  { label: detail.specs.phenologicalStage, value: formatCatalogSpecValue(locale, 'Estado_fenologico', technicalData.Estado_fenologico) },
+  { label: detail.specs.cycle, value: formatCatalogSpecValue(locale, 'Ciclo', technicalData.Ciclo) },
 ];
 ---
 

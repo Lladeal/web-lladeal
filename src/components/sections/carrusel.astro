@@ -3,10 +3,25 @@ import { Image } from 'astro:assets';
 import Button from '@ui/Button.astro';
 import { Icon } from 'astro-icon/components'
 import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
+import { formatCatalogSpecValue } from '@utils/catalog-format';
 
 const locale = getLocaleFromUrl(Astro.url);
 const { carrusel } = getHomeContent(locale);
-type CarouselItem = (typeof carrusel)[number];
+type CarouselItem = {
+  titulo: string;
+  descripcion: string;
+  tipo: string;
+  ImagenArchivo: string;
+  Data: {
+    Tamaño_del_boton: string;
+    Longitud_del_tallo: string;
+    Vida_en_florero: string;
+    Numero_de_petalos: string;
+    Estado_fenologico: string;
+    Ciclo: string;
+    link: string;
+  };
+};
 const specRowClass =
   'grid grid-cols-[minmax(0,10rem)_minmax(0,1fr)] items-center gap-4 border-b border-slate-100 py-3';
 const specLabelClass =
@@ -93,10 +108,13 @@ function slugify(value: string) {
           class="hs-carousel-body absolute inset-s-0 top-0 bottom-0 flex flex-nowrap transition-transform duration-700"
         >
           {
-            carrusel.map((items: CarouselItem, index: number) => (
+            carrusel.map((entry, index: number) => {
+              const items = entry as CarouselItem;
+
+              return (
               <div class="hs-carousel-slide h-full">
                 <article class="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl md:flex-row">
-                  <div class="group relative w-full overflow-hidden bg-linear-to-bl from-[#7e2c75]/80 to-[#4f274d]/20 md:w-1/2">
+                  <div class="group relative w-full overflow-hidden bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] md:w-1/2">
                     <Image
                       src={items.ImagenArchivo}
                       alt={items.descripcion}
@@ -127,27 +145,27 @@ function slugify(value: string) {
                     <div class="flex flex-col">
                       <div class={specRowClass}>
                         <span class={specLabelClass}>{labels.budSize}</span>
-                        <span class={specValueClass}>{items.Data.Tamaño_del_boton}</span>
+                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Tamaño_del_boton', items.Data.Tamaño_del_boton)}</span>
                       </div>
                       <div class={specRowClass}>
                         <span class={specLabelClass}>{labels.stemLength}</span>
-                        <span class={specValueClass}>{items.Data.Longitud_del_tallo}</span>
+                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Longitud_del_tallo', items.Data.Longitud_del_tallo)}</span>
                       </div>
                       <div class={specRowClass}>
                         <span class={specLabelClass}>{labels.vaseLife}</span>
-                        <span class={specValueClass}>{items.Data.Vida_en_florero}</span>
+                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Vida_en_florero', items.Data.Vida_en_florero)}</span>
                       </div>
                       <div class={specRowClass}>
                         <span class={specLabelClass}>{labels.petals}</span>
-                        <span class={specValueClass}>{items.Data.Numero_de_petalos}</span>
+                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Numero_de_petalos', items.Data.Numero_de_petalos)}</span>
                       </div>
                       <div class={specRowClass}>
                         <span class={specLabelClass}>{labels.phenologicalStage}</span>
-                        <span class={specValueClass}>{items.Data.Estado_fenologico}</span>
+                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Estado_fenologico', items.Data.Estado_fenologico)}</span>
                       </div>
                       <div class="grid grid-cols-[minmax(0,10rem)_minmax(0,1fr)] items-center gap-4 py-3">
                         <span class={specLabelClass}>{labels.cycle}</span>
-                        <span class={specValueClass}>{items.Data.Ciclo}</span>
+                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Ciclo', items.Data.Ciclo)}</span>
                       </div>
                     </div>
                     <div class="mt-10 flex gap-3">
@@ -156,7 +174,8 @@ function slugify(value: string) {
                   </div>
                 </article>
               </div>
-            ))
+              );
+            })
           }
         </div>
 
@@ -210,7 +229,10 @@ function slugify(value: string) {
           class="hs-carousel-pagination [&::-webkit-scrollbar-track]:bg-scrollbar-track [&::-webkit-scrollbar-thumb]:bg-scrollbar-thumb flex max-h-160 flex-row gap-2 overflow-x-auto sm:flex-col sm:overflow-x-hidden sm:overflow-y-auto [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-none"
         >
           {
-            carrusel.map((items: CarouselItem) => (
+            carrusel.map(entry => {
+              const items = entry as CarouselItem;
+
+              return (
               <div class="hs-carousel-pagination-item border-line-2 hs-carousel-active:border-primary width-full h-fit shrink-0 cursor-pointer overflow-hidden rounded-md border">
                 <div class="flex h-fit items-center justify-center p-1 text-center">
                   <Image
@@ -223,7 +245,8 @@ function slugify(value: string) {
                   />
                 </div>
               </div>
-            ))
+              );
+            })
           }
         </div>
       </div>
