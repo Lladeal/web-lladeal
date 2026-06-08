@@ -29,14 +29,50 @@ import seoEn from '../content/pages/SEO.en.json';
 import seoRu from '../content/pages/SEO.ru.json';
 import seoZh from '../content/pages/SEO.zh.json';
 
+function normalizeTitle(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+}
+
+function mergeLocalizedEntry(baseEntry: Record<string, any>, localizedEntry: Record<string, any>) {
+  return {
+    ...baseEntry,
+    ...localizedEntry,
+    Data: {
+      ...(baseEntry.Data ?? {}),
+      ...(localizedEntry.Data ?? {}),
+    },
+  };
+}
+
+function mergeHomeContent(localizedHome: Record<string, any>) {
+  const mergedCarousel = homeEs.carrusel.map((baseItem, index) => {
+    const localizedItem =
+      localizedHome.carrusel?.find(
+        (item: Record<string, any>) => normalizeTitle(item.titulo ?? '') === normalizeTitle(baseItem.titulo),
+      ) ?? localizedHome.carrusel?.[index];
+
+    return localizedItem ? mergeLocalizedEntry(baseItem, localizedItem) : baseItem;
+  });
+
+  return {
+    ...homeEs,
+    ...localizedHome,
+    carrusel: mergedCarousel,
+  };
+}
+
 export function getLocaleFromUrl(url: URL): Locale {
   return getLocaleFromPathname(url.pathname);
 }
 
 export function getHomeContent(locale: Locale) {
-  if (locale === 'en') return homeEn;
-  if (locale === 'ru') return homeRu;
-  if (locale === 'zh') return homeZh;
+  if (locale === 'en') return mergeHomeContent(homeEn);
+  if (locale === 'ru') return mergeHomeContent(homeRu);
+  if (locale === 'zh') return mergeHomeContent(homeZh);
   return homeEs;
 }
 

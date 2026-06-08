@@ -2,11 +2,12 @@
 export const prerender = true;
 
 import CatalogDetailPage from '../../../components/pages/CatalogDetailPage.astro';
-import homeRu from '@content/pages/home.ru.json';
+import { getHomeContent } from '@/i18n/content';
 
-type CatalogItem = (typeof homeRu.carrusel)[number];
+type CatalogItem = ReturnType<typeof getHomeContent>['carrusel'][number];
 
 export function getStaticPaths() {
+  const homeRu = getHomeContent('ru');
   const slugify = (value: string) =>
     value
       .normalize('NFD')

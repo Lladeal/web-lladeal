@@ -789,9 +789,39 @@ content:
               - name: descripcion
                 label: Descripcion en ingles
                 type: text
+              - name: ImagenArchivo
+                label: Imagen de la rosa
+                type: image
+                options:
+                  media: uploads
               - name: tipo
                 label: Tipo en ingles
                 type: string
+              - name: Data
+                label: Ficha tecnica
+                type: object
+                fields:
+                  - name: Tamaño_del_boton
+                    label: Tamano del boton
+                    type: string
+                  - name: Longitud_del_tallo
+                    label: Longitud del tallo
+                    type: string
+                  - name: Vida_en_florero
+                    label: Vida en florero
+                    type: string
+                  - name: Numero_de_petalos
+                    label: Numero de petalos
+                    type: string
+                  - name: Estado_fenologico
+                    label: Estado fenologico
+                    type: string
+                  - name: Ciclo
+                    label: Ciclo
+                    type: string
+                  - name: link
+                    label: Enlace para consultar o comprar
+                    type: string
       - name: about_page_en
         label: Nosotros en ingles
         type: file
@@ -1191,9 +1221,39 @@ content:
               - name: descripcion
                 label: Descripcion en ruso
                 type: text
+              - name: ImagenArchivo
+                label: Imagen de la rosa
+                type: image
+                options:
+                  media: uploads
               - name: tipo
                 label: Tipo en ruso
                 type: string
+              - name: Data
+                label: Ficha tecnica
+                type: object
+                fields:
+                  - name: Tamaño_del_boton
+                    label: Tamano del boton
+                    type: string
+                  - name: Longitud_del_tallo
+                    label: Longitud del tallo
+                    type: string
+                  - name: Vida_en_florero
+                    label: Vida en florero
+                    type: string
+                  - name: Numero_de_petalos
+                    label: Numero de petalos
+                    type: string
+                  - name: Estado_fenologico
+                    label: Estado fenologico
+                    type: string
+                  - name: Ciclo
+                    label: Ciclo
+                    type: string
+                  - name: link
+                    label: Enlace para consultar o comprar
+                    type: string
       - name: about_page_ru
         label: Nosotros en ruso
         type: file
@@ -1485,9 +1545,39 @@ content:
               - name: descripcion
                 label: Descripcion en chino
                 type: text
+              - name: ImagenArchivo
+                label: Imagen de la rosa
+                type: image
+                options:
+                  media: uploads
               - name: tipo
                 label: Tipo en chino
                 type: string
+              - name: Data
+                label: Ficha tecnica
+                type: object
+                fields:
+                  - name: Tamaño_del_boton
+                    label: Tamano del boton
+                    type: string
+                  - name: Longitud_del_tallo
+                    label: Longitud del tallo
+                    type: string
+                  - name: Vida_en_florero
+                    label: Vida en florero
+                    type: string
+                  - name: Numero_de_petalos
+                    label: Numero de petalos
+                    type: string
+                  - name: Estado_fenologico
+                    label: Estado fenologico
+                    type: string
+                  - name: Ciclo
+                    label: Ciclo
+                    type: string
+                  - name: link
+                    label: Enlace para consultar o comprar
+                    type: string
       - name: about_page_zh
         label: Nosotros en chino
         type: file
