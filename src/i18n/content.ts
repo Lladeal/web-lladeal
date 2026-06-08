@@ -41,10 +41,8 @@ function mergeLocalizedEntry(baseEntry: Record<string, any>, localizedEntry: Rec
   return {
     ...baseEntry,
     ...localizedEntry,
-    Data: {
-      ...(baseEntry.Data ?? {}),
-      ...(localizedEntry.Data ?? {}),
-    },
+    ImagenArchivo: baseEntry.ImagenArchivo,
+    Data: baseEntry.Data,
   };
 }
 
