@@ -148,16 +148,16 @@
       }
     },
     {
-      "titulo": "High Magic",
-      "descripcion": "Rosa High Magic",
-      "ImagenArchivo": "/CMS-WEB/uploads/02_High_Magic.png",
+      "titulo": "BRIGHTON",
+      "descripcion": "Rosa BRIGHTON",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-6.png",
       "tipo": "Bicolores",
       "Data": {
-        "Tamaño_del_boton": "5,6 cm",
-        "Longitud_del_tallo": "50 - 90 cm",
-        "Vida_en_florero": "12 - 15 días",
-        "Numero_de_petalos": "43",
-        "Estado_fenologico": "88 días",
+        "Tamaño_del_boton": "5.6 - 6.0 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "12 - 14 días",
+        "Numero_de_petalos": "30",
+        "Estado_fenologico": "95 días",
         "Ciclo": "Normal",
         "link": "#"
       }
