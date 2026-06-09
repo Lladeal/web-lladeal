@@ -18,7 +18,7 @@
   },
   "imagen": {
     "video": "/CMS-WEB/uploads/Flores.webm",
-    "ImagenArchivo": "/CMS-WEB/uploads/ISOTIPO_LLADEAL.png"
+    "ImagenArchivo": "/CMS-WEB/uploads/ISOTIPO_LLADEAL.avif"
   },
   "features": {
     "titulo": "Lladeal Farm: совершенство в каждом лепестке",
@@ -65,7 +65,7 @@
       }
     ],
     "Orbita": {
-      "Imagen_central": "/CMS-WEB/uploads/ISOTIPO_LLADEAL.png",
+      "Imagen_central": "/CMS-WEB/uploads/ISOTIPO_LLADEAL.avif",
       "Icono_1": "MaterialSymbolsLightPalette",
       "Icono_2": "MdiFlowerTulip",
       "Icono_3": "MdiWhiteBalanceSunny"

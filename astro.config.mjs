@@ -13,6 +13,9 @@ export default defineConfig({
   site: 'https://damocles99.github.io',
   base: '/CMS-WEB',
   prefetch: true,
+  devToolbar: {
+    enabled: true
+  },
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'en', 'ru', 'zh'],
