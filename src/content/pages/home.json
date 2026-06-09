@@ -151,7 +151,7 @@
       "titulo": "BRIGHTON",
       "descripcion": "Rosa BRIGHTON",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-6.png",
-      "tipo": "Bicolores",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "5.0 - 6.0 cm",
         "Longitud_del_tallo": "40 - 70 cm",
@@ -196,7 +196,7 @@
       "titulo": "EXPLORE",
       "descripcion": "Rosa EXPLORE",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-9.webp",
-      "tipo": "Bicolores",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6,5 - 8 cm",
         "Longitud_del_tallo": "40 - 120 cm",
@@ -211,7 +211,7 @@
       "titulo": "FORTUNE",
       "descripcion": "Rosa FORTUNE",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-10.webp",
-      "tipo": "Bicolores",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "5.5 - 6.0 cm",
         "Longitud_del_tallo": "60 - 80 cm",
@@ -241,7 +241,7 @@
       "titulo": "RED VOLUTION",
       "descripcion": "Rosa RED VOLUTION",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-12.webp",
-      "tipo": "Bicolores",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "1.2 - 1.3 cm",
         "Longitud_del_tallo": "5.5 - 6 cm",
@@ -256,7 +256,7 @@
       "titulo": "FRUTTETO",
       "descripcion": "Rosa FRUTTETO",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-13.webp",
-      "tipo": "Bicolores",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6 - 6.5 cm",
         "Longitud_del_tallo": "40 - 90 cm",
@@ -271,7 +271,7 @@
       "titulo": "GOTCHA",
       "descripcion": "Rosa GOTCHA",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-14.webp",
-      "tipo": "Rojos",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6.0 - 6.5 cm",
         "Longitud_del_tallo": "60 - 90 cm",
@@ -286,7 +286,7 @@
       "titulo": "HIGH MAGIC",
       "descripcion": "Rosa HIGH MAGIC",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-15.webp",
-      "tipo": "Color Único",
+      "tipo": "Bicolores",
       "Data": {
         "Tamaño_del_boton": "5.6 - 6 cm",
         "Longitud_del_tallo": "50 - 90 cm",
@@ -361,7 +361,7 @@
       "titulo": "PALOMA",
       "descripcion": "Rosa PALOMA",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-20.webp",
-      "tipo": "Color Único",
+      "tipo": "Bicolores",
       "Data": {
         "Tamaño_del_boton": "5 - 6 cm",
         "Longitud_del_tallo": "40 - 70 cm",
@@ -421,7 +421,7 @@
       "titulo": "SALMA",
       "descripcion": "Rosa SALMA",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-24.webp",
-      "tipo": "Bicolor",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "5.5 - 7 cm",
         "Longitud_del_tallo": "60 - 90 cm",
@@ -436,7 +436,7 @@
       "titulo": "SHIMMER",
       "descripcion": "Rosa SHIMMER",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-25.webp",
-      "tipo": "Bicolor",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6.5 - 7.0 cm",
         "Longitud_del_tallo": "60 - 80 cm",
@@ -466,7 +466,7 @@
       "titulo": "QUEENS CROWN",
       "descripcion": "Rosa QUEENS CROWN",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-29.webp",
-      "tipo": "Bicolor",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6.5 - 7 cm",
         "Longitud_del_tallo": "40 - 70",
@@ -481,7 +481,7 @@
       "titulo": "PINK XPRESSION",
       "descripcion": "Rosa PINK XPRESSION",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-31.webp",
-      "tipo": "Bicolor",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "8 cm",
         "Longitud_del_tallo": "50 - 70 cm",
@@ -526,7 +526,7 @@
       "titulo": "CANDLELIGHT",
       "descripcion": "Rosa CANDLELIGHT",
       "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-34.webp",
-      "tipo": "Bicolor",
+      "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "6.0 - 7 cm",
         "Longitud_del_tallo": "50 - 70 cm",
