@@ -9,6 +9,7 @@ import { getNavigationLinks } from '@utils/navigation';
 import { localeMetadata, locales, type Locale } from '@/i18n/config';
 import { getLocaleFromUrl, getNavbarContent } from '@/i18n/content';
 import { getUiStrings } from '@/i18n/ui';
+import { Icon } from 'astro-icon/components';
 
 const currentPath = stripBase(Astro.url.pathname);
 const locale = getLocaleFromUrl(Astro.url);
@@ -27,6 +28,14 @@ const languageLinks = locales.map(targetLocale => ({
   href: withBase(localizePath(currentPathWithoutLocale || '/', targetLocale)),
   active: targetLocale === locale,
 }));
+const localeFlags: Record<Locale, string> = {
+  es: 'FlagEs4x3',
+  en: 'FlagUm4x3',
+  ru: 'FlagRu4x3',
+  zh: 'FlagCn4x3',
+};
+const activeLanguageLink =
+  languageLinks.find(link => link.active) ?? languageLinks[0];
 type NavigationLink = (typeof navigationLinks)[number];
 ---
 
@@ -92,11 +101,11 @@ type NavigationLink = (typeof navigationLinks)[number];
 
     <div
       id="hs-header-base"
-      class="hs-collapse hidden grow basis-full overflow-hidden transition-all duration-300 xl:ml-12 xl:block 2xl:ml-20"
+      class="hs-collapse hidden grow basis-full overflow-hidden transition-all duration-300 xl:ml-12 xl:block xl:overflow-visible 2xl:ml-20"
       aria-labelledby="hs-header-base-collapse"
     >
       <div
-        class="max-h-[75vh] overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-track]:bg-slate-100"
+        class="max-h-[75vh] overflow-hidden overflow-y-auto xl:max-h-none xl:overflow-visible [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-track]:bg-slate-100"
       >
         <div
           class="flex flex-col gap-0.5 py-2 xl:flex-row xl:items-center xl:gap-1 xl:py-0"
@@ -142,51 +151,76 @@ type NavigationLink = (typeof navigationLinks)[number];
               }
             </div>
           </div>
-
-           <div
-             class="mt-5 flex flex-wrap items-center gap-x-2 gap-y-2 xl:mt-0 xl:ml-6"
-           >
-            <label class="sr-only" for="locale-switch">Cambiar idioma</label>
-            <div class="relative min-w-20">
-              <select
-                id="locale-switch"
-                data-locale-select
-                class="w-full appearance-none rounded-xl border border-slate-200/80 bg-white/95 py-2 pr-5 pl-3 text-sm font-semibold text-slate-700 shadow-xs ring-1 ring-white/70 transition outline-hidden hover:border-slate-300 hover:bg-slate-50 focus:border-slate-400 focus:bg-white"
-                aria-label="Cambiar idioma"
-              >
-                {
-                  languageLinks.map(link => (
-                    <option
-                      value={link.href}
-                      data-locale={link.locale}
-                      selected={link.active}
-                    >
-                      {link.label}
-                    </option>
-                  ))
-                }
-              </select>
-              <svg
-                class="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-slate-500"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="m6 9 6 6 6-6"></path>
-              </svg>
-            </div>
-            <Button
+          <Button
               href={barra_de_navegacion.boton.link}
               variant="primary"
               target="_blank"
               className="inline-flex border-none py-2! text-nowrap"
               >{barra_de_navegacion.boton.texto}</Button
             >
+
+           <div
+             class="mt-5 flex flex-wrap items-center gap-x-2 gap-y-2 xl:mt-0 xl:ml-6"
+           >
+             <label class="sr-only" for="locale-switch">Cambiar idioma</label>
+            <div class="hs-dropdown relative inline-flex min-w-24">
+              <button
+                id="locale-switch"
+                type="button"
+                class="hs-dropdown-toggle inline-flex w-full items-center justify-between gap-x-2 rounded-xl border border-slate-200/80 bg-white/95 py-2 pr-3 pl-3 text-sm font-semibold text-slate-700 shadow-xs ring-1 ring-white/70 transition outline-hidden hover:border-slate-300 hover:bg-slate-50 focus:border-slate-400 focus:bg-white"
+                aria-label="Cambiar idioma"
+                aria-haspopup="menu"
+                aria-expanded="false"
+              >
+                <span class="flex items-center gap-2">
+                  <Icon
+                    name={localeFlags[activeLanguageLink.locale]}
+                    class="text-base"
+                  />
+                  <span>{activeLanguageLink.label}</span>
+                </span>
+                <svg
+                  class="size-4 text-slate-500 transition-transform duration-200 hs-dropdown-open:rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <div
+                class="hs-dropdown-menu transition-[opacity,margin] duration-150 hs-dropdown-open:opacity-100 absolute top-full right-0 z-50 mt-2 hidden min-w-36 rounded-xl border border-slate-200/80 bg-white/95 p-1 opacity-0 shadow-lg ring-1 ring-slate-950/5 backdrop-blur-sm"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="locale-switch"
+              >
+                <div class="space-y-0.5">
+                  {
+                    languageLinks.map(link => (
+                      <a
+                        href={link.href}
+                        class={`flex items-center gap-x-3 rounded-lg px-3 py-2 text-sm font-medium transition hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden ${
+                          link.active ? 'bg-slate-100 text-slate-900' : 'text-slate-700'
+                        }`}
+                        role="menuitem"
+                        aria-selected={link.active ? 'true' : 'false'}
+                        data-locale={link.locale}
+                      >
+                        <Icon name={localeFlags[link.locale]} class="shrink-0 text-base" />
+                        <span>{link.label}</span>
+                      </a>
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -196,29 +230,22 @@ type NavigationLink = (typeof navigationLinks)[number];
 
 <script is:inline>
   (() => {
-    const bindLocaleSelect = () => {
-      const select = document.querySelector('[data-locale-select]');
-      if (!select || select.dataset.bound === 'true') return;
-
-      select.dataset.bound = 'true';
-      select.addEventListener('change', event => {
-        const currentSelect = event.currentTarget;
-        const selectedOption = currentSelect.options[currentSelect.selectedIndex];
-        const locale = selectedOption?.dataset.locale;
-        const href = currentSelect.value;
-
-        if (locale) {
-          localStorage.setItem('preferredLocale', locale);
-        }
-
-        if (href && href !== window.location.pathname) {
-          window.location.assign(href);
-        }
+    const bindLocaleDropdown = () => {
+      const options = document.querySelectorAll('[data-locale]');
+      options.forEach(option => {
+        if (option.dataset.bound === 'true') return;
+        option.dataset.bound = 'true';
+        option.addEventListener('click', () => {
+          const locale = option.dataset.locale;
+          if (locale) {
+            localStorage.setItem('preferredLocale', locale);
+          }
+        });
       });
     };
 
-    bindLocaleSelect();
-    document.addEventListener('astro:page-load', bindLocaleSelect);
+    bindLocaleDropdown();
+    document.addEventListener('astro:page-load', bindLocaleDropdown);
   })();
 </script>
 
