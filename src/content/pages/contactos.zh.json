@@ -8,16 +8,13 @@
       "direccion_2": "Olmedo, Ecuador"
     },
     "correo": {
-      "titulo": "欢迎邮件或来电联系：",
-      "telefono": "+593 939730772",
-      "mail": "ecuador@lladeal.com"
+      "titulo": "欢迎邮件或来电联系："
     },
     "blog": {
       "titulo": "玫瑰品种目录",
       "detalles": {
         "descripcion": "浏览我们的高海拔优质玫瑰精选系列。",
-        "texto": "查看玫瑰目录",
-        "link": "/catalogo"
+        "texto": "查看玫瑰目录"
       }
     }
   }

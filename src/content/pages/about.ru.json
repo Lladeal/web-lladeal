@@ -4,20 +4,16 @@
     "descripcion": "Эквадорские розы выделяются не количеством, а качеством. В Lladeal мы стремимся поставлять цветы, которые превосходят самые высокие стандарты совершенства.",
     "estadisticas": [
       {
-        "texto": "Сорта роз",
-        "valor": "19"
+        "texto": "Сорта роз"
       },
       {
-        "texto": "Опытные сотрудники",
-        "valor": "34"
+        "texto": "Опытные сотрудники"
       },
       {
-        "texto": "Страны экспорта",
-        "valor": "100+"
+        "texto": "Страны экспорта"
       },
       {
-        "texto": "Роз в ассортименте",
-        "valor": "1,000+"
+        "texto": "Роз в ассортименте"
       }
     ]
   },
@@ -44,23 +40,19 @@
     "team": [
       {
         "nombre": "Fernando Tituaña",
-        "cargo": "Эксперт по выращиванию",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Fernando.webp"
+        "cargo": "Эксперт по выращиванию"
       },
       {
         "nombre": "Alberto Tituaña",
-        "cargo": "Специалист по продажам",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Alberto.webp"
+        "cargo": "Специалист по продажам"
       },
       {
         "nombre": "Javier Vallejo",
-        "cargo": "Супервайзер",
-        "foto": ""
+        "cargo": "Супервайзер"
       },
       {
         "nombre": "Ricardo Tituaña",
-        "cargo": "Менеджер по логистике",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Ricardo.webp"
+        "cargo": "Менеджер по логистике"
       }
     ]
   }

@@ -29,6 +29,40 @@ import seoEn from '../content/pages/SEO.en.json';
 import seoRu from '../content/pages/SEO.ru.json';
 import seoZh from '../content/pages/SEO.zh.json';
 
+const localizedContentByLocale = {
+  home: { en: homeEn, ru: homeRu, zh: homeZh },
+  navbar: { en: navbarEn, ru: navbarRu, zh: navbarZh },
+  footer: { en: footerEn, ru: footerRu, zh: footerZh },
+  about: { en: aboutEn, ru: aboutRu, zh: aboutZh },
+  contact: { en: contactEn, ru: contactRu, zh: contactZh },
+  catalog: { en: catalogEn, ru: catalogRu, zh: catalogZh },
+  seo: { en: seoEn, ru: seoRu, zh: seoZh },
+} as const;
+
+const baseOnlyKeys = new Set([
+  'imagen',
+  'Imagen',
+  'image',
+  'ImagenArchivo',
+  'video',
+  'foto',
+  'icono',
+  'icono_apple',
+  'imagen_og',
+  'manifiesto',
+  'Imagen_central',
+  'link',
+  'Link',
+  'linkHref',
+  'phone',
+  'telefono',
+  'mail',
+  'email',
+  'website',
+  'whatsapp-link',
+  'valor',
+]);
+
 function normalizeTitle(value: string) {
   return value
     .normalize('NFD')
@@ -38,26 +72,108 @@ function normalizeTitle(value: string) {
 }
 
 function slugify(value: string) {
-  return normalizeTitle(value).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  return normalizeTitle(value)
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
-function mergeLocalizedEntry(baseEntry: Record<string, any>, localizedEntry: Record<string, any>) {
+function isPlainObject(value: unknown): value is Record<string, any> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function isAssetKey(key: string) {
+  return baseOnlyKeys.has(key) || /^Icono_\d+$/.test(key);
+}
+
+function isAssetValue(value: unknown) {
+  return (
+    typeof value === 'string' &&
+    (value.startsWith('/CMS-WEB/') ||
+      /\.(?:png|jpe?g|webp|avif|svg|webm|mp4|webmanifest)$/i.test(value))
+  );
+}
+
+function shouldPreferBaseValue(key: string, baseValue: unknown) {
+  return isAssetKey(key) || isAssetValue(baseValue);
+}
+
+function mergeLocalizedArray(baseArray: any[], localizedArray: any[]) {
+  const merged = [];
+  const maxLength = Math.max(baseArray.length, localizedArray.length);
+
+  for (let index = 0; index < maxLength; index += 1) {
+    const baseValue = baseArray[index];
+    const localizedValue = localizedArray[index];
+
+    if (localizedValue === undefined) {
+      if (baseValue !== undefined) merged.push(baseValue);
+      continue;
+    }
+
+    if (baseValue === undefined) {
+      merged.push(localizedValue);
+      continue;
+    }
+
+    merged.push(mergeLocalizedValue(baseValue, localizedValue));
+  }
+
+  return merged;
+}
+
+function mergeLocalizedValue(
+  baseValue: any,
+  localizedValue: any,
+  key = ''
+): any {
+  if (localizedValue === undefined) return baseValue;
+  if (shouldPreferBaseValue(key, baseValue)) return baseValue;
+
+  if (Array.isArray(baseValue) && Array.isArray(localizedValue)) {
+    return mergeLocalizedArray(baseValue, localizedValue);
+  }
+
+  if (isPlainObject(baseValue) && isPlainObject(localizedValue)) {
+    const merged: Record<string, any> = { ...baseValue };
+
+    for (const [childKey, childValue] of Object.entries(localizedValue)) {
+      merged[childKey] = mergeLocalizedValue(
+        baseValue[childKey],
+        childValue,
+        childKey
+      );
+    }
+
+    return merged;
+  }
+
+  return localizedValue;
+}
+
+function getLocalizedContent<T extends Record<string, any>>(
+  locale: Locale,
+  baseContent: T,
+  localizedEntries: Partial<Record<Locale, Record<string, any>>>
+) {
+  if (locale === 'es') return baseContent;
+  return mergeLocalizedValue(baseContent, localizedEntries[locale] ?? {});
+}
+
+function mergeLocalizedEntry(
+  baseEntry: Record<string, any>,
+  localizedEntry: Record<string, any>
+) {
   return {
-    ...baseEntry,
-    ...localizedEntry,
+    ...mergeLocalizedValue(baseEntry, localizedEntry),
     slug: slugify(baseEntry.titulo),
-    ImagenArchivo: baseEntry.ImagenArchivo,
-    Data: baseEntry.Data,
   };
 }
 
-function mergeHomeFeatureEntry(baseEntry: Record<string, any>, localizedEntry?: Record<string, any>) {
-  return {
-    ...baseEntry,
-    ...localizedEntry,
-    image: baseEntry.image,
-    imagen: baseEntry.imagen,
-  };
+function mergeHomeFeatureEntry(
+  baseEntry: Record<string, any>,
+  localizedEntry?: Record<string, any>
+) {
+  return mergeLocalizedValue(baseEntry, localizedEntry ?? {});
 }
 
 function dedupeCarouselEntries<T extends { slug: string }>(items: T[]) {
@@ -71,49 +187,41 @@ function dedupeCarouselEntries<T extends { slug: string }>(items: T[]) {
 }
 
 function mergeHomeContent(localizedHome: Record<string, any>) {
-  const mergedCarousel = dedupeCarouselEntries(homeEs.carrusel.map((baseItem, index) => {
-    const localizedItem =
-      localizedHome.carrusel?.find(
-        (item: Record<string, any>) => normalizeTitle(item.titulo ?? '') === normalizeTitle(baseItem.titulo),
-      ) ?? localizedHome.carrusel?.[index];
+  const mergedCarousel = dedupeCarouselEntries(
+    homeEs.carrusel.map((baseItem, index) => {
+      const localizedItem =
+        localizedHome.carrusel?.find(
+          (item: Record<string, any>) =>
+            normalizeTitle(item.titulo ?? '') ===
+            normalizeTitle(baseItem.titulo)
+        ) ?? localizedHome.carrusel?.[index];
 
-    return localizedItem
-      ? mergeLocalizedEntry(baseItem, localizedItem)
-      : {
-          ...baseItem,
-          slug: slugify(baseItem.titulo),
-        };
-  }));
+      return localizedItem
+        ? mergeLocalizedEntry(baseItem, localizedItem)
+        : {
+            ...baseItem,
+            slug: slugify(baseItem.titulo),
+          };
+    })
+  );
 
   const mergedFeaturesList = homeEs.features.lista.map((entry, index) => {
     const baseItem = entry as Record<string, any>;
     const localizedItem =
       localizedHome.features?.lista?.find(
-        (item: Record<string, any>) => normalizeTitle(item.title ?? item.titulo ?? '') === normalizeTitle(baseItem.title ?? baseItem.titulo ?? ''),
+        (item: Record<string, any>) =>
+          normalizeTitle(item.title ?? item.titulo ?? '') ===
+          normalizeTitle(baseItem.title ?? baseItem.titulo ?? '')
       ) ?? localizedHome.features?.lista?.[index];
 
     return mergeHomeFeatureEntry(baseItem, localizedItem);
   });
 
   return {
-    ...homeEs,
-    ...localizedHome,
-    imagen: {
-      ...homeEs.imagen,
-      ...localizedHome.imagen,
-      video: homeEs.imagen.video,
-      ImagenArchivo: homeEs.imagen.ImagenArchivo,
-      Imagen: (homeEs.imagen as Record<string, any>).Imagen,
-    },
+    ...mergeLocalizedValue(homeEs, localizedHome),
     features: {
-      ...homeEs.features,
-      ...localizedHome.features,
+      ...mergeLocalizedValue(homeEs.features, localizedHome.features ?? {}),
       lista: mergedFeaturesList,
-      Orbita: {
-        ...homeEs.features.Orbita,
-        ...localizedHome.features?.Orbita,
-        Imagen_central: homeEs.features.Orbita.Imagen_central,
-      },
     },
     carrusel: mergedCarousel,
   };
@@ -126,7 +234,7 @@ function buildBaseHomeContent() {
       homeEs.carrusel.map(baseItem => ({
         ...baseItem,
         slug: slugify(baseItem.titulo),
-      })),
+      }))
     ),
   };
 }
@@ -136,173 +244,43 @@ export function getLocaleFromUrl(url: URL): Locale {
 }
 
 export function getHomeContent(locale: Locale) {
-  if (locale === 'en') return mergeHomeContent(homeEn);
-  if (locale === 'ru') return mergeHomeContent(homeRu);
-  if (locale === 'zh') return mergeHomeContent(homeZh);
+  if (locale === 'en')
+    return mergeHomeContent(localizedContentByLocale.home.en);
+  if (locale === 'ru')
+    return mergeHomeContent(localizedContentByLocale.home.ru);
+  if (locale === 'zh')
+    return mergeHomeContent(localizedContentByLocale.home.zh);
   return buildBaseHomeContent();
 }
 
 export function getNavbarContent(locale: Locale) {
-  if (locale === 'en') {
-    return {
-      ...navbarEs,
-      ...navbarEn,
-      barra_de_navegacion: {
-        ...navbarEs.barra_de_navegacion,
-        ...navbarEn.barra_de_navegacion,
-        logo: {
-          ...navbarEs.barra_de_navegacion.logo,
-          ...navbarEn.barra_de_navegacion.logo,
-          imagen: navbarEs.barra_de_navegacion.logo.imagen,
-        },
-      },
-    };
-  }
-  if (locale === 'ru') {
-    return {
-      ...navbarEs,
-      ...navbarRu,
-      barra_de_navegacion: {
-        ...navbarEs.barra_de_navegacion,
-        ...navbarRu.barra_de_navegacion,
-        logo: {
-          ...navbarEs.barra_de_navegacion.logo,
-          ...navbarRu.barra_de_navegacion.logo,
-          imagen: navbarEs.barra_de_navegacion.logo.imagen,
-        },
-      },
-    };
-  }
-  if (locale === 'zh') {
-    return {
-      ...navbarEs,
-      ...navbarZh,
-      barra_de_navegacion: {
-        ...navbarEs.barra_de_navegacion,
-        ...navbarZh.barra_de_navegacion,
-        logo: {
-          ...navbarEs.barra_de_navegacion.logo,
-          ...navbarZh.barra_de_navegacion.logo,
-          imagen: navbarEs.barra_de_navegacion.logo.imagen,
-        },
-      },
-    };
-  }
-  return navbarEs;
+  return getLocalizedContent(locale, navbarEs, localizedContentByLocale.navbar);
 }
 
 export function getFooterContent(locale: Locale) {
-  if (locale === 'en') return footerEn;
-  if (locale === 'ru') return footerRu;
-  if (locale === 'zh') return footerZh;
-  return footerEs;
+  return getLocalizedContent(locale, footerEs, localizedContentByLocale.footer);
 }
 
 export function getAboutContent(locale: Locale) {
-  if (locale === 'en') {
-    return {
-      ...aboutEs,
-      ...aboutEn,
-      Team: {
-        ...aboutEs.Team,
-        ...aboutEn.Team,
-        team: aboutEs.Team.team.map((baseMember: Record<string, any>, index: number) => ({
-          ...baseMember,
-          ...(aboutEn.Team.team[index] ?? {}),
-          foto: baseMember.foto,
-        })),
-      },
-    };
-  }
-  if (locale === 'ru') {
-    return {
-      ...aboutEs,
-      ...aboutRu,
-      Team: {
-        ...aboutEs.Team,
-        ...aboutRu.Team,
-        team: aboutEs.Team.team.map((baseMember: Record<string, any>, index: number) => ({
-          ...baseMember,
-          ...(aboutRu.Team.team[index] ?? {}),
-          foto: baseMember.foto,
-        })),
-      },
-    };
-  }
-  if (locale === 'zh') {
-    return {
-      ...aboutEs,
-      ...aboutZh,
-      Team: {
-        ...aboutEs.Team,
-        ...aboutZh.Team,
-        team: aboutEs.Team.team.map((baseMember: Record<string, any>, index: number) => ({
-          ...baseMember,
-          ...(aboutZh.Team.team[index] ?? {}),
-          foto: baseMember.foto,
-        })),
-      },
-    };
-  }
-  return aboutEs;
+  return getLocalizedContent(locale, aboutEs, localizedContentByLocale.about);
 }
 
 export function getContactContent(locale: Locale) {
-  if (locale === 'en') return contactEn;
-  if (locale === 'ru') return contactRu;
-  if (locale === 'zh') return contactZh;
-  return contactEs;
+  return getLocalizedContent(
+    locale,
+    contactEs,
+    localizedContentByLocale.contact
+  );
 }
 
 export function getCatalogContent(locale: Locale) {
-  if (locale === 'en') return catalogEn;
-  if (locale === 'ru') return catalogRu;
-  if (locale === 'zh') return catalogZh;
-  return catalogEs;
+  return getLocalizedContent(
+    locale,
+    catalogEs,
+    localizedContentByLocale.catalog
+  );
 }
 
 export function getSeoContent(locale: Locale) {
-  if (locale === 'en') {
-    return {
-      ...seoEs,
-      ...seoEn,
-      Seo_global: {
-        ...seoEs.Seo_global,
-        ...seoEn.Seo_global,
-        imagen_og: seoEs.Seo_global.imagen_og,
-        icono: seoEs.Seo_global.icono,
-        icono_apple: seoEs.Seo_global.icono_apple,
-        manifiesto: seoEs.Seo_global.manifiesto,
-      },
-    };
-  }
-  if (locale === 'ru') {
-    return {
-      ...seoEs,
-      ...seoRu,
-      Seo_global: {
-        ...seoEs.Seo_global,
-        ...seoRu.Seo_global,
-        imagen_og: seoEs.Seo_global.imagen_og,
-        icono: seoEs.Seo_global.icono,
-        icono_apple: seoEs.Seo_global.icono_apple,
-        manifiesto: seoEs.Seo_global.manifiesto,
-      },
-    };
-  }
-  if (locale === 'zh') {
-    return {
-      ...seoEs,
-      ...seoZh,
-      Seo_global: {
-        ...seoEs.Seo_global,
-        ...seoZh.Seo_global,
-        imagen_og: seoEs.Seo_global.imagen_og,
-        icono: seoEs.Seo_global.icono,
-        icono_apple: seoEs.Seo_global.icono_apple,
-        manifiesto: seoEs.Seo_global.manifiesto,
-      },
-    };
-  }
-  return seoEs;
+  return getLocalizedContent(locale, seoEs, localizedContentByLocale.seo);
 }

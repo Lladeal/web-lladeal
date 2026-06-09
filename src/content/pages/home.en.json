@@ -1,19 +1,16 @@
 {
   "anuncio": {
     "titulo": "Discover Lladeal",
-    "titulo_link": "Book a meeting!",
-    "link": "https://github.com/mearashadowfax/DataNova"
+    "titulo_link": "Book a meeting!"
   },
   "hero": {
     "titulo": "Lladeal Farm: turning altitude and sunlight into unforgettable flowers.",
     "subtitulo": "Strategically located in Pesillo, Cayambe, we take advantage of equatorial light and warm soils to create an exceptional growing environment.",
     "Boton_1": {
-      "titulo": "View our catalog",
-      "link": "/catalogo"
+      "titulo": "View our catalog"
     },
     "boton_2": {
-      "titulo": "Contact us",
-      "link": "/contact"
+      "titulo": "Contact us"
     }
   },
   "carrusel": [

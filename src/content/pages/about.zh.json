@@ -4,20 +4,16 @@
     "descripcion": "厄瓜多尔玫瑰以卓越品质而闻名，而不仅仅是产量。Lladeal 致力于提供超越高标准要求的优质鲜花。",
     "estadisticas": [
       {
-        "texto": "玫瑰品种",
-        "valor": "19"
+        "texto": "玫瑰品种"
       },
       {
-        "texto": "专业团队成员",
-        "valor": "34"
+        "texto": "专业团队成员"
       },
       {
-        "texto": "出口目的地",
-        "valor": "100+"
+        "texto": "出口目的地"
       },
       {
-        "texto": "玫瑰供应数量",
-        "valor": "1,000+"
+        "texto": "玫瑰供应数量"
       }
     ]
   },
@@ -44,23 +40,19 @@
     "team": [
       {
         "nombre": "Fernando Tituaña",
-        "cargo": "种植专家",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Fernando.webp"
+        "cargo": "种植专家"
       },
       {
         "nombre": "Alberto Tituaña",
-        "cargo": "销售专员",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Alberto.webp"
+        "cargo": "销售专员"
       },
       {
         "nombre": "Javier Vallejo",
-        "cargo": "主管",
-        "foto": ""
+        "cargo": "主管"
       },
       {
         "nombre": "Ricardo Tituaña",
-        "cargo": "物流经理",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Ricardo.webp"
+        "cargo": "物流经理"
       }
     ]
   }

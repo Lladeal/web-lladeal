@@ -1,12 +1,10 @@
 {
   "barra_de_navegacion": {
     "logo": {
-      "imagen": "/CMS-WEB/uploads/logotipo-lladela.png",
       "descripcion": "Lladeal logo"
     },
     "boton": {
-      "texto": "Contact us",
-      "link": "https://github.com/mearashadowfax/DataNova"
+      "texto": "Contact us"
     }
   }
 }

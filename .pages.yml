@@ -27,9 +27,6 @@ content:
               - name: titulo_link
                 label: Texto del boton
                 type: string
-              - name: link
-                label: Enlace al hacer clic
-                type: string
           - name: hero
             label: Portada principal
             type: object
@@ -47,18 +44,12 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
-                  - name: link
-                    label: Enlace al hacer clic
-                    type: string
               - name: boton_2
                 label: Segundo boton
                 type: object
                 fields:
                   - name: titulo
                     label: Texto del boton
-                    type: string
-                  - name: link
-                    label: Enlace al hacer clic
                     type: string
           - name: imagen
             label: Video e imagen principal
@@ -91,7 +82,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{title} ({index})"
+                    summary: '{title} ({index})'
                 fields:
                   - name: title
                     label: Titulo de la tarjeta
@@ -229,7 +220,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{titulo_tarjeta}"
+                    summary: '{titulo_tarjeta}'
                 fields:
                   - name: estilo_borde
                     label: Ajuste interno de bordes (no cambiar)
@@ -275,7 +266,7 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{titulo}"
+                summary: '{titulo}'
             fields:
               - name: titulo
                 label: Nombre de la rosa
@@ -338,13 +329,10 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{texto}"
+                    summary: '{texto}'
                 fields:
                   - name: texto
                     label: Texto
-                    type: string
-                  - name: valor
-                    label: Valor
                     type: string
           - name: datos_de_experticie
             label: Experiencia del equipo
@@ -359,7 +347,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{titulo}"
+                    summary: '{titulo}'
                 fields:
                   - name: titulo
                     label: Titulo
@@ -498,9 +486,6 @@ content:
                       - name: texto
                         label: Texto del enlace
                         type: string
-                      - name: link
-                        label: Enlace
-                        type: string
       - name: footer_page
         label: Pie de pagina
         type: file
@@ -620,9 +605,6 @@ content:
               - name: linkTitle
                 label: Texto del enlace principal
                 type: string
-              - name: linkHref
-                label: Enlace principal
-                type: string
               - name: linkAriaLabel
                 label: Texto accesible del enlace
                 type: string
@@ -696,7 +678,7 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{sectionTitle}"
+                summary: '{sectionTitle}'
             fields:
               - name: sectionTitle
                 label: Nombre de la seccion
@@ -707,7 +689,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{title}"
+                    summary: '{title}'
                 fields:
                   - name: icon
                     label: Nombre del icono
@@ -742,9 +724,6 @@ content:
               - name: titulo_link
                 label: Texto del boton
                 type: string
-              - name: link
-                label: Enlace al hacer clic
-                type: string
           - name: hero
             label: Portada principal
             type: object
@@ -762,9 +741,6 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
-                  - name: link
-                    label: Enlace al hacer clic
-                    type: string
               - name: boton_2
                 label: Segundo boton
                 type: object
@@ -772,16 +748,13 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
-                  - name: link
-                    label: Enlace al hacer clic
-                    type: string
           - name: carrusel
             label: Catalogo de rosas
             type: object
             list:
               collapsible:
                 collapsed: true
-                summary: "{titulo}"
+                summary: '{titulo}'
             fields:
               - name: titulo
                 label: Nombre de la rosa
@@ -814,13 +787,10 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{texto}"
+                    summary: '{texto}'
                 fields:
                   - name: texto
                     label: Texto
-                    type: string
-                  - name: valor
-                    label: Valor
                     type: string
           - name: datos_de_experticie
             label: Experiencia del equipo
@@ -835,7 +805,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{titulo}"
+                    summary: '{titulo}'
                 fields:
                   - name: titulo
                     label: Titulo
@@ -859,7 +829,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{nombre}"
+                    summary: '{nombre}'
                 fields:
                   - name: nombre
                     label: Nombre
@@ -903,12 +873,6 @@ content:
                   - name: titulo
                     label: Titulo de contacto
                     type: string
-                  - name: telefono
-                    label: Telefono
-                    type: string
-                  - name: mail
-                    label: Correo electronico
-                    type: string
               - name: blog
                 label: Bloque de ayuda
                 type: object
@@ -925,9 +889,6 @@ content:
                         type: text
                       - name: texto
                         label: Texto del enlace
-                        type: string
-                      - name: link
-                        label: Enlace
                         type: string
       - name: catalog_page_en
         label: Catalogo en ingles
@@ -950,9 +911,6 @@ content:
                 type: text
               - name: linkTitle
                 label: Texto del enlace principal
-                type: string
-              - name: linkHref
-                label: Enlace principal
                 type: string
               - name: linkAriaLabel
                 label: Texto accesible del enlace
@@ -1071,9 +1029,6 @@ content:
                   - name: texto
                     label: Texto del boton
                     type: string
-                  - name: link
-                    label: Enlace al hacer clic
-                    type: string
       - name: seo_pages_en
         label: SEO en ingles
         type: file
@@ -1163,9 +1118,6 @@ content:
               - name: titulo_link
                 label: Texto del boton
                 type: string
-              - name: link
-                label: Enlace al hacer clic
-                type: string
           - name: hero
             label: Portada principal
             type: object
@@ -1183,9 +1135,6 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
-                  - name: link
-                    label: Enlace al hacer clic
-                    type: string
               - name: boton_2
                 label: Segundo boton
                 type: object
@@ -1193,16 +1142,13 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
-                  - name: link
-                    label: Enlace al hacer clic
-                    type: string
           - name: carrusel
             label: Catalogo de rosas
             type: object
             list:
               collapsible:
                 collapsed: true
-                summary: "{titulo}"
+                summary: '{titulo}'
             fields:
               - name: titulo
                 label: Nombre de la rosa
@@ -1229,6 +1175,17 @@ content:
               - name: descripcion
                 label: Descripcion
                 type: text
+              - name: estadisticas
+                label: Estadisticas
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{texto}'
+                fields:
+                  - name: texto
+                    label: Texto
+                    type: string
           - name: datos_de_experticie
             label: Experiencia del equipo
             type: object
@@ -1242,7 +1199,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{titulo}"
+                    summary: '{titulo}'
                 fields:
                   - name: titulo
                     label: Titulo
@@ -1266,7 +1223,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{nombre}"
+                    summary: '{nombre}'
                 fields:
                   - name: nombre
                     label: Nombre
@@ -1310,12 +1267,23 @@ content:
                   - name: titulo
                     label: Titulo de contacto
                     type: string
-                  - name: telefono
-                    label: Telefono
+              - name: blog
+                label: Bloque de ayuda
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo del bloque
                     type: string
-                  - name: mail
-                    label: Correo electronico
-                    type: string
+                  - name: detalles
+                    label: Detalles del bloque
+                    type: object
+                    fields:
+                      - name: descripcion
+                        label: Descripcion
+                        type: text
+                      - name: texto
+                        label: Texto del enlace
+                        type: string
       - name: catalog_page_ru
         label: Catalogo en ruso
         type: file
@@ -1337,6 +1305,9 @@ content:
                 type: text
               - name: linkTitle
                 label: Texto del enlace principal
+                type: string
+              - name: linkAriaLabel
+                label: Texto accesible del enlace
                 type: string
           - name: listing
             label: Tarjetas del catalogo
@@ -1430,9 +1401,6 @@ content:
                   - name: texto
                     label: Texto del boton
                     type: string
-                  - name: link
-                    label: Enlace al hacer clic
-                    type: string
       - name: seo_pages_ru
         label: SEO en ruso
         type: file
@@ -1476,9 +1444,6 @@ content:
               - name: titulo_link
                 label: Texto del boton
                 type: string
-              - name: link
-                label: Enlace al hacer clic
-                type: string
           - name: hero
             label: Portada principal
             type: object
@@ -1496,9 +1461,6 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
-                  - name: link
-                    label: Enlace al hacer clic
-                    type: string
               - name: boton_2
                 label: Segundo boton
                 type: object
@@ -1506,16 +1468,13 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
-                  - name: link
-                    label: Enlace al hacer clic
-                    type: string
           - name: carrusel
             label: Catalogo de rosas
             type: object
             list:
               collapsible:
                 collapsed: true
-                summary: "{titulo}"
+                summary: '{titulo}'
             fields:
               - name: titulo
                 label: Nombre de la rosa
@@ -1542,6 +1501,17 @@ content:
               - name: descripcion
                 label: Descripcion
                 type: text
+              - name: estadisticas
+                label: Estadisticas
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{texto}'
+                fields:
+                  - name: texto
+                    label: Texto
+                    type: string
           - name: datos_de_experticie
             label: Experiencia del equipo
             type: object
@@ -1555,7 +1525,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{titulo}"
+                    summary: '{titulo}'
                 fields:
                   - name: titulo
                     label: Titulo
@@ -1579,7 +1549,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{nombre}"
+                    summary: '{nombre}'
                 fields:
                   - name: nombre
                     label: Nombre
@@ -1623,12 +1593,23 @@ content:
                   - name: titulo
                     label: Titulo de contacto
                     type: string
-                  - name: telefono
-                    label: Telefono
+              - name: blog
+                label: Bloque de ayuda
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo del bloque
                     type: string
-                  - name: mail
-                    label: Correo electronico
-                    type: string
+                  - name: detalles
+                    label: Detalles del bloque
+                    type: object
+                    fields:
+                      - name: descripcion
+                        label: Descripcion
+                        type: text
+                      - name: texto
+                        label: Texto del enlace
+                        type: string
       - name: catalog_page_zh
         label: Catalogo en chino
         type: file
@@ -1650,6 +1631,9 @@ content:
                 type: text
               - name: linkTitle
                 label: Texto del enlace principal
+                type: string
+              - name: linkAriaLabel
+                label: Texto accesible del enlace
                 type: string
           - name: listing
             label: Tarjetas del catalogo
@@ -1743,9 +1727,6 @@ content:
                   - name: texto
                     label: Texto del boton
                     type: string
-                  - name: link
-                    label: Enlace al hacer clic
-                    type: string
       - name: seo_pages_zh
         label: SEO en chino
         type: file
@@ -1778,7 +1759,7 @@ content:
         type: collection
         path: src/content/articles
         filename:
-          template: "{primary}.mdoc"
+          template: '{primary}.mdoc'
           field: create
         format: yaml-frontmatter
         view:
@@ -1817,7 +1798,7 @@ content:
         type: collection
         path: src/content/articles/en
         filename:
-          template: "{primary}.mdoc"
+          template: '{primary}.mdoc'
           field: create
         format: yaml-frontmatter
         view:
@@ -1856,7 +1837,7 @@ content:
         type: collection
         path: src/content/articles/ru
         filename:
-          template: "{primary}.mdoc"
+          template: '{primary}.mdoc'
           field: create
         format: yaml-frontmatter
         view:
@@ -1895,7 +1876,7 @@ content:
         type: collection
         path: src/content/articles/zh
         filename:
-          template: "{primary}.mdoc"
+          template: '{primary}.mdoc'
           field: create
         format: yaml-frontmatter
         view:
@@ -1934,7 +1915,7 @@ content:
         type: collection
         path: src/content/reference
         filename:
-          template: "{primary}.mdoc"
+          template: '{primary}.mdoc'
           field: create
         format: yaml-frontmatter
         view:
@@ -1971,7 +1952,7 @@ content:
         type: collection
         path: src/data/whitepapers
         filename:
-          template: "{primary}.json"
+          template: '{primary}.json'
           field: create
         format: json
         view:
@@ -1998,7 +1979,7 @@ content:
         type: collection
         path: src/data/spreadsheets
         filename:
-          template: "{primary}.json"
+          template: '{primary}.json'
           field: create
         format: json
         view:

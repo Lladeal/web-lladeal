@@ -4,20 +4,16 @@
     "descripcion": "Ecuadorian roses stand out not because of volume, but because of superior quality. At Lladeal, we are committed to delivering flowers that exceed the highest standards of excellence.",
     "estadisticas": [
       {
-        "texto": "Rose varieties",
-        "valor": "19"
+        "texto": "Rose varieties"
       },
       {
-        "texto": "Expert collaborators",
-        "valor": "34"
+        "texto": "Expert collaborators"
       },
       {
-        "texto": "Export destinations",
-        "valor": "100+"
+        "texto": "Export destinations"
       },
       {
-        "texto": "Roses marketed",
-        "valor": "1,000+"
+        "texto": "Roses marketed"
       }
     ]
   },
@@ -44,23 +40,19 @@
     "team": [
       {
         "nombre": "Fernando Tituaña",
-        "cargo": "Expert Grower",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Fernando.webp"
+        "cargo": "Expert Grower"
       },
       {
         "nombre": "Alberto Tituaña",
-        "cargo": "Sales Specialist",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Alberto.webp"
+        "cargo": "Sales Specialist"
       },
       {
         "nombre": "Javier Vallejo",
-        "cargo": "Supervisor",
-        "foto": ""
+        "cargo": "Supervisor"
       },
       {
         "nombre": "Ricardo Tituaña",
-        "cargo": "Logistics Manager",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Ricardo.webp"
+        "cargo": "Logistics Manager"
       }
     ]
   }

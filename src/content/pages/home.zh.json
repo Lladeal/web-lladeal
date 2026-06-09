@@ -1,24 +1,17 @@
 {
   "anuncio": {
     "titulo": "探索 Lladeal",
-    "titulo_link": "预约洽谈！",
-    "link": "https://github.com/mearashadowfax/DataNova"
+    "titulo_link": "预约洽谈！"
   },
   "hero": {
     "titulo": "Lladeal 农场：让海拔与阳光成就难忘花卉。",
     "subtitulo": "我们位于卡扬贝佩西约，充分利用赤道阳光与温暖土壤，打造卓越的玫瑰生长环境。",
     "Boton_1": {
-      "titulo": "查看产品目录",
-      "link": "/catalogo"
+      "titulo": "查看产品目录"
     },
     "boton_2": {
-      "titulo": "联系我们",
-      "link": "/contact"
+      "titulo": "联系我们"
     }
-  },
-  "imagen": {
-    "video": "/CMS-WEB/uploads/Flores.webm",
-    "ImagenArchivo": "/CMS-WEB/uploads/ISOTIPO_LLADEAL.avif"
   },
   "features": {
     "titulo": "Lladeal Farm：每一片花瓣都体现卓越",
@@ -28,7 +21,6 @@
         "wrapperClass": "lg:rounded-l-3xl",
         "title": "严格出口筛选",
         "description": "每一朵花都经过细致评估，只有花头尺寸、开放阶段和对称性都达到标准的玫瑰才能进入出口流程。",
-        "image": "/CMS-WEB/uploads/Flor-vertical.png",
         "imageClass": "mx-auto mt-5 self-end object-cover w-[90%]",
         "imageContainerClass": "relative flex min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
         "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
@@ -41,8 +33,7 @@
         "imageClass": "w-full rounded-t-xl",
         "imageContainerClass": "relative flex flex-1 items-center justify-center px-4 max-lg:pb-12 max-lg:pt-10 lg:pb-2",
         "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-1 z-10 mx-auto h-28 w-[93%] bg-linear-to-b/oklch from-transparent via-white to-white",
-        "class": "relative max-lg:row-start-1",
-        "image": "/CMS-WEB/uploads/Pesillo01.webp"
+        "class": "relative max-lg:row-start-1"
       },
       {
         "title": "营养与新鲜度保障",
@@ -50,8 +41,7 @@
         "imageClass": "h-full object-cover",
         "imageContainerClass": "relative min-h-[30rem] w-full grow",
         "imageSecondaryContainerClass": "absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl shadow-2xl",
-        "class": "relative lg:row-span-2",
-        "image": "/CMS-WEB/uploads/Rosas.png"
+        "class": "relative lg:row-span-2"
       },
       {
         "title": "更多优势...",
@@ -64,32 +54,23 @@
         "component": "PlatformOrbit"
       }
     ],
-    "Orbita": {
-      "Imagen_central": "/CMS-WEB/uploads/ISOTIPO_LLADEAL.avif",
-      "Icono_1": "MaterialSymbolsLightPalette",
-      "Icono_2": "MdiFlowerTulip",
-      "Icono_3": "MdiWhiteBalanceSunny"
-    }
+    "Orbita": {}
   },
   "caracteristicas": {
     "titulo": "从卡扬贝土壤走向全球市场",
     "subtitulo": "我们充分利用赤道高地的独特条件，培育卓越玫瑰。传统农业经验与精准物流相结合，帮助我们稳定满足国际客户需求。",
     "boton": {
-      "titulo": "了解更多",
-      "link": "/contact"
+      "titulo": "了解更多"
     },
     "carta1": {
-      "icono": "MdiImageFilterHdr",
       "descripcion": "高海拔种植：在赤道阳光下形成强壮枝干和大花头。",
       "estilo": "self-start"
     },
     "carta2": {
-      "icono": "MdiHandExtended",
       "descripcion": "人工采收：在最佳开放阶段进行严格筛选。",
       "estilo": "self-center"
     },
     "carta3": {
-      "icono": "MdiPackageVariant",
       "descripcion": "全球配送：采用保护性包装，确保跨境运输中的持久新鲜。",
       "estilo": "self-end"
     }
@@ -101,7 +82,6 @@
       {
         "estilo_borde": "md:border-l md:border-r",
         "estilo_color": "bg-linear-to-l/oklch from-[#e3186d]/10 to-transparent",
-        "icono": "MdiEarth",
         "titulo_tarjeta": "适合各类市场",
         "descripcion": "无论您是精品花店还是国际批发商，Lladeal 都能以独特品种和出口级产能满足您的需求。"
       },
@@ -109,7 +89,6 @@
         "estilo_borde": "border-b border-t md:border-b-0",
         "gridClasses": "md:col-start-2 md:col-end-3",
         "estilo_color": "bg-linear-to-t/oklch from-[#e3186d]/10 to-transparent",
-        "icono": "MdiCheckDecagram",
         "titulo_tarjeta": "国际标准品质",
         "descripcion": "严格品质控制、大花头与出色瓶插寿命，使我们的玫瑰能够满足全球高端市场要求。"
       },
@@ -117,7 +96,6 @@
         "estilo_borde": "md:border-l md:border-r md:border-t",
         "gridClasses": "md:col-end-4",
         "estilo_color": "bg-linear-to-tl/oklch from-[#e3186d]/10 to-transparent",
-        "icono": "RiBubbleChartFill",
         "titulo_tarjeta": "顺畅物流交付",
         "descripcion": "我们帮助您的供应链保持高效与可预测，让玫瑰以新鲜、饱满的状态准时抵达。"
       }
@@ -127,29 +105,256 @@
     "titulo": "与 Lladeal 开启您的第一笔订单。",
     "subtitulo": "欢迎联系销售团队，了解我们的高海拔玫瑰如何提升您的产品目录并吸引客户。",
     "boton": {
-      "titulo": "开始与 Lladeal 合作",
-      "link": "/contact"
+      "titulo": "开始与 Lladeal 合作"
     }
   },
   "carrusel": [
-    { "titulo": "Magic time", "descripcion": "Magic Time 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/01_Magic_Time.png", "tipo": "双色", "Data": { "Tamaño_del_boton": "7.0 - 8.0 cm", "Longitud_del_tallo": "40 - 70 cm", "Vida_en_florero": "15 - 18 天", "Numero_de_petalos": "42 - 43", "Estado_fenologico": "92 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "High Magic", "descripcion": "High Magic 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/02_High_Magic.png", "tipo": "双色", "Data": { "Tamaño_del_boton": "5.6 cm", "Longitud_del_tallo": "50 - 90 cm", "Vida_en_florero": "12 - 15 天", "Numero_de_petalos": "43", "Estado_fenologico": "88 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Paloma", "descripcion": "Paloma 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/03_Paloma.png", "tipo": "双色", "Data": { "Tamaño_del_boton": "5 - 6 cm", "Longitud_del_tallo": "40 - 70 cm", "Vida_en_florero": "10 - 12 天", "Numero_de_petalos": "32", "Estado_fenologico": "92 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Atomic", "descripcion": "Atomic 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/04_Atomic.png", "tipo": "双色", "Data": { "Tamaño_del_boton": "6.0 - 6.5 cm", "Longitud_del_tallo": "50 - 70 cm", "Vida_en_florero": "14 天", "Numero_de_petalos": "40 - 45", "Estado_fenologico": "89 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Iguazu", "descripcion": "Iguazu 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/05_Iguazu.png", "tipo": "双色", "Data": { "Tamaño_del_boton": "6.5 - 7 cm", "Longitud_del_tallo": "60 - 80 cm", "Vida_en_florero": "12 - 14 天", "Numero_de_petalos": "53", "Estado_fenologico": "90 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Esperance", "descripcion": "Esperance 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/06_Esperance.png", "tipo": "双色", "Data": { "Tamaño_del_boton": "50 - 70 cm", "Longitud_del_tallo": "50 - 70 cm", "Vida_en_florero": "14 天", "Numero_de_petalos": "53", "Estado_fenologico": "90 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Kahala", "descripcion": "Kahala 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/07_Kahala.png", "tipo": "双色", "Data": { "Tamaño_del_boton": "5.5 cm", "Longitud_del_tallo": "40 - 70 cm", "Vida_en_florero": "14 天", "Numero_de_petalos": "40", "Estado_fenologico": "88 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Salma", "descripcion": "Salma 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/08_Salma.png", "tipo": "双色", "Data": { "Tamaño_del_boton": "5.5 - 6.0 cm", "Longitud_del_tallo": "60 - 90 cm", "Vida_en_florero": "15 天", "Numero_de_petalos": "35 - 40", "Estado_fenologico": "92 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Dee Purple", "descripcion": "Dee Purple 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/09_Dee_Purple.png", "tipo": "双色", "Data": { "Tamaño_del_boton": "5 - 6 cm", "Longitud_del_tallo": "50 - 80 cm", "Vida_en_florero": "10 - 12 天", "Numero_de_petalos": "40", "Estado_fenologico": "86 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Explorer", "descripcion": "Explorer 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/10_Explorer.png", "tipo": "红色", "Data": { "Tamaño_del_boton": "6.5 - 7.0 cm", "Longitud_del_tallo": "60 - 90 cm", "Vida_en_florero": "15 天", "Numero_de_petalos": "40 - 45", "Estado_fenologico": "109 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Pink Floyd", "descripcion": "Pink Floyd 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/11_Pink_Floyd.png", "tipo": "纯色", "Data": { "Tamaño_del_boton": "6 - 6.5 cm", "Longitud_del_tallo": "60 - 90 cm", "Vida_en_florero": "17 天", "Numero_de_petalos": "38", "Estado_fenologico": "92 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Brighton", "descripcion": "Brighton 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/12_Brighton.png", "tipo": "纯色", "Data": { "Tamaño_del_boton": "5.0 - 6.0 cm", "Longitud_del_tallo": "40 - 70 cm", "Vida_en_florero": "12 - 14 天", "Numero_de_petalos": "30", "Estado_fenologico": "90 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Gotcha", "descripcion": "Gotcha 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/13_Gotcha.png", "tipo": "纯色", "Data": { "Tamaño_del_boton": "6.0 - 6.5 cm", "Longitud_del_tallo": "60 - 90 cm", "Vida_en_florero": "14 天", "Numero_de_petalos": "30 - 35", "Estado_fenologico": "95 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Lola", "descripcion": "Lola 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/14_Lola.png", "tipo": "纯色", "Data": { "Tamaño_del_boton": "7.0 - 8.0 cm", "Longitud_del_tallo": "40 - 70 cm", "Vida_en_florero": "15 - 18 天", "Numero_de_petalos": "32", "Estado_fenologico": "92 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Novia", "descripcion": "Novia 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/15_Novia.png", "tipo": "纯色", "Data": { "Tamaño_del_boton": "7.0 cm", "Longitud_del_tallo": "50 - 80 cm", "Vida_en_florero": "12 - 15 天", "Numero_de_petalos": "37", "Estado_fenologico": "90 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Proud", "descripcion": "Proud 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/16_Proud.png", "tipo": "纯色", "Data": { "Tamaño_del_boton": "6.9 cm", "Longitud_del_tallo": "40 - 70 cm", "Vida_en_florero": "10 - 12 天", "Numero_de_petalos": "57", "Estado_fenologico": "95 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Nina", "descripcion": "Nina 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/17_Nina.png", "tipo": "纯色", "Data": { "Tamaño_del_boton": "6.4 cm", "Longitud_del_tallo": "40 - 90 cm", "Vida_en_florero": "14 - 15 天", "Numero_de_petalos": "52", "Estado_fenologico": "92 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Shimmer", "descripcion": "Shimmer 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/18_Shimmer.png", "tipo": "纯色", "Data": { "Tamaño_del_boton": "6.5 - 7.0 cm", "Longitud_del_tallo": "60 - 80 cm", "Vida_en_florero": "15 天", "Numero_de_petalos": "60 - 65", "Estado_fenologico": "95 天", "Ciclo": "正常", "link": "#" } },
-    { "titulo": "Mondial", "descripcion": "Mondial 玫瑰", "ImagenArchivo": "/CMS-WEB/uploads/19_Mondial.png", "tipo": "纯色", "Data": { "Tamaño_del_boton": "5.9 cm", "Longitud_del_tallo": "50 - 80 cm", "Vida_en_florero": "15 - 18 天", "Numero_de_petalos": "37", "Estado_fenologico": "94 天", "Ciclo": "正常", "link": "#" } }
+    {
+      "titulo": "Magic time",
+      "descripcion": "Magic Time 玫瑰",
+      "tipo": "双色",
+      "Data": {
+        "Tamaño_del_boton": "7.0 - 8.0 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "15 - 18 天",
+        "Numero_de_petalos": "42 - 43",
+        "Estado_fenologico": "92 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "High Magic",
+      "descripcion": "High Magic 玫瑰",
+      "tipo": "双色",
+      "Data": {
+        "Tamaño_del_boton": "5.6 cm",
+        "Longitud_del_tallo": "50 - 90 cm",
+        "Vida_en_florero": "12 - 15 天",
+        "Numero_de_petalos": "43",
+        "Estado_fenologico": "88 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Paloma",
+      "descripcion": "Paloma 玫瑰",
+      "tipo": "双色",
+      "Data": {
+        "Tamaño_del_boton": "5 - 6 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "10 - 12 天",
+        "Numero_de_petalos": "32",
+        "Estado_fenologico": "92 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Atomic",
+      "descripcion": "Atomic 玫瑰",
+      "tipo": "双色",
+      "Data": {
+        "Tamaño_del_boton": "6.0 - 6.5 cm",
+        "Longitud_del_tallo": "50 - 70 cm",
+        "Vida_en_florero": "14 天",
+        "Numero_de_petalos": "40 - 45",
+        "Estado_fenologico": "89 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Iguazu",
+      "descripcion": "Iguazu 玫瑰",
+      "tipo": "双色",
+      "Data": {
+        "Tamaño_del_boton": "6.5 - 7 cm",
+        "Longitud_del_tallo": "60 - 80 cm",
+        "Vida_en_florero": "12 - 14 天",
+        "Numero_de_petalos": "53",
+        "Estado_fenologico": "90 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Esperance",
+      "descripcion": "Esperance 玫瑰",
+      "tipo": "双色",
+      "Data": {
+        "Tamaño_del_boton": "50 - 70 cm",
+        "Longitud_del_tallo": "50 - 70 cm",
+        "Vida_en_florero": "14 天",
+        "Numero_de_petalos": "53",
+        "Estado_fenologico": "90 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Kahala",
+      "descripcion": "Kahala 玫瑰",
+      "tipo": "双色",
+      "Data": {
+        "Tamaño_del_boton": "5.5 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "14 天",
+        "Numero_de_petalos": "40",
+        "Estado_fenologico": "88 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Salma",
+      "descripcion": "Salma 玫瑰",
+      "tipo": "双色",
+      "Data": {
+        "Tamaño_del_boton": "5.5 - 6.0 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "15 天",
+        "Numero_de_petalos": "35 - 40",
+        "Estado_fenologico": "92 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Dee Purple",
+      "descripcion": "Dee Purple 玫瑰",
+      "tipo": "双色",
+      "Data": {
+        "Tamaño_del_boton": "5 - 6 cm",
+        "Longitud_del_tallo": "50 - 80 cm",
+        "Vida_en_florero": "10 - 12 天",
+        "Numero_de_petalos": "40",
+        "Estado_fenologico": "86 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Explorer",
+      "descripcion": "Explorer 玫瑰",
+      "tipo": "红色",
+      "Data": {
+        "Tamaño_del_boton": "6.5 - 7.0 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "15 天",
+        "Numero_de_petalos": "40 - 45",
+        "Estado_fenologico": "109 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Pink Floyd",
+      "descripcion": "Pink Floyd 玫瑰",
+      "tipo": "纯色",
+      "Data": {
+        "Tamaño_del_boton": "6 - 6.5 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "17 天",
+        "Numero_de_petalos": "38",
+        "Estado_fenologico": "92 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Brighton",
+      "descripcion": "Brighton 玫瑰",
+      "tipo": "纯色",
+      "Data": {
+        "Tamaño_del_boton": "5.0 - 6.0 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "12 - 14 天",
+        "Numero_de_petalos": "30",
+        "Estado_fenologico": "90 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Gotcha",
+      "descripcion": "Gotcha 玫瑰",
+      "tipo": "纯色",
+      "Data": {
+        "Tamaño_del_boton": "6.0 - 6.5 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "14 天",
+        "Numero_de_petalos": "30 - 35",
+        "Estado_fenologico": "95 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Lola",
+      "descripcion": "Lola 玫瑰",
+      "tipo": "纯色",
+      "Data": {
+        "Tamaño_del_boton": "7.0 - 8.0 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "15 - 18 天",
+        "Numero_de_petalos": "32",
+        "Estado_fenologico": "92 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Novia",
+      "descripcion": "Novia 玫瑰",
+      "tipo": "纯色",
+      "Data": {
+        "Tamaño_del_boton": "7.0 cm",
+        "Longitud_del_tallo": "50 - 80 cm",
+        "Vida_en_florero": "12 - 15 天",
+        "Numero_de_petalos": "37",
+        "Estado_fenologico": "90 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Proud",
+      "descripcion": "Proud 玫瑰",
+      "tipo": "纯色",
+      "Data": {
+        "Tamaño_del_boton": "6.9 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "10 - 12 天",
+        "Numero_de_petalos": "57",
+        "Estado_fenologico": "95 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Nina",
+      "descripcion": "Nina 玫瑰",
+      "tipo": "纯色",
+      "Data": {
+        "Tamaño_del_boton": "6.4 cm",
+        "Longitud_del_tallo": "40 - 90 cm",
+        "Vida_en_florero": "14 - 15 天",
+        "Numero_de_petalos": "52",
+        "Estado_fenologico": "92 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Shimmer",
+      "descripcion": "Shimmer 玫瑰",
+      "tipo": "纯色",
+      "Data": {
+        "Tamaño_del_boton": "6.5 - 7.0 cm",
+        "Longitud_del_tallo": "60 - 80 cm",
+        "Vida_en_florero": "15 天",
+        "Numero_de_petalos": "60 - 65",
+        "Estado_fenologico": "95 天",
+        "Ciclo": "正常"
+      }
+    },
+    {
+      "titulo": "Mondial",
+      "descripcion": "Mondial 玫瑰",
+      "tipo": "纯色",
+      "Data": {
+        "Tamaño_del_boton": "5.9 cm",
+        "Longitud_del_tallo": "50 - 80 cm",
+        "Vida_en_florero": "15 - 18 天",
+        "Numero_de_petalos": "37",
+        "Estado_fenologico": "94 天",
+        "Ciclo": "正常"
+      }
+    }
   ]
 }
