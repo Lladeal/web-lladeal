@@ -5,7 +5,9 @@
     "subTitle": "Explora nuestras variedades premium cultivadas en Cayambe. Cada rosa destaca por su color, frescura y resistencia para los mercados mas exigentes.",
     "linkTitle": "Hablar con ventas",
     "linkHref": "/contact",
-    "linkAriaLabel": "Hablar con el equipo comercial sobre variedades de rosas"
+    "linkAriaLabel": "Hablar con el equipo comercial sobre variedades de rosas",
+    "linktitle2": "Descargar catalogo",
+    "linkhref2": "/CMS-WEB/uploads/CATALOGO-LLADEAL-1.pdf"
   },
   "listing": {
     "typeLabel": "Tipo",

@@ -54,6 +54,7 @@ const baseOnlyKeys = new Set([
   'link',
   'Link',
   'linkHref',
+  'linkhref2',
   'phone',
   'telefono',
   'mail',

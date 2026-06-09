@@ -1,7 +1,7 @@
 ---
 import { twMerge } from 'tailwind-merge';
 import { getLocaleFromPathname, withBase } from '@utils/links';
-const { type, href, rel, target, variant, className, id } = Astro.props;
+const { type, href, rel, target, variant, className, id, download } = Astro.props;
 const locale = getLocaleFromPathname(Astro.url.pathname);
 const resolvedHref = withBase(href, locale);
 
@@ -13,6 +13,7 @@ export interface Props {
   variant?: 'primary' | 'secondary' | 'tertiary' | 'alternative';
   className?: string;
   id?: string;
+  download?: boolean;
 }
 
 /**
@@ -50,6 +51,7 @@ This component dynamically renders either a `<button>` element or an `<a>` (link
     <a
       id={id}
       href={resolvedHref}
+      download={download ? true : undefined}
       rel={rel ? rel : undefined}
       target={target ? target : undefined}
       class={twMerge(

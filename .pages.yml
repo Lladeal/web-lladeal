@@ -637,6 +637,12 @@ content:
               - name: linkTitle
                 label: Texto del enlace principal
                 type: string
+              - name: linktitle2
+                label: Texto del segundo enlace
+                type: string
+              - name: linkhref2
+                label: Enlace del segundo boton
+                type: string
               - name: linkAriaLabel
                 label: Texto accesible del enlace
                 type: string
@@ -943,6 +949,9 @@ content:
                 type: text
               - name: linkTitle
                 label: Texto del enlace principal
+                type: string
+              - name: linktitle2
+                label: Texto del segundo enlace
                 type: string
               - name: linkAriaLabel
                 label: Texto accesible del enlace
@@ -1338,6 +1347,9 @@ content:
               - name: linkTitle
                 label: Texto del enlace principal
                 type: string
+              - name: linktitle2
+                label: Texto del segundo enlace
+                type: string
               - name: linkAriaLabel
                 label: Texto accesible del enlace
                 type: string
@@ -1663,6 +1675,9 @@ content:
                 type: text
               - name: linkTitle
                 label: Texto del enlace principal
+                type: string
+              - name: linktitle2
+                label: Texto del segundo enlace
                 type: string
               - name: linkAriaLabel
                 label: Texto accesible del enlace
