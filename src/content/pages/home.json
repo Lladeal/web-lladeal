@@ -163,164 +163,119 @@
       }
     },
     {
-      "titulo": "Paloma",
-      "descripcion": "Rosa Paloma",
-      "ImagenArchivo": "/CMS-WEB/uploads/03_Paloma.png",
+      "titulo": "DEEP PURPLE",
+      "descripcion": "Rosa DEEP PURPLE",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-7.webp",
       "tipo": "Bicolores",
       "Data": {
-        "Tamaño_del_boton": "5 - 6 cm",
-        "Longitud_del_tallo": "40 - 70 cm",
-        "Vida_en_florero": "10 - 12 días",
-        "Numero_de_petalos": "32",
-        "Estado_fenologico": "92 días",
-        "Ciclo": "Normal",
-        "link": "#"
-      }
-    },
-    {
-      "titulo": "Atomic",
-      "descripcion": "Rosa Atomic",
-      "ImagenArchivo": "/CMS-WEB/uploads/04_Atomic.png",
-      "tipo": "Bicolores",
-      "Data": {
-        "Tamaño_del_boton": "6,0 - 6,5 cm",
-        "Longitud_del_tallo": "50 - 70 cm",
-        "Vida_en_florero": "14 días",
-        "Numero_de_petalos": "40 - 45",
-        "Estado_fenologico": "89 días",
-        "Ciclo": "Normal",
-        "link": "#"
-      }
-    },
-    {
-      "titulo": "Iguazu",
-      "descripcion": "Rosa Iguazu",
-      "ImagenArchivo": "/CMS-WEB/uploads/05_Iguazu.png",
-      "tipo": "Bicolores",
-      "Data": {
-        "Tamaño_del_boton": "6,5 - 7 cm",
-        "Longitud_del_tallo": "60 - 80 cm",
-        "Vida_en_florero": "12 - 14 días",
-        "Numero_de_petalos": "53",
-        "Estado_fenologico": "90 días",
-        "Ciclo": "Normal",
-        "link": "#"
-      }
-    },
-    {
-      "titulo": "Esperance",
-      "descripcion": "Rosa Esperance",
-      "ImagenArchivo": "/CMS-WEB/uploads/06_Esperance.png",
-      "tipo": "Bicolores",
-      "Data": {
-        "Tamaño_del_boton": "50 - 70 cm",
-        "Longitud_del_tallo": "50 - 70 cm",
-        "Vida_en_florero": "14 días",
-        "Numero_de_petalos": "53",
-        "Estado_fenologico": "90 días",
-        "Ciclo": "Normal",
-        "link": "#"
-      }
-    },
-    {
-      "titulo": "Kahala",
-      "descripcion": "Rosa Kahala",
-      "ImagenArchivo": "/CMS-WEB/uploads/07_Kahala.png",
-      "tipo": "Bicolores",
-      "Data": {
-        "Tamaño_del_boton": "5,5 cm",
-        "Longitud_del_tallo": "40 - 70 cm",
-        "Vida_en_florero": "14 días",
-        "Numero_de_petalos": "40",
-        "Estado_fenologico": "88 días",
-        "Ciclo": "Normal",
-        "link": "#"
-      }
-    },
-    {
-      "titulo": "Salma",
-      "descripcion": "Rosa Salma",
-      "ImagenArchivo": "/CMS-WEB/uploads/08_Salma.png",
-      "tipo": "Bicolores",
-      "Data": {
-        "Tamaño_del_boton": "5,5 - 6,0 cm",
-        "Longitud_del_tallo": "60 - 90 cm",
-        "Vida_en_florero": "15 días",
-        "Numero_de_petalos": "35 - 40",
-        "Estado_fenologico": "92 días",
-        "Ciclo": "Normal",
-        "link": "#"
-      }
-    },
-    {
-      "titulo": "Dee Purple",
-      "descripcion": "Rosa Dee purple",
-      "ImagenArchivo": "/CMS-WEB/uploads/09_Dee_Purple.png",
-      "tipo": "Bicolores",
-      "Data": {
-        "Tamaño_del_boton": "5 - 6 cm",
+        "Tamaño_del_boton": "5.5 - 7 cm",
         "Longitud_del_tallo": "50 - 80 cm",
         "Vida_en_florero": "10 - 12 días",
         "Numero_de_petalos": "40",
-        "Estado_fenologico": "86 días",
+        "Estado_fenologico": "95 días",
         "Ciclo": "Normal",
         "link": "#"
       }
     },
     {
-      "titulo": "Explorer",
-      "descripcion": "Rosa Explorer",
-      "ImagenArchivo": "/CMS-WEB/uploads/10_Explorer.png",
-      "tipo": "Rojos",
+      "titulo": "ESPERANCE",
+      "descripcion": "Rosa ESPERANCE",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-8.webp",
+      "tipo": "Bicolores",
       "Data": {
-        "Tamaño_del_boton": "6,5 - 7,0 cm",
-        "Longitud_del_tallo": "60 - 90 cm",
-        "Vida_en_florero": "15 días",
-        "Numero_de_petalos": "40 - 45",
-        "Estado_fenologico": "109 días",
-        "Ciclo": "Normal",
-        "link": "#"
-      }
-    },
-    {
-      "titulo": "Pink Floyd",
-      "descripcion": "Rosa Pink Floyd",
-      "ImagenArchivo": "/CMS-WEB/uploads/11_Pink_Floyd.png",
-      "tipo": "Color Único",
-      "Data": {
-        "Tamaño_del_boton": "6 - 6,5 cm",
-        "Longitud_del_tallo": "60 - 90 cm",
-        "Vida_en_florero": "17 días",
-        "Numero_de_petalos": "38",
-        "Estado_fenologico": "92 días",
-        "Ciclo": "Normal",
-        "link": "#"
-      }
-    },
-    {
-      "titulo": "Brighton",
-      "descripcion": "Rosa Brighton",
-      "ImagenArchivo": "/CMS-WEB/uploads/12_Brighton.png",
-      "tipo": "Color Único",
-      "Data": {
-        "Tamaño_del_boton": "5,0 - 6,0 cm",
-        "Longitud_del_tallo": "40 - 70 cm",
-        "Vida_en_florero": "12 - 14 días",
-        "Numero_de_petalos": "30",
+        "Tamaño_del_boton": "6,0 - 7 cm",
+        "Longitud_del_tallo": "50 - 70 cm",
+        "Vida_en_florero": "14 días",
+        "Numero_de_petalos": "53",
         "Estado_fenologico": "90 días",
         "Ciclo": "Normal",
         "link": "#"
       }
     },
     {
-      "titulo": "Gotcha",
-      "descripcion": "Rosa Gotcha",
-      "ImagenArchivo": "/CMS-WEB/uploads/13_Gotcha.png",
+      "titulo": "EXPLORE",
+      "descripcion": "Rosa EXPLORE",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-9.webp",
+      "tipo": "Bicolores",
+      "Data": {
+        "Tamaño_del_boton": "6,5 - 8 cm",
+        "Longitud_del_tallo": "40 - 120 cm",
+        "Vida_en_florero": "15 días",
+        "Numero_de_petalos": "40 - 45",
+        "Estado_fenologico": "120 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "FORTUNE",
+      "descripcion": "Rosa FORTUNE",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-10.webp",
+      "tipo": "Bicolores",
+      "Data": {
+        "Tamaño_del_boton": "5.5 - 6.0 cm",
+        "Longitud_del_tallo": "60 - 80 cm",
+        "Vida_en_florero": "15 días",
+        "Numero_de_petalos": "45 - 50",
+        "Estado_fenologico": "95 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "FREEDOM",
+      "descripcion": "Rosa FREEDOM",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-11.webp",
       "tipo": "Color Único",
       "Data": {
-        "Tamaño_del_boton": "6,0 - 6,5 cm",
-        "Longitud_del_tallo": "60 - 90 cm",
+        "Tamaño_del_boton": "5,5 - 6.5 cm",
+        "Longitud_del_tallo": "40 - 80 cm",
+        "Vida_en_florero": "13 - 15 días",
+        "Numero_de_petalos": "44",
+        "Estado_fenologico": "95 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "RED VOLUTION",
+      "descripcion": "Rosa RED VOLUTION",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-12.webp",
+      "tipo": "Bicolores",
+      "Data": {
+        "Tamaño_del_boton": "1.2 - 1.3 cm",
+        "Longitud_del_tallo": "5.5 - 6 cm",
         "Vida_en_florero": "14 días",
+        "Numero_de_petalos": "30 - 35",
+        "Estado_fenologico": "90 -110 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "FRUTTETO",
+      "descripcion": "Rosa FRUTTETO",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-13.webp",
+      "tipo": "Bicolores",
+      "Data": {
+        "Tamaño_del_boton": "6 - 6.5 cm",
+        "Longitud_del_tallo": "40 - 90 cm",
+        "Vida_en_florero": "12 - 15 días",
+        "Numero_de_petalos": "30 - 35",
+        "Estado_fenologico": "90 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "GOTCHA",
+      "descripcion": "Rosa GOTCHA",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-14.webp",
+      "tipo": "Rojos",
+      "Data": {
+        "Tamaño_del_boton": "6.0 - 6.5 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "12 -14 días",
         "Numero_de_petalos": "30 - 35",
         "Estado_fenologico": "95 días",
         "Ciclo": "Normal",
@@ -328,59 +283,74 @@
       }
     },
     {
-      "titulo": "Lola",
-      "descripcion": "Rosa Lola",
-      "ImagenArchivo": "/CMS-WEB/uploads/14_Lola.png",
+      "titulo": "HIGH MAGIC",
+      "descripcion": "Rosa HIGH MAGIC",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-15.webp",
       "tipo": "Color Único",
       "Data": {
-        "Tamaño_del_boton": "7,0 - 8,0 cm",
-        "Longitud_del_tallo": "40 - 70 cm",
-        "Vida_en_florero": "15 - 18 días",
-        "Numero_de_petalos": "32",
-        "Estado_fenologico": "92 días",
-        "Ciclo": "Normal",
-        "link": "#"
-      }
-    },
-    {
-      "titulo": "Novia",
-      "descripcion": "Rosa Novia",
-      "ImagenArchivo": "/CMS-WEB/uploads/15_Novia.png",
-      "tipo": "Color Único",
-      "Data": {
-        "Tamaño_del_boton": "7,0 cm",
-        "Longitud_del_tallo": "50 - 80 cm",
+        "Tamaño_del_boton": "5.6 - 6 cm",
+        "Longitud_del_tallo": "50 - 90 cm",
         "Vida_en_florero": "12 - 15 días",
-        "Numero_de_petalos": "37",
-        "Estado_fenologico": "90 días",
-        "Ciclo": "Normal",
-        "link": "#"
-      }
-    },
-    {
-      "titulo": "Proud",
-      "descripcion": "Rosa Proud",
-      "ImagenArchivo": "/CMS-WEB/uploads/16_Proud.png",
-      "tipo": "Color Único",
-      "Data": {
-        "Tamaño_del_boton": "6,9 cm",
-        "Longitud_del_tallo": "40 - 70 cm",
-        "Vida_en_florero": "10 - 12 días",
-        "Numero_de_petalos": "57",
+        "Numero_de_petalos": "43",
         "Estado_fenologico": "95 días",
         "Ciclo": "Normal",
         "link": "#"
       }
     },
     {
-      "titulo": "Nina",
-      "descripcion": "Rosa Nina",
-      "ImagenArchivo": "/CMS-WEB/uploads/17_Nina.png",
+      "titulo": "LOLA",
+      "descripcion": "Rosa LOLA",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-16.webp",
       "tipo": "Color Único",
       "Data": {
-        "Tamaño_del_boton": "6,4 cm",
+        "Tamaño_del_boton": "5.5 - 7.5 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "15 días",
+        "Numero_de_petalos": "32",
+        "Estado_fenologico": "95 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "BARISTA",
+      "descripcion": "Rosa BARISTA",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-17.webp",
+      "tipo": "Color Único",
+      "Data": {
+        "Tamaño_del_boton": "0.9 - 1 cm",
+        "Longitud_del_tallo": "5.5 - 0.6 cm",
+        "Vida_en_florero": "14 - 16 días",
+        "Numero_de_petalos": "40",
+        "Estado_fenologico": "90 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "MONDIAL",
+      "descripcion": "Rosa MONDIAL",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-18.webp",
+      "tipo": "Color Único",
+      "Data": {
+        "Tamaño_del_boton": "6.5 - 7,0 cm",
+        "Longitud_del_tallo": "50 - 80 cm",
+        "Vida_en_florero": "15  días",
+        "Numero_de_petalos": "37",
+        "Estado_fenologico": "94 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "NINA",
+      "descripcion": "Rosa NINA",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-19.webp",
+      "tipo": "Color Único",
+      "Data": {
+        "Tamaño_del_boton": "5.0 - 6 cm",
         "Longitud_del_tallo": "40 - 90 cm",
-        "Vida_en_florero": "14 - 15 días",
+        "Vida_en_florero": "15 días",
         "Numero_de_petalos": "52",
         "Estado_fenologico": "92 días",
         "Ciclo": "Normal",
@@ -388,10 +358,85 @@
       }
     },
     {
-      "titulo": "Shimmer",
-      "descripcion": "Rosa Shimmer",
-      "ImagenArchivo": "/CMS-WEB/uploads/18_Shimmer.png",
+      "titulo": "PALOMA",
+      "descripcion": "Rosa PALOMA",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-20.webp",
       "tipo": "Color Único",
+      "Data": {
+        "Tamaño_del_boton": "5 - 6 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "10 - 15 días",
+        "Numero_de_petalos": "32",
+        "Estado_fenologico": "95 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "PINK FLOYD",
+      "descripcion": "Rosa PINK FLOYD",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-21.webp",
+      "tipo": "Color Único",
+      "Data": {
+        "Tamaño_del_boton": "5.5 - 7.5 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "15 días",
+        "Numero_de_petalos": "38",
+        "Estado_fenologico": "95 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "PINK MONDIAL",
+      "descripcion": "Rosa PINK MONDIAL",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-22.webp",
+      "tipo": "Color Único",
+      "Data": {
+        "Tamaño_del_boton": "5.5 - 7 cm",
+        "Longitud_del_tallo": "60 - 80 cm",
+        "Vida_en_florero": "15 días",
+        "Numero_de_petalos": "30 - 35",
+        "Estado_fenologico": "120 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "PROUD",
+      "descripcion": "Rosa PROUD",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-23.webp",
+      "tipo": "Color Único",
+      "Data": {
+        "Tamaño_del_boton": "5.5 - 7.5 cm",
+        "Longitud_del_tallo": "40 - 70 cm",
+        "Vida_en_florero": "15 días",
+        "Numero_de_petalos": "57",
+        "Estado_fenologico": "95 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "SALMA",
+      "descripcion": "Rosa SALMA",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-24.webp",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "5.5 - 7 cm",
+        "Longitud_del_tallo": "60 - 90 cm",
+        "Vida_en_florero": "15 días",
+        "Numero_de_petalos": "35 - 40",
+        "Estado_fenologico": "95 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "SHIMMER",
+      "descripcion": "Rosa SHIMMER",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-25.webp",
+      "tipo": "Bicolor",
       "Data": {
         "Tamaño_del_boton": "6.5 - 7.0 cm",
         "Longitud_del_tallo": "60 - 80 cm",
@@ -403,16 +448,91 @@
       }
     },
     {
-      "titulo": "Mondial",
-      "descripcion": "Rosa Mondial",
-      "ImagenArchivo": "/CMS-WEB/uploads/19_Mondial.png",
-      "tipo": "Color Único",
+      "titulo": "MANDALA",
+      "descripcion": "Rosa MANDALA",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-26.webp",
+      "tipo": "Bicolor",
       "Data": {
-        "Tamaño_del_boton": "5,9 cm",
-        "Longitud_del_tallo": "50 - 80 cm",
-        "Vida_en_florero": "15 - 18 días",
-        "Numero_de_petalos": "37",
-        "Estado_fenologico": "94 días",
+        "Tamaño_del_boton": "1 cm",
+        "Longitud_del_tallo": "5 - 8 cm",
+        "Vida_en_florero": "12 - 14 días",
+        "Numero_de_petalos": "40 - 45",
+        "Estado_fenologico": "90 - 100 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "QUEENS CROWN",
+      "descripcion": "Rosa QUEENS CROWN",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-29.webp",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "6.5 - 7 cm",
+        "Longitud_del_tallo": "40 - 70",
+        "Vida_en_florero": "12 - 18 días",
+        "Numero_de_petalos": "100",
+        "Estado_fenologico": "90 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "PINK XPRESSION",
+      "descripcion": "Rosa PINK XPRESSION",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-31.webp",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "8 cm",
+        "Longitud_del_tallo": "50 - 70 cm",
+        "Vida_en_florero": "12 - 18 días",
+        "Numero_de_petalos": "100",
+        "Estado_fenologico": "90 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "KINGS CROSS",
+      "descripcion": "Rosa KINGS CROSS",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-32.webp",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "8 - 10 cm",
+        "Longitud_del_tallo": "40 - 80 cm",
+        "Vida_en_florero": "15 días",
+        "Numero_de_petalos": "50 - 55",
+        "Estado_fenologico": "90 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "ANTONIA",
+      "descripcion": "Rosa ANTONIA",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-33.webp",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "8 - 10 cm",
+        "Longitud_del_tallo": "40 - 60 cm",
+        "Vida_en_florero": "7 - 12 días",
+        "Numero_de_petalos": "40 - 60",
+        "Estado_fenologico": "79 días",
+        "Ciclo": "Normal",
+        "link": "#"
+      }
+    },
+    {
+      "titulo": "CANDLELIGHT",
+      "descripcion": "Rosa CANDLELIGHT",
+      "ImagenArchivo": "/CMS-WEB/uploads/catalogo-lladeal-1-34.webp",
+      "tipo": "Bicolor",
+      "Data": {
+        "Tamaño_del_boton": "6.0 - 7 cm",
+        "Longitud_del_tallo": "50 - 70 cm",
+        "Vida_en_florero": "12 - 14 días",
+        "Numero_de_petalos": "50",
+        "Estado_fenologico": "90 - 100 días",
         "Ciclo": "Normal",
         "link": "#"
       }
