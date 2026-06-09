@@ -843,6 +843,30 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
+          - name: Team
+            label: Equipo
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo de la seccion
+                type: string
+              - name: descripcion
+                label: Descripcion de la seccion
+                type: text
+              - name: team
+                label: Miembros del equipo
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{nombre}"
+                fields:
+                  - name: nombre
+                    label: Nombre
+                    type: string
+                  - name: cargo
+                    label: Cargo
+                    type: string
       - name: contact_page_en
         label: Contacto en ingles
         type: file
@@ -1037,11 +1061,6 @@ content:
                 label: Logo
                 type: object
                 fields:
-                  - name: imagen
-                    label: Imagen del logo
-                    type: image
-                    options:
-                      media: uploads
                   - name: descripcion
                     label: Texto alternativo del logo
                     type: string
@@ -1231,6 +1250,30 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
+          - name: Team
+            label: Equipo
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo de la seccion
+                type: string
+              - name: descripcion
+                label: Descripcion de la seccion
+                type: text
+              - name: team
+                label: Miembros del equipo
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{nombre}"
+                fields:
+                  - name: nombre
+                    label: Nombre
+                    type: string
+                  - name: cargo
+                    label: Cargo
+                    type: string
       - name: contact_page_ru
         label: Contacto en ruso
         type: file
@@ -1377,11 +1420,6 @@ content:
                 label: Logo
                 type: object
                 fields:
-                  - name: imagen
-                    label: Imagen del logo
-                    type: image
-                    options:
-                      media: uploads
                   - name: descripcion
                     label: Texto alternativo del logo
                     type: string
@@ -1525,6 +1563,30 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
+          - name: Team
+            label: Equipo
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo de la seccion
+                type: string
+              - name: descripcion
+                label: Descripcion de la seccion
+                type: text
+              - name: team
+                label: Miembros del equipo
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{nombre}"
+                fields:
+                  - name: nombre
+                    label: Nombre
+                    type: string
+                  - name: cargo
+                    label: Cargo
+                    type: string
       - name: contact_page_zh
         label: Contacto en chino
         type: file
@@ -1671,11 +1733,6 @@ content:
                 label: Logo
                 type: object
                 fields:
-                  - name: imagen
-                    label: Imagen del logo
-                    type: image
-                    options:
-                      media: uploads
                   - name: descripcion
                     label: Texto alternativo del logo
                     type: string

@@ -51,6 +51,15 @@ function mergeLocalizedEntry(baseEntry: Record<string, any>, localizedEntry: Rec
   };
 }
 
+function mergeHomeFeatureEntry(baseEntry: Record<string, any>, localizedEntry?: Record<string, any>) {
+  return {
+    ...baseEntry,
+    ...localizedEntry,
+    image: baseEntry.image,
+    imagen: baseEntry.imagen,
+  };
+}
+
 function dedupeCarouselEntries<T extends { slug: string }>(items: T[]) {
   const seen = new Set<string>();
 
@@ -76,9 +85,36 @@ function mergeHomeContent(localizedHome: Record<string, any>) {
         };
   }));
 
+  const mergedFeaturesList = homeEs.features.lista.map((entry, index) => {
+    const baseItem = entry as Record<string, any>;
+    const localizedItem =
+      localizedHome.features?.lista?.find(
+        (item: Record<string, any>) => normalizeTitle(item.title ?? item.titulo ?? '') === normalizeTitle(baseItem.title ?? baseItem.titulo ?? ''),
+      ) ?? localizedHome.features?.lista?.[index];
+
+    return mergeHomeFeatureEntry(baseItem, localizedItem);
+  });
+
   return {
     ...homeEs,
     ...localizedHome,
+    imagen: {
+      ...homeEs.imagen,
+      ...localizedHome.imagen,
+      video: homeEs.imagen.video,
+      ImagenArchivo: homeEs.imagen.ImagenArchivo,
+      Imagen: (homeEs.imagen as Record<string, any>).Imagen,
+    },
+    features: {
+      ...homeEs.features,
+      ...localizedHome.features,
+      lista: mergedFeaturesList,
+      Orbita: {
+        ...homeEs.features.Orbita,
+        ...localizedHome.features?.Orbita,
+        Imagen_central: homeEs.features.Orbita.Imagen_central,
+      },
+    },
     carrusel: mergedCarousel,
   };
 }
@@ -107,9 +143,51 @@ export function getHomeContent(locale: Locale) {
 }
 
 export function getNavbarContent(locale: Locale) {
-  if (locale === 'en') return navbarEn;
-  if (locale === 'ru') return navbarRu;
-  if (locale === 'zh') return navbarZh;
+  if (locale === 'en') {
+    return {
+      ...navbarEs,
+      ...navbarEn,
+      barra_de_navegacion: {
+        ...navbarEs.barra_de_navegacion,
+        ...navbarEn.barra_de_navegacion,
+        logo: {
+          ...navbarEs.barra_de_navegacion.logo,
+          ...navbarEn.barra_de_navegacion.logo,
+          imagen: navbarEs.barra_de_navegacion.logo.imagen,
+        },
+      },
+    };
+  }
+  if (locale === 'ru') {
+    return {
+      ...navbarEs,
+      ...navbarRu,
+      barra_de_navegacion: {
+        ...navbarEs.barra_de_navegacion,
+        ...navbarRu.barra_de_navegacion,
+        logo: {
+          ...navbarEs.barra_de_navegacion.logo,
+          ...navbarRu.barra_de_navegacion.logo,
+          imagen: navbarEs.barra_de_navegacion.logo.imagen,
+        },
+      },
+    };
+  }
+  if (locale === 'zh') {
+    return {
+      ...navbarEs,
+      ...navbarZh,
+      barra_de_navegacion: {
+        ...navbarEs.barra_de_navegacion,
+        ...navbarZh.barra_de_navegacion,
+        logo: {
+          ...navbarEs.barra_de_navegacion.logo,
+          ...navbarZh.barra_de_navegacion.logo,
+          imagen: navbarEs.barra_de_navegacion.logo.imagen,
+        },
+      },
+    };
+  }
   return navbarEs;
 }
 
@@ -121,9 +199,51 @@ export function getFooterContent(locale: Locale) {
 }
 
 export function getAboutContent(locale: Locale) {
-  if (locale === 'en') return aboutEn;
-  if (locale === 'ru') return aboutRu;
-  if (locale === 'zh') return aboutZh;
+  if (locale === 'en') {
+    return {
+      ...aboutEs,
+      ...aboutEn,
+      Team: {
+        ...aboutEs.Team,
+        ...aboutEn.Team,
+        team: aboutEs.Team.team.map((baseMember: Record<string, any>, index: number) => ({
+          ...baseMember,
+          ...(aboutEn.Team.team[index] ?? {}),
+          foto: baseMember.foto,
+        })),
+      },
+    };
+  }
+  if (locale === 'ru') {
+    return {
+      ...aboutEs,
+      ...aboutRu,
+      Team: {
+        ...aboutEs.Team,
+        ...aboutRu.Team,
+        team: aboutEs.Team.team.map((baseMember: Record<string, any>, index: number) => ({
+          ...baseMember,
+          ...(aboutRu.Team.team[index] ?? {}),
+          foto: baseMember.foto,
+        })),
+      },
+    };
+  }
+  if (locale === 'zh') {
+    return {
+      ...aboutEs,
+      ...aboutZh,
+      Team: {
+        ...aboutEs.Team,
+        ...aboutZh.Team,
+        team: aboutEs.Team.team.map((baseMember: Record<string, any>, index: number) => ({
+          ...baseMember,
+          ...(aboutZh.Team.team[index] ?? {}),
+          foto: baseMember.foto,
+        })),
+      },
+    };
+  }
   return aboutEs;
 }
 
@@ -142,8 +262,47 @@ export function getCatalogContent(locale: Locale) {
 }
 
 export function getSeoContent(locale: Locale) {
-  if (locale === 'en') return seoEn;
-  if (locale === 'ru') return seoRu;
-  if (locale === 'zh') return seoZh;
+  if (locale === 'en') {
+    return {
+      ...seoEs,
+      ...seoEn,
+      Seo_global: {
+        ...seoEs.Seo_global,
+        ...seoEn.Seo_global,
+        imagen_og: seoEs.Seo_global.imagen_og,
+        icono: seoEs.Seo_global.icono,
+        icono_apple: seoEs.Seo_global.icono_apple,
+        manifiesto: seoEs.Seo_global.manifiesto,
+      },
+    };
+  }
+  if (locale === 'ru') {
+    return {
+      ...seoEs,
+      ...seoRu,
+      Seo_global: {
+        ...seoEs.Seo_global,
+        ...seoRu.Seo_global,
+        imagen_og: seoEs.Seo_global.imagen_og,
+        icono: seoEs.Seo_global.icono,
+        icono_apple: seoEs.Seo_global.icono_apple,
+        manifiesto: seoEs.Seo_global.manifiesto,
+      },
+    };
+  }
+  if (locale === 'zh') {
+    return {
+      ...seoEs,
+      ...seoZh,
+      Seo_global: {
+        ...seoEs.Seo_global,
+        ...seoZh.Seo_global,
+        imagen_og: seoEs.Seo_global.imagen_og,
+        icono: seoEs.Seo_global.icono,
+        icono_apple: seoEs.Seo_global.icono_apple,
+        manifiesto: seoEs.Seo_global.manifiesto,
+      },
+    };
+  }
   return seoEs;
 }
