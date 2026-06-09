@@ -8,7 +8,8 @@
     "titulo": "Finca Lladeal: El arte de transformar altura y sol en flores inolvidables.",
     "subtitulo": "Ubicados estratégicamente en Pesillo, Cayambe. Aprovechamos la luz ecuatorial y suelos cálidos para ofrecer un entorno geográfico excepcional.",
     "Boton_1": {
-      "titulo": "Ver nuestro catalogo"
+      "titulo": "Ver nuestro catalogo",
+      "link": "/catalogo"
     },
     "boton_2": {
       "titulo": "Contáctanos",
