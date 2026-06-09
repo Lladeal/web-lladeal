@@ -11,15 +11,6 @@ const locale = getLocaleFromUrl(Astro.url);
 const { hero, listing, seo } = getCatalogContent(locale);
 const { carrusel } = getHomeContent(locale);
 
-function slugify(value: string) {
-  return value
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-}
-
 type CatalogItem = (typeof carrusel)[number];
 ---
 
@@ -71,7 +62,7 @@ type CatalogItem = (typeof carrusel)[number];
                 <h2 class="text-2xl font-semibold text-slate-800">{item.titulo}</h2>
                 <p class="mt-2 text-sm leading-6 text-slate-600">{item.descripcion}</p>
               </div>
-              <Button href={`/catalogo/${slugify(item.titulo)}`} className="inline-flex border-none px-4! py-2.5!">
+              <Button href={`/catalogo/${item.slug}`} className="inline-flex border-none px-4! py-2.5!">
                 {listing.button}
               </Button>
             </div>

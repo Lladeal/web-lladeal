@@ -8,6 +8,7 @@ import { formatCatalogSpecValue } from '@utils/catalog-format';
 const locale = getLocaleFromUrl(Astro.url);
 const { carrusel } = getHomeContent(locale);
 type CarouselItem = {
+  slug: string;
   titulo: string;
   descripcion: string;
   tipo: string;
@@ -83,14 +84,6 @@ const labelsByLocale = {
 } as const;
 const labels = labelsByLocale[locale];
 
-function slugify(value: string) {
-  return value
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-}
 ---
 
 <div class="mx-auto max-w-340 px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20">
@@ -169,7 +162,7 @@ function slugify(value: string) {
                       </div>
                     </div>
                     <div class="mt-10 flex gap-3">
-                      <Button variant="alternative" href={`/catalogo/${slugify(items.titulo)}`}> {labels.learnMore} </Button>
+                      <Button variant="alternative" href={`/catalogo/${items.slug}`}> {labels.learnMore} </Button>
                     </div>
                   </div>
                 </article>

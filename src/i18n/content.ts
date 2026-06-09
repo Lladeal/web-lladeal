@@ -37,29 +37,61 @@ function normalizeTitle(value: string) {
     .trim();
 }
 
+function slugify(value: string) {
+  return normalizeTitle(value).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
 function mergeLocalizedEntry(baseEntry: Record<string, any>, localizedEntry: Record<string, any>) {
   return {
     ...baseEntry,
     ...localizedEntry,
+    slug: slugify(baseEntry.titulo),
     ImagenArchivo: baseEntry.ImagenArchivo,
     Data: baseEntry.Data,
   };
 }
 
+function dedupeCarouselEntries<T extends { slug: string }>(items: T[]) {
+  const seen = new Set<string>();
+
+  return items.filter(item => {
+    if (seen.has(item.slug)) return false;
+    seen.add(item.slug);
+    return true;
+  });
+}
+
 function mergeHomeContent(localizedHome: Record<string, any>) {
-  const mergedCarousel = homeEs.carrusel.map((baseItem, index) => {
+  const mergedCarousel = dedupeCarouselEntries(homeEs.carrusel.map((baseItem, index) => {
     const localizedItem =
       localizedHome.carrusel?.find(
         (item: Record<string, any>) => normalizeTitle(item.titulo ?? '') === normalizeTitle(baseItem.titulo),
       ) ?? localizedHome.carrusel?.[index];
 
-    return localizedItem ? mergeLocalizedEntry(baseItem, localizedItem) : baseItem;
-  });
+    return localizedItem
+      ? mergeLocalizedEntry(baseItem, localizedItem)
+      : {
+          ...baseItem,
+          slug: slugify(baseItem.titulo),
+        };
+  }));
 
   return {
     ...homeEs,
     ...localizedHome,
     carrusel: mergedCarousel,
+  };
+}
+
+function buildBaseHomeContent() {
+  return {
+    ...homeEs,
+    carrusel: dedupeCarouselEntries(
+      homeEs.carrusel.map(baseItem => ({
+        ...baseItem,
+        slug: slugify(baseItem.titulo),
+      })),
+    ),
   };
 }
 
@@ -71,7 +103,7 @@ export function getHomeContent(locale: Locale) {
   if (locale === 'en') return mergeHomeContent(homeEn);
   if (locale === 'ru') return mergeHomeContent(homeRu);
   if (locale === 'zh') return mergeHomeContent(homeZh);
-  return homeEs;
+  return buildBaseHomeContent();
 }
 
 export function getNavbarContent(locale: Locale) {

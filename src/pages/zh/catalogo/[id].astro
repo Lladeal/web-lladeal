@@ -4,20 +4,28 @@ export const prerender = true;
 import CatalogDetailPage from '../../../components/pages/CatalogDetailPage.astro';
 import { getHomeContent } from '@/i18n/content';
 
-type CatalogItem = ReturnType<typeof getHomeContent>['carrusel'][number];
+type CatalogItem = {
+  slug: string;
+  titulo: string;
+  descripcion: string;
+  tipo: string;
+  ImagenArchivo: string;
+  Data: {
+    Tamaño_del_boton: string;
+    Longitud_del_tallo: string;
+    Vida_en_florero: string;
+    Numero_de_petalos: string;
+    Estado_fenologico: string;
+    Ciclo: string;
+    link: string;
+  };
+};
 
 export function getStaticPaths() {
-  const homeZh = getHomeContent('zh');
-  const slugify = (value: string) =>
-    value
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
+  const homeZh = getHomeContent('zh').carrusel as CatalogItem[];
 
-  return homeZh.carrusel.map((item: CatalogItem) => ({
-    params: { id: slugify(item.titulo) },
+  return homeZh.map(item => ({
+    params: { id: item.slug },
     props: { item },
   }));
 }
