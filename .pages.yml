@@ -355,6 +355,35 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
+          - name: Team
+            label: Equipo
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo de la seccion
+                type: string
+              - name: descripcion
+                label: Descripcion de la seccion
+                type: text
+              - name: team
+                label: Miembros del equipo
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{nombre}'
+                fields:
+                  - name: nombre
+                    label: Nombre
+                    type: string
+                  - name: cargo
+                    label: Cargo
+                    type: string
+                  - name: foto
+                    label: Foto del miembro
+                    type: image
+                    options:
+                      media: uploads
       - name: seo_pages
         label: SEO y metadatos
         type: file
