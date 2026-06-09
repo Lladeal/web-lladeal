@@ -27,6 +27,9 @@ content:
               - name: titulo_link
                 label: Texto del boton
                 type: string
+              - name: link
+                label: Enlace al hacer clic
+                type: string
           - name: hero
             label: Portada principal
             type: object
