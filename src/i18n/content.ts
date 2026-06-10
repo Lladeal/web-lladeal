@@ -89,7 +89,7 @@ function isAssetKey(key: string) {
 function isAssetValue(value: unknown) {
   return (
     typeof value === 'string' &&
-    (value.startsWith('/CMS-WEB/') ||
+    (value.startsWith('/web-lladeal/') ||
       /\.(?:png|jpe?g|webp|avif|svg|webm|mp4|webmanifest)$/i.test(value))
   );
 }

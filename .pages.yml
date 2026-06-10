@@ -2,7 +2,7 @@ media:
   - name: uploads
     label: Archivos subidos
     input: public/uploads
-    output: /CMS-WEB/uploads
+    output: /web-lladeal/uploads
     categories: [image, video]
     rename: safe
 

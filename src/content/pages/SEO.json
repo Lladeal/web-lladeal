@@ -5,10 +5,10 @@
     "og_titulo": "Lladeal® | Las Flores más Hermosas del Mundo",
     "og_descripcion": "Llevamos la majestuosidad de las rosas ecuatorianas a todo el mundo. Cultivo de altura a 3,000 msnm en Cayambe con máxima durabilidad y frescura garantizada.",
     "imagen_texto_alternativo": "Logotipo oficial de Lladeal, rosas de exportación de Ecuador.",
-    "imagen_og": "/CMS-WEB/social.png",
-    "icono": "/CMS-WEB/icon.svg",
-    "icono_apple": "/CMS-WEB/apple-touch-icon.png",
-    "manifiesto": "/CMS-WEB/manifest.webmanifest"
+    "imagen_og": "/web-lladeal/social.png",
+    "icono": "/web-lladeal/icon.svg",
+    "icono_apple": "/web-lladeal/apple-touch-icon.png",
+    "manifiesto": "/web-lladeal/manifest.webmanifest"
   },
   "sobre_nosotros": {
     "lenguaje": "es-EC",

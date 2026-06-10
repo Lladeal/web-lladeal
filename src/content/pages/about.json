@@ -79,12 +79,12 @@
       {
         "nombre": "Fernando Tituaña",
         "cargo": "Agricultor Experto",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Fernando.webp"
+        "foto": "/web-lladeal/uploads/fotos_personal/Fernando.webp"
       },
       {
         "nombre": "Alberto Tituaña",
         "cargo": "Especialista en Ventas",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Alberto.webp"
+        "foto": "/web-lladeal/uploads/fotos_personal/Alberto.webp"
       },
       {
         "nombre": "Javier Vallejo",
@@ -94,7 +94,7 @@
       {
         "nombre": "Ricardo Tituaña",
         "cargo": "Manager Logístico",
-        "foto": "/CMS-WEB/uploads/fotos_personal/Ricardo.webp"
+        "foto": "/web-lladeal/uploads/fotos_personal/Ricardo.webp"
       }
     ]
   }

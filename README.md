@@ -152,13 +152,13 @@ Ese comando ejecuta primero chequeos de Astro/TypeScript y despues genera la com
 ## Assets y archivos publicos
 
 - Usa `public/` para archivos servidos directamente
-- Los uploads del CMS quedan referenciados normalmente dentro de `/CMS-WEB/uploads/...`
+- Los uploads del CMS quedan referenciados normalmente dentro de `/web-lladeal/uploads/...`
 - Si enlazas un PDF para descarga, puedes usar el componente `src/components/ui/Button.astro` con `download={true}`
 
 Ejemplo:
 
 ```astro
-<Button href="/CMS-WEB/uploads/CATALOGO-LLADEAL-1.pdf" download={true}>
+<Button href="/web-lladeal/uploads/CATALOGO-LLADEAL-1.pdf" download={true}>
   Descargar catalogo
 </Button>
 ```
