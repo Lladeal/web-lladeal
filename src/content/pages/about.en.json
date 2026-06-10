@@ -34,6 +34,36 @@
       }
     ]
   },
+  "mision_vison": {
+    "mision": {
+      "titulo": "Our mission",
+      "descripcion": "To grow and export roses of excellence by harnessing the unique altitude and equatorial light of Pesillo, Cayambe. We combine artisanal care with rigorous selection standards to deliver large-bud flowers, vibrant colors, and long vase life, exceeding the expectations of florists and global distributors while honoring our land and community.",
+      "lista": [
+        {
+          "titulo": "Worldwide recognition",
+          "label": "To be recognized worldwide as the origin of the most memorable high-altitude roses, where every bloom tells the story of Cayambe's unique light and the artisanal care of our people."
+        },
+        {
+          "titulo": "Lasting partnerships",
+          "label": "To build lasting partnerships with florists and global distributors by offering not just flowers, but an experience of trust, unmatched freshness, and the certainty that every order reflects the excellence of our land."
+        }
+      ]
+    },
+    "vision": {
+      "titulo": "Our vision",
+      "descripcion": "To be the global benchmark in high-altitude floriculture, recognized for turning Cayambe's geography into unforgettable roses that lead international markets. We seek to grow through seamless logistics, sustainability, and majestic varieties, bringing the art of Lladeal to every corner of the planet with freshness and passion.",
+      "lista": [
+        {
+          "titulo": "A synonym for happiness and quality",
+          "label": "We dream that every Lladeal rose crossing borders carries a little piece of Cayambe with it, filling people's special moments with color and joy no matter how far away they are."
+        },
+        {
+          "titulo": "Growing alongside our customers",
+          "label": "We want to be the trusted partner people can always rely on: fresh, long-lasting, beautiful flowers grown with dedication so every business and every gesture of love becomes unforgettable."
+        }
+      ]
+    }
+  },
   "Team": {
     "titulo": "Our Team",
     "descripcion": "Lladeal® is an Ecuadorian flower company dedicated to the sustainable production of high-altitude roses, globally recognized for their size, strength, and vibrant colors.",

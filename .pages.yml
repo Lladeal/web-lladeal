@@ -358,6 +358,64 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
+          - name: mision_vison
+            label: Mision y vision
+            type: object
+            fields:
+              - name: mision
+                label: Mision
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de la seccion
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+                  - name: lista
+                    label: Pilares de la mision
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: '{titulo}'
+                    fields:
+                      - name: icono
+                        label: Nombre del icono
+                        type: string
+                      - name: titulo
+                        label: Titulo
+                        type: string
+                      - name: label
+                        label: Texto descriptivo
+                        type: text
+              - name: vision
+                label: Vision
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de la seccion
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+                  - name: lista
+                    label: Pilares de la vision
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: '{titulo}'
+                    fields:
+                      - name: icono
+                        label: Nombre del icono
+                        type: string
+                      - name: titulo
+                        label: Titulo
+                        type: string
+                      - name: label
+                        label: Texto descriptivo
+                        type: text
           - name: Team
             label: Equipo
             type: object
@@ -851,6 +909,58 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
+          - name: mision_vison
+            label: Mision y vision
+            type: object
+            fields:
+              - name: mision
+                label: Mision
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de la seccion
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+                  - name: lista
+                    label: Pilares de la mision
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: '{titulo}'
+                    fields:
+                      - name: titulo
+                        label: Titulo
+                        type: string
+                      - name: label
+                        label: Texto descriptivo
+                        type: text
+              - name: vision
+                label: Vision
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de la seccion
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+                  - name: lista
+                    label: Pilares de la vision
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: '{titulo}'
+                    fields:
+                      - name: titulo
+                        label: Titulo
+                        type: string
+                      - name: label
+                        label: Texto descriptivo
+                        type: text
           - name: Team
             label: Equipo
             type: object
@@ -1248,6 +1358,58 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
+          - name: mision_vison
+            label: Mision y vision
+            type: object
+            fields:
+              - name: mision
+                label: Mision
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de la seccion
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+                  - name: lista
+                    label: Pilares de la mision
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: '{titulo}'
+                    fields:
+                      - name: titulo
+                        label: Titulo
+                        type: string
+                      - name: label
+                        label: Texto descriptivo
+                        type: text
+              - name: vision
+                label: Vision
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de la seccion
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+                  - name: lista
+                    label: Pilares de la vision
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: '{titulo}'
+                    fields:
+                      - name: titulo
+                        label: Titulo
+                        type: string
+                      - name: label
+                        label: Texto descriptivo
+                        type: text
           - name: Team
             label: Equipo
             type: object
@@ -1577,6 +1739,58 @@ content:
                   - name: descripcion
                     label: Descripcion
                     type: text
+          - name: mision_vison
+            label: Mision y vision
+            type: object
+            fields:
+              - name: mision
+                label: Mision
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de la seccion
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+                  - name: lista
+                    label: Pilares de la mision
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: '{titulo}'
+                    fields:
+                      - name: titulo
+                        label: Titulo
+                        type: string
+                      - name: label
+                        label: Texto descriptivo
+                        type: text
+              - name: vision
+                label: Vision
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de la seccion
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+                  - name: lista
+                    label: Pilares de la vision
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: '{titulo}'
+                    fields:
+                      - name: titulo
+                        label: Titulo
+                        type: string
+                      - name: label
+                        label: Texto descriptivo
+                        type: text
           - name: Team
             label: Equipo
             type: object

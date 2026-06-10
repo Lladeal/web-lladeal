@@ -38,9 +38,43 @@
       }
     ]
   },
+  "mision_vison": {
+    "mision": {
+      "titulo": "Nuestra misión",
+      "descripcion": "Cultivar y exportar rosas de excelencia aprovechando las condiciones únicas de altura y luz ecuatorial en Pesillo, Cayambe. Combinamos el cuidado artesanal con estándares rigurosos de selección para ofrecer flores de botón grande, colores vibrantes y larga duración en florero, superando las expectativas de floristerías y distribuidores globales, mientras respetamos nuestra tierra y comunidad.",
+      "lista": [
+        {
+          "icono": "MaterialSymbolsGlobe",
+          "titulo": "Reconocimiento mundial",
+          "label": "Ser reconocidos mundialmente como el origen de las rosas de altura más memorables, donde cada flor cuente la historia de la luz única de Cayambe y el cuidado artesanal de nuestra gente."
+        },
+        {
+          "icono": "MdiHandshakeOutline",
+          "titulo": "Alianzas duraderas",
+          "label": "Construir alianzas duraderas con floristerías y distribuidores globales, ofreciéndoles no solo flores, sino una experiencia de confianza, frescura inigualable y la certeza de que cada pedido refleja la excelencia de nuestra tierra."
+        }
+      ]
+    },
+    "vision": {
+      "titulo": "Nuestra visión",
+      "descripcion": "Ser el referente mundial en floricultura de altura, reconocidos por transformar la geografía de Cayambe en rosas inolvidables que lideran los mercados internacionales. Buscamos crecer integrando logística sin fricciones, sostenibilidad y variedades majestuosas, llevando el arte de Lladeal a cada rincón del planeta con frescura y pasión.",
+      "lista": [
+        {
+          "icono": "MdiFlowerTulipOutline",
+          "titulo": "Sinónimo de felicidad y Calidad",
+          "label": "Soñamos con que cada rosa Lladeal que cruza fronteras lleve consigo un pedacito de Cayambe, llenando de color y alegría los momentos especiales de las personas, sin importar qué tan lejos estén."
+        },
+        {
+          "icono": "MaterialSymbolsPartnerExchangeRounded",
+          "titulo": "Crecer junto a nuestros clientes",
+          "label": "Queremos ser ese aliado en el que siempre se pueda confiar: flores frescas, duraderas y hermosas, cultivadas con dedicación, para que cada negocio o cada detalle de amor sea inolvidable."
+        }
+      ]
+    }
+  },
   "Team": {
     "titulo": "Nuestro Equipo",
-    "descripcion":"Lladeal® es una empresa florícola ecuatoriana dedicada a la producción sostenible de rosas de altura, reconocidas globalmente por su tamaño, fuerza y colores vibrantes.",
+    "descripcion": "Lladeal® es una empresa florícola ecuatoriana dedicada a la producción sostenible de rosas de altura, reconocidas globalmente por su tamaño, fuerza y colores vibrantes.",
     "team": [
       {
         "nombre": "Fernando Tituaña",
