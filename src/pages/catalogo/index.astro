@@ -13,6 +13,8 @@ import { withBase } from '@utils/links';
 const locale = getLocaleFromUrl(Astro.url);
 const { hero, listing, seo } = getCatalogContent(locale);
 const { carrusel } = getHomeContent(locale);
+const itemsPerPage = 9;
+const totalPages = Math.ceil(carrusel.length / itemsPerPage);
 
 type CatalogItem = (typeof carrusel)[number];
 ---
@@ -52,10 +54,14 @@ type CatalogItem = (typeof carrusel)[number];
   </section>
 
   <section class="mx-auto max-w-[85rem] px-4 pb-24 sm:px-6 lg:px-8">
-    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <div id="catalog-grid" class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {
-        carrusel.map((item: CatalogItem) => (
-          <article class="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+        carrusel.map((item: CatalogItem, index: number) => (
+          <article
+            class={`group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl ${index >= itemsPerPage ? 'hidden' : ''}`}
+            data-catalog-item
+            data-page={Math.floor(index / itemsPerPage) + 1}
+          >
             <div class="bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] p-6">
               <img
                 src={withBase(item.ImagenArchivo) ?? ''}
@@ -93,5 +99,147 @@ type CatalogItem = (typeof carrusel)[number];
         ))
       }
     </div>
+
+    {
+      totalPages > 1 && (
+        <nav
+          class="mt-10 flex flex-wrap items-center justify-center gap-3"
+          aria-label="Paginacion del catalogo"
+          data-catalog-pagination
+        >
+          <button
+            type="button"
+            class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:border-slate-300 hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-40"
+            data-page-prev
+            disabled
+          >
+            Anterior
+          </button>
+
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            {
+              Array.from({ length: totalPages }, (_, index) => {
+                const page = index + 1;
+
+                return (
+                  <button
+                    type="button"
+                    class={`size-11 rounded-full border text-sm font-semibold transition ${
+                      page === 1
+                        ? 'border-pink-600 bg-pink-600 text-[#e3186d]'
+                        : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:text-slate-900'
+                    }`}
+                    aria-current={page === 1 ? 'page' : undefined}
+                    data-page-button={page}
+                  >
+                    {page}
+                  </button>
+                );
+              })
+            }
+          </div>
+
+          <button
+            type="button"
+            class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:border-slate-300 hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-40"
+            data-page-next
+            disabled={totalPages === 1}
+          >
+            Siguiente
+          </button>
+        </nav>
+      )
+    }
   </section>
 </BaseLayout>
+
+<script is:inline define:vars={{ totalPages }}>
+  (() => {
+    const initCatalogPagination = () => {
+      const pagination = document.querySelector('[data-catalog-pagination]');
+      const cards = Array.from(document.querySelectorAll('[data-catalog-item]'));
+
+      if (!pagination || !cards.length || pagination.dataset.bound === 'true') return;
+      pagination.dataset.bound = 'true';
+
+      const prevButton = pagination.querySelector('[data-page-prev]');
+      const nextButton = pagination.querySelector('[data-page-next]');
+      const pageButtons = Array.from(
+        pagination.querySelectorAll('[data-page-button]')
+      );
+
+      let currentPage = 1;
+
+      const renderPage = page => {
+        currentPage = page;
+
+        cards.forEach(card => {
+          const cardPage = Number(card.getAttribute('data-page'));
+          card.classList.toggle('hidden', cardPage !== currentPage);
+        });
+
+        pageButtons.forEach(button => {
+          const buttonPage = Number(button.getAttribute('data-page-button'));
+          const isActive = buttonPage === currentPage;
+
+          if (isActive) {
+            button.setAttribute('aria-current', 'page');
+          } else {
+            button.removeAttribute('aria-current');
+          }
+          button.classList.toggle('border-pink-600', isActive);
+          button.classList.toggle('bg-pink-600', isActive);
+          button.classList.toggle('text-[#e3186d]', isActive);
+          button.classList.toggle('border-slate-200', !isActive);
+          button.classList.toggle('bg-white', !isActive);
+          button.classList.toggle('text-slate-700', !isActive);
+        });
+
+        if (prevButton instanceof HTMLButtonElement) {
+          prevButton.disabled = currentPage === 1;
+        }
+
+        if (nextButton instanceof HTMLButtonElement) {
+          nextButton.disabled = currentPage === totalPages;
+        }
+      };
+
+      pageButtons.forEach(button => {
+        if (!(button instanceof HTMLButtonElement)) return;
+        button.addEventListener('click', () => {
+          const targetPage = Number(button.getAttribute('data-page-button'));
+          if (!targetPage || targetPage === currentPage) return;
+          renderPage(targetPage);
+          document
+            .querySelector('#catalog-grid')
+            ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      if (prevButton instanceof HTMLButtonElement) {
+        prevButton.addEventListener('click', () => {
+          if (currentPage > 1) {
+            renderPage(currentPage - 1);
+            document
+              .querySelector('#catalog-grid')
+              ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+
+      if (nextButton instanceof HTMLButtonElement) {
+        nextButton.addEventListener('click', () => {
+          if (currentPage < totalPages) {
+            renderPage(currentPage + 1);
+            document
+              .querySelector('#catalog-grid')
+              ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+    };
+
+    initCatalogPagination();
+    document.addEventListener('astro:page-load', initCatalogPagination);
+  })();
+</script>
