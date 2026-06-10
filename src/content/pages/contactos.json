@@ -19,6 +19,7 @@
                 "texto": "Ver catálogo de rosas",
                 "link": "/catalogo"
             }
-        }
+        },
+        "formulario": "https://formspree.io/f/YOUR_ID"
     }
 }

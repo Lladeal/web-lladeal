@@ -576,6 +576,9 @@ content:
                       - name: texto
                         label: Texto del enlace
                         type: string
+              - name: formulario
+                label: URL de Formspree (crea una cuenta en formspree.io, genera un formulario, copia el endpoint https://formspree.io/f/... y pegalo aqui)
+                type: string
       - name: footer_page
         label: Pie de pagina
         type: file

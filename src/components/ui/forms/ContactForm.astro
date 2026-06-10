@@ -1,9 +1,11 @@
 ---
-import { getLocaleFromUrl } from '@/i18n/content';
+import { getLocaleFromUrl, getContactContent } from '@/i18n/content';
 import { getUiStrings } from '@/i18n/ui';
+
 
 const locale = getLocaleFromUrl(Astro.url);
 const formStrings = getUiStrings(locale).contactForm;
+const { contactos } = getContactContent(locale);
 ---
 
 <!-- TODO: Wire up form submission. Options:
@@ -11,7 +13,7 @@ const formStrings = getUiStrings(locale).contactForm;
   2. Use a third-party form service (e.g. Formspree: action="https://formspree.io/f/YOUR_ID" method="POST")
   3. Add a fetch-based JS submit handler for a fully custom solution.
 -->
-<form class="p-4" aria-labelledby="form-title">
+<form class="p-4" aria-labelledby="form-title" action={contactos.formulario} method="POST">
   {/* Fieldset and legend for grouping form elements */}
   
   <fieldset class="space-y-4">
