@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
 import { withBase } from '@utils/links';
@@ -19,9 +18,9 @@ const { features } = getHomeContent(locale);
     <p
       class="dm-sans absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-lg"
     >
-      <Image
+      <img
         class="mr-1 inline-block size-5 h-auto w-6 text-slate-500"
-        src={withBase(features.Orbita.Imagen_central)}
+        src={withBase(features.Orbita.Imagen_central) ?? ''}
         height={20}
         width={20}
         alt=""

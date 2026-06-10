@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import Button from '@ui/Button.astro';
 import { Icon } from 'astro-icon/components';
 import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
@@ -110,13 +109,12 @@ const labels = labelsByLocale[locale];
                 <div class="hs-carousel-slide h-full">
                   <article class="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl md:flex-row">
                     <div class="group relative w-full overflow-hidden bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] md:w-1/2">
-                      <Image
-                        src={withBase(items.ImagenArchivo)}
-                        alt={items.descripcion}
-                        inferSize={false}
-                        width={130}
-                        height={70}
-                        class="test h-auto w-full rounded-md"
+                    <img
+                      src={withBase(items.ImagenArchivo) ?? ''}
+                      alt={items.descripcion}
+                      width={130}
+                      height={70}
+                      class="test h-auto w-full rounded-md"
                       />
                       <div class="absolute top-6 left-6">
                         <span class="rounded-full border border-slate-200 bg-white/90 px-3 py-1 text-[10px] font-bold tracking-widest text-slate-600 uppercase backdrop-blur-sm">
@@ -275,13 +273,12 @@ const labels = labelsByLocale[locale];
               return (
                 <div class="hs-carousel-pagination-item border-line-2 hs-carousel-active:border-primary width-full h-fit shrink-0 cursor-pointer overflow-hidden rounded-md border">
                   <div class="flex h-fit items-center justify-center p-1 text-center">
-                    <Image
-                      src={withBase(items.ImagenArchivo)}
-                      alt={items.descripcion}
-                      inferSize={false}
-                      width={130}
-                      height={70}
-                      class="test rounded-md"
+                  <img
+                    src={withBase(items.ImagenArchivo) ?? ''}
+                    alt={items.descripcion}
+                    width={130}
+                    height={70}
+                    class="test rounded-md"
                     />
                   </div>
                 </div>

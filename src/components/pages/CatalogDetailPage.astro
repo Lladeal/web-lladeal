@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '@layout/BaseLayout.astro';
 import Button from '@ui/Button.astro';
-import { Image } from 'astro:assets';
 import { getCatalogContent, getLocaleFromUrl } from '@/i18n/content';
 import { formatCatalogSpecValue } from '@utils/catalog-format';
 import { withBase } from '@utils/links';
@@ -127,10 +126,9 @@ const specs = [
       <div
         class="overflow-hidden rounded-3xl bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] p-6 shadow-xl ring-1 ring-slate-200/70"
       >
-        <Image
-          src={withBase(item.ImagenArchivo)}
+        <img
+          src={withBase(item.ImagenArchivo) ?? ''}
           alt={item.descripcion}
-          inferSize={false}
           width={900}
           height={1100}
           class="mx-auto h-auto w-full max-w-md"

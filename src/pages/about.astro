@@ -2,7 +2,6 @@
 export const prerender = true;
 import BaseLayout from '@layout/BaseLayout.astro';
 import type { WithContext, Thing } from 'schema-dts';
-import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 import { withBase } from '@utils/links';
 import {
@@ -205,10 +204,10 @@ const schema: WithContext<Thing> = {
         {
           Team.team.map(miembro => (
             <div class="text-center">
-              <Image
+              <img
                 class="mx-auto size-24 rounded-full"
                 src={
-                  miembro.foto == ''
+                  !miembro.foto
                     ? withBase('/uploads/fotos_personal/Avatar-default.png')
                     : withBase(miembro.foto)
                 }

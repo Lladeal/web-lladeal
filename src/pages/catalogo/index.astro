@@ -3,7 +3,6 @@ export const prerender = true;
 
 import BaseLayout from '@layout/BaseLayout.astro';
 import Button from '@ui/Button.astro';
-import { Image } from 'astro:assets';
 import {
   getCatalogContent,
   getHomeContent,
@@ -58,10 +57,9 @@ type CatalogItem = (typeof carrusel)[number];
         carrusel.map((item: CatalogItem) => (
           <article class="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
             <div class="bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] p-6">
-              <Image
-                src={withBase(item.ImagenArchivo)}
+              <img
+                src={withBase(item.ImagenArchivo) ?? ''}
                 alt={item.descripcion}
-                inferSize={false}
                 width={640}
                 height={780}
                 class="mx-auto h-72 w-auto object-contain"
