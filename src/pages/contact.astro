@@ -46,16 +46,16 @@ const schema: WithContext<Thing> = {
       <p class="mt-1 ml-1 text-slate-600">{contactos.subtitulo}</p>
     </div>
 
-    <div class="grid grid-cols-1 gap-x-10 md:grid-cols-2 lg:gap-x-16">
-      <div class="space-y-14 self-center">
+    <div class="grid grid-cols-1 gap-x-10 md:grid-cols-2 lg:gap-x-16 ">
+      <div class="space-y-14 self-center rounded-2xl p-10 relative overflow-hidden rounded-2xl border border-white/35 bg-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-2xl backdrop-saturate-150 before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(135deg,rgba(255,255,255,0.45),rgba(255,255,255,0.12)_40%,rgba(255,255,255,0.03))] after:pointer-events-none after:absolute after:top-2 after:right-2 after:h-10 after:w-10 after:rounded-full after:bg-white/30 after:blur-xl h-full w-full hover:scale-105 transition-all">
         <div class="flex gap-x-5">
           <Icon name="mapPin" />
           <div class="grow">
-            <h4 class="font-semibold text-slate-600">
+            <h4 class="font-semibold text-slate-800">
               {contactos.direcciones.titulo}
             </h4>
 
-            <address class="mt-1 text-sm text-slate-500 not-italic">
+            <address class="mt-1 text-sm text-slate-800 not-italic">
               {contactos.direcciones.direccion_1}
               <br />
               {contactos.direcciones.direccion_2}
@@ -64,14 +64,14 @@ const schema: WithContext<Thing> = {
         </div>
 
         <div class="flex gap-x-5">
-          <Icon name="email" class="size-6 shrink-0 text-slate-600" />
+          <Icon name="email" class="size-6 shrink-0 text-slate-800" />
           <div class="grow">
-            <h4 class="font-semibold text-slate-600">
+            <h4 class="font-semibold text-slate-800">
               {contactos.correo.titulo}
             </h4>
 
             <a
-              class="mt-1 text-sm text-slate-500 transition-colors duration-300 hover:text-slate-400 focus:text-slate-400 focus:outline-hidden"
+              class="mt-1 text-sm text-slate-800 transition-colors duration-300 hover:text-slate-700 focus:text-slate-400 focus:outline-hidden"
               href={`mailto:${contactos.correo.mail}`}
             >
               {contactos.correo.mail}
@@ -80,17 +80,17 @@ const schema: WithContext<Thing> = {
         </div>
 
         <div class="flex gap-x-5">
-          <Icon name="info" class="size-6 shrink-0 text-slate-600" />
+          <Icon name="info" class="size-6 shrink-0 text-slate-800" />
           <div class="grow">
-            <h4 class="font-semibold text-slate-600">
+            <h4 class="font-semibold text-slate-800">
               {contactos.blog.titulo}
             </h4>
-            <p class="mt-1 text-sm text-slate-500">
+            <p class="mt-1 text-sm text-slate-800">
               {contactos.blog.detalles.descripcion}
             </p>
             <p class="mt-2">
               <a
-                class="group inline-flex items-center gap-x-2 text-sm font-medium text-slate-600 decoration-2 transition duration-300 hover:underline focus:underline focus:outline-hidden"
+                class="group inline-flex items-center gap-x-2 text-sm font-medium text-slate-800 decoration-2 transition duration-300 hover:underline focus:underline focus:outline-hidden"
                 href={withBase(contactos.blog.detalles.link, locale)}
               >
                 {contactos.blog.detalles.texto}
@@ -100,16 +100,17 @@ const schema: WithContext<Thing> = {
           </div>
         </div>
       </div>
-      <div>
-        <div class="flex justify-center">
-          <img
-            src={withBase(barra_de_navegacion.logo.imagen)}
-            alt={barra_de_navegacion.logo.descripcion}
-            class="my-2 w-48"
-          />
+      <div class="space-y-14 self-center rounded-2xl p-10 relative overflow-hidden rounded-2xl border border-white/35 bg-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-2xl backdrop-saturate-150 before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(135deg,rgba(255,255,255,0.45),rgba(255,255,255,0.12)_40%,rgba(255,255,255,0.03))] after:pointer-events-none after:absolute after:top-2 after:right-2 after:h-10 after:w-10 after:rounded-full after:bg-white/30 after:blur-xl h-full w-full hover:scale-105 transition-all">
+        <div class="flex flex-col justify-center items-start mb-2">
+          <h4
+            class="text-2xl text-balance text-slate-800 sm:text-4xl md:text-4xl lg:text-4xl"
+          >
+            {contactos.titulo_form}
+          </h4>
+          <p class="mt-1 ml-1 text-slate-600">{contactos.descripcion_form}</p>
         </div>
         <div
-          class="mb-10 h-fit rounded-xl bg-[#e3186d]/20 pb-10 md:order-2 md:mb-0 md:pb-0"
+          class="mb-10 h-fit rounded-2xl bg-[#e0e0e0] shadow-[inset_20px_20px_60px_#bebebe,inset_-20px_-20px_60px_#ffffff] pb-10 md:order-2 md:mb-0 md:pb-0 "
         >
           <ContactForm />
         </div>

@@ -107,79 +107,6 @@ const schema: WithContext<Thing> = {
       </div>
     </div>
   </section>
-  <!-- vision mision -->
-  <!-- Icon Blocks -->
-  <section
-    class="mx-auto flex max-w-340 gap-10 px-4 py-10 sm:px-6 lg:px-8 lg:py-14"
-  >
-    <div class="max-w-2xl">
-      <!-- Grid -->
-      <div class="grid gap-12">
-        <div>
-          <h2 class="text-foreground text-3xl font-bold lg:text-4xl">
-            {mision_vison.mision.titulo}
-          </h2>
-          <p class="text-foreground mt-3">
-            {mision_vison.mision.descripcion}
-          </p>
-        </div>
-
-        <div class="space-y-6 lg:space-y-10">
-          {
-            mision_vison.mision.lista.map(lista => (
-              <div class="flex gap-x-5 rounded-2xl from-transparent to-[#e3186d]/20 p-2 transition-all delay-110 hover:translate-2 hover:bg-linear-to-b sm:gap-x-8">
-                <Icon
-                  name={lista.icono}
-                  class="text-foreground mt-2 size-6 shrink-0"
-                />
-                <div class="grow">
-                  <h3 class="text-foreground text-base font-semibold sm:text-lg">
-                    {lista.title}
-                  </h3>
-                  <p class="text-muted-foreground-2 mt-1">{lista.label}</p>
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-      <!-- End Grid -->
-    </div>
-    <div class="max-w-2xl">
-      <!-- Grid -->
-      <div class="grid gap-12">
-        <div>
-          <h2 class="text-foreground text-3xl font-bold lg:text-4xl">
-            {mision_vison.vision.titulo}
-          </h2>
-          <p class="text-foreground mt-3">
-            {mision_vison.vision.descripcion}
-          </p>
-        </div>
-
-        <div class="space-y-6 lg:space-y-10">
-          {
-            mision_vison.vision.lista.map(lista => (
-              <div class="flex gap-x-5 rounded-2xl from-transparent to-[#e3186d]/20 p-2 transition-all delay-110 hover:translate-2 hover:bg-linear-to-b sm:gap-x-8">
-                <Icon
-                  name={lista.icono}
-                  class="text-foreground mt-2 size-6 shrink-0"
-                />
-                <div class="grow">
-                  <h3 class="text-foreground text-base font-semibold sm:text-lg">
-                    {lista.title}
-                  </h3>
-                  <p class="text-muted-foreground-2 mt-1">{lista.label}</p>
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-      <!-- End Grid -->
-    </div>
-  </section>
-  <!-- End Icon Blocks -->
 
   <section class="mx-auto max-w-340 px-4 pb-12 pb-24 sm:px-6 lg:px-8">
     <!-- Team -->
@@ -226,6 +153,82 @@ const schema: WithContext<Thing> = {
     </div>
     <!-- End Team -->
   </section>
+
+  <!-- vision mision -->
+  <!-- Icon Blocks -->
+  <section
+    class="mx-auto flex md:flex-row flex-col max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14"
+  >
+    <div class="md:w-1/2 border-y border-dashed border-slate-400 lg:border-x lg:border-y-0 p-8">
+      <!-- Grid -->
+      <div class="grid gap-12">
+        <div>
+          <h2 class="text-foreground text-3xl font-bold lg:text-4xl">
+            {mision_vison.mision.titulo}
+          </h2>
+          <p class="text-foreground mt-3">
+            {mision_vison.mision.descripcion}
+          </p>
+        </div>
+
+        <div class="space-y-6 lg:space-y-10">
+          {
+            mision_vison.mision.lista.map(lista => (
+              <div class="flex gap-x-5 rounded-2xl from-transparent to-[#e3186d]/20 p-2 transition-all delay-110 hover:translate-2 hover:bg-linear-to-b sm:gap-x-8">
+                <Icon
+                  name={lista.icono}
+                  class="text-foreground mt-2 size-6 shrink-0"
+                />
+                <div class="grow">
+                  <h3 class="text-foreground text-base font-semibold sm:text-lg">
+                    {lista.title}
+                  </h3>
+                  <p class="text-muted-foreground-2 mt-1">{lista.label}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <!-- End Grid -->
+    </div>
+    <div class="md:w-1/2 border-y border-dashed border-slate-400 lg:border-x lg:border-y-0 p-8">
+      <!-- Grid -->
+      <div class="grid gap-12">
+        <div>
+          <h2 class="text-foreground text-3xl font-bold lg:text-4xl">
+            {mision_vison.vision.titulo}
+          </h2>
+          <p class="text-foreground mt-3">
+            {mision_vison.vision.descripcion}
+          </p>
+        </div>
+
+        <div class="space-y-6 lg:space-y-10">
+          {
+            mision_vison.vision.lista.map(lista => (
+              <div class="flex gap-x-5 rounded-2xl from-transparent to-[#e3186d]/20 p-2 transition-all delay-110 hover:translate-2 hover:bg-linear-to-b sm:gap-x-8">
+                <Icon
+                  name={lista.icono}
+                  class="text-foreground mt-2 size-6 shrink-0"
+                />
+                <div class="grow">
+                  <h3 class="text-foreground text-base font-semibold sm:text-lg">
+                    {lista.title}
+                  </h3>
+                  <p class="text-muted-foreground-2 mt-1">{lista.label}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <!-- End Grid -->
+    </div>
+  </section>
+  <!-- End Icon Blocks -->
+
+  
 
   <style
     define:vars={{

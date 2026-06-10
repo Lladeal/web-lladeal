@@ -4,16 +4,20 @@
     "descripcion": "Las rosas de Ecuador no se distinguen por su cantidad, sino por su calidad superior, que es lo que las hace competitivas en el mercado mundial. En Lladeal prometemos que nuestras flores superarán todos los estándares de excelencia previos.",
     "estadisticas": [
       {
-        "texto": "Variedades de rosas"
+        "texto": "Variedades de rosas",
+        "valor": "19"
       },
       {
-        "texto": "Colaboradores expertos"
+        "texto": "Colaboradores expertos",
+        "valor": "34"
       },
       {
-        "texto": "Destinos de exportación"
+        "texto": "Destinos de exportación",
+        "valor": "100+"
       },
       {
-        "texto": "Rosas comercializadas"
+        "texto": "Rosas comercializadas",
+        "valor": "1,000+"
       }
     ]
   },

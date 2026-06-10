@@ -1,25 +1,27 @@
 {
-    "contactos": {
-        "titulo": "Contáctanos",
-        "subtitulo": "Preguntas, comentarios o solicitudes de cotización.",
-        "direcciones": {
-            "titulo": "Nuestra ubicación:",
-            "direccion_1": "Cayambe, Pesillo",
-            "direccion_2": "Olmedo, Ecuador"
-        },
-        "correo": {
-            "titulo": "Escríbenos por correo o llámanos:",
-            "telefono": "+593 939730772",
-            "mail": "ecuador@lladeal.com"
-        },
-        "blog": {
-            "titulo": "Catálogo de Variedades",
-            "detalles": {
-                "descripcion": "Explora nuestra exclusiva colección de rosas premium de altura.",
-                "texto": "Ver catálogo de rosas",
-                "link": "/catalogo"
-            }
-        },
-        "formulario": "https://formspree.io/f/YOUR_ID"
-    }
+  "contactos": {
+    "titulo": "Contáctanos",
+    "subtitulo": "Preguntas, comentarios o solicitudes de cotización.",
+    "titulo_form": "¿En qué podemos ayudarte?",
+    "descripcion_form": "Déjanos tu consulta y te responderemos pronto.",
+    "direcciones": {
+      "titulo": "Nuestra ubicación:",
+      "direccion_1": "Cayambe, Pesillo",
+      "direccion_2": "Olmedo, Ecuador"
+    },
+    "correo": {
+      "titulo": "Escríbenos por correo o llámanos:",
+      "telefono": "+593 939730772",
+      "mail": "ecuador@lladeal.com"
+    },
+    "blog": {
+      "titulo": "Catálogo de Variedades",
+      "detalles": {
+        "descripcion": "Explora nuestra exclusiva colección de rosas premium de altura.",
+        "texto": "Ver catálogo de rosas",
+        "link": "/catalogo"
+      }
+    },
+    "formulario": "https://formspree.io/f/YOUR_ID"
+  }
 }
