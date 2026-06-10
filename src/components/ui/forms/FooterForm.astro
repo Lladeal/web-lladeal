@@ -1,13 +1,14 @@
 ---
-import { getFooterContent, getLocaleFromUrl } from '@/i18n/content';
+import { getFooterContent, getLocaleFromUrl, getContactContent } from '@/i18n/content';
 import { getUiStrings } from '@/i18n/ui';
 
 const locale = getLocaleFromUrl(Astro.url);
 const { footer_form } = getFooterContent(locale);
+const { contactos } = getContactContent(locale);
 const t = getUiStrings(locale).footer;
 ---
 
-<form>
+<form action={contactos.formulario} method="POST">
   {/* Fieldset for grouping form elements */}
   <fieldset
     class="mt-4 flex flex-col items-center gap-2 rounded-lg bg-[#e3186d]/20 p-2 sm:flex-row sm:gap-3"
