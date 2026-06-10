@@ -4,6 +4,7 @@ import BaseLayout from '@layout/BaseLayout.astro';
 import type { WithContext, Thing } from 'schema-dts';
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
+import { withBase } from '@utils/links';
 import {
   getAboutContent,
   getLocaleFromUrl,
@@ -109,7 +110,9 @@ const schema: WithContext<Thing> = {
   </section>
   <!-- vision mision -->
   <!-- Icon Blocks -->
-  <section class="mx-auto max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 flex gap-10">
+  <section
+    class="mx-auto flex max-w-340 gap-10 px-4 py-10 sm:px-6 lg:px-8 lg:py-14"
+  >
     <div class="max-w-2xl">
       <!-- Grid -->
       <div class="grid gap-12">
@@ -125,15 +128,16 @@ const schema: WithContext<Thing> = {
         <div class="space-y-6 lg:space-y-10">
           {
             mision_vison.mision.lista.map(lista => (
-              <div class="flex gap-x-5 sm:gap-x-8 hover:translate-2 transition-all delay-110 hover:bg-linear-to-b to-[#e3186d]/20 from-transparent p-2 rounded-2xl">
-                <Icon name={lista.icono} class="text-foreground mt-2 size-6 shrink-0" />
+              <div class="flex gap-x-5 rounded-2xl from-transparent to-[#e3186d]/20 p-2 transition-all delay-110 hover:translate-2 hover:bg-linear-to-b sm:gap-x-8">
+                <Icon
+                  name={lista.icono}
+                  class="text-foreground mt-2 size-6 shrink-0"
+                />
                 <div class="grow">
                   <h3 class="text-foreground text-base font-semibold sm:text-lg">
                     {lista.title}
                   </h3>
-                  <p class="text-muted-foreground-2 mt-1">
-                    {lista.label}
-                  </p>
+                  <p class="text-muted-foreground-2 mt-1">{lista.label}</p>
                 </div>
               </div>
             ))
@@ -157,15 +161,16 @@ const schema: WithContext<Thing> = {
         <div class="space-y-6 lg:space-y-10">
           {
             mision_vison.vision.lista.map(lista => (
-              <div class="flex gap-x-5 sm:gap-x-8 hover:translate-2 transition-all delay-110 hover:bg-linear-to-b to-[#e3186d]/20 from-transparent p-2 rounded-2xl">
-                <Icon name={lista.icono} class="text-foreground mt-2 size-6 shrink-0" />
+              <div class="flex gap-x-5 rounded-2xl from-transparent to-[#e3186d]/20 p-2 transition-all delay-110 hover:translate-2 hover:bg-linear-to-b sm:gap-x-8">
+                <Icon
+                  name={lista.icono}
+                  class="text-foreground mt-2 size-6 shrink-0"
+                />
                 <div class="grow">
                   <h3 class="text-foreground text-base font-semibold sm:text-lg">
                     {lista.title}
                   </h3>
-                  <p class="text-muted-foreground-2 mt-1">
-                    {lista.label}
-                  </p>
+                  <p class="text-muted-foreground-2 mt-1">{lista.label}</p>
                 </div>
               </div>
             ))
@@ -204,8 +209,8 @@ const schema: WithContext<Thing> = {
                 class="mx-auto size-24 rounded-full"
                 src={
                   miembro.foto == ''
-                    ? '/web-lladeal/uploads/fotos_personal/Avatar-default.png'
-                    : miembro.foto
+                    ? withBase('/uploads/fotos_personal/Avatar-default.png')
+                    : withBase(miembro.foto)
                 }
                 alt={`${t.avatarAlt} ${miembro.nombre}`}
                 width={96}

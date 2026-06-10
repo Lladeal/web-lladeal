@@ -1,6 +1,6 @@
 ---
-import { features } from '@content/pages/home.json'
-
+import { features } from '@content/pages/home.json';
+import { withBase } from '@utils/links';
 ---
 
 <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20">
@@ -31,7 +31,7 @@ import { features } from '@content/pages/home.json'
           {feature.ImagenArchivo && (
             <img
               class={`${feature.posicion || ''}`}
-              src={feature.ImagenArchivo}
+              src={withBase(feature.ImagenArchivo)}
               alt=""
             />
           )}

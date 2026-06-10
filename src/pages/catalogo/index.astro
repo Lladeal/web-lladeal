@@ -40,7 +40,12 @@ type CatalogItem = (typeof carrusel)[number];
         >
           {hero.linkTitle}
         </a>
-        <Button href={withBase(hero.linkhref2, locale)} target='_blank' className="inline-flex border-none px-4! py-2.5! ml-5" download>
+        <Button
+          href={withBase(hero.linkhref2, locale)}
+          target="_blank"
+          className="ml-5 inline-flex border-none px-4! py-2.5!"
+          download
+        >
           {hero.linktitle2}
         </Button>
       </div>
@@ -54,7 +59,7 @@ type CatalogItem = (typeof carrusel)[number];
           <article class="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
             <div class="bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] p-6">
               <Image
-                src={item.ImagenArchivo}
+                src={withBase(item.ImagenArchivo)}
                 alt={item.descripcion}
                 inferSize={false}
                 width={640}

@@ -5,7 +5,12 @@ import Icon from '@ui/icons/Icon.astro';
 import ContactForm from '@ui/forms/ContactForm.astro';
 import type { WithContext, Thing } from 'schema-dts';
 import { withBase } from '@utils/links';
-import { getContactContent, getLocaleFromUrl, getNavbarContent, getSeoContent } from '@/i18n/content';
+import {
+  getContactContent,
+  getLocaleFromUrl,
+  getNavbarContent,
+  getSeoContent,
+} from '@/i18n/content';
 
 const locale = getLocaleFromUrl(Astro.url);
 const { contactos } = getContactContent(locale);
@@ -98,9 +103,9 @@ const schema: WithContext<Thing> = {
       <div>
         <div class="flex justify-center">
           <img
-            src={barra_de_navegacion.logo.imagen}
+            src={withBase(barra_de_navegacion.logo.imagen)}
             alt={barra_de_navegacion.logo.descripcion}
-            class="w-48 my-2"
+            class="my-2 w-48"
           />
         </div>
         <div
@@ -109,8 +114,6 @@ const schema: WithContext<Thing> = {
           <ContactForm />
         </div>
       </div>
-
-      
     </div>
   </div>
 

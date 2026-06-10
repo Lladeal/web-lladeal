@@ -8,8 +8,13 @@ import { withBase } from '@utils/links';
 const locale = getLocaleFromUrl(Astro.url);
 const { imagen } = getHomeContent(locale);
 const t = getUiStrings(locale).footer;
-const heroData = imagen as typeof imagen & { ImagenArchivo?: string; Imagen?: string };
+const heroData = imagen as typeof imagen & {
+  ImagenArchivo?: string;
+  Imagen?: string;
+};
 const heroImage = heroData.ImagenArchivo?.trim() || heroData.Imagen?.trim();
+const heroImageSrc = heroImage ? withBase(heroImage) : undefined;
+const heroVideoSrc = imagen.video ? withBase(imagen.video) : undefined;
 ---
 
 {/* Hero Visual */}
@@ -22,7 +27,7 @@ const heroImage = heroData.ImagenArchivo?.trim() || heroData.Imagen?.trim();
   {
     heroImage ? (
       <img
-        src={heroImage}
+        src={heroImageSrc}
         alt="Chart"
         loading="eager"
         class="absolute inset-[25%_auto_auto_-8%] z-20 hidden w-[25%] sm:block"
@@ -45,10 +50,10 @@ const heroImage = heroData.ImagenArchivo?.trim() || heroData.Imagen?.trim();
       muted
       playsinline
       preload="metadata"
-        poster={withBase('/poster.png')}
+      poster={withBase('/poster.png')}
       class="aspect-auto rounded-xl"
     >
-      <source src={imagen.video} type="video/mp4" />
+      {heroVideoSrc && <source src={heroVideoSrc} type="video/mp4" />}
       {t.videoFallback}
     </video>
   </div>

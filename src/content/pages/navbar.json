@@ -1,7 +1,7 @@
 {
   "barra_de_navegacion": {
     "logo": {
-      "imagen": "/web-lladeal/uploads/logotipo-lladela.png",
+      "imagen": "/uploads/logotipo-lladela.png",
       "descripcion": "Logo lladeal"
     },
     "boton": {

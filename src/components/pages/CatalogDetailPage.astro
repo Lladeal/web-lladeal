@@ -4,6 +4,7 @@ import Button from '@ui/Button.astro';
 import { Image } from 'astro:assets';
 import { getCatalogContent, getLocaleFromUrl } from '@/i18n/content';
 import { formatCatalogSpecValue } from '@utils/catalog-format';
+import { withBase } from '@utils/links';
 
 const { item } = Astro.props as {
   item: {
@@ -41,12 +42,50 @@ const seo = {
 };
 
 const specs = [
-  { label: detail.specs.budSize, value: formatCatalogSpecValue(locale, 'Tamaño_del_boton', technicalData.Tamaño_del_boton) },
-  { label: detail.specs.stemLength, value: formatCatalogSpecValue(locale, 'Longitud_del_tallo', technicalData.Longitud_del_tallo) },
-  { label: detail.specs.vaseLife, value: formatCatalogSpecValue(locale, 'Vida_en_florero', technicalData.Vida_en_florero) },
-  { label: detail.specs.petals, value: formatCatalogSpecValue(locale, 'Numero_de_petalos', technicalData.Numero_de_petalos) },
-  { label: detail.specs.phenologicalStage, value: formatCatalogSpecValue(locale, 'Estado_fenologico', technicalData.Estado_fenologico) },
-  { label: detail.specs.cycle, value: formatCatalogSpecValue(locale, 'Ciclo', technicalData.Ciclo) },
+  {
+    label: detail.specs.budSize,
+    value: formatCatalogSpecValue(
+      locale,
+      'Tamaño_del_boton',
+      technicalData.Tamaño_del_boton
+    ),
+  },
+  {
+    label: detail.specs.stemLength,
+    value: formatCatalogSpecValue(
+      locale,
+      'Longitud_del_tallo',
+      technicalData.Longitud_del_tallo
+    ),
+  },
+  {
+    label: detail.specs.vaseLife,
+    value: formatCatalogSpecValue(
+      locale,
+      'Vida_en_florero',
+      technicalData.Vida_en_florero
+    ),
+  },
+  {
+    label: detail.specs.petals,
+    value: formatCatalogSpecValue(
+      locale,
+      'Numero_de_petalos',
+      technicalData.Numero_de_petalos
+    ),
+  },
+  {
+    label: detail.specs.phenologicalStage,
+    value: formatCatalogSpecValue(
+      locale,
+      'Estado_fenologico',
+      technicalData.Estado_fenologico
+    ),
+  },
+  {
+    label: detail.specs.cycle,
+    value: formatCatalogSpecValue(locale, 'Ciclo', technicalData.Ciclo),
+  },
 ];
 ---
 
@@ -54,13 +93,19 @@ const specs = [
   <section class="mx-auto max-w-[85rem] px-4 pt-36 pb-16 sm:px-6 lg:px-8">
     <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
       <div>
-        <p class="text-sm font-semibold tracking-[0.2em] text-pink-600 uppercase">
+        <p
+          class="text-sm font-semibold tracking-[0.2em] text-pink-600 uppercase"
+        >
           {detail.badge}
         </p>
-        <h1 class="mt-4 text-4xl font-bold text-slate-800 sm:text-5xl lg:text-6xl">
+        <h1
+          class="mt-4 text-4xl font-bold text-slate-800 sm:text-5xl lg:text-6xl"
+        >
           {item.titulo}
         </h1>
-        <p class="mt-4 text-sm font-semibold tracking-[0.18em] text-slate-500 uppercase">
+        <p
+          class="mt-4 text-sm font-semibold tracking-[0.18em] text-slate-500 uppercase"
+        >
           {item.tipo}
         </p>
         <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-700">
@@ -68,14 +113,22 @@ const specs = [
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
-          {technicalData.link !== '#' && <Button href={technicalData.link}>{detail.consultButton}</Button>}
-          <Button href="/catalogo" variant="alternative">{detail.backButton}</Button>
+          {
+            technicalData.link !== '#' && (
+              <Button href={technicalData.link}>{detail.consultButton}</Button>
+            )
+          }
+          <Button href="/catalogo" variant="alternative"
+            >{detail.backButton}</Button
+          >
         </div>
       </div>
 
-      <div class="overflow-hidden rounded-3xl bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] p-6 shadow-xl ring-1 ring-slate-200/70">
+      <div
+        class="overflow-hidden rounded-3xl bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] p-6 shadow-xl ring-1 ring-slate-200/70"
+      >
         <Image
-          src={item.ImagenArchivo}
+          src={withBase(item.ImagenArchivo)}
           alt={item.descripcion}
           inferSize={false}
           width={900}
@@ -87,9 +140,13 @@ const specs = [
   </section>
 
   <section class="mx-auto max-w-[85rem] px-4 pb-24 sm:px-6 lg:px-8">
-    <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+    <div
+      class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+    >
       <div class="border-b border-slate-200 px-6 py-5 sm:px-8">
-        <h2 class="text-2xl font-semibold text-slate-800">{detail.specsTitle}</h2>
+        <h2 class="text-2xl font-semibold text-slate-800">
+          {detail.specsTitle}
+        </h2>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3">
@@ -99,7 +156,9 @@ const specs = [
               <p class="text-xs font-semibold tracking-[0.16em] text-slate-500 uppercase">
                 {spec.label}
               </p>
-              <p class="mt-2 text-lg font-semibold text-slate-800">{spec.value}</p>
+              <p class="mt-2 text-lg font-semibold text-slate-800">
+                {spec.value}
+              </p>
             </div>
           ))
         }

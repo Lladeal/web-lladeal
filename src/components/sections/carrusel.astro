@@ -1,9 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import Button from '@ui/Button.astro';
-import { Icon } from 'astro-icon/components'
+import { Icon } from 'astro-icon/components';
 import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
 import { formatCatalogSpecValue } from '@utils/catalog-format';
+import { withBase } from '@utils/links';
 
 const locale = getLocaleFromUrl(Astro.url);
 const { carrusel } = getHomeContent(locale);
@@ -83,7 +84,6 @@ const labelsByLocale = {
   },
 } as const;
 const labels = labelsByLocale[locale];
-
 ---
 
 <div class="mx-auto max-w-340 px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20">
@@ -96,7 +96,9 @@ const labels = labelsByLocale[locale];
     class="relative"
   >
     <div class="hs-carousel flex h-fit flex-col gap-2 sm:flex-row">
-      <div class="relative min-h-[58rem] grow overflow-hidden rounded-lg sm:order-2 sm:min-h-[54rem] md:min-h-[42rem] lg:min-h-[40rem]">
+      <div
+        class="relative min-h-[58rem] grow overflow-hidden rounded-lg sm:order-2 sm:min-h-[54rem] md:min-h-[42rem] lg:min-h-[40rem]"
+      >
         <div
           class="hs-carousel-body absolute inset-s-0 top-0 bottom-0 flex flex-nowrap transition-transform duration-700"
         >
@@ -105,68 +107,113 @@ const labels = labelsByLocale[locale];
               const items = entry as CarouselItem;
 
               return (
-              <div class="hs-carousel-slide h-full">
-                <article class="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl md:flex-row">
-                  <div class="group relative w-full overflow-hidden bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] md:w-1/2">
-                    <Image
-                      src={items.ImagenArchivo}
-                      alt={items.descripcion}
-                      inferSize={false}
-                      width={130}
-                      height={70}
-                      class="test h-auto w-full rounded-md"
-                    />
-                    <div class="absolute top-6 left-6">
-                      <span class="rounded-full border border-slate-200 bg-white/90 px-3 py-1 text-[10px] font-bold tracking-widest text-slate-600 uppercase backdrop-blur-sm">
-                        {labels.badge}
-                      </span>
+                <div class="hs-carousel-slide h-full">
+                  <article class="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl md:flex-row">
+                    <div class="group relative w-full overflow-hidden bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] md:w-1/2">
+                      <Image
+                        src={withBase(items.ImagenArchivo)}
+                        alt={items.descripcion}
+                        inferSize={false}
+                        width={130}
+                        height={70}
+                        class="test h-auto w-full rounded-md"
+                      />
+                      <div class="absolute top-6 left-6">
+                        <span class="rounded-full border border-slate-200 bg-white/90 px-3 py-1 text-[10px] font-bold tracking-widest text-slate-600 uppercase backdrop-blur-sm">
+                          {labels.badge}
+                        </span>
+                      </div>
                     </div>
-                  </div>
                     <div class="flex w-full flex-1 flex-col justify-center bg-white p-8 md:w-1/2 md:p-12">
-                    <header class="mb-8">
-                      <h1 class="mb-2 text-4xl font-bold text-pink-600">
-                        {items.titulo}
-                      </h1>
-                      <div class="flex items-center gap-2 text-slate-900">
-                        
-                        <Icon name="MdiFlowerTulip" class="text-lg" />
-                        <p class="text-xs font-bold tracking-[0.2em] uppercase">
-                          {items.tipo}
-                        </p>
+                      <header class="mb-8">
+                        <h1 class="mb-2 text-4xl font-bold text-pink-600">
+                          {items.titulo}
+                        </h1>
+                        <div class="flex items-center gap-2 text-slate-900">
+                          <Icon name="MdiFlowerTulip" class="text-lg" />
+                          <p class="text-xs font-bold tracking-[0.2em] uppercase">
+                            {items.tipo}
+                          </p>
+                        </div>
+                      </header>
+                      <div class="flex flex-col">
+                        <div class={specRowClass}>
+                          <span class={specLabelClass}>{labels.budSize}</span>
+                          <span class={specValueClass}>
+                            {formatCatalogSpecValue(
+                              locale,
+                              'Tamaño_del_boton',
+                              items.Data.Tamaño_del_boton
+                            )}
+                          </span>
+                        </div>
+                        <div class={specRowClass}>
+                          <span class={specLabelClass}>
+                            {labels.stemLength}
+                          </span>
+                          <span class={specValueClass}>
+                            {formatCatalogSpecValue(
+                              locale,
+                              'Longitud_del_tallo',
+                              items.Data.Longitud_del_tallo
+                            )}
+                          </span>
+                        </div>
+                        <div class={specRowClass}>
+                          <span class={specLabelClass}>{labels.vaseLife}</span>
+                          <span class={specValueClass}>
+                            {formatCatalogSpecValue(
+                              locale,
+                              'Vida_en_florero',
+                              items.Data.Vida_en_florero
+                            )}
+                          </span>
+                        </div>
+                        <div class={specRowClass}>
+                          <span class={specLabelClass}>{labels.petals}</span>
+                          <span class={specValueClass}>
+                            {formatCatalogSpecValue(
+                              locale,
+                              'Numero_de_petalos',
+                              items.Data.Numero_de_petalos
+                            )}
+                          </span>
+                        </div>
+                        <div class={specRowClass}>
+                          <span class={specLabelClass}>
+                            {labels.phenologicalStage}
+                          </span>
+                          <span class={specValueClass}>
+                            {formatCatalogSpecValue(
+                              locale,
+                              'Estado_fenologico',
+                              items.Data.Estado_fenologico
+                            )}
+                          </span>
+                        </div>
+                        <div class="grid grid-cols-[minmax(0,10rem)_minmax(0,1fr)] items-center gap-4 py-3">
+                          <span class={specLabelClass}>{labels.cycle}</span>
+                          <span class={specValueClass}>
+                            {formatCatalogSpecValue(
+                              locale,
+                              'Ciclo',
+                              items.Data.Ciclo
+                            )}
+                          </span>
+                        </div>
                       </div>
-                    </header>
-                    <div class="flex flex-col">
-                      <div class={specRowClass}>
-                        <span class={specLabelClass}>{labels.budSize}</span>
-                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Tamaño_del_boton', items.Data.Tamaño_del_boton)}</span>
-                      </div>
-                      <div class={specRowClass}>
-                        <span class={specLabelClass}>{labels.stemLength}</span>
-                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Longitud_del_tallo', items.Data.Longitud_del_tallo)}</span>
-                      </div>
-                      <div class={specRowClass}>
-                        <span class={specLabelClass}>{labels.vaseLife}</span>
-                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Vida_en_florero', items.Data.Vida_en_florero)}</span>
-                      </div>
-                      <div class={specRowClass}>
-                        <span class={specLabelClass}>{labels.petals}</span>
-                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Numero_de_petalos', items.Data.Numero_de_petalos)}</span>
-                      </div>
-                      <div class={specRowClass}>
-                        <span class={specLabelClass}>{labels.phenologicalStage}</span>
-                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Estado_fenologico', items.Data.Estado_fenologico)}</span>
-                      </div>
-                      <div class="grid grid-cols-[minmax(0,10rem)_minmax(0,1fr)] items-center gap-4 py-3">
-                        <span class={specLabelClass}>{labels.cycle}</span>
-                        <span class={specValueClass}>{formatCatalogSpecValue(locale, 'Ciclo', items.Data.Ciclo)}</span>
+                      <div class="mt-10 flex gap-3">
+                        <Button
+                          variant="alternative"
+                          href={`/catalogo/${items.slug}`}
+                        >
+                          {' '}
+                          {labels.learnMore}{' '}
+                        </Button>
                       </div>
                     </div>
-                    <div class="mt-10 flex gap-3">
-                      <Button variant="alternative" href={`/catalogo/${items.slug}`}> {labels.learnMore} </Button>
-                    </div>
-                  </div>
-                </article>
-              </div>
+                  </article>
+                </div>
               );
             })
           }
@@ -226,18 +273,18 @@ const labels = labelsByLocale[locale];
               const items = entry as CarouselItem;
 
               return (
-              <div class="hs-carousel-pagination-item border-line-2 hs-carousel-active:border-primary width-full h-fit shrink-0 cursor-pointer overflow-hidden rounded-md border">
-                <div class="flex h-fit items-center justify-center p-1 text-center">
-                  <Image
-                    src={items.ImagenArchivo}
-                    alt={items.descripcion}
-                    inferSize={false}
-                    width={130}
-                    height={70}
-                    class="test rounded-md"
-                  />
+                <div class="hs-carousel-pagination-item border-line-2 hs-carousel-active:border-primary width-full h-fit shrink-0 cursor-pointer overflow-hidden rounded-md border">
+                  <div class="flex h-fit items-center justify-center p-1 text-center">
+                    <Image
+                      src={withBase(items.ImagenArchivo)}
+                      alt={items.descripcion}
+                      inferSize={false}
+                      width={130}
+                      height={70}
+                      class="test rounded-md"
+                    />
+                  </div>
                 </div>
-              </div>
               );
             })
           }
