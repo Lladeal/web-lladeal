@@ -11,7 +11,7 @@ export default defineConfig({
   // The `site` property specifies the base URL for your site.
   // Be sure to update this to your own domain (e.g., "https://yourdomain.com") before deploying.
   site: 'https://damocles99.github.io',
-  base: '/CMS-WEB',
+  base: '/web-lladeal',
   prefetch: true,
   devToolbar: {
     enabled: true
