@@ -27,7 +27,7 @@
       {
         "title": "Selección rigurosa de exportación",
         "description": "Criterios de excelencia: Evaluamos minuciosamente cada flor, eligiendo solo aquellas que cumplen con el tamaño de botón perfecto, la apertura ideal y una simetría impecable.",
-        "image": "/uploads/Flor-vertical.png",
+        "image": "/uploads/Flor-vertical.avif",
         "class": "relative lg:row-span-2",
         "wrapperClass": "lg:rounded-l-3xl",
         "imageClass": "mx-auto mt-5 self-end object-cover w-[90%]",
@@ -38,7 +38,7 @@
       {
         "title": "Cultivo artesanal en la altura",
         "description": "Cuidado directo en el campo: Trabajamos la tierra de Pesillo con manos expertas, aprovechando la luz perpendicular de la línea ecuatorial para dar vida a tallos robustos y colores intensos.",
-        "image": "/uploads/Pesillo01.webp",
+        "image": "/uploads/Pesillo01.avif",
         "class": "relative max-lg:row-start-1",
         "imageClass": "w-full rounded-t-xl",
         "imageContainerClass": "relative flex flex-1 items-center justify-center px-4 max-lg:pb-12 max-lg:pt-10 lg:pb-2",
@@ -47,7 +47,7 @@
       {
         "title": "Nutrición y frescura garantizada",
         "description": "Suelos cálidos y nutrientes puros: Alimentamos nuestras plantas con los minerales de las tierras altas de Cayambe, asegurando que cada rosa tenga una vida en florero mucho más larga y duradera.",
-        "image": "/uploads/Rosas.png",
+        "image": "/uploads/Rosas.avif",
         "class": "relative lg:row-span-2",
         "imageClass": "h-full object-cover",
         "imageContainerClass": "relative min-h-[30rem] w-full grow",
@@ -135,7 +135,7 @@
     {
       "titulo": "ATOMIC",
       "descripcion": "Rosa ATOMIC",
-      "ImagenArchivo": "/uploads/catalogo-lladeal-1-5.png",
+      "ImagenArchivo": "/uploads/catalogo-lladeal-1-5.avif",
       "tipo": "Bicolores",
       "Data": {
         "Tamaño_del_boton": "6.0 - 6.5 cm",
@@ -150,7 +150,7 @@
     {
       "titulo": "BRIGHTON",
       "descripcion": "Rosa BRIGHTON",
-      "ImagenArchivo": "/uploads/catalogo-lladeal-1-6.png",
+      "ImagenArchivo": "/uploads/catalogo-lladeal-1-6.avif",
       "tipo": "Color Único",
       "Data": {
         "Tamaño_del_boton": "5.0 - 6.0 cm",
