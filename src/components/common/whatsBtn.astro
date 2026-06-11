@@ -7,7 +7,7 @@
   aria-label="Contact us on WhatsApp"
 >
   <div
-    class="absolute top-0 left-0 z-10 h-full w-full animate-ping rounded-full bg-[#25d366]"
+    class="ping-custom absolute top-0 left-0 z-10 h-full w-full rounded-full bg-[#25d366] [animation-delay:3s]"
   >
   </div>
   <div class="relative z-20">
@@ -32,3 +32,8 @@
     </svg>
   </div>
 </a>
+<style>
+  .ping-custom {
+    animation: ping 3s cubic-bezier(0, 0, 0.2, 1) 0.05s infinite;
+  }
+</style>
