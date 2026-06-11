@@ -30,6 +30,7 @@ const heroVideoSrc = imagen.video ? withBase(imagen.video) : undefined;
         src={heroImageSrc}
         alt="Chart"
         loading="eager"
+        fetchpriority="high"
         class="absolute inset-[25%_auto_auto_-8%] z-20 hidden w-[25%] sm:block"
       />
     ) : (
@@ -37,6 +38,7 @@ const heroVideoSrc = imagen.video ? withBase(imagen.video) : undefined;
         src={chartImage}
         alt="Chart"
         loading={'eager'}
+        fetchpriority={'high'}
         inferSize={true}
         class="absolute inset-[25%_auto_auto_-8%] z-20 hidden w-[25%] sm:block"
       />

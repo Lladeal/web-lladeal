@@ -6,7 +6,7 @@ import { ClientRouter } from 'astro:transitions';
 import { SEO, type Props as SEOProps } from 'astro-seo';
 import { Schema } from 'astro-seo-schema';
 import type { WithContext, Thing } from 'schema-dts';
-import { withBase } from '@utils/links';
+import { stripBase, withBase } from '@utils/links';
 import { localeMetadata } from '@/i18n/config';
 import { getLocaleFromUrl, getSeoContent } from '@/i18n/content';
 import '@styles/global.css';
@@ -27,6 +27,9 @@ const socialImage = new URL(
   Astro.site
 ).toString();
 const somatypeBold = withBase('/fonts/Somatype-Bold.otf');
+const posterImage = withBase('/poster.png');
+const currentPath = stripBase(Astro.url.pathname);
+const isHomePage = currentPath === '/' || currentPath === '/en' || currentPath === '/ru' || currentPath === '/zh';
 
 // Define default JSON-LD Schema.org data if no schema is passed
 const defaultSchema: WithContext<Thing> = {
@@ -75,6 +78,16 @@ const defaultSchema: WithContext<Thing> = {
           { rel: 'icon', href: withBase('/icon.svg'), type: 'image/svg+xml' },
           { rel: 'apple-touch-icon', href: withBase('/apple-touch-icon.png') },
           { rel: 'manifest', href: withBase('/manifest.webmanifest') },
+          ...(isHomePage && posterImage
+            ? [
+                {
+                  rel: 'preload',
+                  href: posterImage,
+                  as: 'image',
+                  fetchpriority: 'high',
+                },
+              ]
+            : []),
         ],
         meta: [
           { name: 'viewport', content: 'width=device-width' },
