@@ -83,6 +83,7 @@ const labelsByLocale = {
   },
 } as const;
 const labels = labelsByLocale[locale];
+const carouselItems = carrusel as CarouselItem[];
 ---
 
 <div class="mx-auto max-w-340 px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20">
@@ -102,8 +103,8 @@ const labels = labelsByLocale[locale];
           class="hs-carousel-body absolute inset-s-0 top-0 bottom-0 flex flex-nowrap transition-transform duration-700"
         >
           {
-            carrusel.map((entry, index: number) => {
-              const items = entry as CarouselItem;
+            carouselItems.map(entry => {
+              const items = entry;
 
               return (
                 <div class="hs-carousel-slide h-full">
@@ -267,8 +268,8 @@ const labels = labelsByLocale[locale];
           class="hs-carousel-pagination [&::-webkit-scrollbar-track]:bg-scrollbar-track [&::-webkit-scrollbar-thumb]:bg-scrollbar-thumb flex max-h-160 flex-row gap-2 overflow-x-auto sm:flex-col sm:overflow-x-hidden sm:overflow-y-auto [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-none"
         >
           {
-            carrusel.map(entry => {
-              const items = entry as CarouselItem;
+            carouselItems.map(entry => {
+              const items = entry;
 
               return (
                 <div class="hs-carousel-pagination-item border-line-2 hs-carousel-active:border-primary width-full h-fit shrink-0 cursor-pointer overflow-hidden rounded-md border">

@@ -266,6 +266,7 @@ content:
           - name: carrusel
             label: Catalogo de rosas
             type: object
+            description: Edita aqui la ficha tecnica compartida de cada flor. Los datos numericos y tecnicos se reutilizan automaticamente en todos los idiomas.
             list:
               collapsible:
                 collapsed: true
@@ -847,23 +848,6 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
-          - name: carrusel
-            label: Catalogo de rosas
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: '{titulo}'
-            fields:
-              - name: titulo
-                label: Nombre de la rosa
-                type: string
-              - name: descripcion
-                label: Descripcion en ingles
-                type: text
-              - name: tipo
-                label: Tipo en ingles
-                type: string
       - name: about_page_en
         label: Nosotros en ingles
         type: file
@@ -1296,23 +1280,6 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
-          - name: carrusel
-            label: Catalogo de rosas
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: '{titulo}'
-            fields:
-              - name: titulo
-                label: Nombre de la rosa
-                type: string
-              - name: descripcion
-                label: Descripcion en ruso
-                type: text
-              - name: tipo
-                label: Tipo en ruso
-                type: string
       - name: about_page_ru
         label: Nosotros en ruso
         type: file
@@ -1677,23 +1644,6 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
-          - name: carrusel
-            label: Catalogo de rosas
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: '{titulo}'
-            fields:
-              - name: titulo
-                label: Nombre de la rosa
-                type: string
-              - name: descripcion
-                label: Descripcion en chino
-                type: text
-              - name: tipo
-                label: Tipo en chino
-                type: string
       - name: about_page_zh
         label: Nosotros en chino
         type: file

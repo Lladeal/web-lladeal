@@ -160,21 +160,60 @@ function getLocalizedContent<T extends Record<string, any>>(
   return mergeLocalizedValue(baseContent, localizedEntries[locale] ?? {});
 }
 
-function mergeLocalizedEntry(
-  baseEntry: Record<string, any>,
-  localizedEntry: Record<string, any>
-) {
-  return {
-    ...mergeLocalizedValue(baseEntry, localizedEntry),
-    slug: slugify(baseEntry.titulo),
-  };
-}
-
 function mergeHomeFeatureEntry(
   baseEntry: Record<string, any>,
   localizedEntry?: Record<string, any>
 ) {
   return mergeLocalizedValue(baseEntry, localizedEntry ?? {});
+}
+
+function localizeRoseDescription(locale: Locale, title: string) {
+  if (locale === 'en') return `${title} rose`;
+  if (locale === 'ru') return `Роза ${title}`;
+  if (locale === 'zh') return `${title} 玫瑰`;
+  return `Rosa ${title}`;
+}
+
+function localizeRoseType(locale: Locale, type: string) {
+  const normalizedType = normalizeTitle(type);
+
+  if (normalizedType === 'bicolor' || normalizedType === 'bicolores') {
+    if (locale === 'en') return 'Bicolor';
+    if (locale === 'ru') return 'Двухцветная';
+    if (locale === 'zh') return '双色';
+    return 'Bicolores';
+  }
+
+  if (
+    normalizedType === 'color unico' ||
+    normalizedType === 'solid color' ||
+    normalizedType === 'red'
+  ) {
+    if (locale === 'en') {
+      return normalizedType === 'red' ? 'Red' : 'Solid Color';
+    }
+
+    if (locale === 'ru') {
+      return normalizedType === 'red' ? 'Красная' : 'Однотонная';
+    }
+
+    if (locale === 'zh') {
+      return normalizedType === 'red' ? '红色' : '纯色';
+    }
+
+    return normalizedType === 'red' ? 'Roja' : 'Color Único';
+  }
+
+  return type;
+}
+
+function localizeCarouselEntry(locale: Locale, baseEntry: Record<string, any>) {
+  return {
+    ...baseEntry,
+    descripcion: localizeRoseDescription(locale, baseEntry.titulo),
+    tipo: localizeRoseType(locale, baseEntry.tipo),
+    slug: slugify(baseEntry.titulo),
+  };
 }
 
 function dedupeCarouselEntries<T extends { slug: string }>(items: T[]) {
@@ -187,23 +226,9 @@ function dedupeCarouselEntries<T extends { slug: string }>(items: T[]) {
   });
 }
 
-function mergeHomeContent(localizedHome: Record<string, any>) {
+function mergeHomeContent(locale: Locale, localizedHome: Record<string, any>) {
   const mergedCarousel = dedupeCarouselEntries(
-    homeEs.carrusel.map((baseItem, index) => {
-      const localizedItem =
-        localizedHome.carrusel?.find(
-          (item: Record<string, any>) =>
-            normalizeTitle(item.titulo ?? '') ===
-            normalizeTitle(baseItem.titulo)
-        ) ?? localizedHome.carrusel?.[index];
-
-      return localizedItem
-        ? mergeLocalizedEntry(baseItem, localizedItem)
-        : {
-            ...baseItem,
-            slug: slugify(baseItem.titulo),
-          };
-    })
+    homeEs.carrusel.map(baseItem => localizeCarouselEntry(locale, baseItem))
   );
 
   const mergedFeaturesList = homeEs.features.lista.map((entry, index) => {
@@ -246,11 +271,11 @@ export function getLocaleFromUrl(url: URL): Locale {
 
 export function getHomeContent(locale: Locale) {
   if (locale === 'en')
-    return mergeHomeContent(localizedContentByLocale.home.en);
+    return mergeHomeContent(locale, localizedContentByLocale.home.en);
   if (locale === 'ru')
-    return mergeHomeContent(localizedContentByLocale.home.ru);
+    return mergeHomeContent(locale, localizedContentByLocale.home.ru);
   if (locale === 'zh')
-    return mergeHomeContent(localizedContentByLocale.home.zh);
+    return mergeHomeContent(locale, localizedContentByLocale.home.zh);
   return buildBaseHomeContent();
 }
 
