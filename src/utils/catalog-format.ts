@@ -23,6 +23,7 @@ function localizeDays(value: string, locale: Locale) {
     en: 'days',
     ru: 'дней',
     zh: '天',
+    de: 'Tage',
   } as const;
 
   return `${numericValue} ${unitByLocale[locale]}`;
@@ -36,6 +37,7 @@ function localizeCycle(value: string, locale: Locale) {
       en: 'Normal',
       ru: 'Нормальный',
       zh: '正常',
+      de: 'Normal',
     },
   } as const;
 

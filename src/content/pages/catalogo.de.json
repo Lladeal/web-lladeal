@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "preTitle": "Katalog",
+    "title": "Entdecken Sie unseren Blumenkatalog",
+    "subTitle": "Lernen Sie unsere Premiumsorten aus Cayambe kennen. Jede Rose uberzeugt durch Farbe, Frische und Leistung in anspruchsvollen Markten.",
+    "linkTitle": "Mit dem Vertrieb sprechen",
+    "linktitle2": "Katalog herunterladen",
+    "linkAriaLabel": "Mit dem Vertriebsteam uber Rosensorten sprechen"
+  },
+  "listing": {
+    "typeLabel": "Typ",
+    "button": "Details ansehen"
+  },
+  "detail": {
+    "badge": "Katalog",
+    "consultButton": "Diese Sorte anfragen",
+    "backButton": "Zuruck zum Katalog",
+    "specsTitle": "Technisches Datenblatt",
+    "specs": {
+      "budSize": "Knospengrosse",
+      "stemLength": "Stiellange",
+      "vaseLife": "Vasenhaltbarkeit",
+      "petals": "Anzahl der Blatter",
+      "phenologicalStage": "Phanologisches Stadium",
+      "cycle": "Zyklus"
+    }
+  },
+  "seo": {
+    "title": "Rosenkatalog | Lladeal",
+    "description": "Entdecken Sie den Premium-Rosenkatalog von Lladeal mit Exportsorten aus Cayambe, Ecuador."
+  }
+}

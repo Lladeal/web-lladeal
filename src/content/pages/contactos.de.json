@@ -1,0 +1,21 @@
+{
+  "contactos": {
+    "titulo": "Kontaktieren Sie uns",
+    "subtitulo": "Fragen, Kommentare oder Angebotsanfragen.",
+    "direcciones": {
+      "titulo": "Unser Standort:",
+      "direccion_1": "Cayambe, Pesillo",
+      "direccion_2": "Olmedo, Ecuador"
+    },
+    "correo": {
+      "titulo": "Schreiben oder rufen Sie uns an:"
+    },
+    "blog": {
+      "titulo": "Sortenkatalog",
+      "detalles": {
+        "descripcion": "Entdecken Sie unsere exklusive Kollektion an Premiumrosen aus grosser Hohe.",
+        "texto": "Rosenkatalog ansehen"
+      }
+    }
+  }
+}

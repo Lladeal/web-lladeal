@@ -4,39 +4,46 @@ import homeEs from '../content/pages/home.json';
 import homeEn from '../content/pages/home.en.json';
 import homeRu from '../content/pages/home.ru.json';
 import homeZh from '../content/pages/home.zh.json';
+import homeDe from '../content/pages/home.de.json';
 import navbarEs from '../content/pages/navbar.json';
 import navbarEn from '../content/pages/navbar.en.json';
 import navbarRu from '../content/pages/navbar.ru.json';
 import navbarZh from '../content/pages/navbar.zh.json';
+import navbarDe from '../content/pages/navbar.de.json';
 import footerEs from '../content/pages/footer.json';
 import footerEn from '../content/pages/footer.en.json';
 import footerRu from '../content/pages/footer.ru.json';
 import footerZh from '../content/pages/footer.zh.json';
+import footerDe from '../content/pages/footer.de.json';
 import aboutEs from '../content/pages/about.json';
 import aboutEn from '../content/pages/about.en.json';
 import aboutRu from '../content/pages/about.ru.json';
 import aboutZh from '../content/pages/about.zh.json';
+import aboutDe from '../content/pages/about.de.json';
 import contactEs from '../content/pages/contactos.json';
 import contactEn from '../content/pages/contactos.en.json';
 import contactRu from '../content/pages/contactos.ru.json';
 import contactZh from '../content/pages/contactos.zh.json';
+import contactDe from '../content/pages/contactos.de.json';
 import catalogEs from '../content/pages/catalogo.json';
 import catalogEn from '../content/pages/catalogo.en.json';
 import catalogRu from '../content/pages/catalogo.ru.json';
 import catalogZh from '../content/pages/catalogo.zh.json';
+import catalogDe from '../content/pages/catalogo.de.json';
 import seoEs from '../content/pages/SEO.json';
 import seoEn from '../content/pages/SEO.en.json';
 import seoRu from '../content/pages/SEO.ru.json';
 import seoZh from '../content/pages/SEO.zh.json';
+import seoDe from '../content/pages/SEO.de.json';
 
 const localizedContentByLocale = {
-  home: { en: homeEn, ru: homeRu, zh: homeZh },
-  navbar: { en: navbarEn, ru: navbarRu, zh: navbarZh },
-  footer: { en: footerEn, ru: footerRu, zh: footerZh },
-  about: { en: aboutEn, ru: aboutRu, zh: aboutZh },
-  contact: { en: contactEn, ru: contactRu, zh: contactZh },
-  catalog: { en: catalogEn, ru: catalogRu, zh: catalogZh },
-  seo: { en: seoEn, ru: seoRu, zh: seoZh },
+  home: { en: homeEn, ru: homeRu, zh: homeZh, de: homeDe },
+  navbar: { en: navbarEn, ru: navbarRu, zh: navbarZh, de: navbarDe },
+  footer: { en: footerEn, ru: footerRu, zh: footerZh, de: footerDe },
+  about: { en: aboutEn, ru: aboutRu, zh: aboutZh, de: aboutDe },
+  contact: { en: contactEn, ru: contactRu, zh: contactZh, de: contactDe },
+  catalog: { en: catalogEn, ru: catalogRu, zh: catalogZh, de: catalogDe },
+  seo: { en: seoEn, ru: seoRu, zh: seoZh, de: seoDe },
 } as const;
 
 const baseOnlyKeys = new Set([
@@ -171,6 +178,7 @@ function localizeRoseDescription(locale: Locale, title: string) {
   if (locale === 'en') return `${title} rose`;
   if (locale === 'ru') return `Роза ${title}`;
   if (locale === 'zh') return `${title} 玫瑰`;
+  if (locale === 'de') return `${title} Rose`;
   return `Rosa ${title}`;
 }
 
@@ -181,6 +189,7 @@ function localizeRoseType(locale: Locale, type: string) {
     if (locale === 'en') return 'Bicolor';
     if (locale === 'ru') return 'Двухцветная';
     if (locale === 'zh') return '双色';
+    if (locale === 'de') return 'Zweifarbig';
     return 'Bicolores';
   }
 
@@ -199,6 +208,10 @@ function localizeRoseType(locale: Locale, type: string) {
 
     if (locale === 'zh') {
       return normalizedType === 'red' ? '红色' : '纯色';
+    }
+
+    if (locale === 'de') {
+      return normalizedType === 'red' ? 'Rot' : 'Einfarbig';
     }
 
     return normalizedType === 'red' ? 'Roja' : 'Color Único';
@@ -276,6 +289,8 @@ export function getHomeContent(locale: Locale) {
     return mergeHomeContent(locale, localizedContentByLocale.home.ru);
   if (locale === 'zh')
     return mergeHomeContent(locale, localizedContentByLocale.home.zh);
+  if (locale === 'de')
+    return mergeHomeContent(locale, localizedContentByLocale.home.de);
   return buildBaseHomeContent();
 }
 

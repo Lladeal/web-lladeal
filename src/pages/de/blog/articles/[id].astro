@@ -1,0 +1,14 @@
+---
+export const prerender = true;
+
+import BlogArticlePage from '../../../../components/pages/BlogArticlePage.astro';
+import { getArticleStaticPaths } from '@utils/articles';
+
+export async function getStaticPaths() {
+  return getArticleStaticPaths('de');
+}
+
+const { post } = Astro.props;
+---
+
+<BlogArticlePage post={post} />

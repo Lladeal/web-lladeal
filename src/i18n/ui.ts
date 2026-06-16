@@ -12,6 +12,7 @@ const ui = {
       switchToSpanish: 'ES',
       switchToRussian: 'RU',
       switchToChinese: '中文',
+      switchToGerman: 'DE',
       logoAltSuffix: 'inicio',
     },
     footer: {
@@ -40,6 +41,7 @@ const ui = {
       switchToSpanish: 'ES',
       switchToRussian: 'RU',
       switchToChinese: '中文',
+      switchToGerman: 'DE',
       logoAltSuffix: 'home',
     },
     footer: {
@@ -68,6 +70,7 @@ const ui = {
       switchToSpanish: 'ES',
       switchToRussian: 'RU',
       switchToChinese: '中文',
+      switchToGerman: 'DE',
       logoAltSuffix: 'главная',
     },
     footer: {
@@ -96,6 +99,7 @@ const ui = {
       switchToSpanish: 'ES',
       switchToRussian: 'RU',
       switchToChinese: '中文',
+      switchToGerman: 'DE',
       logoAltSuffix: '首页',
     },
     footer: {
@@ -111,6 +115,35 @@ const ui = {
       email: '电子邮箱',
       message: '留言',
       submit: '发送',
+    },
+  },
+  de: {
+    nav: {
+      home: 'Startseite',
+      about: 'Uber uns',
+      contact: 'Kontakt',
+      catalogo: 'Katalog',
+      blog: 'Blog',
+      switchToEnglish: 'EN',
+      switchToSpanish: 'ES',
+      switchToRussian: 'RU',
+      switchToChinese: '中文',
+      switchToGerman: 'DE',
+      logoAltSuffix: 'startseite',
+    },
+    footer: {
+      moreInfo: 'Benotigen Sie mehr Informationen?',
+      contactUs: 'Kontaktieren Sie uns',
+      craftedBy: 'Erstellt von',
+      emailSubmitAria: 'E-Mail senden',
+      videoFallback: 'Ihr Browser unterstutzt das Video-Tag nicht.',
+      avatarAlt: 'Foto von',
+    },
+    contactForm: {
+      name: 'Name',
+      email: 'E-Mail',
+      message: 'Nachricht',
+      submit: 'Senden',
     },
   },
 } as const;

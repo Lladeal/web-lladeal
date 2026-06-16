@@ -1,0 +1,21 @@
+{
+  "generales": {
+    "nombre_empresa": "Lladeal®",
+    "Descripcion": "Lladeal® ist ein fuhrendes Blumenunternehmen mit Fokus auf die Produktion und den Export von Premiumrosen. Unser Anbau in Cayambe, Ecuador, beliefert internationale Markte."
+  },
+  "contactos": {
+    "address": "Cayambe, Pesillo. Olmedo"
+  },
+  "creacion": {
+    "nombre": "Sotomayor Consulting"
+  },
+  "noticia": {
+    "titulo": "2026 Lladeal®. Alle Rechte vorbehalten."
+  },
+  "footer_form": {
+    "leyenda": "Abonnieren Sie unseren Newsletter",
+    "placeholder": "Geben Sie Ihre E-Mail ein",
+    "submit": "Senden",
+    "description": "Erhalten Sie die Informationen, die Sie brauchen. Hinterlassen Sie Ihre E-Mail, und unser Team wird Sie kontaktieren."
+  }
+}

@@ -13,6 +13,7 @@ const localeRedirectMap = {
   en: withBase('/en'),
   ru: withBase('/ru'),
   zh: withBase('/zh'),
+  de: withBase('/de'),
 };
 ---
 
@@ -33,6 +34,8 @@ const localeRedirectMap = {
         ? 'ru'
         : preferredLocale.startsWith('zh')
           ? 'zh'
+          : preferredLocale.startsWith('de')
+            ? 'de'
           : preferredLocale.startsWith('en')
             ? 'en'
             : 'es';
@@ -51,7 +54,7 @@ const localeRedirectMap = {
   
   <!-- <FeatureShowcase /> -->
 
-  <FeatureBento /> 
+  <FeatureBento />
 
   <FeatureAnimated />
 

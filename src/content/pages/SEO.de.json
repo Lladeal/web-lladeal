@@ -1,0 +1,35 @@
+{
+  "Seo_global": {
+    "titulo": "Lladeal® | Premium-Exportrosen aus Ecuador",
+    "descripcion": "Entdecken Sie die Exzellenz von Lladeal in Cayambe, Ecuador. Wir liefern hochwertige Hochlandrosen mit kraftigen Stielen, grossen Knospen und Premiumqualitat fur den internationalen Markt.",
+    "og_titulo": "Lladeal® | Die schonsten Blumen der Welt",
+    "og_descripcion": "Wir bringen die Pracht ecuadorianischer Rosen in die Welt. Hochlandanbau in Cayambe mit aussergewohnlicher Haltbarkeit und garantierter Frische.",
+    "imagen_texto_alternativo": "Offizielles Lladeal-Logo, Premium-Exportrosen aus Ecuador."
+  },
+  "sobre_nosotros": {
+    "lenguaje": "de-DE",
+    "nombre": "Uber Lladeal",
+    "descripcion": "Erfahren Sie mehr uber Lladeal, ein fuhrendes Blumenunternehmen in Pesillo, Cayambe. Wir sind auf den Anbau und Export von Premiumrosen nach internationalen Qualitatsstandards spezialisiert.",
+    "parte_de": {
+      "nombre": "Lladeal®",
+      "descripcion": "Lladeal® ist ein ecuadorianisches Blumenunternehmen, das sich dem nachhaltigen Anbau von Hochlandrosen widmet, die fur ihre Grosse, Widerstandsfahigkeit und lebendigen Farben weltweit geschatzt werden."
+    }
+  },
+  "seo_sobre_nosotros": {
+    "title": "Uber uns | Lladeal Blumenfarm in Cayambe",
+    "description": "Entdecken Sie unsere Geschichte und unsere Anbauprozesse. Bei Lladeal verbinden wir das einzigartige Aquatorklima von Cayambe mit landwirtschaftlicher Expertise, um aussergewohnliche Rosen zu erzeugen."
+  },
+  "seo_contactos": {
+    "lenguaje": "de-DE",
+    "nombre": "Kontakt | Lladeal",
+    "description": "Kontaktieren Sie unser Vertriebsteam fur den Import von Premiumrosen aus Ecuador. Wir unterstutzen Grosshandelsbestellungen, Distributoren und internationale Broker.",
+    "parte_de": {
+      "nombre": "Lladeal®",
+      "descripcion": "Lladeal® ist ein ecuadorianisches Blumenunternehmen, das sich dem nachhaltigen Anbau von Hochlandrosen widmet, die fur ihre Grosse, Widerstandsfahigkeit und lebendigen Farben weltweit geschatzt werden."
+    }
+  },
+  "seo_contact": {
+    "title": "Kontakt und Grosshandel | Lladeal",
+    "description": "Fordern Sie ein Angebot oder unseren Rosenkatalog an. Kontaktieren Sie uns per E-Mail, Telefon oder besuchen Sie uns in Cayambe, Ecuador."
+  }
+}

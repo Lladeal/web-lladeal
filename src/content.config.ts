@@ -9,7 +9,7 @@ const articles = defineCollection({
     base: './src/content/articles',
   }),
   schema: z.object({
-    locale: z.enum(['es', 'en', 'ru', 'zh']),
+    locale: z.enum(['es', 'en', 'ru', 'zh', 'de']),
     articleSlug: z.string(),
     title: z.string(),
     description: z.string(),

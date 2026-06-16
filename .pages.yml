@@ -1964,6 +1964,370 @@ content:
                 label: Descripcion para redes
                 type: text
 
+  - name: site_pages_de
+    label: Paginas en aleman
+    type: group
+    items:
+      - name: home_page_de
+        label: Inicio en aleman
+        type: file
+        path: src/content/pages/home.de.json
+        format: json
+        fields:
+          - name: anuncio
+            label: Franja superior
+            type: object
+            fields:
+              - name: titulo
+                label: Texto principal
+                type: string
+              - name: titulo_link
+                label: Texto del boton
+                type: string
+          - name: hero
+            label: Portada principal
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: string
+              - name: subtitulo
+                label: Texto de apoyo
+                type: text
+              - name: Boton_1
+                label: Primer boton
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+              - name: boton_2
+                label: Segundo boton
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+      - name: about_page_de
+        label: Nosotros en aleman
+        type: file
+        path: src/content/pages/about.de.json
+        format: json
+        fields:
+          - name: datos_sobre_nosotros
+            label: Informacion principal
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: descripcion
+                label: Descripcion
+                type: text
+              - name: estadisticas
+                label: Estadisticas
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{texto}'
+                fields:
+                  - name: texto
+                    label: Texto
+                    type: string
+          - name: datos_de_experticie
+            label: Experiencia del equipo
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: experticie
+                label: Lista de experiencia
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{titulo}'
+                fields:
+                  - name: titulo
+                    label: Titulo
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+          - name: mision_vison
+            label: Mision y vision
+            type: object
+            fields:
+              - name: mision
+                label: Mision
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de la seccion
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+                  - name: lista
+                    label: Pilares de la mision
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: '{titulo}'
+                    fields:
+                      - name: titulo
+                        label: Titulo
+                        type: string
+                      - name: label
+                        label: Texto de apoyo
+                        type: text
+              - name: vision
+                label: Vision
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo de la seccion
+                    type: string
+                  - name: descripcion
+                    label: Descripcion
+                    type: text
+                  - name: lista
+                    label: Pilares de la vision
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: '{titulo}'
+                    fields:
+                      - name: titulo
+                        label: Titulo
+                        type: string
+                      - name: label
+                        label: Texto de apoyo
+                        type: text
+          - name: Team
+            label: Equipo
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: descripcion
+                label: Descripcion
+                type: text
+              - name: team
+                label: Integrantes
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{nombre}'
+                fields:
+                  - name: nombre
+                    label: Nombre
+                    type: string
+                  - name: cargo
+                    label: Cargo
+                    type: string
+      - name: contact_page_de
+        label: Contacto en aleman
+        type: file
+        path: src/content/pages/contactos.de.json
+        format: json
+        fields:
+          - name: contactos
+            label: Informacion de contacto
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo
+                type: string
+              - name: subtitulo
+                label: Subtitulo
+                type: text
+              - name: direcciones
+                label: Direcciones
+                type: object
+                fields:
+                  - name: titulo
+                    label: Encabezado
+                    type: string
+                  - name: direccion_1
+                    label: Direccion principal
+                    type: string
+                  - name: direccion_2
+                    label: Direccion secundaria
+                    type: string
+              - name: correo
+                label: Datos de correo
+                type: object
+                fields:
+                  - name: titulo
+                    label: Encabezado
+                    type: string
+              - name: blog
+                label: Acceso al catalogo
+                type: object
+                fields:
+                  - name: titulo
+                    label: Titulo del bloque
+                    type: string
+                  - name: detalles
+                    label: Detalles
+                    type: object
+                    fields:
+                      - name: descripcion
+                        label: Descripcion
+                        type: text
+                      - name: texto
+                        label: Texto del enlace
+                        type: string
+      - name: catalog_page_de
+        label: Catalogo en aleman
+        type: file
+        path: src/content/pages/catalogo.de.json
+        format: json
+        fields:
+          - name: hero
+            label: Encabezado del catalogo
+            type: object
+            fields:
+              - name: preTitle
+                label: Titulo pequeno
+                type: string
+              - name: title
+                label: Titulo principal
+                type: string
+              - name: subTitle
+                label: Descripcion introductoria
+                type: text
+              - name: linkTitle
+                label: Texto del enlace principal
+                type: string
+              - name: linktitle2
+                label: Texto del boton de descarga
+                type: string
+              - name: linkAriaLabel
+                label: Descripcion accesible del enlace
+                type: string
+          - name: listing
+            label: Tarjetas del listado
+            type: object
+            fields:
+              - name: typeLabel
+                label: Etiqueta del tipo
+                type: string
+              - name: button
+                label: Texto del boton
+                type: string
+          - name: detail
+            label: Detalle del producto
+            type: object
+            fields:
+              - name: badge
+                label: Etiqueta superior
+                type: string
+              - name: consultButton
+                label: Texto del boton para consultar
+                type: string
+              - name: backButton
+                label: Texto del boton para volver
+                type: string
+              - name: specsTitle
+                label: Titulo de la ficha tecnica
+                type: string
+          - name: seo
+            label: SEO del catalogo
+            type: object
+            fields:
+              - name: title
+                label: Titulo SEO
+                type: string
+              - name: description
+                label: Descripcion SEO
+                type: text
+      - name: footer_page_de
+        label: Pie de pagina en aleman
+        type: file
+        path: src/content/pages/footer.de.json
+        format: json
+        fields:
+          - name: generales
+            label: Informacion general
+            type: object
+            fields:
+              - name: nombre_empresa
+                label: Nombre de la empresa
+                type: string
+              - name: Descripcion
+                label: Descripcion de la empresa
+                type: text
+          - name: footer_form
+            label: Formulario del pie de pagina
+            type: object
+            fields:
+              - name: leyenda
+                label: Titulo del formulario
+                type: string
+              - name: placeholder
+                label: Texto de ayuda del campo
+                type: string
+              - name: submit
+                label: Texto del boton
+                type: string
+              - name: description
+                label: Descripcion del formulario
+                type: text
+      - name: navbar_page_de
+        label: Barra de navegacion en aleman
+        type: file
+        path: src/content/pages/navbar.de.json
+        format: json
+        fields:
+          - name: barra_de_navegacion
+            label: Contenido de la barra superior
+            type: object
+            fields:
+              - name: logo
+                label: Logo
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Texto alternativo del logo
+                    type: string
+              - name: boton
+                label: Boton principal
+                type: object
+                fields:
+                  - name: texto
+                    label: Texto del boton
+                    type: string
+      - name: seo_pages_de
+        label: SEO en aleman
+        type: file
+        path: src/content/pages/SEO.de.json
+        format: json
+        fields:
+          - name: Seo_global
+            label: SEO global
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo general
+                type: string
+              - name: descripcion
+                label: Descripcion general
+                type: text
+              - name: og_titulo
+                label: Titulo para redes
+                type: string
+              - name: og_descripcion
+                label: Descripcion para redes
+                type: text
+
   - name: editorial_content
     label: Contenido editorial
     type: group
@@ -2089,6 +2453,45 @@ content:
         label: Articulos en chino
         type: collection
         path: src/content/articles/zh
+        filename:
+          template: '{primary}.mdoc'
+          field: create
+        format: yaml-frontmatter
+        view:
+          fields: [title, date, description, articleSlug]
+          primary: title
+          sort: [date, title]
+          search: [title, description, body, articleSlug]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: locale
+            label: Idioma interno
+            type: string
+          - name: articleSlug
+            label: Slug del articulo
+            type: string
+          - name: title
+            label: Titulo
+            type: string
+          - name: description
+            label: Descripcion corta
+            type: text
+          - name: date
+            label: Fecha de publicacion
+            type: date
+          - name: body
+            label: Contenido
+            type: rich-text
+            options:
+              format: markdown
+              media: uploads
+
+      - name: articles_de
+        label: Articulos en aleman
+        type: collection
+        path: src/content/articles/de
         filename:
           template: '{primary}.mdoc'
           field: create

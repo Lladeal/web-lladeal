@@ -11,6 +11,7 @@ export const getReadingTime = (text: string, locale = 'en'): string | undefined 
       if (locale === 'es') return `${totalMinutes} min de lectura`;
       if (locale === 'ru') return `${totalMinutes} мин чтения`;
       if (locale === 'zh') return `阅读约 ${totalMinutes} 分钟`;
+      if (locale === 'de') return `${totalMinutes} Min. Lesezeit`;
       return `${totalMinutes} min read`;
     }
     return undefined;

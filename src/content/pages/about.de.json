@@ -1,0 +1,89 @@
+{
+  "datos_sobre_nosotros": {
+    "titulo": "Lladeal®",
+    "descripcion": "Ecuadorianische Rosen zeichnen sich nicht durch Masse aus, sondern durch ihre uberlegene Qualitat. Bei Lladeal verpflichten wir uns, Blumen zu liefern, die hochste Exzellenzstandards ubertreffen.",
+    "estadisticas": [
+      {
+        "texto": "Rosensorten"
+      },
+      {
+        "texto": "Erfahrene Mitarbeitende"
+      },
+      {
+        "texto": "Exportziele"
+      },
+      {
+        "texto": "Vermarktete Rosen"
+      }
+    ]
+  },
+  "datos_de_experticie": {
+    "titulo": "Unsere Exzellenz:",
+    "experticie": [
+      {
+        "titulo": "Begunstigtes Mikroklima:",
+        "descripcion": "Wir bauen in Cayambe auf idealer Hohe an, sodass unsere Rosen grossere Knospen und aussergewohnlich lebendige Farben entwickeln konnen."
+      },
+      {
+        "titulo": "Manueller Schnitt und Auswahl:",
+        "descripcion": "Jeder Stiel wird exakt zum richtigen Offnungspunkt geerntet, um perfekte Symmetrie und Exportqualitat sicherzustellen."
+      },
+      {
+        "titulo": "Logistik und Kuhlkette:",
+        "descripcion": "Wir gewahrleisten einen strengen Nachernteprozess, damit Frische und Hydrierung bis zur internationalen Ankunft jeder Bestellung erhalten bleiben."
+      }
+    ]
+  },
+  "mision_vison": {
+    "mision": {
+      "titulo": "Unsere Mission",
+      "descripcion": "Wir bauen Rosen von herausragender Qualitat an und exportieren sie, indem wir die einzigartige Hohe und das Aquatoriallicht von Pesillo, Cayambe nutzen. Durch handwerkliche Sorgfalt und strenge Auswahlstandards liefern wir Blumen mit grossen Knospen, lebendigen Farben und langer Vasenhaltbarkeit, ubertreffen die Erwartungen von Floristen und internationalen Distributoren und ehren zugleich unser Land und unsere Gemeinschaft.",
+      "lista": [
+        {
+          "titulo": "Weltweite Anerkennung",
+          "label": "Wir wollen weltweit als Ursprung der eindrucksvollsten Hochlandrosen anerkannt werden - dort, wo jede Blute die Geschichte des einzigartigen Lichts von Cayambe und der handwerklichen Sorgfalt unserer Menschen erzahlt."
+        },
+        {
+          "titulo": "Langfristige Partnerschaften",
+          "label": "Wir wollen dauerhafte Partnerschaften mit Floristen und globalen Distributoren aufbauen, indem wir nicht nur Blumen liefern, sondern ein Erlebnis aus Vertrauen, unvergleichlicher Frische und der Gewissheit, dass jede Bestellung die Exzellenz unseres Landes widerspiegelt."
+        }
+      ]
+    },
+    "vision": {
+      "titulo": "Unsere Vision",
+      "descripcion": "Wir wollen zum globalen Massstab fur Hochlandflorik werden, anerkannt dafur, die Geografie Cayambes in unvergessliche Rosen zu verwandeln, die internationale Markte anfuhren. Wir wollen durch nahtlose Logistik, Nachhaltigkeit und majestatische Sorten wachsen und die Kunst von Lladeal mit Frische und Leidenschaft in jeden Winkel der Welt bringen.",
+      "lista": [
+        {
+          "titulo": "Ein Synonym fur Freude und Qualitat",
+          "label": "Wir traumen davon, dass jede Lladeal-Rose, die Grenzen uberquert, ein Stuck Cayambe mit sich tragt und besondere Momente der Menschen mit Farbe und Freude erfullt - egal, wie weit entfernt sie sind."
+        },
+        {
+          "titulo": "Mit unseren Kunden wachsen",
+          "label": "Wir wollen der verlaessliche Partner sein, auf den man immer zahlen kann: frische, langlebige und wunderschone Blumen, mit Hingabe angebaut, damit jedes Geschaft und jede Geste der Liebe unvergesslich wird."
+        }
+      ]
+    }
+  },
+  "Team": {
+    "titulo": "Unser Team",
+    "descripcion": "Lladeal® ist ein ecuadorianisches Blumenunternehmen, das sich dem nachhaltigen Anbau von Hochlandrosen widmet, die fur ihre Grosse, Widerstandsfahigkeit und lebendigen Farben weltweit geschatzt werden.",
+    "team": [
+      {
+        "nombre": "Fernando Tituaña",
+        "cargo": "Anbauexperte"
+      },
+      {
+        "nombre": "Alberto Tituaña",
+        "cargo": "Vertriebsspezialist"
+      },
+      {
+        "nombre": "Javier Vallejo",
+        "cargo": "Supervisor"
+      },
+      {
+        "nombre": "Ricardo Tituaña",
+        "cargo": "Logistikleiter"
+      }
+    ]
+  }
+}
