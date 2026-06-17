@@ -109,7 +109,7 @@ const carouselItems = carrusel as CarouselItem[];
   <div
     data-carousel-root
     data-hs-carousel='{
-    "isInfiniteLoop": true, "isAutoPlay": true, "isDraggable": true
+    "isInfiniteLoop": true, "isAutoPlay": true
   }'
     class="relative"
   >
@@ -128,12 +128,12 @@ const carouselItems = carrusel as CarouselItem[];
                 <div class="hs-carousel-slide h-full">
                   <article class="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl md:flex-row">
                     <div class="group relative w-full overflow-hidden bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] md:w-1/2">
-                    <img
-                      src={withBase(items.ImagenArchivo) ?? ''}
-                      alt={items.descripcion}
-                      width={130}
-                      height={70}
-                      class="test h-auto w-full rounded-md"
+                      <img
+                        src={withBase(items.ImagenArchivo) ?? ''}
+                        alt={items.descripcion}
+                        width={130}
+                        height={70}
+                        class="test h-auto w-full rounded-md"
                       />
                       <div class="absolute top-6 left-6">
                         <span class="rounded-full border border-slate-200 bg-white/90 px-3 py-1 text-[10px] font-bold tracking-widest text-slate-600 uppercase backdrop-blur-sm">
@@ -229,7 +229,8 @@ const carouselItems = carrusel as CarouselItem[];
                         </Button>
                         <Button
                           variant="alternative"
-                          href={`/catalogo/${items.slug}`}
+                          href={items.Data.link}
+                          target="_blank"
                         >
                           {' '}
                           {labels.buy}{' '}
@@ -299,12 +300,12 @@ const carouselItems = carrusel as CarouselItem[];
               return (
                 <div class="hs-carousel-pagination-item border-line-2 hs-carousel-active:border-primary width-full h-fit shrink-0 cursor-pointer overflow-hidden rounded-md border">
                   <div class="flex h-fit items-center justify-center p-1 text-center">
-                  <img
-                    src={withBase(items.ImagenArchivo) ?? ''}
-                    alt={items.descripcion}
-                    width={130}
-                    height={70}
-                    class="test rounded-md"
+                    <img
+                      src={withBase(items.ImagenArchivo) ?? ''}
+                      alt={items.descripcion}
+                      width={130}
+                      height={70}
+                      class="test rounded-md"
                     />
                   </div>
                 </div>
