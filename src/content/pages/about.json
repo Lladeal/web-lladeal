@@ -1,7 +1,7 @@
 {
   "datos_sobre_nosotros": {
     "titulo": "Lladeal®",
-    "descripcion": "Las rosas de Ecuador no se distinguen por su cantidad, sino por su calidad superior, que es lo que las hace competitivas en el mercado mundial. En Lladeal prometemos que nuestras flores superarán todos los estándares de excelencia previos.",
+    "descripcion": "Con una ubicación estratégica en el ecuador, a una altitud de más de 10,300 pies sobre el nivel del mar, en el pequeño pueblo de Pesillo, en el cantón de Cayambe, la finca de Lladeal ofrece condiciones climáticas y geográficas excepcionales, como luz perpendicular y suelos cálidos.",
     "estadisticas": [
       {
         "texto": "Variedades de rosas",
@@ -41,33 +41,33 @@
   "mision_vison": {
     "mision": {
       "titulo": "Nuestra misión",
-      "descripcion": "Cultivar y exportar rosas de excelencia aprovechando las condiciones únicas de altura y luz ecuatorial en Pesillo, Cayambe. Combinamos el cuidado artesanal con estándares rigurosos de selección para ofrecer flores de botón grande, colores vibrantes y larga duración en florero, superando las expectativas de floristerías y distribuidores globales, mientras respetamos nuestra tierra y comunidad.",
+      "descripcion": "En Lladeal, creemos que las flores son más que un simple producto; son una expresión de amor, felicidad y agrade- cimiento. Nuestra misión es cultivar y ofrecer las flores más hermosas y frescas, con el fin de inspirar momentos de alegría y emoción en la vida de las personas.",
       "lista": [
         {
           "icono": "MaterialSymbolsGlobe",
           "titulo": "Reconocimiento mundial",
-          "label": "Ser reconocidos mundialmente como el origen de las rosas de altura más memorables, donde cada flor cuente la historia de la luz única de Cayambe y el cuidado artesanal de nuestra gente."
+          "label": "Estamos orgullosos de ser un puente entre la belleza natural de nuestras flores y los sentimientos de nuestros clientes, creando experiencias únicas e inolvidables con cada entrega."
         },
         {
           "icono": "MdiHandshakeOutline",
           "titulo": "Alianzas duraderas",
-          "label": "Construir alianzas duraderas con floristerías y distribuidores globales, ofreciéndoles no solo flores, sino una experiencia de confianza, frescura inigualable y la certeza de que cada pedido refleja la excelencia de nuestra tierra."
+          "label": "Además, estamos comprometidos a promover prácticas sostenibles y responsables en todas nuestras operaciones, para preservar el medio ambiente y asegurar un futuro prometedor para nuestra industria y nuestra comunidad."
         }
       ]
     },
     "vision": {
       "titulo": "Nuestra visión",
-      "descripcion": "Ser el referente mundial en floricultura de altura, reconocidos por transformar la geografía de Cayambe en rosas inolvidables que lideran los mercados internacionales. Buscamos crecer integrando logística sin fricciones, sostenibilidad y variedades majestuosas, llevando el arte de Lladeal a cada rincón del planeta con frescura y pasión.",
+      "descripcion": "En Lladeal nos dedicamos a la producción y venta de las flores más hermosas y frescas, ofreciendo a nuestros clientes una experiencia excepcional con cada compra. Mantenemos altos estándares de calidad en todas nuestras operaciones, desde la selección de semillas hasta la entrega del producto, con un enfoque en el servicio y la satisfacción del cliente.",
       "lista": [
         {
           "icono": "MdiFlowerTulipOutline",
           "titulo": "Sinónimo de felicidad y Calidad",
-          "label": "Soñamos con que cada rosa Lladeal que cruza fronteras lleve consigo un pedacito de Cayambe, llenando de color y alegría los momentos especiales de las personas, sin importar qué tan lejos estén."
+          "label": "Estamos comprometidos a ser líderes en la implementación de prácticas sustentables y responsables en la industria floral, cuidando el medio ambiente y promoviendo el bienestar de nuestras comunidades."
         },
         {
           "icono": "MaterialSymbolsPartnerExchangeRounded",
           "titulo": "Crecer junto a nuestros clientes",
-          "label": "Queremos ser ese aliado en el que siempre se pueda confiar: flores frescas, duraderas y hermosas, cultivadas con dedicación, para que cada negocio o cada detalle de amor sea inolvidable."
+          "label": "Nuestra dedicación y compromiso con la excelencia nos guían en cada paso que damos, para ofrecer productos únicos y emocionantes que reflejen la belleza natural de nuestras flores."
         }
       ]
     }

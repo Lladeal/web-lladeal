@@ -2,6 +2,7 @@
 import Navbar from '@sections/Navbar.astro';
 import Footer from '@sections/Footer.astro';
 import WhatsappBtn from '@common/whatsBtn.astro';
+import CallToAction from '@common/Call_to_Btn.astro';
 import { ClientRouter } from 'astro:transitions';
 import { SEO, type Props as SEOProps } from 'astro-seo';
 import { Schema } from 'astro-seo-schema';
@@ -182,6 +183,7 @@ const defaultSchema: WithContext<Thing> = {
     <main>
       <slot />
       <WhatsappBtn />
+      <CallToAction />
     </main>
 
     <Footer />

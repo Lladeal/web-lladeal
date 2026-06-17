@@ -1,7 +1,7 @@
 {
   "datos_sobre_nosotros": {
     "titulo": "Lladeal®",
-    "descripcion": "Ecuadorian roses stand out not because of volume, but because of superior quality. At Lladeal, we are committed to delivering flowers that exceed the highest standards of excellence.",
+    "descripcion": "Strategically located on the equator at an altitude of more than 10,300 feet above sea level, in the small town of Pesillo in the Cayambe canton, Lladeal Farm offers exceptional climatic and geographic conditions, including direct sunlight and warm soils.",
     "estadisticas": [
       {
         "texto": "Rose varieties"
@@ -37,29 +37,29 @@
   "mision_vison": {
     "mision": {
       "titulo": "Our mission",
-      "descripcion": "To grow and export roses of excellence by harnessing the unique altitude and equatorial light of Pesillo, Cayambe. We combine artisanal care with rigorous selection standards to deliver large-bud flowers, vibrant colors, and long vase life, exceeding the expectations of florists and global distributors while honoring our land and community.",
+      "descripcion": "At Lladeal, we believe flowers are more than just a product; they are an expression of love, happiness, and gratitude. Our mission is to grow and offer the most beautiful and freshest flowers in order to inspire moments of joy and emotion in people's lives.",
       "lista": [
         {
           "titulo": "Worldwide recognition",
-          "label": "To be recognized worldwide as the origin of the most memorable high-altitude roses, where every bloom tells the story of Cayambe's unique light and the artisanal care of our people."
+          "label": "We are proud to be a bridge between the natural beauty of our flowers and the feelings of our customers, creating unique and unforgettable experiences with every delivery."
         },
         {
           "titulo": "Lasting partnerships",
-          "label": "To build lasting partnerships with florists and global distributors by offering not just flowers, but an experience of trust, unmatched freshness, and the certainty that every order reflects the excellence of our land."
+          "label": "In addition, we are committed to promoting sustainable and responsible practices throughout our operations in order to preserve the environment and ensure a promising future for our industry and our community."
         }
       ]
     },
     "vision": {
       "titulo": "Our vision",
-      "descripcion": "To be the global benchmark in high-altitude floriculture, recognized for turning Cayambe's geography into unforgettable roses that lead international markets. We seek to grow through seamless logistics, sustainability, and majestic varieties, bringing the art of Lladeal to every corner of the planet with freshness and passion.",
+      "descripcion": "At Lladeal, we are dedicated to producing and selling the most beautiful and freshest flowers, offering our customers an exceptional experience with every purchase. We maintain high quality standards throughout our operations, from seed selection to product delivery, with a focus on service and customer satisfaction.",
       "lista": [
         {
           "titulo": "A synonym for happiness and quality",
-          "label": "We dream that every Lladeal rose crossing borders carries a little piece of Cayambe with it, filling people's special moments with color and joy no matter how far away they are."
+          "label": "We are committed to being leaders in the implementation of sustainable and responsible practices in the floral industry, caring for the environment and promoting the well-being of our communities."
         },
         {
           "titulo": "Growing alongside our customers",
-          "label": "We want to be the trusted partner people can always rely on: fresh, long-lasting, beautiful flowers grown with dedication so every business and every gesture of love becomes unforgettable."
+          "label": "Our dedication and commitment to excellence guide every step we take so we can offer unique and exciting products that reflect the natural beauty of our flowers."
         }
       ]
     }

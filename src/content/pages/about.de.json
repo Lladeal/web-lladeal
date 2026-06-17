@@ -1,7 +1,7 @@
 {
   "datos_sobre_nosotros": {
     "titulo": "Lladeal®",
-    "descripcion": "Ecuadorianische Rosen zeichnen sich nicht durch Masse aus, sondern durch ihre uberlegene Qualitat. Bei Lladeal verpflichten wir uns, Blumen zu liefern, die hochste Exzellenzstandards ubertreffen.",
+    "descripcion": "Strategisch am Aquator gelegen, auf einer Hohe von mehr als 10.300 Fuss uber dem Meeresspiegel, im kleinen Ort Pesillo im Kanton Cayambe, bietet die Farm von Lladeal aussergewohnliche klimatische und geografische Bedingungen, darunter senkrechtes Sonnenlicht und warme Boden.",
     "estadisticas": [
       {
         "texto": "Rosensorten"
@@ -37,29 +37,29 @@
   "mision_vison": {
     "mision": {
       "titulo": "Unsere Mission",
-      "descripcion": "Wir bauen Rosen von herausragender Qualitat an und exportieren sie, indem wir die einzigartige Hohe und das Aquatoriallicht von Pesillo, Cayambe nutzen. Durch handwerkliche Sorgfalt und strenge Auswahlstandards liefern wir Blumen mit grossen Knospen, lebendigen Farben und langer Vasenhaltbarkeit, ubertreffen die Erwartungen von Floristen und internationalen Distributoren und ehren zugleich unser Land und unsere Gemeinschaft.",
+      "descripcion": "Bei Lladeal glauben wir, dass Blumen mehr sind als nur ein Produkt; sie sind ein Ausdruck von Liebe, Gluck und Dankbarkeit. Unsere Mission ist es, die schonsten und frischesten Blumen anzubauen und anzubieten, um Momente der Freude und Emotion im Leben der Menschen zu inspirieren.",
       "lista": [
         {
           "titulo": "Weltweite Anerkennung",
-          "label": "Wir wollen weltweit als Ursprung der eindrucksvollsten Hochlandrosen anerkannt werden - dort, wo jede Blute die Geschichte des einzigartigen Lichts von Cayambe und der handwerklichen Sorgfalt unserer Menschen erzahlt."
+          "label": "Wir sind stolz darauf, eine Brucke zwischen der naturlichen Schonheit unserer Blumen und den Gefuhlen unserer Kunden zu sein und mit jeder Lieferung einzigartige und unvergessliche Erlebnisse zu schaffen."
         },
         {
           "titulo": "Langfristige Partnerschaften",
-          "label": "Wir wollen dauerhafte Partnerschaften mit Floristen und globalen Distributoren aufbauen, indem wir nicht nur Blumen liefern, sondern ein Erlebnis aus Vertrauen, unvergleichlicher Frische und der Gewissheit, dass jede Bestellung die Exzellenz unseres Landes widerspiegelt."
+          "label": "Daruber hinaus engagieren wir uns dafur, in all unseren Ablaufen nachhaltige und verantwortungsvolle Praktiken zu fordern, um die Umwelt zu bewahren und eine vielversprechende Zukunft fur unsere Branche und unsere Gemeinschaft zu sichern."
         }
       ]
     },
     "vision": {
       "titulo": "Unsere Vision",
-      "descripcion": "Wir wollen zum globalen Massstab fur Hochlandflorik werden, anerkannt dafur, die Geografie Cayambes in unvergessliche Rosen zu verwandeln, die internationale Markte anfuhren. Wir wollen durch nahtlose Logistik, Nachhaltigkeit und majestatische Sorten wachsen und die Kunst von Lladeal mit Frische und Leidenschaft in jeden Winkel der Welt bringen.",
+      "descripcion": "Bei Lladeal widmen wir uns der Produktion und dem Verkauf der schonsten und frischesten Blumen und bieten unseren Kunden bei jedem Kauf ein aussergewohnliches Erlebnis. Wir halten in all unseren Ablaufen hohe Qualitatsstandards ein, von der Auswahl des Saatguts bis zur Auslieferung des Produkts, mit einem klaren Fokus auf Service und Kundenzufriedenheit.",
       "lista": [
         {
           "titulo": "Ein Synonym fur Freude und Qualitat",
-          "label": "Wir traumen davon, dass jede Lladeal-Rose, die Grenzen uberquert, ein Stuck Cayambe mit sich tragt und besondere Momente der Menschen mit Farbe und Freude erfullt - egal, wie weit entfernt sie sind."
+          "label": "Wir setzen uns dafur ein, fuhrend bei der Umsetzung nachhaltiger und verantwortungsvoller Praktiken in der Blumenbranche zu sein, die Umwelt zu schutzen und das Wohlergehen unserer Gemeinschaften zu fordern."
         },
         {
           "titulo": "Mit unseren Kunden wachsen",
-          "label": "Wir wollen der verlaessliche Partner sein, auf den man immer zahlen kann: frische, langlebige und wunderschone Blumen, mit Hingabe angebaut, damit jedes Geschaft und jede Geste der Liebe unvergesslich wird."
+          "label": "Unsere Hingabe und unser Engagement fur Exzellenz leiten jeden Schritt, den wir gehen, damit wir einzigartige und inspirierende Produkte anbieten konnen, die die naturliche Schonheit unserer Blumen widerspiegeln."
         }
       ]
     }
