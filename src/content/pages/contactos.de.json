@@ -2,20 +2,26 @@
   "contactos": {
     "titulo": "Kontaktieren Sie uns",
     "subtitulo": "Fragen, Kommentare oder Angebotsanfragen.",
+    "titulo_form": "Wie konnen wir Ihnen helfen?",
+    "descripcion_form": "Hinterlassen Sie uns Ihre Anfrage und wir melden uns bald bei Ihnen.",
     "direcciones": {
       "titulo": "Unser Standort:",
       "direccion_1": "Cayambe, Pesillo",
       "direccion_2": "Olmedo, Ecuador"
     },
     "correo": {
-      "titulo": "Schreiben oder rufen Sie uns an:"
+      "titulo": "Schreiben oder rufen Sie uns an:",
+      "telefono": "+593 939730772",
+      "mail": "sales@lladeal.com.ec"
     },
     "blog": {
       "titulo": "Sortenkatalog",
       "detalles": {
         "descripcion": "Entdecken Sie unsere exklusive Kollektion an Premiumrosen aus grosser Hohe.",
-        "texto": "Rosenkatalog ansehen"
+        "texto": "Rosenkatalog ansehen",
+        "link": "/catalogo"
       }
-    }
+    },
+    "formulario": "https://formspree.io/f/YOUR_ID"
   }
 }

@@ -2,20 +2,26 @@
   "contactos": {
     "titulo": "联系我们",
     "subtitulo": "欢迎咨询、留言或索取报价。",
+    "titulo_form": "我们可以如何帮助您？",
+    "descripcion_form": "请留下您的需求，我们会尽快回复您。",
     "direcciones": {
       "titulo": "我们的地址：",
       "direccion_1": "Cayambe, Pesillo",
       "direccion_2": "Olmedo, Ecuador"
     },
     "correo": {
-      "titulo": "欢迎邮件或来电联系："
+      "titulo": "欢迎邮件或来电联系：",
+      "telefono": "+593 939730772",
+      "mail": "sales@lladeal.com.ec"
     },
     "blog": {
       "titulo": "玫瑰品种目录",
       "detalles": {
         "descripcion": "浏览我们的高海拔优质玫瑰精选系列。",
-        "texto": "查看玫瑰目录"
+        "texto": "查看玫瑰目录",
+        "link": "/catalogo"
       }
-    }
+    },
+    "formulario": "https://formspree.io/f/YOUR_ID"
   }
 }

@@ -4,6 +4,7 @@ import BaseLayout from '@layout/BaseLayout.astro';
 import type { WithContext, Thing } from 'schema-dts';
 import { Icon } from 'astro-icon/components';
 import { withBase } from '@utils/links';
+import Marquee from '@ui/marquee.astro'
 import {
   getAboutContent,
   getLocaleFromUrl,
@@ -152,6 +153,10 @@ const schema: WithContext<Thing> = {
       </div>
     </div>
     <!-- End Team -->
+  </section>
+
+  <section class="mx-auto max-w-340 px-4 pb-12 pb-24 sm:px-6 lg:px-8"> 
+    <Marquee marquee={} />
   </section>
 
   <!-- vision mision -->

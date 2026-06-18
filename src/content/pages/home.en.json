@@ -4,7 +4,7 @@
     "titulo_link": "Book a meeting!"
   },
   "hero": {
-    "titulo": "Lladeal Farm: turning altitude and sunlight into unforgettable flowers.",
+    "titulo": "Lladeal: Premium roses from Ecuador for importers, wholesalers, and international florists.",
     "subtitulo": "Strategically located in Pesillo, Cayambe, we take advantage of equatorial light and warm soils to create an exceptional growing environment.",
     "Boton_1": {
       "titulo": "View our catalog"
@@ -21,7 +21,7 @@
         "wrapperClass": "lg:rounded-l-3xl",
         "title": "Strict export selection",
         "description": "Every flower is carefully evaluated, and only roses with ideal bud size, opening stage, and symmetry make it into the export batch.",
-        "imageClass": "mx-auto mt-5 self-end object-cover w-[90%]",
+        "imageClass": "mx-auto mt-5 self-center object-cover w-[90%] rounded-2xl",
         "imageContainerClass": "relative flex min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
         "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
         "headingClass": "pb-3 sm:pb-0",
@@ -58,7 +58,7 @@
   },
   "caracteristicas": {
     "titulo": "From Cayambe soils to global markets",
-    "subtitulo": "We make the most of unique equatorial conditions to grow top-quality roses. Our process combines traditional agricultural expertise with precise logistics.",
+    "subtitulo": "We make the most of unique equatorial conditions to grow top-quality roses. Our process combines traditional agricultural expertise with precise logistics to anticipate your needs, ensuring absolute freshness and flowers that stand out against any competition. We are direct growers, with daily availability, secure packaging, and personalized support.",
     "boton": {
       "titulo": "Learn more"
     },

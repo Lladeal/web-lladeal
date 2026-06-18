@@ -6,7 +6,7 @@ const ui = {
       home: 'Inicio',
       about: 'Nosotros',
       contact: 'Contactos',
-      catalogo: 'Catalogo',
+      catalogo: 'Catálogo',
       blog: 'Blog',
       switchToEnglish: 'EN',
       switchToSpanish: 'ES',
@@ -16,7 +16,7 @@ const ui = {
       logoAltSuffix: 'inicio',
     },
     footer: {
-      moreInfo: '¿Mas informacion?',
+      moreInfo: '¿Mas información?',
       contactUs: 'Contáctanos',
       craftedBy: 'Creado por',
       emailSubmitAria: 'Enviar correo',

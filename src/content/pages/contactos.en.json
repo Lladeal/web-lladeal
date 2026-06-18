@@ -2,20 +2,26 @@
   "contactos": {
     "titulo": "Contact us",
     "subtitulo": "Questions, comments, or quote requests.",
+    "titulo_form": "How can we help you?",
+    "descripcion_form": "Leave us your inquiry and we will get back to you soon.",
     "direcciones": {
       "titulo": "Our location:",
       "direccion_1": "Cayambe, Pesillo",
       "direccion_2": "Olmedo, Ecuador"
     },
     "correo": {
-      "titulo": "Email or call us:"
+      "titulo": "Email or call us:",
+      "telefono": "+593 939730772",
+      "mail": "sales@lladeal.com.ec"
     },
     "blog": {
       "titulo": "Variety Catalog",
       "detalles": {
         "descripcion": "Explore our exclusive collection of premium high-altitude roses.",
-        "texto": "View rose catalog"
+        "texto": "View rose catalog",
+        "link": "/catalogo"
       }
-    }
+    },
+    "formulario": "https://formspree.io/f/YOUR_ID"
   }
 }

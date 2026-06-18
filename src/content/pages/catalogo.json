@@ -1,12 +1,12 @@
 {
   "hero": {
-    "preTitle": "Catalogo",
-    "title": "Revisa nuestro catalogo de flores",
+    "preTitle": "Catálogo",
+    "title": "Revisa nuestro catálogo de flores",
     "subTitle": "Explora nuestras variedades premium cultivadas en Cayambe. Cada rosa destaca por su color, frescura y resistencia para los mercados mas exigentes.",
     "linkTitle": "Hablar con ventas",
     "linkHref": "/contact",
     "linkAriaLabel": "Hablar con el equipo comercial sobre variedades de rosas",
-    "linktitle2": "Descargar catalogo",
+    "linktitle2": "Descargar catálogo",
     "linkhref2": "/uploads/CATALOGO-LLADEAL-1.pdf"
   },
   "listing": {
@@ -14,16 +14,16 @@
     "button": "Ver detalle"
   },
   "detail": {
-    "badge": "Catalogo",
+    "badge": "Catálogo",
     "consultButton": "Consultar esta variedad",
-    "buyButton": "Comprar",
-    "backButton": "Volver al catalogo",
+    "buyButton": "Solicitar cotización",
+    "backButton": "Volver al catálogo",
     "specsTitle": "Ficha tecnica",
     "specs": {
-      "budSize": "Tamano del boton",
+      "budSize": "Tamaño del botón",
       "stemLength": "Longitud del tallo",
       "vaseLife": "Vida en florero",
-      "petals": "Numero de petalos",
+      "petals": "Numero de pétalos",
       "phenologicalStage": "Estado fenologico",
       "cycle": "Ciclo"
     }

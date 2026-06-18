@@ -5,10 +5,10 @@
     "link": "https://wa.link/w9n4jn"
   },
   "hero": {
-    "titulo": "Finca Lladeal: El arte de transformar altura y sol en flores inolvidables.",
+    "titulo": "Lladeal: Rosas premium de Ecuador para importadores, mayoristas y floristerías internacionales.",
     "subtitulo": "Ubicados estratégicamente en Pesillo, Cayambe. Aprovechamos la luz ecuatorial y suelos cálidos para ofrecer un entorno geográfico excepcional.",
     "Boton_1": {
-      "titulo": "Ver nuestro catalogo",
+      "titulo": "Ver nuestro catálogo",
       "link": "/catalogo"
     },
     "boton_2": {
@@ -27,31 +27,31 @@
       {
         "title": "Selección rigurosa de exportación",
         "description": "Criterios de excelencia: Evaluamos minuciosamente cada flor, eligiendo solo aquellas que cumplen con el tamaño de botón perfecto, la apertura ideal y una simetría impecable.",
-        "image": "/uploads/Flor-vertical.avif",
+        "image": "/uploads/_MG_1306.avif",
         "class": "relative lg:row-span-2",
         "wrapperClass": "lg:rounded-l-3xl",
-        "imageClass": "mx-auto mt-5 self-end object-cover w-[90%]",
-        "imageContainerClass": "relative flex min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
-        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
+        "imageClass": "mx-auto mt-5 self-start object-cover w-[90%] rounded-2xl",
+        "imageContainerClass": "relative flex min-h-[25rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 md:bottom-30 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
         "headingClass": "pb-3 sm:pb-0"
       },
       {
         "title": "Cultivo artesanal en la altura",
         "description": "Cuidado directo en el campo: Trabajamos la tierra de Pesillo con manos expertas, aprovechando la luz perpendicular de la línea ecuatorial para dar vida a tallos robustos y colores intensos.",
-        "image": "/uploads/Pesillo01.avif",
+        "image": "/uploads/_MG_1252.avif",
         "class": "relative max-lg:row-start-1",
-        "imageClass": "w-full rounded-t-xl",
+        "imageClass": "w-full rounded-t-xl mt-5",
         "imageContainerClass": "relative flex flex-1 items-center justify-center px-4 max-lg:pb-12 max-lg:pt-10 lg:pb-2",
         "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-1 z-10 mx-auto h-28 w-[93%] bg-linear-to-b/oklch from-transparent via-white to-white"
       },
       {
         "title": "Nutrición y frescura garantizada",
         "description": "Suelos cálidos y nutrientes puros: Alimentamos nuestras plantas con los minerales de las tierras altas de Cayambe, asegurando que cada rosa tenga una vida en florero mucho más larga y duradera.",
-        "image": "/uploads/Rosas.avif",
+        "image": "/uploads/flores.avif",
         "class": "relative lg:row-span-2",
-        "imageClass": "h-full object-cover",
-        "imageContainerClass": "relative min-h-[30rem] w-full grow",
-        "imageSecondaryContainerClass": "absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl shadow-2xl"
+        "imageClass": "h-full object-cover rounded-xl",
+        "imageContainerClass": "relative min-h-[25rem] w-full grow",
+        "imageSecondaryContainerClass": "absolute bottom-0 md:left-10 left-5 right-0 top-5 overflow-hidden rounded-xl shadow-2xl"
       },
       {
         "title": "Y mas...",
@@ -73,7 +73,7 @@
   },
   "caracteristicas": {
     "titulo": "Del suelo de Cayambe a los mercados del mundo",
-    "subtitulo": "Aprovechamos las condiciones geográficas más exigentes de la línea ecuatorial para cultivar rosas de calidad superior. Nuestro proceso combina el conocimiento agrícola tradicional con una logística precisa para anticipar tus necesidades, garantizando frescura absoluta y flores que destacan frente a cualquier competencia.",
+    "subtitulo": "Aprovechamos las condiciones geográficas más exigentes de la línea ecuatorial para cultivar rosas de calidad superior. Nuestro proceso combina el conocimiento agrícola tradicional con una logística precisa para anticipar tus necesidades, garantizando frescura absoluta y flores que destacan frente a cualquier competencia. Somos productores directos, contamos con disponibilidad diaria, empaque seguro y atención personalizada.",
     "boton": {
       "titulo": "Saber más",
       "link": "/contact"

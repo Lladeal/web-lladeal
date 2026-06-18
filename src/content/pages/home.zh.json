@@ -4,7 +4,7 @@
     "titulo_link": "预约洽谈！"
   },
   "hero": {
-    "titulo": "Lladeal 农场：让海拔与阳光成就难忘花卉。",
+    "titulo": "Lladeal：来自厄瓜多尔的优质玫瑰，服务进口商、批发商与国际花艺客户。",
     "subtitulo": "我们位于卡扬贝佩西约，充分利用赤道阳光与温暖土壤，打造卓越的玫瑰生长环境。",
     "Boton_1": {
       "titulo": "查看产品目录"
@@ -21,7 +21,7 @@
         "wrapperClass": "lg:rounded-l-3xl",
         "title": "严格出口筛选",
         "description": "每一朵花都经过细致评估，只有花头尺寸、开放阶段和对称性都达到标准的玫瑰才能进入出口流程。",
-        "imageClass": "mx-auto mt-5 self-end object-cover w-[90%]",
+        "imageClass": "mx-auto mt-5 self-center object-cover w-[90%] rounded-2xl",
         "imageContainerClass": "relative flex min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
         "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
         "headingClass": "pb-3 sm:pb-0",
@@ -58,7 +58,7 @@
   },
   "caracteristicas": {
     "titulo": "从卡扬贝土壤走向全球市场",
-    "subtitulo": "我们充分利用赤道高地的独特条件，培育卓越玫瑰。传统农业经验与精准物流相结合，帮助我们稳定满足国际客户需求。",
+    "subtitulo": "我们充分利用赤道地区最具挑战性的地理条件，培育高品质玫瑰。我们的流程融合传统种植经验与精准物流，提前响应您的需求，确保卓越新鲜度，并让每一枝花在市场中脱颖而出。我们是直接生产商，提供每日稳定供应、安全包装与个性化服务。",
     "boton": {
       "titulo": "了解更多"
     },

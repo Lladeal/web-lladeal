@@ -4,7 +4,7 @@
     "titulo_link": "Vereinbaren Sie ein Gesprach!"
   },
   "hero": {
-    "titulo": "Lladeal Farm: Wir verwandeln Hohe und Sonnenlicht in unvergessliche Blumen.",
+    "titulo": "Lladeal: Premiumrosen aus Ecuador fur Importeure, Grosshandler und internationale Floristen.",
     "subtitulo": "Strategisch in Pesillo, Cayambe gelegen, nutzen wir das Aquatoriallicht und warme Boden, um ideale Bedingungen fur den Anbau zu schaffen.",
     "Boton_1": {
       "titulo": "Unseren Katalog ansehen"
@@ -21,7 +21,7 @@
         "wrapperClass": "lg:rounded-l-3xl",
         "title": "Strenge Exportauswahl",
         "description": "Jede Blume wird sorgfaltig gepruft, und nur Rosen mit idealer Knospengrosse, passendem Offnungsstadium und perfekter Symmetrie gelangen in die Exportcharge.",
-        "imageClass": "mx-auto mt-5 self-end object-cover w-[90%]",
+        "imageClass": "mx-auto mt-5 self-center object-cover w-[90%] rounded-2xl",
         "imageContainerClass": "relative flex min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
         "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
         "headingClass": "pb-3 sm:pb-0",
@@ -58,7 +58,7 @@
   },
   "caracteristicas": {
     "titulo": "Von den Boden Cayambes zu den Weltmarkten",
-    "subtitulo": "Wir nutzen die einzigartigen Bedingungen am Aquator optimal, um Rosen von hochster Qualitat anzubauen. Unser Prozess verbindet traditionelle Landwirtschaft mit praziser Logistik.",
+    "subtitulo": "Wir nutzen die anspruchsvollen geografischen Bedingungen entlang des Aquators, um Rosen von hochster Qualitat anzubauen. Unser Prozess verbindet traditionelles landwirtschaftliches Know-how mit praziser Logistik, um Ihren Bedarf vorauszudenken und absolute Frische sowie Blumen zu garantieren, die sich in jedem Markt abheben. Wir sind Direktproduzenten und bieten tagliche Verfugbarkeit, sichere Verpackung und personliche Betreuung.",
     "boton": {
       "titulo": "Mehr erfahren"
     },
