@@ -446,6 +446,28 @@ content:
                     type: image
                     options:
                       media: uploads
+      - name: marquee_page
+        label: Galeria marquee
+        type: file
+        path: src/content/pages/marquee.json
+        format: json
+        fields:
+          - name: marquee
+            label: Imagenes del marquee
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{alt}'
+            fields:
+              - name: src
+                label: Imagen
+                type: image
+                options:
+                  media: uploads
+              - name: alt
+                label: Texto alternativo
+                type: string
       - name: seo_pages
         label: SEO y metadatos
         type: file
