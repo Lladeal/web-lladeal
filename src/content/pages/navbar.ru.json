@@ -4,7 +4,8 @@
       "descripcion": "Логотип Lladeal"
     },
     "boton": {
-      "texto": "Связаться с нами"
+      "texto": "Купить",
+      "link": "https://eshops.kometsales.com/813947/"
     }
   }
 }

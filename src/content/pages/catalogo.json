@@ -16,6 +16,7 @@
   "detail": {
     "badge": "Catalogo",
     "consultButton": "Consultar esta variedad",
+    "buyButton": "Comprar",
     "backButton": "Volver al catalogo",
     "specsTitle": "Ficha tecnica",
     "specs": {

@@ -34,6 +34,7 @@ const technicalData = item.Data ?? {
   Ciclo: '-',
   link: '#',
 };
+const buyLink = technicalData.link || 'https://eshops.kometsales.com/813947/';
 
 const seo = {
   title: `${item.titulo} | ${detail.badge}`,
@@ -112,17 +113,12 @@ const specs = [
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
-          {
-            technicalData.link !== '#' && (
-              <Button href={technicalData.link}>{detail.consultButton}</Button>
-            )
-          }
           <Button href="/catalogo" variant="alternative"
             >{detail.backButton}</Button
           >
-          <Button href="/catalogo" variant="alternative"
-            >Comprar</Button
-          >
+          <Button href={buyLink} target="_blank" variant="alternative">
+            {detail.buyButton}
+          </Button>
         </div>
       </div>
 

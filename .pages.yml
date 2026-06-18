@@ -725,8 +725,8 @@ content:
               - name: badge
                 label: Etiqueta superior
                 type: string
-              - name: consultButton
-                label: Texto del boton para consultar
+              - name: buyButton
+                label: Texto del boton para comprar
                 type: string
               - name: backButton
                 label: Texto del boton para volver
@@ -1070,8 +1070,8 @@ content:
               - name: badge
                 label: Etiqueta superior
                 type: string
-              - name: consultButton
-                label: Texto del boton para consultar
+              - name: buyButton
+                label: Texto del boton para comprar
                 type: string
               - name: backButton
                 label: Texto del boton para volver
@@ -1166,6 +1166,9 @@ content:
                 fields:
                   - name: texto
                     label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
                     type: string
       - name: seo_pages_en
         label: SEO en ingles
@@ -1502,8 +1505,8 @@ content:
               - name: badge
                 label: Etiqueta superior
                 type: string
-              - name: consultButton
-                label: Texto del boton para consultar
+              - name: buyButton
+                label: Texto del boton para comprar
                 type: string
               - name: backButton
                 label: Texto del boton para volver
@@ -1576,6 +1579,9 @@ content:
                 fields:
                   - name: texto
                     label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
                     type: string
       - name: seo_pages_ru
         label: SEO en ruso
@@ -1866,8 +1872,8 @@ content:
               - name: badge
                 label: Etiqueta superior
                 type: string
-              - name: consultButton
-                label: Texto del boton para consultar
+              - name: buyButton
+                label: Texto del boton para comprar
                 type: string
               - name: backButton
                 label: Texto del boton para volver
@@ -1940,6 +1946,9 @@ content:
                 fields:
                   - name: texto
                     label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
                     type: string
       - name: seo_pages_zh
         label: SEO en chino
@@ -2230,8 +2239,8 @@ content:
               - name: badge
                 label: Etiqueta superior
                 type: string
-              - name: consultButton
-                label: Texto del boton para consultar
+              - name: buyButton
+                label: Texto del boton para comprar
                 type: string
               - name: backButton
                 label: Texto del boton para volver
@@ -2304,6 +2313,9 @@ content:
                 fields:
                   - name: texto
                     label: Texto del boton
+                    type: string
+                  - name: link
+                    label: Enlace al hacer clic
                     type: string
       - name: seo_pages_de
         label: SEO en aleman
