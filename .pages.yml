@@ -63,7 +63,9 @@ content:
                 type: boolean
               - name: video
                 label: Video principal
-                type: string
+                type: image
+                options:
+                  media: uploads
               - name: ImagenArchivo
                 label: Imagen principal subida
                 type: image
