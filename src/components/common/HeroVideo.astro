@@ -9,12 +9,14 @@ const locale = getLocaleFromUrl(Astro.url);
 const { imagen } = getHomeContent(locale);
 const t = getUiStrings(locale).footer;
 const heroData = imagen as typeof imagen & {
+  usarVideo?: boolean;
   ImagenArchivo?: string;
   Imagen?: string;
 };
 const heroImage = heroData.ImagenArchivo?.trim() || heroData.Imagen?.trim();
 const heroImageSrc = heroImage ? withBase(heroImage) : undefined;
 const heroVideoSrc = imagen.video ? withBase(imagen.video) : undefined;
+const shouldRenderVideo = heroData.usarVideo !== false && !!heroVideoSrc;
 ---
 
 {/* Hero Visual */}
@@ -45,18 +47,34 @@ const heroVideoSrc = imagen.video ? withBase(imagen.video) : undefined;
     )
   }
 
-  <div class="aspect-video">
-    <video
-      autoplay
-      loop
-      muted
-      playsinline
-      preload="metadata"
-      poster={withBase('/poster.png')}
-      class="aspect-auto rounded-xl"
-    >
-      {heroVideoSrc && <source src={heroVideoSrc} type="video/mp4" />}
-      {t.videoFallback}
-    </video>
+  <div class="aspect-video overflow-hidden rounded-xl">
+    {
+      shouldRenderVideo ? (
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="metadata"
+          poster={withBase('/poster.png')}
+          class="h-full w-full object-cover"
+        >
+          {heroVideoSrc && <source src={heroVideoSrc} type="video/mp4" />}
+          {t.videoFallback}
+        </video>
+      ) : heroImageSrc ? (
+        <img
+          src={heroImageSrc}
+          alt="Visual principal"
+          loading="eager"
+          fetchpriority="high"
+          class="h-full w-full object-cover"
+        />
+      ) : (
+        <div class="flex h-full w-full items-center justify-center bg-slate-100 text-sm text-slate-500">
+          {t.videoFallback}
+        </div>
+      )
+    }
   </div>
 </div>

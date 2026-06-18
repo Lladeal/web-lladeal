@@ -58,6 +58,9 @@ content:
             label: Video e imagen principal
             type: object
             fields:
+              - name: usarVideo
+                label: Mostrar video en lugar de imagen
+                type: boolean
               - name: video
                 label: Video principal
                 type: string

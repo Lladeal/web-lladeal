@@ -17,7 +17,8 @@
     }
   },
   "imagen": {
-    "video": "/uploads/Flores.mp4",
+    "usarVideo": false,
+    "video": "/uploads/fotos_lladeal/_MG_1227.avif",
     "ImagenArchivo": "/uploads/ISOTIPO_LLADEAL.avif"
   },
   "features": {
