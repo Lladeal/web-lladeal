@@ -8,17 +8,15 @@
     "titulo": "Lladeal: Rosas premium de Ecuador para importadores, mayoristas y floristerías internacionales.",
     "subtitulo": "Ubicados estratégicamente en Pesillo, Cayambe. Aprovechamos la luz ecuatorial y suelos cálidos para ofrecer un entorno geográfico excepcional.",
     "Boton_1": {
-      "titulo": "Ver nuestro catálogo",
-      "link": "/catalogo"
+      "titulo": "Ver nuestro catálogo"
     },
     "boton_2": {
-      "titulo": "Contáctanos",
-      "link": "/contact"
+      "titulo": "Contáctanos"
     }
   },
   "imagen": {
-    "video": "/uploads/Flores.mp4",
-    "ImagenArchivo": "/uploads/ISOTIPO_LLADEAL.avif"
+    "ImagenArchivo": "/uploads/ISOTIPO_LLADEAL.avif",
+    "Imagen": "/uploads/fotos_lladeal/_MG_1227.avif"
   },
   "features": {
     "titulo": "Finca Lladeal: Excelencia en cada pétalo",
