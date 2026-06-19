@@ -15,11 +15,18 @@ const { hero, listing, seo } = getCatalogContent(locale);
 const { carrusel } = getHomeContent(locale);
 const itemsPerPage = 9;
 const totalPages = Math.ceil(carrusel.length / itemsPerPage);
-const catalogTypes = Array.from(
-  new Set(carrusel.map(item => item.tipo).filter(Boolean))
-).sort((a, b) => a.localeCompare(b, locale));
-
 type CatalogItem = (typeof carrusel)[number];
+const catalogItems = carrusel as CatalogItem[];
+const catalogTypes: string[] = [];
+
+for (const item of catalogItems) {
+  if (typeof item.tipo !== 'string' || item.tipo.length === 0) continue;
+  if (!catalogTypes.includes(item.tipo)) {
+    catalogTypes.push(item.tipo);
+  }
+}
+
+catalogTypes.sort((a: string, b: string) => a.localeCompare(b, locale));
 ---
 
 <BaseLayout seo={seo}>
@@ -79,7 +86,7 @@ type CatalogItem = (typeof carrusel)[number];
 
           <div class="mt-5 flex flex-wrap gap-3" data-catalog-filters>
             {
-              catalogTypes.map(type => (
+              catalogTypes.map((type: string) => (
                 <label class="inline-flex cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-pink-300 hover:bg-pink-50">
                   <input
                     type="checkbox"
@@ -106,10 +113,14 @@ type CatalogItem = (typeof carrusel)[number];
           >
             <div class="bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] p-6">
               <img
-                src={withBase(item.ImagenArchivo) ?? ''}
+                src={index < itemsPerPage ? withBase(item.ImagenArchivo) : undefined}
+                data-src={withBase(item.ImagenArchivo) ?? ''}
                 alt={item.descripcion}
                 width={640}
                 height={780}
+                loading={index < itemsPerPage ? 'eager' : 'lazy'}
+                decoding="async"
+                fetchpriority={index < itemsPerPage ? 'high' : 'low'}
                 class="mx-auto h-72 w-auto object-contain"
               />
             </div>
@@ -218,6 +229,18 @@ type CatalogItem = (typeof carrusel)[number];
       let currentPage = 1;
       let activeTypes = [];
 
+      const ensureCardImage = card => {
+        const image = card.querySelector('img[data-src]');
+        if (!(image instanceof HTMLImageElement)) return;
+        if (image.dataset.loaded === 'true') return;
+
+        const src = image.getAttribute('data-src');
+        if (!src) return;
+
+        image.src = src;
+        image.dataset.loaded = 'true';
+      };
+
       const getFilteredCards = () => {
         if (!activeTypes.length) return cards;
         return cards.filter(card => activeTypes.includes(card.getAttribute('data-type')));
@@ -252,7 +275,12 @@ type CatalogItem = (typeof carrusel)[number];
 
           const cardIndex = filteredCards.indexOf(card);
           const cardPage = Math.floor(cardIndex / itemsPerPage) + 1;
-          card.classList.toggle('hidden', cardPage !== currentPage);
+          const isVisible = cardPage === currentPage;
+          card.classList.toggle('hidden', !isVisible);
+
+          if (isVisible) {
+            ensureCardImage(card);
+          }
         });
 
         if (pagination) {
