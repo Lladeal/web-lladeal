@@ -9,7 +9,12 @@
   },
   "listing": {
     "typeLabel": "类型",
-    "button": "查看详情"
+    "button": "查看详情",
+    "filterTitle": "按类型筛选",
+    "clearFilters": "清除筛选",
+    "paginationLabel": "目录分页",
+    "previous": "上一页",
+    "next": "下一页"
   },
   "detail": {
     "badge": "产品目录",

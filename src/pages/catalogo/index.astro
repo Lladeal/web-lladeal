@@ -15,6 +15,9 @@ const { hero, listing, seo } = getCatalogContent(locale);
 const { carrusel } = getHomeContent(locale);
 const itemsPerPage = 9;
 const totalPages = Math.ceil(carrusel.length / itemsPerPage);
+const catalogTypes = Array.from(
+  new Set(carrusel.map(item => item.tipo).filter(Boolean))
+).sort((a, b) => a.localeCompare(b, locale));
 
 type CatalogItem = (typeof carrusel)[number];
 ---
@@ -54,13 +57,52 @@ type CatalogItem = (typeof carrusel)[number];
   </section>
 
   <section class="mx-auto max-w-[85rem] px-4 pb-24 sm:px-6 lg:px-8">
+    {
+      catalogTypes.length > 0 && (
+        <div class="mb-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p class="text-sm font-semibold tracking-[0.16em] text-pink-600 uppercase">
+                {listing.filterTitle}
+              </p>
+              <p class="mt-2 text-sm text-slate-500">{listing.typeLabel}</p>
+            </div>
+
+            <button
+              type="button"
+              class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+              data-clear-filters
+            >
+              {listing.clearFilters}
+            </button>
+          </div>
+
+          <div class="mt-5 flex flex-wrap gap-3" data-catalog-filters>
+            {
+              catalogTypes.map(type => (
+                <label class="inline-flex cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-pink-300 hover:bg-pink-50">
+                  <input
+                    type="checkbox"
+                    value={type}
+                    class="size-4 rounded border-slate-300 text-[#e3186d] focus:ring-transparent"
+                    data-filter-checkbox
+                  />
+                  <span>{type}</span>
+                </label>
+              ))
+            }
+          </div>
+        </div>
+      )
+    }
+
     <div id="catalog-grid" class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {
         carrusel.map((item: CatalogItem, index: number) => (
           <article
             class={`group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl ${index >= itemsPerPage ? 'hidden' : ''}`}
             data-catalog-item
-            data-page={Math.floor(index / itemsPerPage) + 1}
+            data-type={item.tipo}
           >
             <div class="bg-linear-to-br from-[#f7d2e3] via-white to-[#fdecef] p-6">
               <img
@@ -104,7 +146,7 @@ type CatalogItem = (typeof carrusel)[number];
       totalPages > 1 && (
         <nav
           class="mt-10 flex flex-wrap items-center justify-center gap-3"
-          aria-label="Paginacion del catalogo"
+          aria-label={listing.paginationLabel}
           data-catalog-pagination
         >
           <button
@@ -113,7 +155,7 @@ type CatalogItem = (typeof carrusel)[number];
             data-page-prev
             disabled
           >
-            Anterior
+            {listing.previous}
           </button>
 
           <div class="flex flex-wrap items-center justify-center gap-2">
@@ -145,7 +187,7 @@ type CatalogItem = (typeof carrusel)[number];
             data-page-next
             disabled={totalPages === 1}
           >
-            Siguiente
+            {listing.next}
           </button>
         </nav>
       )
@@ -153,34 +195,80 @@ type CatalogItem = (typeof carrusel)[number];
   </section>
 </BaseLayout>
 
-<script is:inline define:vars={{ totalPages }}>
+<script is:inline define:vars={{ totalPages, itemsPerPage }}>
   (() => {
     const initCatalogPagination = () => {
       const pagination = document.querySelector('[data-catalog-pagination]');
       const cards = Array.from(document.querySelectorAll('[data-catalog-item]'));
+      const filterInputs = Array.from(
+        document.querySelectorAll('[data-filter-checkbox]')
+      );
+      const clearFiltersButton = document.querySelector('[data-clear-filters]');
 
-      if (!pagination || !cards.length || pagination.dataset.bound === 'true') return;
-      pagination.dataset.bound = 'true';
+      if (!cards.length) return;
+      if (pagination && pagination.dataset.bound === 'true') return;
+      if (pagination) pagination.dataset.bound = 'true';
 
-      const prevButton = pagination.querySelector('[data-page-prev]');
-      const nextButton = pagination.querySelector('[data-page-next]');
+      const prevButton = pagination?.querySelector('[data-page-prev]');
+      const nextButton = pagination?.querySelector('[data-page-next]');
       const pageButtons = Array.from(
-        pagination.querySelectorAll('[data-page-button]')
+        pagination?.querySelectorAll('[data-page-button]') ?? []
       );
 
       let currentPage = 1;
+      let activeTypes = [];
+
+      const getFilteredCards = () => {
+        if (!activeTypes.length) return cards;
+        return cards.filter(card => activeTypes.includes(card.getAttribute('data-type')));
+      };
+
+      const updateFilterStyles = () => {
+        filterInputs.forEach(input => {
+          if (!(input instanceof HTMLInputElement)) return;
+          const label = input.closest('label');
+          if (!label) return;
+          label.classList.toggle('border-pink-300', input.checked);
+          label.classList.toggle('bg-pink-50', input.checked);
+          label.classList.toggle('text-pink-700', input.checked);
+        });
+      };
 
       const renderPage = page => {
-        currentPage = page;
+        const filteredCards = getFilteredCards();
+        const filteredTotalPages = Math.max(
+          1,
+          Math.ceil(filteredCards.length / itemsPerPage)
+        );
+
+        currentPage = Math.min(Math.max(page, 1), filteredTotalPages);
 
         cards.forEach(card => {
-          const cardPage = Number(card.getAttribute('data-page'));
+          const isVisibleByFilter = filteredCards.includes(card);
+          if (!isVisibleByFilter) {
+            card.classList.add('hidden');
+            return;
+          }
+
+          const cardIndex = filteredCards.indexOf(card);
+          const cardPage = Math.floor(cardIndex / itemsPerPage) + 1;
           card.classList.toggle('hidden', cardPage !== currentPage);
         });
+
+        if (pagination) {
+          pagination.classList.toggle('hidden', filteredCards.length <= itemsPerPage);
+        }
 
         pageButtons.forEach(button => {
           const buttonPage = Number(button.getAttribute('data-page-button'));
           const isActive = buttonPage === currentPage;
+          const shouldHide = buttonPage > filteredTotalPages;
+
+          button.classList.toggle('hidden', shouldHide);
+          if (shouldHide) {
+            button.removeAttribute('aria-current');
+            return;
+          }
 
           if (isActive) {
             button.setAttribute('aria-current', 'page');
@@ -200,8 +288,17 @@ type CatalogItem = (typeof carrusel)[number];
         }
 
         if (nextButton instanceof HTMLButtonElement) {
-          nextButton.disabled = currentPage === totalPages;
+          nextButton.disabled = currentPage === filteredTotalPages;
         }
+      };
+
+      const syncFilters = () => {
+        activeTypes = filterInputs
+          .filter(input => input instanceof HTMLInputElement && input.checked)
+          .map(input => input.value);
+
+        updateFilterStyles();
+        renderPage(1);
       };
 
       pageButtons.forEach(button => {
@@ -237,6 +334,26 @@ type CatalogItem = (typeof carrusel)[number];
           }
         });
       }
+
+      filterInputs.forEach(input => {
+        if (!(input instanceof HTMLInputElement)) return;
+        input.addEventListener('change', syncFilters);
+      });
+
+      if (clearFiltersButton instanceof HTMLButtonElement) {
+        clearFiltersButton.addEventListener('click', () => {
+          filterInputs.forEach(input => {
+            if (input instanceof HTMLInputElement) {
+              input.checked = false;
+            }
+          });
+
+          syncFilters();
+        });
+      }
+
+      updateFilterStyles();
+      renderPage(1);
     };
 
     initCatalogPagination();

@@ -8,10 +8,12 @@
     "titulo": "Lladeal: Rosas premium de Ecuador para importadores, mayoristas y floristerías internacionales.",
     "subtitulo": "Ubicados estratégicamente en Pesillo, Cayambe. Aprovechamos la luz ecuatorial y suelos cálidos para ofrecer un entorno geográfico excepcional.",
     "Boton_1": {
-      "titulo": "Ver nuestro catálogo"
+      "titulo": "Ver nuestro catálogo",
+      "link": "/catalogo"
     },
     "boton_2": {
-      "titulo": "Contáctanos"
+      "titulo": "Contáctanos",
+      "link": "/contact"
     }
   },
   "imagen": {
@@ -135,7 +137,7 @@
       "titulo": "ATOMIC",
       "descripcion": "Rosa ATOMIC",
       "ImagenArchivo": "/uploads/catalogo-lladeal-1-5.avif",
-      "tipo": "Bicolores",
+      "tipo": "Bicolor",
       "Data": {
         "Tamaño_del_boton": "6.0 - 6.5 cm",
         "Longitud_del_tallo": "40 - 70 cm",
@@ -165,7 +167,7 @@
       "titulo": "DEEP PURPLE",
       "descripcion": "Rosa DEEP PURPLE",
       "ImagenArchivo": "/uploads/catalogo-lladeal-1-7.webp",
-      "tipo": "Bicolores",
+      "tipo": "Bicolor",
       "Data": {
         "Tamaño_del_boton": "5.5 - 7 cm",
         "Longitud_del_tallo": "50 - 80 cm",
@@ -180,7 +182,7 @@
       "titulo": "ESPERANCE",
       "descripcion": "Rosa ESPERANCE",
       "ImagenArchivo": "/uploads/catalogo-lladeal-1-8.webp",
-      "tipo": "Bicolores",
+      "tipo": "Bicolor",
       "Data": {
         "Tamaño_del_boton": "6,0 - 7 cm",
         "Longitud_del_tallo": "50 - 70 cm",
@@ -285,7 +287,7 @@
       "titulo": "HIGH MAGIC",
       "descripcion": "Rosa HIGH MAGIC",
       "ImagenArchivo": "/uploads/catalogo-lladeal-1-15.webp",
-      "tipo": "Bicolores",
+      "tipo": "Bicolor",
       "Data": {
         "Tamaño_del_boton": "5.6 - 6 cm",
         "Longitud_del_tallo": "50 - 90 cm",
@@ -360,7 +362,7 @@
       "titulo": "PALOMA",
       "descripcion": "Rosa PALOMA",
       "ImagenArchivo": "/uploads/catalogo-lladeal-1-20.webp",
-      "tipo": "Bicolores",
+      "tipo": "Bicolor",
       "Data": {
         "Tamaño_del_boton": "5 - 6 cm",
         "Longitud_del_tallo": "40 - 70 cm",

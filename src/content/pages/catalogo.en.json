@@ -9,7 +9,12 @@
   },
   "listing": {
     "typeLabel": "Type",
-    "button": "View details"
+    "button": "View details",
+    "filterTitle": "Filter by type",
+    "clearFilters": "Clear filters",
+    "paginationLabel": "Catalog pagination",
+    "previous": "Previous",
+    "next": "Next"
   },
   "detail": {
     "badge": "Catalog",

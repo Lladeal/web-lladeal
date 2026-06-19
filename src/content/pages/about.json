@@ -79,21 +79,22 @@
       {
         "nombre": "Fernando Tituaña",
         "cargo": "Gerente General",
-        "foto": "/uploads/fotos_lladeal/_MG_1306.avif"
+        "foto": "/uploads/fotos_personal/_MG_1306.avif"
       },
       {
         "nombre": "Alberto Tituaña",
-        "cargo": "Especialista en Ventas",
-        "foto": "/uploads/chatgpt-image-10-jun-2026-122930.avif"
+        "cargo": "Gerencia Comercial",
+        "foto": "/uploads/fotos_personal/_MG_1310.avif"
       },
       {
         "nombre": "Javier Vallejo",
-        "cargo": "Supervisor"
+        "cargo": "Ventas",
+        "foto": "/uploads/fotos_personal/_MG_1338.avif"
       },
       {
         "nombre": "Ricardo Tituaña",
-        "cargo": "Manager Logístico",
-        "foto": "/uploads/chatgpt-image-10-jun-2026-122754.avif"
+        "cargo": "Jefa de Poscocecha",
+        "foto": "/uploads/fotos_personal/_MG_1335.avif"
       }
     ]
   }

@@ -11,7 +11,12 @@
   },
   "listing": {
     "typeLabel": "Tipo",
-    "button": "Ver detalle"
+    "button": "Ver detalle",
+    "filterTitle": "Filtrar por tipo",
+    "clearFilters": "Limpiar filtros",
+    "paginationLabel": "Paginacion del catalogo",
+    "previous": "Anterior",
+    "next": "Siguiente"
   },
   "detail": {
     "badge": "Catálogo",

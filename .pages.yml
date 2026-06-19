@@ -745,6 +745,21 @@ content:
               - name: button
                 label: Texto del boton de cada rosa
                 type: string
+              - name: filterTitle
+                label: Titulo del filtro
+                type: string
+              - name: clearFilters
+                label: Texto para limpiar filtros
+                type: string
+              - name: paginationLabel
+                label: Descripcion accesible de paginacion
+                type: string
+              - name: previous
+                label: Texto del boton anterior
+                type: string
+              - name: next
+                label: Texto del boton siguiente
+                type: string
           - name: detail
             label: Pagina de detalle de cada rosa
             type: object
@@ -1089,6 +1104,21 @@ content:
                 type: string
               - name: button
                 label: Texto del boton de cada rosa
+                type: string
+              - name: filterTitle
+                label: Titulo del filtro
+                type: string
+              - name: clearFilters
+                label: Texto para limpiar filtros
+                type: string
+              - name: paginationLabel
+                label: Descripcion accesible de paginacion
+                type: string
+              - name: previous
+                label: Texto del boton anterior
+                type: string
+              - name: next
+                label: Texto del boton siguiente
                 type: string
           - name: detail
             label: Pagina de detalle de cada rosa
@@ -1525,6 +1555,21 @@ content:
               - name: button
                 label: Texto del boton de cada rosa
                 type: string
+              - name: filterTitle
+                label: Titulo del filtro
+                type: string
+              - name: clearFilters
+                label: Texto para limpiar filtros
+                type: string
+              - name: paginationLabel
+                label: Descripcion accesible de paginacion
+                type: string
+              - name: previous
+                label: Texto del boton anterior
+                type: string
+              - name: next
+                label: Texto del boton siguiente
+                type: string
           - name: detail
             label: Pagina de detalle de cada rosa
             type: object
@@ -1892,6 +1937,21 @@ content:
               - name: button
                 label: Texto del boton de cada rosa
                 type: string
+              - name: filterTitle
+                label: Titulo del filtro
+                type: string
+              - name: clearFilters
+                label: Texto para limpiar filtros
+                type: string
+              - name: paginationLabel
+                label: Descripcion accesible de paginacion
+                type: string
+              - name: previous
+                label: Texto del boton anterior
+                type: string
+              - name: next
+                label: Texto del boton siguiente
+                type: string
           - name: detail
             label: Pagina de detalle de cada rosa
             type: object
@@ -2258,6 +2318,21 @@ content:
                 type: string
               - name: button
                 label: Texto del boton
+                type: string
+              - name: filterTitle
+                label: Titulo del filtro
+                type: string
+              - name: clearFilters
+                label: Texto para limpiar filtros
+                type: string
+              - name: paginationLabel
+                label: Descripcion accesible de paginacion
+                type: string
+              - name: previous
+                label: Texto del boton anterior
+                type: string
+              - name: next
+                label: Texto del boton siguiente
                 type: string
           - name: detail
             label: Detalle del producto

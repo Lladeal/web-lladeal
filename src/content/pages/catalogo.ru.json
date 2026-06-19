@@ -9,7 +9,12 @@
   },
   "listing": {
     "typeLabel": "Тип",
-    "button": "Смотреть подробнее"
+    "button": "Смотреть подробнее",
+    "filterTitle": "Фильтр по типу",
+    "clearFilters": "Сбросить фильтры",
+    "paginationLabel": "Пагинация каталога",
+    "previous": "Назад",
+    "next": "Вперед"
   },
   "detail": {
     "badge": "Каталог",
