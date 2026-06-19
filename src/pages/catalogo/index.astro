@@ -157,7 +157,7 @@ catalogTypes.sort((a: string, b: string) => a.localeCompare(b, locale));
     {
       totalPages > 1 && (
         <nav
-          class="mt-10 flex flex-wrap items-center justify-center gap-3"
+          class="mt-10 flex  items-center justify-center gap-3"
           aria-label={listing.paginationLabel}
           data-catalog-pagination
         >
@@ -170,7 +170,7 @@ catalogTypes.sort((a: string, b: string) => a.localeCompare(b, locale));
             {listing.previous}
           </button>
 
-          <div class="flex flex-wrap items-center justify-center gap-2">
+          <div class="flex items-center justify-center gap-2">
             {
               Array.from({ length: totalPages }, (_, index) => {
                 const page = index + 1;
