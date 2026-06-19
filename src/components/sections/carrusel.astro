@@ -40,6 +40,7 @@ const labelsByLocale = {
     learnMore: 'Saber más',
     buy: 'Solicitar cotización',
     viewDetail: 'Ver en detalle',
+    learnMoreAria: 'Saber más sobre',
     previous: 'Anterior',
     next: 'Siguiente',
   },
@@ -54,6 +55,7 @@ const labelsByLocale = {
     learnMore: 'Learn more',
     buy: 'Buy',
     viewDetail: 'View in detail',
+    learnMoreAria: 'Learn more about',
     previous: 'Previous',
     next: 'Next',
   },
@@ -68,6 +70,7 @@ const labelsByLocale = {
     learnMore: 'Подробнее',
     buy: 'Купить',
     viewDetail: 'Смотреть каталог',
+    learnMoreAria: 'Подробнее о',
     previous: 'Назад',
     next: 'Вперед',
   },
@@ -82,6 +85,7 @@ const labelsByLocale = {
     learnMore: '了解更多',
     buy: '购买',
     viewDetail: '查看目录',
+    learnMoreAria: '了解更多：',
     previous: '上一张',
     next: '下一张',
   },
@@ -96,6 +100,7 @@ const labelsByLocale = {
     learnMore: 'Mehr erfahren',
     buy: 'Kaufen',
     viewDetail: 'Katalog ansehen',
+    learnMoreAria: 'Mehr erfahren uber',
     previous: 'Zuruck',
     next: 'Weiter',
   },
@@ -223,6 +228,7 @@ const carouselItems = carrusel as CarouselItem[];
                         <Button
                           variant="alternative"
                           href={`/catalogo/${items.slug}`}
+                          ariaLabel={`${labels.learnMoreAria} ${items.titulo}`}
                         >
                           {' '}
                           {labels.learnMore}{' '}

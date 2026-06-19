@@ -144,6 +144,7 @@ catalogTypes.sort((a: string, b: string) => a.localeCompare(b, locale));
               <Button
                 href={`/catalogo/${item.slug}`}
                 className="inline-flex border-none px-4! py-2.5!"
+                ariaLabel={`${listing.button}: ${item.titulo}`}
               >
                 {listing.button}
               </Button>

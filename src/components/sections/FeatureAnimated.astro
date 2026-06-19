@@ -54,6 +54,7 @@ const { caracteristicas } = getHomeContent(locale);
           href={caracteristicas.boton.link}
           variant="tertiary"
           className="group inline-flex items-center justify-center gap-x-2 py-2.5! pr-4 pl-5 text-slate-700"
+          ariaLabel={`${caracteristicas.boton.titulo}: ${caracteristicas.titulo}`}
           >{caracteristicas.boton.titulo}<Icon name="chevronRight" /></Button
         >
       </div>
