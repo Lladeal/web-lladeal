@@ -182,8 +182,42 @@ function localizeRoseDescription(locale: Locale, title: string) {
   return `Rosa ${title}`;
 }
 
-function localizeRoseType(locale: Locale, type: string) {
+function buildTypeTranslationMap(entries: unknown) {
+  const map: Record<string, string> = {};
+
+  if (!Array.isArray(entries)) return map;
+
+  for (const entry of entries) {
+    if (!isPlainObject(entry)) continue;
+
+    const key = typeof entry.key === 'string' ? normalizeTitle(entry.key) : '';
+    const label = typeof entry.label === 'string' ? entry.label.trim() : '';
+
+    if (key && label) {
+      map[key] = label;
+    }
+  }
+
+  return map;
+}
+
+function localizeRoseType(
+  locale: Locale,
+  type: string,
+  localizedTypeTranslations?: unknown,
+  baseTypeTranslations?: unknown
+) {
   const normalizedType = normalizeTitle(type);
+  const localizedMap = buildTypeTranslationMap(localizedTypeTranslations);
+  const baseMap = buildTypeTranslationMap(baseTypeTranslations);
+
+  if (locale !== 'es' && localizedMap[normalizedType]) {
+    return localizedMap[normalizedType];
+  }
+
+  if (baseMap[normalizedType]) {
+    return baseMap[normalizedType];
+  }
 
   if (normalizedType === 'bicolor' || normalizedType === 'bicolores') {
     if (locale === 'en') return 'Bicolor';
@@ -220,11 +254,20 @@ function localizeRoseType(locale: Locale, type: string) {
   return type;
 }
 
-function localizeCarouselEntry(locale: Locale, baseEntry: Record<string, any>) {
+function localizeCarouselEntry(
+  locale: Locale,
+  baseEntry: Record<string, any>,
+  localizedHome?: Record<string, any>
+) {
   return {
     ...baseEntry,
     descripcion: localizeRoseDescription(locale, baseEntry.titulo),
-    tipo: localizeRoseType(locale, baseEntry.tipo),
+    tipo: localizeRoseType(
+      locale,
+      baseEntry.tipo,
+      localizedHome?.typeTranslations,
+      homeEs.typeTranslations
+    ),
     slug: slugify(baseEntry.titulo),
   };
 }
@@ -241,7 +284,9 @@ function dedupeCarouselEntries<T extends { slug: string }>(items: T[]) {
 
 function mergeHomeContent(locale: Locale, localizedHome: Record<string, any>) {
   const mergedCarousel = dedupeCarouselEntries(
-    homeEs.carrusel.map(baseItem => localizeCarouselEntry(locale, baseItem))
+    homeEs.carrusel.map(baseItem =>
+      localizeCarouselEntry(locale, baseItem, localizedHome)
+    )
   );
 
   const mergedFeaturesList = homeEs.features.lista.map((entry, index) => {

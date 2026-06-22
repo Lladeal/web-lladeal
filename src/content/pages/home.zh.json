@@ -13,6 +13,20 @@
       "titulo": "联系我们"
     }
   },
+  "typeTranslations": [
+    {
+      "key": "bicolor",
+      "label": "双色"
+    },
+    {
+      "key": "color unico",
+      "label": "纯色"
+    },
+    {
+      "key": "red",
+      "label": "红色"
+    }
+  ],
   "features": {
     "titulo": "Lladeal Farm：每一片花瓣都体现卓越",
     "subtitulo": "了解我们如何将卡扬贝的独特条件转化为世界级出口玫瑰，并结合精细人工照料与严格品质标准。",

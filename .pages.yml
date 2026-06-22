@@ -74,6 +74,20 @@ content:
               - name: Imagen
                 label: Imagen externa opcional
                 type: string
+          - name: typeTranslations
+            label: Traducciones de tipos de flor
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{key} -> {label}'
+            fields:
+              - name: key
+                label: Tipo base
+                type: string
+              - name: label
+                label: Texto visible
+                type: string
           - name: features
             label: Bloque destacado
             type: object
@@ -890,6 +904,20 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
+          - name: typeTranslations
+            label: Traducciones de tipos de flor
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{key} -> {label}'
+            fields:
+              - name: key
+                label: Tipo base
+                type: string
+              - name: label
+                label: Texto visible
+                type: string
       - name: about_page_en
         label: Nosotros en ingles
         type: file
@@ -1340,6 +1368,20 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
+          - name: typeTranslations
+            label: Traducciones de tipos de flor
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{key} -> {label}'
+            fields:
+              - name: key
+                label: Tipo base
+                type: string
+              - name: label
+                label: Texto visible
+                type: string
       - name: about_page_ru
         label: Nosotros en ruso
         type: file
@@ -1722,6 +1764,20 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
+          - name: typeTranslations
+            label: Traducciones de tipos de flor
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{key} -> {label}'
+            fields:
+              - name: key
+                label: Tipo base
+                type: string
+              - name: label
+                label: Texto visible
+                type: string
       - name: about_page_zh
         label: Nosotros en chino
         type: file
@@ -2104,6 +2160,20 @@ content:
                   - name: titulo
                     label: Texto del boton
                     type: string
+          - name: typeTranslations
+            label: Traducciones de tipos de flor
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{key} -> {label}'
+            fields:
+              - name: key
+                label: Tipo base
+                type: string
+              - name: label
+                label: Texto visible
+                type: string
       - name: about_page_de
         label: Nosotros en aleman
         type: file

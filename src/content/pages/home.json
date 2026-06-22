@@ -21,6 +21,20 @@
     "video": "/uploads/fotos_lladeal/_MG_1227.avif",
     "ImagenArchivo": "/uploads/ISOTIPO_LLADEAL.avif"
   },
+  "typeTranslations": [
+    {
+      "key": "bicolor",
+      "label": "Bicolores"
+    },
+    {
+      "key": "color unico",
+      "label": "Color Único"
+    },
+    {
+      "key": "red",
+      "label": "Roja"
+    }
+  ],
   "features": {
     "titulo": "Finca Lladeal: Excelencia en cada pétalo",
     "subtitulo": "Descubre cómo transformamos las condiciones únicas de Cayambe en las rosas de exportación más hermosas del mundo, combinando el cuidado artesanal con estándares de calidad insuperables.",

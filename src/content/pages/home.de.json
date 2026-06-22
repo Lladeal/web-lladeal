@@ -13,6 +13,20 @@
       "titulo": "Kontakt aufnehmen"
     }
   },
+  "typeTranslations": [
+    {
+      "key": "bicolor",
+      "label": "Zweifarbig"
+    },
+    {
+      "key": "color unico",
+      "label": "Einfarbig"
+    },
+    {
+      "key": "red",
+      "label": "Rot"
+    }
+  ],
   "features": {
     "titulo": "Lladeal Farm: Exzellenz in jedem Blutenblatt",
     "subtitulo": "Erfahren Sie, wie wir die einzigartigen Bedingungen von Cayambe in einige der schonsten Exportrosen der Welt verwandeln - mit sorgfaltiger Handarbeit und kompromisslosen Qualitatsstandards.",

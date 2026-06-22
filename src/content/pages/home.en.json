@@ -13,6 +13,20 @@
       "titulo": "Contact us"
     }
   },
+  "typeTranslations": [
+    {
+      "key": "bicolor",
+      "label": "Bicolor"
+    },
+    {
+      "key": "color unico",
+      "label": "Solid Color"
+    },
+    {
+      "key": "red",
+      "label": "Red"
+    }
+  ],
   "features": {
     "titulo": "Lladeal Farm: excellence in every petal",
     "subtitulo": "Discover how we turn Cayambe's unique conditions into some of the world's most beautiful export roses, combining hands-on care with uncompromising quality standards.",
