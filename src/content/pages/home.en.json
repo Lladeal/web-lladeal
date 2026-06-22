@@ -25,10 +25,101 @@
     {
       "key": "red",
       "label": "Red"
-    },
-    {
-      "key": "test",
-      "label": "tests en"
     }
-  ]
+  ],
+  "features": {
+    "titulo": "Lladeal Farm: excellence in every petal",
+    "subtitulo": "Discover how we turn Cayambe's unique conditions into some of the world's most beautiful export roses, combining hands-on care with uncompromising quality standards.",
+    "lista": [
+      {
+        "wrapperClass": "lg:rounded-l-3xl",
+        "title": "Strict export selection",
+        "description": "Every flower is carefully evaluated, and only roses with ideal bud size, opening stage, and symmetry make it into the export batch.",
+        "imageClass": "mx-auto mt-5 self-center object-cover w-[90%] rounded-2xl",
+        "imageContainerClass": "relative flex min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
+        "headingClass": "pb-3 sm:pb-0",
+        "class": "relative lg:row-span-2"
+      },
+      {
+        "title": "Hand-grown at high altitude",
+        "description": "We work the Pesillo land by hand, using direct equatorial sunlight to grow strong stems and vibrant shades.",
+        "imageClass": "w-full rounded-t-xl",
+        "imageContainerClass": "relative flex flex-1 items-center justify-center px-4 max-lg:pb-12 max-lg:pt-10 lg:pb-2",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-1 z-10 mx-auto h-28 w-[93%] bg-linear-to-b/oklch from-transparent via-white to-white",
+        "class": "relative max-lg:row-start-1"
+      },
+      {
+        "title": "Nutrition and freshness under control",
+        "description": "Warm soils and clean nutrients help our roses maintain vase freshness for longer.",
+        "imageClass": "h-full object-cover",
+        "imageContainerClass": "relative min-h-[30rem] w-full grow",
+        "imageSecondaryContainerClass": "absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl shadow-2xl",
+        "class": "relative lg:row-span-2"
+      },
+      {
+        "title": "And much more...",
+        "listItems": [
+          "Striking varieties: a wide range of vibrant shades and large buds sought after in global markets.",
+          "Origin and responsibility: we proudly grow roses in Cayambe while respecting the land and the local community."
+        ],
+        "class": "relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2",
+        "wrapperClass": "rounded-lg",
+        "component": "PlatformOrbit"
+      }
+    ],
+    "Orbita": {}
+  },
+  "caracteristicas": {
+    "titulo": "From Cayambe soils to global markets",
+    "subtitulo": "We make the most of unique equatorial conditions to grow top-quality roses. Our process combines traditional agricultural expertise with precise logistics to anticipate your needs, ensuring absolute freshness and flowers that stand out against any competition. We are direct growers, with daily availability, secure packaging, and personalized support.",
+    "boton": {
+      "titulo": "Learn more"
+    },
+    "carta1": {
+      "descripcion": "High-altitude cultivation: strong stems and large buds under the equatorial sun.",
+      "estilo": "self-start"
+    },
+    "carta2": {
+      "descripcion": "Hand harvesting: strict selection at the exact opening stage.",
+      "estilo": "self-center"
+    },
+    "carta3": {
+      "descripcion": "Global distribution: protective packaging for lasting freshness in international transit.",
+      "estilo": "self-end"
+    }
+  },
+  "Caracteristicas_red": {
+    "titulo": "Why choose Lladeal?",
+    "subtitulo": "We combine natural beauty with export precision. From local florists to international distributors, Lladeal delivers premium roses with long vase life and consistent quality.",
+    "lista": [
+      {
+        "estilo_borde": "md:border-l md:border-r",
+        "estilo_color": "bg-linear-to-l/oklch from-[#e3186d]/10 to-transparent",
+        "titulo_tarjeta": "For any market",
+        "descripcion": "Whether you're a boutique florist or an international wholesale network, Lladeal adapts to your scale with exclusive varieties and export volumes."
+      },
+      {
+        "estilo_borde": "border-b border-t md:border-b-0",
+        "gridClasses": "md:col-start-2 md:col-end-3",
+        "estilo_color": "bg-linear-to-t/oklch from-[#e3186d]/10 to-transparent",
+        "titulo_tarjeta": "International-grade quality",
+        "descripcion": "Strict quality control, large buds, and excellent vase life allow our roses to meet the expectations of the most demanding markets."
+      },
+      {
+        "estilo_borde": "md:border-l md:border-r md:border-t",
+        "gridClasses": "md:col-end-4",
+        "estilo_color": "bg-linear-to-tl/oklch from-[#e3186d]/10 to-transparent",
+        "titulo_tarjeta": "Hassle-free logistics",
+        "descripcion": "We help keep deliveries efficient and predictable so roses arrive fresh, hydrated, and ready to impress."
+      }
+    ]
+  },
+  "call_to_action": {
+    "titulo": "Place your first order with Lladeal.",
+    "subtitulo": "Contact our sales team and discover how our high-altitude roses can strengthen your assortment.",
+    "boton": {
+      "titulo": "Start with Lladeal"
+    }
+  }
 }

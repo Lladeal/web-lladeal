@@ -21,6 +21,105 @@
     {
       "key": "color unico",
       "label": "Einfarbig"
+    },
+    {
+      "key": "red",
+      "label": "Rot"
     }
-  ]
+  ],
+  "features": {
+    "titulo": "Lladeal Farm: Exzellenz in jedem Blutenblatt",
+    "subtitulo": "Erfahren Sie, wie wir die einzigartigen Bedingungen von Cayambe in einige der schonsten Exportrosen der Welt verwandeln - mit sorgfaltiger Handarbeit und kompromisslosen Qualitatsstandards.",
+    "lista": [
+      {
+        "wrapperClass": "lg:rounded-l-3xl",
+        "title": "Strenge Exportauswahl",
+        "description": "Jede Blume wird sorgfaltig gepruft, und nur Rosen mit idealer Knospengrosse, passendem Offnungsstadium und perfekter Symmetrie gelangen in die Exportcharge.",
+        "imageClass": "mx-auto mt-5 self-center object-cover w-[90%] rounded-2xl",
+        "imageContainerClass": "relative flex min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
+        "headingClass": "pb-3 sm:pb-0",
+        "class": "relative lg:row-span-2"
+      },
+      {
+        "title": "In grosser Hohe von Hand angebaut",
+        "description": "Wir bearbeiten die Felder von Pesillo in Handarbeit und nutzen das direkte Aquatoriallicht, um kraftige Stiele und intensive Farben zu erzeugen.",
+        "imageClass": "w-full rounded-t-xl",
+        "imageContainerClass": "relative flex flex-1 items-center justify-center px-4 max-lg:pb-12 max-lg:pt-10 lg:pb-2",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-1 z-10 mx-auto h-28 w-[93%] bg-linear-to-b/oklch from-transparent via-white to-white",
+        "class": "relative max-lg:row-start-1"
+      },
+      {
+        "title": "Nahrung und Frische unter Kontrolle",
+        "description": "Warme Boden und saubere Nahrstoffe helfen unseren Rosen, ihre Frische in der Vase langer zu bewahren.",
+        "imageClass": "h-full object-cover",
+        "imageContainerClass": "relative min-h-[30rem] w-full grow",
+        "imageSecondaryContainerClass": "absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl shadow-2xl",
+        "class": "relative lg:row-span-2"
+      },
+      {
+        "title": "Und vieles mehr...",
+        "listItems": [
+          "Auffallende Sorten: eine breite Auswahl an leuchtenden Farben und grossen Knospen, die auf den Weltmarkten gefragt sind.",
+          "Herkunft und Verantwortung: Wir bauen unsere Rosen mit Stolz in Cayambe an und respektieren dabei Land und lokale Gemeinschaft."
+        ],
+        "class": "relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2",
+        "wrapperClass": "rounded-lg",
+        "component": "PlatformOrbit"
+      }
+    ],
+    "Orbita": {}
+  },
+  "caracteristicas": {
+    "titulo": "Von den Boden Cayambes zu den Weltmarkten",
+    "subtitulo": "Wir nutzen die anspruchsvollen geografischen Bedingungen entlang des Aquators, um Rosen von hochster Qualitat anzubauen. Unser Prozess verbindet traditionelles landwirtschaftliches Know-how mit praziser Logistik, um Ihren Bedarf vorauszudenken und absolute Frische sowie Blumen zu garantieren, die sich in jedem Markt abheben. Wir sind Direktproduzenten und bieten tagliche Verfugbarkeit, sichere Verpackung und personliche Betreuung.",
+    "boton": {
+      "titulo": "Mehr erfahren"
+    },
+    "carta1": {
+      "descripcion": "Anbau in grosser Hohe: starke Stiele und grosse Knospen unter der Sonne des Aquators.",
+      "estilo": "self-start"
+    },
+    "carta2": {
+      "descripcion": "Handernte: strenge Auswahl genau im richtigen Offnungsstadium.",
+      "estilo": "self-center"
+    },
+    "carta3": {
+      "descripcion": "Weltweite Distribution: schutzende Verpackung fur anhaltende Frische beim internationalen Transport.",
+      "estilo": "self-end"
+    }
+  },
+  "Caracteristicas_red": {
+    "titulo": "Warum Lladeal?",
+    "subtitulo": "Wir verbinden naturliche Schonheit mit Exportprazision. Von lokalen Floristen bis zu internationalen Distributoren liefert Lladeal Premiumrosen mit langer Vasenhaltbarkeit und gleichbleibender Qualitat.",
+    "lista": [
+      {
+        "estilo_borde": "md:border-l md:border-r",
+        "estilo_color": "bg-linear-to-l/oklch from-[#e3186d]/10 to-transparent",
+        "titulo_tarjeta": "Fur jeden Markt",
+        "descripcion": "Ob Boutique-Florist oder internationales Grosshandelsnetzwerk - Lladeal passt sich Ihrer Groesse mit exklusiven Sorten und Exportmengen an."
+      },
+      {
+        "estilo_borde": "border-b border-t md:border-b-0",
+        "gridClasses": "md:col-start-2 md:col-end-3",
+        "estilo_color": "bg-linear-to-t/oklch from-[#e3186d]/10 to-transparent",
+        "titulo_tarjeta": "Qualitat auf internationalem Niveau",
+        "descripcion": "Strenge Qualitatskontrolle, grosse Knospen und ausgezeichnete Vasenhaltbarkeit erfullen die Erwartungen selbst anspruchsvollster Markte."
+      },
+      {
+        "estilo_borde": "md:border-l md:border-r md:border-t",
+        "gridClasses": "md:col-end-4",
+        "estilo_color": "bg-linear-to-tl/oklch from-[#e3186d]/10 to-transparent",
+        "titulo_tarjeta": "Reibungslose Logistik",
+        "descripcion": "Wir helfen dabei, Lieferungen effizient und planbar zu halten, damit die Rosen frisch, hydratisiert und bereit zum Beeindrucken ankommen."
+      }
+    ]
+  },
+  "call_to_action": {
+    "titulo": "Geben Sie Ihre erste Bestellung bei Lladeal auf.",
+    "subtitulo": "Kontaktieren Sie unser Verkaufsteam und erfahren Sie, wie unsere Hochlandrosen Ihr Sortiment starken konnen.",
+    "boton": {
+      "titulo": "Mit Lladeal starten"
+    }
+  }
 }
