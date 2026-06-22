@@ -8,12 +8,10 @@
     "titulo": "Lladeal: Rosas premium de Ecuador para importadores, mayoristas y floristerías internacionales.",
     "subtitulo": "Ubicados estratégicamente en Pesillo, Cayambe. Aprovechamos la luz ecuatorial y suelos cálidos para ofrecer un entorno geográfico excepcional.",
     "Boton_1": {
-      "titulo": "Ver nuestro catálogo",
-      "link": "/catalogo"
+      "titulo": "Ver nuestro catálogo"
     },
     "boton_2": {
-      "titulo": "Contáctanos",
-      "link": "/contact"
+      "titulo": "Contáctanos"
     }
   },
   "imagen": {
@@ -550,6 +548,21 @@
         "Estado_fenologico": "90 - 100 días",
         "Ciclo": "Normal",
         "link": "https://eshops.kometsales.com/813947/"
+      }
+    },
+    {
+      "titulo": "TEST",
+      "descripcion": "TEST DE ROSA",
+      "ImagenArchivo": "/uploads/flor-vertical.avif",
+      "tipo": "test",
+      "Data": {
+        "Tamaño_del_boton": "10",
+        "Longitud_del_tallo": "20",
+        "Vida_en_florero": "12 dias",
+        "Numero_de_petalos": "12",
+        "Estado_fenologico": "12 dias",
+        "Ciclo": "normal",
+        "link": "tests"
       }
     }
   ]
