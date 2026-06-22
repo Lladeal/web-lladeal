@@ -549,21 +549,6 @@
         "Ciclo": "Normal",
         "link": "https://eshops.kometsales.com/813947/"
       }
-    },
-    {
-      "titulo": "TEST",
-      "descripcion": "TEST DE ROSA",
-      "ImagenArchivo": "/uploads/flor-vertical.avif",
-      "tipo": "test",
-      "Data": {
-        "Tamaño_del_boton": "10",
-        "Longitud_del_tallo": "20",
-        "Vida_en_florero": "12 dias",
-        "Numero_de_petalos": "12",
-        "Estado_fenologico": "12 dias",
-        "Ciclo": "normal",
-        "link": "tests"
-      }
     }
   ]
 }
