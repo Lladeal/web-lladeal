@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import chartImage from '@images/chart.webp';
 import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
 import { getUiStrings } from '@/i18n/ui';
 import { withBase } from '@utils/links';
@@ -26,26 +24,15 @@ const shouldRenderVideo = heroData.usarVideo !== false && !!heroVideoSrc;
   >
   </div>
 
-  {
-    heroImage ? (
-      <img
-        src={heroImageSrc}
-        alt="Chart"
-        loading="eager"
-        fetchpriority="high"
-        class="absolute inset-[25%_auto_auto_-8%] z-20 hidden w-[25%] sm:block"
-      />
-    ) : (
-      <Image
-        src={chartImage}
-        alt="Chart"
-        loading={'eager'}
-        fetchpriority={'high'}
-        inferSize={true}
-        class="absolute inset-[25%_auto_auto_-8%] z-20 hidden w-[25%] sm:block"
-      />
-    )
-  }
+  {heroImage && (
+    <img
+      src={heroImageSrc}
+      alt="Chart"
+      loading="eager"
+      fetchpriority="high"
+      class="absolute inset-[25%_auto_auto_-8%] z-20 hidden w-[25%] sm:block"
+    />
+  )}
 
   <div class="aspect-video overflow-hidden rounded-xl">
     {
