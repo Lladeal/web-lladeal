@@ -2,7 +2,7 @@
 import { getHomeContent, getLocaleFromUrl } from '@/i18n/content';
 import PlatformOrbit from '@common/PlatformOrbit.astro';
 import { withBase } from '@utils/links';
-
+import { Image } from 'astro:assets'
 const locale = getLocaleFromUrl(Astro.url);
 const { features } = getHomeContent(locale);
 type FeatureItem = (typeof features.lista)[number];
@@ -60,23 +60,23 @@ type FeatureItem = (typeof features.lista)[number];
                 <div class={`${feature.imageContainerClass}`}>
                   {feature.imageSecondaryContainerClass ? (
                     <div class={`${feature.imageSecondaryContainerClass}`}>
-                      <img
+                      <Image
                         class={`${feature.imageClass}`}
                         src={withBase(feature.image) ?? ''}
                         height={300}
                         width={300}
-                        alt=""
+                        alt="Imagen grupo LLadeal"
                       />
                     </div>
                   ) : (
                     <>
                       <div class={`${feature.imageFadeClass}`} />
-                      <img
+                      <Image
                         class={`${feature.imageClass}`}
                         src={withBase(feature.image) ?? ''}
                         height={300}
                         width={300}
-                        alt=""
+                        alt="Imagen grupo LLadeal"
                       />
                     </>
                   )}
