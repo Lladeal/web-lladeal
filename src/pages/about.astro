@@ -58,7 +58,7 @@ const schema: WithContext<Thing> = {
           class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4"
         >
           {
-            datos_sobre_nosotros.estadisticas.map(stat => (
+            datos_sobre_nosotros.estadisticas.map((stat: { texto: unknown; valor: unknown; }) => (
               <div class="flex flex-col-reverse gap-1">
                 <dt class="text-base/7 text-slate-700">{stat.texto}</dt>
                 <dd class="text-4xl font-semibold tracking-tight text-slate-800">
@@ -91,7 +91,7 @@ const schema: WithContext<Thing> = {
           class="relative mt-10 grid max-w-xl grid-cols-1 items-start text-base/7 text-slate-800 sm:max-w-none lg:grid-flow-row-dense lg:auto-rows-fr lg:grid-cols-3"
         >
           {
-            datos_de_experticie.experticie.map((item, index) => (
+            datos_de_experticie.experticie.map((item: { titulo: unknown; descripcion: unknown; }, index: number) => (
               <div
                 class={`px-5 py-5 sm:px-10 lg:py-0 ${index === 1 ? 'h-full border-y border-dashed border-slate-400 lg:border-x lg:border-y-0' : ''}`}
               >
@@ -130,7 +130,7 @@ const schema: WithContext<Thing> = {
         class="flex flex-wrap gap-10 justify-center"
       >
         {
-          Team.team.map(miembro => (
+          Team.team.map((miembro: { foto: string | undefined; nombre: unknown; cargo: unknown; }) => (
             <div class="text-center">
               <img
                 class="mx-auto size-24 rounded-full"
@@ -156,7 +156,7 @@ const schema: WithContext<Thing> = {
   </section>
 
   <section class="mx-auto max-w-340 px-4 pb-12 pb-24 sm:px-6 lg:px-8"> 
-    <Marquee marquee={} />
+    <Marquee />
   </section>
 
   <!-- vision mision -->
@@ -178,7 +178,7 @@ const schema: WithContext<Thing> = {
 
         <div class="space-y-6 lg:space-y-10">
           {
-            mision_vison.mision.lista.map(lista => (
+            mision_vison.mision.lista.map((lista: { icono: unknown; title: unknown; label: unknown; }) => (
               <div class="flex gap-x-5 rounded-2xl p-2 transition-all delay-110 hover:translate-2 sm:gap-x-8">
                 <Icon
                   name={lista.icono}
@@ -211,7 +211,7 @@ const schema: WithContext<Thing> = {
 
         <div class="space-y-6 lg:space-y-10">
           {
-            mision_vison.vision.lista.map(lista => (
+            mision_vison.vision.lista.map((lista: { icono: unknown; title: unknown; label: unknown; }) => (
               <div class="flex gap-x-5 rounded-2xl p-2 transition-all delay-110 hover:translate-2 sm:gap-x-8">
                 <Icon
                   name={lista.icono}

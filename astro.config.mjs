@@ -6,6 +6,8 @@ import markdoc from '@astrojs/markdoc';
 import svelte from '@astrojs/svelte';
 import icon from 'astro-icon';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   // The `site` property specifies the base URL for your site.
@@ -27,14 +29,9 @@ export default defineConfig({
   experimental: {
     clientPrerender: true,
   },
-  integrations: [
-    react(),
-    markdoc(),
-    svelte(),
-    icon({
-      iconDir: 'public/uploads/icons',
-    }),
-  ],
+  integrations: [react(), markdoc(), svelte(), icon({
+    iconDir: 'public/uploads/icons',
+  }), sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },

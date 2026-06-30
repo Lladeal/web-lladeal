@@ -79,13 +79,13 @@ const defaultSchema: WithContext<Thing> = {
           { rel: 'icon', href: withBase('/icon.svg'), type: 'image/svg+xml' },
           { rel: 'apple-touch-icon', href: withBase('/apple-touch-icon.png') },
           { rel: 'manifest', href: withBase('/manifest.webmanifest') },
-          ...(isHomePage && posterImage
+          ...(isHomePage && socialImage
             ? [
                 {
                   rel: 'preload',
-                  href: posterImage,
+                  href: socialImage,
                   as: 'image',
-                  fetchpriority: 'high',
+                  fetchPriority: 'high' as const,
                 },
               ]
             : []),
@@ -98,6 +98,9 @@ const defaultSchema: WithContext<Thing> = {
     />
     {/* Schema.org JSON-LD */}
     <Schema item={schema ?? defaultSchema} />
+
+    {/*Site map */}
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     {/* Client-Side Router for page transitions */}
     <ClientRouter />
