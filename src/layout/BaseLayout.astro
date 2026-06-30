@@ -5,47 +5,236 @@ import WhatsappBtn from '@common/whatsBtn.astro';
 import CallToAction from '@common/Call_to_Btn.astro';
 import { ClientRouter } from 'astro:transitions';
 import { SEO, type Props as SEOProps } from 'astro-seo';
-import { Schema } from 'astro-seo-schema';
-import type { WithContext, Thing } from 'schema-dts';
 import { stripBase, withBase } from '@utils/links';
-import { localeMetadata } from '@/i18n/config';
-import { getLocaleFromUrl, getSeoContent } from '@/i18n/content';
+import { defaultLocale, localeMetadata, locales } from '@/i18n/config';
+import {
+  getAboutContent,
+  getContactContent,
+  getLocaleFromUrl,
+  getSeoContent,
+} from '@/i18n/content';
 import '@styles/global.css';
 
 interface Props {
   seo?: SEOProps; // Optional SEO properties to customize meta tags
-  schema?: WithContext<Thing>; // Optional schema.org properties for structured data
+  schema?: Record<string, any>; // Optional schema.org properties to customize structured data
 }
 
-// Extract `seo` and `schema` from properties or define defaults
 const { seo, schema } = Astro.props;
 const locale = getLocaleFromUrl(Astro.url);
 const localeMeta = localeMetadata[locale];
 const seoContent = getSeoContent(locale);
 const { Seo_global } = seoContent;
+const { contactos } = getContactContent(locale);
+const { datos_sobre_nosotros } = getAboutContent(locale);
+const siteBase = Astro.site ?? new URL(Astro.url.origin);
+const siteRootUrl = new URL(withBase('/') ?? '/', siteBase).toString();
+const siteName = Seo_global.titulo.split('|')[0]?.trim() || 'Lladeal';
+const pageTitle = seo?.title ?? Seo_global.titulo;
+const pageDescription = seo?.description ?? Seo_global.descripcion;
 const socialImage = new URL(
   withBase('/social.png') ?? '/social.png',
-  Astro.site
+  siteBase
 ).toString();
+const logoUrl = new URL(withBase('/icon.svg') ?? '/icon.svg', siteBase).toString();
 const somatypeBold = withBase('/fonts/Somatype-Bold.otf');
-const posterImage = withBase('/poster.png');
 const currentPath = stripBase(Astro.url.pathname);
-const isHomePage = currentPath === '/' || currentPath === '/en' || currentPath === '/ru' || currentPath === '/zh';
+const isHomePage =
+  currentPath === '/' ||
+  currentPath === '/en' ||
+  currentPath === '/ru' ||
+  currentPath === '/zh' ||
+  currentPath === '/de';
+const organizationId = `${siteRootUrl}#organization`;
+const websiteId = `${siteRootUrl}#website`;
+const webpageId = `${Astro.url.href}#webpage`;
 
-// Define default JSON-LD Schema.org data if no schema is passed
-const defaultSchema: WithContext<Thing> = {
+const routeLabels: Record<string, Record<(typeof locales)[number], string>> = {
+  about: {
+    es: 'Nosotros',
+    en: 'About',
+    ru: 'О нас',
+    zh: '关于我们',
+    de: 'Uber uns',
+  },
+  contact: {
+    es: 'Contacto',
+    en: 'Contact',
+    ru: 'Контакты',
+    zh: '联系我们',
+    de: 'Kontakt',
+  },
+  catalogo: {
+    es: 'Catalogo',
+    en: 'Catalog',
+    ru: 'Каталог',
+    zh: '产品目录',
+    de: 'Katalog',
+  },
+  blog: {
+    es: 'Blog',
+    en: 'Blog',
+    ru: 'Блог',
+    zh: '博客',
+    de: 'Blog',
+  },
+  articles: {
+    es: 'Articulos',
+    en: 'Articles',
+    ru: 'Статьи',
+    zh: '文章',
+    de: 'Artikel',
+  },
+};
+
+function normalizeText(value: unknown) {
+  if (typeof value !== 'string') return '';
+  return value.replace(/\s+/g, ' ').trim();
+}
+
+function getLocalizedHomePath() {
+  return locale === defaultLocale ? '/' : `/${locale}`;
+}
+
+function titleizeSegment(segment: string) {
+  return segment
+    .split('-')
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
+
+function getSegmentLabel(segment: string) {
+  return routeLabels[segment]?.[locale] ?? titleizeSegment(segment);
+}
+
+function getContentType(pathname: string) {
+  if (pathname.endsWith('/blog/articles') || pathname === '/blog/articles') {
+    return 'CollectionPage';
+  }
+
+  if (pathname.includes('/catalogo')) {
+    return pathname.split('/').filter(Boolean).at(-1) === 'catalogo'
+      ? 'CollectionPage'
+      : 'ItemPage';
+  }
+
+  return 'WebPage';
+}
+
+function buildBreadcrumbSchema() {
+  const segments = currentPath.split('/').filter(Boolean);
+  const filteredSegments =
+    segments[0] && locales.includes(segments[0] as (typeof locales)[number])
+      ? segments.slice(1)
+      : segments;
+
+  const items = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: siteName,
+      item: new URL(getLocalizedHomePath(), siteBase).toString(),
+    },
+  ];
+
+  let runningPath = getLocalizedHomePath() === '/' ? '' : getLocalizedHomePath();
+
+  filteredSegments.forEach((segment, index) => {
+    runningPath = `${runningPath}/${segment}`;
+    items.push({
+      '@type': 'ListItem',
+      position: index + 2,
+      name: getSegmentLabel(segment),
+      item: new URL(runningPath, siteBase).toString(),
+    });
+  });
+
+  if (items.length < 2) return null;
+
+  return {
+    '@type': 'BreadcrumbList',
+    '@id': `${Astro.url.href}#breadcrumb`,
+    itemListElement: items,
+  };
+}
+
+const breadcrumbSchema = buildBreadcrumbSchema();
+
+const siteSchema: Record<string, any> = {
   '@context': 'https://schema.org',
-  '@type': 'WebPage',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: siteName,
+      url: siteRootUrl,
+      image: socialImage,
+      logo: {
+        '@type': 'ImageObject',
+        url: logoUrl,
+      },
+      description: normalizeText(datos_sobre_nosotros.descripcion) || pageDescription,
+      email: normalizeText(contactos.correo.mail),
+      telephone: normalizeText(contactos.correo.telefono),
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Cayambe',
+        addressCountry: 'EC',
+      },
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'sales',
+          email: normalizeText(contactos.correo.mail),
+          telephone: normalizeText(contactos.correo.telefono),
+          availableLanguage: locales.map(code => localeMetadata[code].htmlLang),
+          areaServed: 'Worldwide',
+        },
+      ],
+      knowsLanguage: locales.map(code => localeMetadata[code].htmlLang),
+      areaServed: 'Worldwide',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      url: siteRootUrl,
+      name: siteName,
+      description: Seo_global.descripcion,
+      publisher: {
+        '@id': organizationId,
+      },
+      inLanguage: locales.map(code => localeMetadata[code].schemaLang),
+    },
+    ...(breadcrumbSchema ? [breadcrumbSchema] : []),
+  ],
+};
+
+const defaultSchema: Record<string, any> = {
+  '@context': 'https://schema.org',
+  '@type': getContentType(currentPath),
   inLanguage: localeMeta.schemaLang,
-  '@id': Astro.url.href,
+  '@id': webpageId,
   url: Astro.url.href,
-  name: Seo_global.titulo,
-  description: Seo_global.descripcion,
+  name: pageTitle,
+  description: pageDescription,
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: socialImage,
+  },
+  about: {
+    '@id': organizationId,
+  },
+  breadcrumb: breadcrumbSchema
+    ? {
+        '@id': `${Astro.url.href}#breadcrumb`,
+      }
+    : undefined,
   isPartOf: {
-    '@type': 'WebSite',
-    url: `${Astro.site}`,
-    name: Seo_global.titulo,
-    description: Seo_global.descripcion,
+    '@id': websiteId,
+  },
+  publisher: {
+    '@id': organizationId,
   },
 };
 ---
@@ -55,22 +244,26 @@ const defaultSchema: WithContext<Thing> = {
     {/* SEO Meta Tags */}
     <SEO
       charset="utf-8"
-      title={Seo_global.titulo}
-      description={Seo_global.descripcion}
+      title={pageTitle}
+      description={pageDescription}
       openGraph={{
         basic: {
-          title: Seo_global.og_titulo,
+          title: seo?.openGraph?.basic?.title ?? Seo_global.og_titulo,
           type: 'website',
           image: socialImage,
         },
         optional: {
-          description: Seo_global.og_descripcion,
+          description:
+            seo?.openGraph?.optional?.description ??
+            seo?.description ??
+            Seo_global.og_descripcion,
         },
       }}
       twitter={{
         card: 'summary_large_image',
-        title: Seo_global.og_titulo,
-        description: Seo_global.og_descripcion,
+        title: seo?.twitter?.title ?? seo?.title ?? Seo_global.og_titulo,
+        description:
+          seo?.twitter?.description ?? seo?.description ?? Seo_global.og_descripcion,
         image: socialImage,
         imageAlt: Seo_global.imagen_texto_alternativo,
       }}
@@ -97,10 +290,31 @@ const defaultSchema: WithContext<Thing> = {
       }}
     />
     {/* Schema.org JSON-LD */}
-    <Schema item={schema ?? defaultSchema} />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(siteSchema)}
+    />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(schema ?? defaultSchema)}
+    />
 
     {/*Site map */}
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="text/plain"
+      title="llms.txt"
+      href={withBase('/llms.txt')}
+    />
+    <link
+      rel="alternate"
+      type="text/plain"
+      title="llms-full.txt"
+      href={withBase('/llms-full.txt')}
+    />
 
     {/* Client-Side Router for page transitions */}
     <ClientRouter />
