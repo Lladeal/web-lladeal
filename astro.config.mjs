@@ -10,10 +10,9 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // The `site` property specifies the base URL for your site.
-  // Be sure to update this to your own domain (e.g., "https://yourdomain.com") before deploying.
-  site: 'https://damocles99.github.io',
-  base: '/web-lladeal',
+  
+  site: 'https://lladeal.github.io', // remplazar con la URL de tu sitio web
+  base: '/web-lladeal', // remplazar con la ruta base de tu sitio web, puede ser '/' si tu sitio web está en la raíz del dominio
   prefetch: true,
   devToolbar: {
     enabled: true
