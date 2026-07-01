@@ -8,6 +8,16 @@ import icon from 'astro-icon';
 
 import sitemap from '@astrojs/sitemap';
 
+const defaultLocale = 'es';
+const localeCodes = ['es', 'en', 'ru', 'zh', 'de'];
+const sitemapLocales = {
+  es: 'es',
+  en: 'en',
+  ru: 'ru-RU',
+  zh: 'zh-CN',
+  de: 'de-DE',
+};
+
 // https://astro.build/config
 export default defineConfig({
   
@@ -18,8 +28,8 @@ export default defineConfig({
     enabled: true
   },
   i18n: {
-    defaultLocale: 'es',
-    locales: ['es', 'en', 'ru', 'zh'],
+    defaultLocale,
+    locales: localeCodes,
     routing: {
       prefixDefaultLocale: false,
     },
@@ -30,7 +40,12 @@ export default defineConfig({
   },
   integrations: [react(), markdoc(), svelte(), icon({
     iconDir: 'public/uploads/icons',
-  }), sitemap()],
+  }), sitemap({
+    i18n: {
+      defaultLocale,
+      locales: sitemapLocales,
+    },
+  })],
   vite: {
     plugins: [tailwindcss()],
   },
