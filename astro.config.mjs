@@ -21,8 +21,8 @@ const sitemapLocales = {
 // https://astro.build/config
 export default defineConfig({
   
-  site: 'https://lladeal.github.io', // remplazar con la URL de tu sitio web
-  base: '/web-lladeal', // remplazar con la ruta base de tu sitio web, puede ser '/' si tu sitio web está en la raíz del dominio
+  site: 'https://www.lladeal.com/', // remplazar con la URL de tu sitio web
+  base: '/', // remplazar con la ruta base de tu sitio web, puede ser '/' si tu sitio web está en la raíz del dominio
   prefetch: true,
   devToolbar: {
     enabled: true
