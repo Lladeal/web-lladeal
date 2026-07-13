@@ -8,12 +8,10 @@
     "titulo": "Lladeal: Rosas premium de Ecuador para importadores, mayoristas y floristerías internacionales.",
     "subtitulo": "Ubicados estratégicamente en Pesillo, Cayambe. Aprovechamos la luz ecuatorial y suelos cálidos para ofrecer un entorno geográfico excepcional.",
     "Boton_1": {
-      "titulo": "Ver nuestro catálogo",
-      "link": "/catalogo"
+      "titulo": "Ver nuestro catálogo"
     },
     "boton_2": {
-      "titulo": "Contáctanos",
-      "link": "/contact"
+      "titulo": "Contáctanos"
     }
   },
   "imagen": {
@@ -545,6 +543,36 @@
         "Numero_de_petalos": "50",
         "Estado_fenologico": "90 - 100 días",
         "Ciclo": "Normal",
+        "link": "https://eshops.kometsales.com/813947/"
+      }
+    },
+    {
+      "titulo": "BLUE AND PINK",
+      "descripcion": "Tinte and painted",
+      "ImagenArchivo": "/uploads/1.png",
+      "tipo": "Tinturadas",
+      "Data": {
+        "Tamaño_del_boton": "--",
+        "Longitud_del_tallo": "--",
+        "Vida_en_florero": "--",
+        "Numero_de_petalos": "--",
+        "Estado_fenologico": "--",
+        "Ciclo": "--",
+        "link": "https://eshops.kometsales.com/813947/"
+      }
+    },
+    {
+      "titulo": "LILAC AND YELLOW",
+      "descripcion": "Tinte and painted",
+      "ImagenArchivo": "/uploads/2.png",
+      "tipo": "Tinturadas",
+      "Data": {
+        "Tamaño_del_boton": "--",
+        "Longitud_del_tallo": "--",
+        "Vida_en_florero": "--",
+        "Numero_de_petalos": "--",
+        "Estado_fenologico": "--",
+        "Ciclo": "--",
         "link": "https://eshops.kometsales.com/813947/"
       }
     }
