@@ -26,5 +26,110 @@
       "key": "tinturadas",
       "label": "Tinted"
     }
-  ]
+  ],
+  "features": {
+    "titulo": "Lladeal Farm: Excellence in every petal",
+    "subtitulo": "Discover how we transform Cayambe's unique conditions into some of the world's most beautiful export roses, combining artisanal care with unmatched quality standards.",
+    "lista": [
+      {
+        "title": "Rigorous export selection",
+        "description": "Standards of excellence: We carefully evaluate each flower, choosing only those that meet the perfect bud size, ideal opening stage, and flawless symmetry.",
+        "image": "/uploads/_MG_1306.avif",
+        "class": "relative lg:row-span-2",
+        "wrapperClass": "lg:rounded-l-3xl",
+        "imageClass": "mx-auto mt-5 self-start object-cover w-[90%] rounded-2xl",
+        "imageContainerClass": "relative flex min-h-[25rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 md:bottom-30 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
+        "headingClass": "pb-3 sm:pb-0"
+      },
+      {
+        "title": "Artisanal high-altitude cultivation",
+        "description": "Hands-on field care: We work the soils of Pesillo with expert hands, taking advantage of the equatorial line's direct sunlight to produce strong stems and intense colors.",
+        "image": "/uploads/_MG_1252.avif",
+        "class": "relative max-lg:row-start-1",
+        "imageClass": "w-full rounded-t-xl mt-5",
+        "imageContainerClass": "relative flex flex-1 items-center justify-center px-4 max-lg:pb-12 max-lg:pt-10 lg:pb-2",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-1 z-10 mx-auto h-28 w-[93%] bg-linear-to-b/oklch from-transparent via-white to-white"
+      },
+      {
+        "title": "Guaranteed nutrition and freshness",
+        "description": "Warm soils and pure nutrients: We nourish our plants with minerals from Cayambe's highlands, ensuring that every rose enjoys a much longer vase life.",
+        "image": "/uploads/flores.avif",
+        "class": "relative lg:row-span-2",
+        "imageClass": "h-full object-cover rounded-xl",
+        "imageContainerClass": "relative min-h-[25rem] w-full grow",
+        "imageSecondaryContainerClass": "absolute bottom-0 md:left-10 left-5 right-0 top-5 overflow-hidden rounded-xl shadow-2xl"
+      },
+      {
+        "title": "And more...",
+        "listItems": [
+          "Majestic varieties: A wide range of vibrant colors and large buds that stand out in the global market.",
+          "Commitment and origin: Proudly grown in Cayambe, with respect for the land and our community."
+        ],
+        "component": "PlatformOrbit",
+        "class": "relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2",
+        "wrapperClass": "rounded-lg"
+      }
+    ]
+  },
+  "caracteristicas": {
+    "titulo": "From Cayambe's soil to markets around the world",
+    "subtitulo": "We take advantage of the equatorial line's most demanding geographic conditions to grow superior-quality roses. Our process combines traditional agricultural knowledge with precise logistics to anticipate your needs, ensuring absolute freshness and flowers that stand out against any competition. We are direct growers with daily availability, secure packaging, and personalized service.",
+    "boton": {
+      "titulo": "Learn more",
+      "link": "/contact"
+    },
+    "carta1": {
+      "icono": "MdiImageFilterHdr",
+      "descripcion": "High-altitude cultivation: Strong stems and large buds under the equatorial sun.",
+      "estilo": "self-start"
+    },
+    "carta2": {
+      "icono": "MdiHandExtended",
+      "descripcion": "Hand harvesting: Rigorous selection at the exact opening stage.",
+      "estilo": "self-center"
+    },
+    "carta3": {
+      "icono": "MdiPackageVariant",
+      "descripcion": "Global distribution: High-protection packaging for international freshness.",
+      "estilo": "self-end"
+    }
+  },
+  "Caracteristicas_red": {
+    "titulo": "Why choose Lladeal?",
+    "subtitulo": "Experience the perfect balance between the majesty of nature and export precision. From local florists to large global distributors, Lladeal supplies your business with superior-quality roses that exceed every standard. Transform your catalog with longer-lasting flowers, vibrant colors, and a reliable supply in every season.",
+    "lista": [
+      {
+        "estilo_borde": "md:border-l md:border-r",
+        "estilo_color": "bg-linear-to-l/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "MdiEarth",
+        "titulo_tarjeta": "Designed for every market",
+        "descripcion": "Whether you are a boutique florist or a global wholesale distributor, Finca Lladeal adapts to your scale. We supply everything from exclusive varieties to large export volumes, always with personalized attention that matches your business pace."
+      },
+      {
+        "estilo_borde": "border-b border-t md:border-b-0",
+        "gridClasses": "md:col-start-2 md:col-end-3",
+        "estilo_color": "bg-linear-to-t/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "MdiCheckDecagram",
+        "titulo_tarjeta": "International-grade quality",
+        "descripcion": "We take the potential of floriculture to the highest level. Through rigorous quality control, large buds, and superior vase life, our roses compete successfully in the world's most demanding markets."
+      },
+      {
+        "estilo_borde": "md:border-l md:border-r md:border-t",
+        "gridClasses": "md:col-end-4",
+        "estilo_color": "bg-linear-to-tl/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "RiBubbleChartFill",
+        "titulo_tarjeta": "Frictionless logistics",
+        "descripcion": "Keep your supply chain efficient without complications. We integrate seamlessly with your traditional import channels, managing the process from Cayambe so your orders arrive with freshness and hydration fully preserved."
+      }
+    ]
+  },
+  "call_to_action": {
+    "titulo": "Place your first order with Lladeal.",
+    "subtitulo": "Get in touch with our sales team and discover how our high-altitude roses can transform your catalog and captivate your customers.",
+    "boton": {
+      "titulo": "Start with Lladeal",
+      "link": "/contact"
+    }
+  }
 }

@@ -26,5 +26,110 @@
       "key": "tinturadas",
       "label": "染色"
     }
-  ]
+  ],
+  "features": {
+    "titulo": "Lladeal 农场：每一片花瓣都体现卓越",
+    "subtitulo": "了解我们如何将卡扬贝独特的自然条件转化为世界上最美丽的出口玫瑰之一，把匠心种植与卓越品质标准结合在一起。",
+    "lista": [
+      {
+        "title": "严格的出口级筛选",
+        "description": "卓越标准：我们细致评估每一朵花，只挑选花苞大小、开放阶段和对称性都达到理想标准的玫瑰。",
+        "image": "/uploads/_MG_1306.avif",
+        "class": "relative lg:row-span-2",
+        "wrapperClass": "lg:rounded-l-3xl",
+        "imageClass": "mx-auto mt-5 self-start object-cover w-[90%] rounded-2xl",
+        "imageContainerClass": "relative flex min-h-[25rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 md:bottom-30 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
+        "headingClass": "pb-3 sm:pb-0"
+      },
+      {
+        "title": "高海拔匠心种植",
+        "description": "田间精细养护：我们以专业经验深耕佩西约的土地，借助赤道垂直光照，培育出花茎强健、色彩浓郁的玫瑰。",
+        "image": "/uploads/_MG_1252.avif",
+        "class": "relative max-lg:row-start-1",
+        "imageClass": "w-full rounded-t-xl mt-5",
+        "imageContainerClass": "relative flex flex-1 items-center justify-center px-4 max-lg:pb-12 max-lg:pt-10 lg:pb-2",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-1 z-10 mx-auto h-28 w-[93%] bg-linear-to-b/oklch from-transparent via-white to-white"
+      },
+      {
+        "title": "营养与新鲜度双重保障",
+        "description": "温暖土壤与纯净养分：我们用来自卡扬贝高地的矿物质滋养植株，确保每一枝玫瑰都拥有更持久的瓶插寿命。",
+        "image": "/uploads/flores.avif",
+        "class": "relative lg:row-span-2",
+        "imageClass": "h-full object-cover rounded-xl",
+        "imageContainerClass": "relative min-h-[25rem] w-full grow",
+        "imageSecondaryContainerClass": "absolute bottom-0 md:left-10 left-5 right-0 top-5 overflow-hidden rounded-xl shadow-2xl"
+      },
+      {
+        "title": "更多优势...",
+        "listItems": [
+          "非凡品种：丰富而鲜艳的色彩与大花苞，在全球市场中脱颖而出。",
+          "承诺与产地：自豪地种植于卡扬贝，尊重土地，也尊重我们的社区。"
+        ],
+        "component": "PlatformOrbit",
+        "class": "relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2",
+        "wrapperClass": "rounded-lg"
+      }
+    ]
+  },
+  "caracteristicas": {
+    "titulo": "从卡扬贝的土壤到全球市场",
+    "subtitulo": "我们充分利用赤道带最严苛的地理条件，种植出高品质玫瑰。我们的流程将传统农业经验与精准物流结合起来，提前响应您的需求，确保极致新鲜，并提供足以在任何竞争中脱颖而出的花材。我们是直供种植商，具备每日供货能力、安全包装与个性化服务。",
+    "boton": {
+      "titulo": "了解更多",
+      "link": "/contact"
+    },
+    "carta1": {
+      "icono": "MdiImageFilterHdr",
+      "descripcion": "高海拔种植：在赤道阳光下培育强健花茎与大花苞。",
+      "estilo": "self-start"
+    },
+    "carta2": {
+      "icono": "MdiHandExtended",
+      "descripcion": "人工采收：在最佳开放时机进行严格筛选。",
+      "estilo": "self-center"
+    },
+    "carta3": {
+      "icono": "MdiPackageVariant",
+      "descripcion": "全球配送：高防护包装，保障国际运输中的新鲜度。",
+      "estilo": "self-end"
+    }
+  },
+  "Caracteristicas_red": {
+    "titulo": "为什么选择 Lladeal？",
+    "subtitulo": "感受自然之美与出口精准之间的完美平衡。从本地花艺店到全球大型分销商，Lladeal 以超越标准的高品质玫瑰为您的业务供货。用更持久的花材、更鲜明的色彩和每个季节都可靠的供应，升级您的产品目录。",
+    "lista": [
+      {
+        "estilo_borde": "md:border-l md:border-r",
+        "estilo_color": "bg-linear-to-l/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "MdiEarth",
+        "titulo_tarjeta": "为每个市场而设计",
+        "descripcion": "无论您是精品花店还是全球批发分销商，Finca Lladeal 都能根据您的规模灵活配合。我们既提供独家品种，也能满足大批量出口需求，并始终以符合您业务节奏的个性化服务进行支持。"
+      },
+      {
+        "estilo_borde": "border-b border-t md:border-b-0",
+        "gridClasses": "md:col-start-2 md:col-end-3",
+        "estilo_color": "bg-linear-to-t/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "MdiCheckDecagram",
+        "titulo_tarjeta": "国际标准级品质",
+        "descripcion": "我们将花卉种植的潜力提升到更高水平。凭借严格的质量控制、大花苞和更长的瓶插寿命，我们的玫瑰能够在全球最严苛的市场中成功竞争。"
+      },
+      {
+        "estilo_borde": "md:border-l md:border-r md:border-t",
+        "gridClasses": "md:col-end-4",
+        "estilo_color": "bg-linear-to-tl/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "RiBubbleChartFill",
+        "titulo_tarjeta": "顺畅无阻的物流",
+        "descripcion": "让您的供应链高效运转，无需复杂流程。我们可无缝对接您现有的传统进口渠道，并从卡扬贝统筹整个流程，确保订单在抵达时仍保持完整的新鲜度与水分状态。"
+      }
+    ]
+  },
+  "call_to_action": {
+    "titulo": "与 Lladeal 开启您的第一笔订单。",
+    "subtitulo": "联系您的销售团队，了解我们的高海拔玫瑰如何升级您的产品目录并打动您的客户。",
+    "boton": {
+      "titulo": "开始选择 Lladeal",
+      "link": "/contact"
+    }
+  }
 }

@@ -26,5 +26,110 @@
       "key": "tinturadas",
       "label": "Крашеные"
     }
-  ]
+  ],
+  "features": {
+    "titulo": "Ферма Lladeal: совершенство в каждом лепестке",
+    "subtitulo": "Узнайте, как мы превращаем уникальные условия Каямбе в одни из самых красивых экспортных роз в мире, сочетая ремесленный уход с безупречными стандартами качества.",
+    "lista": [
+      {
+        "title": "Строгий отбор для экспорта",
+        "description": "Критерии совершенства: мы тщательно оцениваем каждый цветок, отбирая только те, что соответствуют идеальному размеру бутона, нужной стадии раскрытия и безупречной симметрии.",
+        "image": "/uploads/_MG_1306.avif",
+        "class": "relative lg:row-span-2",
+        "wrapperClass": "lg:rounded-l-3xl",
+        "imageClass": "mx-auto mt-5 self-start object-cover w-[90%] rounded-2xl",
+        "imageContainerClass": "relative flex min-h-[25rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 md:bottom-30 bottom-0 z-10 mx-auto h-30 w-[90%] bg-linear-to-b/oklch from-transparent via-white to-white",
+        "headingClass": "pb-3 sm:pb-0"
+      },
+      {
+        "title": "Ремесленное высокогорное выращивание",
+        "description": "Прямой уход в поле: мы работаем с почвами Песильо руками опытных специалистов, используя прямой свет экваториальной линии для формирования крепких стеблей и насыщенных цветов.",
+        "image": "/uploads/_MG_1252.avif",
+        "class": "relative max-lg:row-start-1",
+        "imageClass": "w-full rounded-t-xl mt-5",
+        "imageContainerClass": "relative flex flex-1 items-center justify-center px-4 max-lg:pb-12 max-lg:pt-10 lg:pb-2",
+        "imageFadeClass": "pointer-events-none absolute inset-x-0 bottom-1 z-10 mx-auto h-28 w-[93%] bg-linear-to-b/oklch from-transparent via-white to-white"
+      },
+      {
+        "title": "Гарантированные питание и свежесть",
+        "description": "Теплые почвы и чистые питательные вещества: мы питаем растения минералами высокогорья Каямбе, чтобы каждая роза сохраняла свежесть в вазе значительно дольше.",
+        "image": "/uploads/flores.avif",
+        "class": "relative lg:row-span-2",
+        "imageClass": "h-full object-cover rounded-xl",
+        "imageContainerClass": "relative min-h-[25rem] w-full grow",
+        "imageSecondaryContainerClass": "absolute bottom-0 md:left-10 left-5 right-0 top-5 overflow-hidden rounded-xl shadow-2xl"
+      },
+      {
+        "title": "И многое другое...",
+        "listItems": [
+          "Величественные сорта: широкий выбор ярких оттенков и крупных бутонов, заметных на мировом рынке.",
+          "Приверженность и происхождение: с гордостью выращено в Каямбе с уважением к земле и нашему сообществу."
+        ],
+        "component": "PlatformOrbit",
+        "class": "relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2",
+        "wrapperClass": "rounded-lg"
+      }
+    ]
+  },
+  "caracteristicas": {
+    "titulo": "От почв Каямбе к рынкам всего мира",
+    "subtitulo": "Мы используем самые требовательные природные условия экваториальной линии, чтобы выращивать розы превосходного качества. Наш процесс объединяет традиционные аграрные знания и точную логистику, позволяя заранее учитывать ваши потребности, обеспечивать абсолютную свежесть и предлагать цветы, которые выделяются на фоне любой конкуренции. Мы являемся прямыми производителями, предлагаем ежедневное наличие, надежную упаковку и персональное сопровождение.",
+    "boton": {
+      "titulo": "Узнать больше",
+      "link": "/contact"
+    },
+    "carta1": {
+      "icono": "MdiImageFilterHdr",
+      "descripcion": "Высокогорное выращивание: крепкие стебли и крупные бутоны под экваториальным солнцем.",
+      "estilo": "self-start"
+    },
+    "carta2": {
+      "icono": "MdiHandExtended",
+      "descripcion": "Ручной сбор: строгий отбор в точный момент раскрытия.",
+      "estilo": "self-center"
+    },
+    "carta3": {
+      "icono": "MdiPackageVariant",
+      "descripcion": "Глобальная дистрибуция: упаковка высокой защиты для международной свежести.",
+      "estilo": "self-end"
+    }
+  },
+  "Caracteristicas_red": {
+    "titulo": "Почему стоит выбрать Lladeal?",
+    "subtitulo": "Почувствуйте идеальный баланс между величием природы и точностью экспортной логистики. От локальных флористов до крупных мировых дистрибьюторов - Lladeal обеспечивает ваш бизнес розами высшего качества, превосходящими любые стандарты. Обновите свой каталог более стойкими цветами, яркими оттенками и надежными поставками в любой сезон.",
+    "lista": [
+      {
+        "estilo_borde": "md:border-l md:border-r",
+        "estilo_color": "bg-linear-to-l/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "MdiEarth",
+        "titulo_tarjeta": "Для любого рынка",
+        "descripcion": "Будь то небольшая авторская флористика или глобальный оптовый дистрибьютор, Finca Lladeal адаптируется под ваш масштаб. Мы поставляем как эксклюзивные сорта, так и крупные экспортные объемы, гарантируя персональный подход в ритме вашего бизнеса."
+      },
+      {
+        "estilo_borde": "border-b border-t md:border-b-0",
+        "gridClasses": "md:col-start-2 md:col-end-3",
+        "estilo_color": "bg-linear-to-t/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "MdiCheckDecagram",
+        "titulo_tarjeta": "Качество международного уровня",
+        "descripcion": "Мы выводим потенциал цветоводства на самый высокий уровень. Благодаря строгому контролю качества, крупным бутонам и длительной стойкости в вазе наши розы успешно конкурируют на самых требовательных рынках мира."
+      },
+      {
+        "estilo_borde": "md:border-l md:border-r md:border-t",
+        "gridClasses": "md:col-end-4",
+        "estilo_color": "bg-linear-to-tl/oklch from-[#e3186d]/10 to-transparent",
+        "icono": "RiBubbleChartFill",
+        "titulo_tarjeta": "Логистика без трения",
+        "descripcion": "Сохраняйте эффективность своей цепочки поставок без лишних сложностей. Мы легко интегрируемся в ваши привычные импортные каналы и управляем процессом из Каямбе, чтобы ваши заказы приходили с полностью сохраненной свежестью и гидратацией."
+      }
+    ]
+  },
+  "call_to_action": {
+    "titulo": "Сделайте свой первый заказ с Lladeal.",
+    "subtitulo": "Свяжитесь с нашей командой продаж и узнайте, как наши высокогорные розы могут преобразить ваш каталог и впечатлить ваших клиентов.",
+    "boton": {
+      "titulo": "Начать с Lladeal",
+      "link": "/contact"
+    }
+  }
 }

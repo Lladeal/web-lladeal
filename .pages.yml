@@ -918,6 +918,113 @@ content:
               - name: label
                 label: Texto visible
                 type: string
+          - name: features
+            label: Bloque destacado
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: text
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: lista
+                label: Tarjetas destacadas
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{title} ({index})'
+                fields:
+                  - name: title
+                    label: Titulo de la tarjeta
+                    type: string
+                  - name: description
+                    label: Texto descriptivo
+                    type: text
+                  - name: listItems
+                    label: Lista de puntos destacados
+                    type: string
+                    list: true
+          - name: caracteristicas
+            label: Bloque de ventajas
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: string
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: boton
+                label: Boton del bloque
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+              - name: carta1
+                label: Tarjeta 1
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+              - name: carta2
+                label: Tarjeta 2
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+              - name: carta3
+                label: Tarjeta 3
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+          - name: Caracteristicas_red
+            label: Razones para elegirnos
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: text
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: lista
+                label: Tarjetas de beneficios
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{titulo_tarjeta}'
+                fields:
+                  - name: titulo_tarjeta
+                    label: Titulo de la tarjeta
+                    type: string
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+          - name: call_to_action
+            label: Llamado final a la accion
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: text
+              - name: subtitulo
+                label: Texto de apoyo
+                type: text
+              - name: boton
+                label: Boton principal
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
       - name: about_page_en
         label: Nosotros en ingles
         type: file
@@ -1382,6 +1489,113 @@ content:
               - name: label
                 label: Texto visible
                 type: string
+          - name: features
+            label: Bloque destacado
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: text
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: lista
+                label: Tarjetas destacadas
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{title} ({index})'
+                fields:
+                  - name: title
+                    label: Titulo de la tarjeta
+                    type: string
+                  - name: description
+                    label: Texto descriptivo
+                    type: text
+                  - name: listItems
+                    label: Lista de puntos destacados
+                    type: string
+                    list: true
+          - name: caracteristicas
+            label: Bloque de ventajas
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: string
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: boton
+                label: Boton del bloque
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+              - name: carta1
+                label: Tarjeta 1
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+              - name: carta2
+                label: Tarjeta 2
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+              - name: carta3
+                label: Tarjeta 3
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+          - name: Caracteristicas_red
+            label: Razones para elegirnos
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: text
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: lista
+                label: Tarjetas de beneficios
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{titulo_tarjeta}'
+                fields:
+                  - name: titulo_tarjeta
+                    label: Titulo de la tarjeta
+                    type: string
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+          - name: call_to_action
+            label: Llamado final a la accion
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: text
+              - name: subtitulo
+                label: Texto de apoyo
+                type: text
+              - name: boton
+                label: Boton principal
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
       - name: about_page_ru
         label: Nosotros en ruso
         type: file
@@ -1778,6 +1992,113 @@ content:
               - name: label
                 label: Texto visible
                 type: string
+          - name: features
+            label: Bloque destacado
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: text
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: lista
+                label: Tarjetas destacadas
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{title} ({index})'
+                fields:
+                  - name: title
+                    label: Titulo de la tarjeta
+                    type: string
+                  - name: description
+                    label: Texto descriptivo
+                    type: text
+                  - name: listItems
+                    label: Lista de puntos destacados
+                    type: string
+                    list: true
+          - name: caracteristicas
+            label: Bloque de ventajas
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: string
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: boton
+                label: Boton del bloque
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+              - name: carta1
+                label: Tarjeta 1
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+              - name: carta2
+                label: Tarjeta 2
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+              - name: carta3
+                label: Tarjeta 3
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+          - name: Caracteristicas_red
+            label: Razones para elegirnos
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: text
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: lista
+                label: Tarjetas de beneficios
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{titulo_tarjeta}'
+                fields:
+                  - name: titulo_tarjeta
+                    label: Titulo de la tarjeta
+                    type: string
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+          - name: call_to_action
+            label: Llamado final a la accion
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: text
+              - name: subtitulo
+                label: Texto de apoyo
+                type: text
+              - name: boton
+                label: Boton principal
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
       - name: about_page_zh
         label: Nosotros en chino
         type: file
@@ -2174,6 +2495,113 @@ content:
               - name: label
                 label: Texto visible
                 type: string
+          - name: features
+            label: Bloque destacado
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: text
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: lista
+                label: Tarjetas destacadas
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{title} ({index})'
+                fields:
+                  - name: title
+                    label: Titulo de la tarjeta
+                    type: string
+                  - name: description
+                    label: Texto descriptivo
+                    type: text
+                  - name: listItems
+                    label: Lista de puntos destacados
+                    type: string
+                    list: true
+          - name: caracteristicas
+            label: Bloque de ventajas
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: string
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: boton
+                label: Boton del bloque
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
+              - name: carta1
+                label: Tarjeta 1
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+              - name: carta2
+                label: Tarjeta 2
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+              - name: carta3
+                label: Tarjeta 3
+                type: object
+                fields:
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+          - name: Caracteristicas_red
+            label: Razones para elegirnos
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo del bloque
+                type: text
+              - name: subtitulo
+                label: Descripcion del bloque
+                type: text
+              - name: lista
+                label: Tarjetas de beneficios
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{titulo_tarjeta}'
+                fields:
+                  - name: titulo_tarjeta
+                    label: Titulo de la tarjeta
+                    type: string
+                  - name: descripcion
+                    label: Descripcion de la tarjeta
+                    type: text
+          - name: call_to_action
+            label: Llamado final a la accion
+            type: object
+            fields:
+              - name: titulo
+                label: Titulo principal
+                type: text
+              - name: subtitulo
+                label: Texto de apoyo
+                type: text
+              - name: boton
+                label: Boton principal
+                type: object
+                fields:
+                  - name: titulo
+                    label: Texto del boton
+                    type: string
       - name: about_page_de
         label: Nosotros en aleman
         type: file
