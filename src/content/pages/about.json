@@ -4,16 +4,20 @@
     "descripcion": "Con una ubicación estratégica en el ecuador, a una altitud de más de 10,300 pies sobre el nivel del mar, en el pequeño pueblo de Pesillo, en el cantón de Cayambe, la finca de Lladeal ofrece condiciones climáticas y geográficas excepcionales, como luz perpendicular y suelos cálidos.",
     "estadisticas": [
       {
-        "texto": "Variedades de rosas"
+        "texto": "Variedades de rosas",
+        "valor": "19"
       },
       {
-        "texto": "Colaboradores expertos"
+        "texto": "Colaboradores expertos",
+        "valor": "34"
       },
       {
-        "texto": "Destinos de exportación"
+        "texto": "Destinos de exportación",
+        "valor": "100+"
       },
       {
-        "texto": "Rosas comercializadas"
+        "texto": "Rosas comercializadas",
+        "valor": "1,000+"
       }
     ]
   },
